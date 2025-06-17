@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "766433798492",
+    "project_id": "biofitlab-4637f",
+    "storage_bucket": "biofitlab-4637f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766433798492:android:75bbf0893202667d913999",
+        "android_client_info": {
+          "package_name": "com.bio.fitlab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766433798492-e86i0nojcjh7an1r95ke6u1nrb1a86j6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX4LDL3-C383MkfWhEpc8YPdR37VQtOWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766433798492-e86i0nojcjh7an1r95ke6u1nrb1a86j6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "766433798492-l7s6jnh1d658b1lrjqkb8dglnp2t3e14.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bio.fitlab"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

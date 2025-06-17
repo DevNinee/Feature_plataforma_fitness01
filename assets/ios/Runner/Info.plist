@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>BioFitLab </string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BioFitLab</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1026272280935-6ictliv7nobebj4fqgpc4i10cj93ik2u</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~3347511713</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSAllowsArbitraryLoadsInWebContent</key>
+		<true/>
+	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_CC1AD845._googlecast._tcp</string>
+		<string>_googlecast._tcp</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>O aplicativo BioFitLab precisa de acesso à câmera para que você possa enviar sua foto de perfil.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>O BioFitLab utiliza sua localização para fornecer rastreamento preciso de entregas e atualizações em tempo real. Com acesso ao seu endereço, garantimos informações atualizadas sobre o status e o tempo estimado de entrega dos seus pedidos.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>O BioFitLab utiliza sua localização para fornecer rastreamento preciso de entregas e atualizações em tempo real. Com acesso ao seu endereço, garantimos informações atualizadas sobre o status e o tempo estimado de entrega dos seus pedidos.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>O BioFitLab utiliza sua localização para fornecer rastreamento preciso de entregas e atualizações em tempo real. Com acesso ao seu endereço, garantimos informações atualizadas sobre o status e o tempo estimado de entrega dos seus pedidos.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>O aplicativo BioFitLab utiliza o microfone do seu dispositivo para melhorar sua experiência fitness. Usamos comandos de voz para treinos guiados, permitindo interação com o app sem o uso das mãos. Também utilizamos o microfone para gravação de observações e feedbacks dos treinos. Respeitamos sua privacidade e não armazenamos nenhum áudio sem o seu consentimento.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>O aplicativo BioFitLab acompanha seus passos para monitoramento de atividades físicas.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>O BioFitLab precisa de acesso à sua galeria de fotos para que você possa enviar sua foto de perfil.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>O BioFitLab precisa de acesso à sua galeria de fotos para que você possa enviar sua foto de perfil.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Utilizamos o reconhecimento de voz para fornecer instruções de treino controladas por voz e acompanhar seu progresso no BioFitLab. O acesso ao microfone é necessário para garantir interações por voz precisas e convenientes com o aplicativo.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>io.flutter.embedded_views_preview</key>
+	<true/>
+</dict>
+</plist>

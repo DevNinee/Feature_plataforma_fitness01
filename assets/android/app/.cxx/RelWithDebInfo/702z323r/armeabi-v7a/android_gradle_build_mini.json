@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "H:\\src\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Cliente\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Cliente\\Downloads\\biofit update\\MightyFitnessSourceCode\\FlutterCode\\mightyfitness_flutter\\android\\app\\.cxx\\RelWithDebInfo\\702z323r\\armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Cliente\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Cliente\\Downloads\\biofit update\\MightyFitnessSourceCode\\FlutterCode\\mightyfitness_flutter\\android\\app\\.cxx\\RelWithDebInfo\\702z323r\\armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

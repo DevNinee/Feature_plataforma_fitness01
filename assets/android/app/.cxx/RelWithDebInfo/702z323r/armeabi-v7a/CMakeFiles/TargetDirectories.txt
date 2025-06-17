@@ -1,0 +1,2 @@
+C:/Users/Cliente/Downloads/biofit update/MightyFitnessSourceCode/FlutterCode/mightyfitness_flutter/android/app/.cxx/RelWithDebInfo/702z323r/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Cliente/Downloads/biofit update/MightyFitnessSourceCode/FlutterCode/mightyfitness_flutter/android/app/.cxx/RelWithDebInfo/702z323r/armeabi-v7a/CMakeFiles/rebuild_cache.dir
