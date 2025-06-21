@@ -37,15 +37,15 @@ class ChatMessageModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data[KEY_ID] = this.id;
-    data[KEY_FIREBASE_CREATED_AT] = this.createdAt;
-    data[KEY_MESSAGE] = this.message;
-    data[KEY_SENDER_ID] = this.senderId;
-    data[KEY_IS_MESSAGE_READ] = this.isMessageRead;
-    data[KEY_RECEIVER_ID] = this.receiverId;
-    data[KEY_PHOTO_URL] = this.photoUrl;
-    data[KEY_MESSAGE_TYPE] = this.messageType;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data[KEY_ID] = id;
+    data[KEY_FIREBASE_CREATED_AT] = createdAt;
+    data[KEY_MESSAGE] = message;
+    data[KEY_SENDER_ID] = senderId;
+    data[KEY_IS_MESSAGE_READ] = isMessageRead;
+    data[KEY_RECEIVER_ID] = receiverId;
+    data[KEY_PHOTO_URL] = photoUrl;
+    data[KEY_MESSAGE_TYPE] = messageType;
     return data;
   }
 }

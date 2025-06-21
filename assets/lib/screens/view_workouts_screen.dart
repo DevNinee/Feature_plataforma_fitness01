@@ -14,7 +14,7 @@ class ViewWorkoutsScreen extends StatefulWidget {
   final bool? isFav;
   final bool? isAssign;
 
-  ViewWorkoutsScreen({this.isFav = false, this.isAssign = false});
+  const ViewWorkoutsScreen({super.key, this.isFav = false, this.isAssign = false});
 
   @override
   _ViewWorkoutsScreenState createState() => _ViewWorkoutsScreenState();
@@ -76,7 +76,7 @@ class _ViewWorkoutsScreenState extends State<ViewWorkoutsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar:
-            widget.isFav == true || widget.isAssign == true ? PreferredSize(preferredSize: Size.fromHeight(0), child: SizedBox()) : appBarWidget(languages.lblWorkouts, elevation: 0, context: context),
+            widget.isFav == true || widget.isAssign == true ? const PreferredSize(preferredSize: Size.fromHeight(0), child: SizedBox()) : appBarWidget(languages.lblWorkouts, elevation: 0, context: context),
         body: Stack(
           children: [
             mWorkoutList.isNotEmpty
@@ -99,9 +99,9 @@ class _ViewWorkoutsScreenState extends State<ViewWorkoutsScreen> {
                     },
                   )
                 : NoDataScreen(mTitle: languages.lblWorkoutNoFound).visible(!appStore.isLoading),
-            Loader().center().visible(appStore.isLoading)
+            const Loader().center().visible(appStore.isLoading)
           ],
         ),
-        bottomNavigationBar: userStore.adsBannerDetailShowBannerOnWorkouts == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : SizedBox());
+        bottomNavigationBar: userStore.adsBannerDetailShowBannerOnWorkouts == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : const SizedBox());
   }
 }

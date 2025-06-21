@@ -18,7 +18,7 @@ import 'ChatScreen.dart';
 class NewChatScreen extends StatefulWidget {
   final bool? isCall;
 
-  NewChatScreen({this.isCall = false});
+  const NewChatScreen({super.key, this.isCall = false});
 
   @override
   _NewChatScreenState createState() => _NewChatScreenState();
@@ -49,9 +49,10 @@ class _NewChatScreenState extends State<NewChatScreen> {
         textColor: primaryColor,
         actions: [
           AnimatedContainer(
-            margin: EdgeInsets.only(left: 8),
-            duration: Duration(milliseconds: 100),
+            margin: const EdgeInsets.only(left: 8),
+            duration: const Duration(milliseconds: 100),
             curve: Curves.decelerate,
+            width: isSearch ? context.width() - 86 : 50,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -72,7 +73,7 @@ class _NewChatScreenState extends State<NewChatScreen> {
                   ),
                 ).expand(),
                 IconButton(
-                  icon: isSearch ? Icon(Icons.close) : Icon(Icons.search),
+                  icon: isSearch ? const Icon(Icons.close) : const Icon(Icons.search),
                   onPressed: () async {
                     isSearch = !isSearch;
                     searchCont.clear();
@@ -83,7 +84,6 @@ class _NewChatScreenState extends State<NewChatScreen> {
                 )
               ],
             ),
-            width: isSearch ? context.width() - 86 : 50,
           ),
         ],
       ),
@@ -101,9 +101,9 @@ class _NewChatScreenState extends State<NewChatScreen> {
               users.sort((a, b) => a.firstName?.toLowerCase().compareTo(b.firstName?.toLowerCase()??'')??0);
 
               return SingleChildScrollView(
-                physics: AlwaysScrollableScrollPhysics(),
+                physics: const AlwaysScrollableScrollPhysics(),
                 child: ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemCount: users.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
@@ -111,7 +111,7 @@ class _NewChatScreenState extends State<NewChatScreen> {
 
                     return Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                          const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                       child: Row(
                         children: [
                           (data.profileImage == null ||
@@ -121,7 +121,7 @@ class _NewChatScreenState extends State<NewChatScreen> {
                                   child: Container(
                                     height: 50,
                                     width: 50,
-                                    padding: EdgeInsets.all(10),
+                                    padding: const EdgeInsets.all(10),
                                     color: primaryColor,
                                     child: Text(
                                       data.firstName?.isNotEmpty??true
@@ -143,11 +143,11 @@ class _NewChatScreenState extends State<NewChatScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '${data.firstName?.capitalizeFirstLetter()??''}',
+                                data.firstName?.capitalizeFirstLetter()??'',
                                 style: primaryTextStyle(),
                               ),
                               Text(
-                                '${data.status.validate()}',
+                                data.status.validate(),
                                 style: secondaryTextStyle(),
                               ),
                             ],
@@ -162,7 +162,7 @@ class _NewChatScreenState extends State<NewChatScreen> {
                 ),
               );
             } else {
-              return Text("no_data_found").center();
+              return const Text("no_data_found").center();
             }
           }
           return snapWidgetHelper(snap);

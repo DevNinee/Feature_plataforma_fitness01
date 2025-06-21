@@ -21,78 +21,78 @@ class DashboardResponse {
     if (json['bodypart'] != null) {
       bodypart = <BodyPartModel>[];
       json['bodypart'].forEach((v) {
-        bodypart!.add(new BodyPartModel.fromJson(v));
+        bodypart!.add(BodyPartModel.fromJson(v));
       });
     }
     if (json['level'] != null) {
       level = <LevelModel>[];
       json['level'].forEach((v) {
-        level!.add(new LevelModel.fromJson(v));
+        level!.add(LevelModel.fromJson(v));
       });
     }
     if (json['equipment'] != null) {
       equipment = <EquipmentModel>[];
       json['equipment'].forEach((v) {
-        equipment!.add(new EquipmentModel.fromJson(v));
+        equipment!.add(EquipmentModel.fromJson(v));
       });
     }
     if (json['exercise'] != null) {
       exercise = <ExerciseModel>[];
       json['exercise'].forEach((v) {
-        exercise!.add(new ExerciseModel.fromJson(v));
+        exercise!.add(ExerciseModel.fromJson(v));
       });
     }
     if (json['diet'] != null) {
       diet = <Diet>[];
       json['diet'].forEach((v) {
-        diet!.add(new Diet.fromJson(v));
+        diet!.add(Diet.fromJson(v));
       });
     }
     if (json['workouttype'] != null) {
       workouttype = <Workouttype>[];
       json['workouttype'].forEach((v) {
-        workouttype!.add(new Workouttype.fromJson(v));
+        workouttype!.add(Workouttype.fromJson(v));
       });
     }
     if (json['workout'] != null) {
       workout = <WorkoutDetailModel>[];
       json['workout'].forEach((v) {
-        workout!.add(new WorkoutDetailModel.fromJson(v));
+        workout!.add(WorkoutDetailModel.fromJson(v));
       });
     }
     if (json['featured_diet'] != null) {
       featuredDiet = <Diet>[];
       json['featured_diet'].forEach((v) {
-        featuredDiet!.add(new Diet.fromJson(v));
+        featuredDiet!.add(Diet.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.bodypart != null) {
-      data['bodypart'] = this.bodypart!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (bodypart != null) {
+      data['bodypart'] = bodypart!.map((v) => v.toJson()).toList();
     }
-    if (this.level != null) {
-      data['level'] = this.level!.map((v) => v.toJson()).toList();
+    if (level != null) {
+      data['level'] = level!.map((v) => v.toJson()).toList();
     }
-    if (this.equipment != null) {
-      data['equipment'] = this.equipment!.map((v) => v.toJson()).toList();
+    if (equipment != null) {
+      data['equipment'] = equipment!.map((v) => v.toJson()).toList();
     }
-    if (this.exercise != null) {
-      data['exercise'] = this.exercise!.map((v) => v.toJson()).toList();
+    if (exercise != null) {
+      data['exercise'] = exercise!.map((v) => v.toJson()).toList();
     }
-    if (this.diet != null) {
-      data['diet'] = this.diet!.map((v) => v.toJson()).toList();
+    if (diet != null) {
+      data['diet'] = diet!.map((v) => v.toJson()).toList();
     }
-    if (this.workouttype != null) {
-      data['workouttype'] = this.workouttype!.map((v) => v.toJson()).toList();
+    if (workouttype != null) {
+      data['workouttype'] = workouttype!.map((v) => v.toJson()).toList();
     }
-    if (this.workout != null) {
-      data['workout'] = this.workout!.map((v) => v.toJson()).toList();
+    if (workout != null) {
+      data['workout'] = workout!.map((v) => v.toJson()).toList();
     }
-    if (this.featuredDiet != null) {
-      data['featured_diet'] = this.featuredDiet!.map((v) => v.toJson()).toList();
+    if (featuredDiet != null) {
+      data['featured_diet'] = featuredDiet!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -163,26 +163,26 @@ class Diet {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['calories'] = this.calories;
-    data['carbs'] = this.carbs;
-    data['protein'] = this.protein;
-    data['fat'] = this.fat;
-    data['servings'] = this.servings;
-    data['total_time'] = this.totalTime;
-    data['is_featured'] = this.isFeatured;
-    data['status'] = this.status;
-    data['ingredients'] = this.ingredients;
-    data['description'] = this.description;
-    data['diet_image'] = this.dietImage;
-    data['is_premium'] = this.isPremium;
-    data['categorydiet_id'] = this.categorydietId;
-    data['categorydiet_title'] = this.categorydietTitle;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['is_favourite'] = this.isFavourite;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['calories'] = calories;
+    data['carbs'] = carbs;
+    data['protein'] = protein;
+    data['fat'] = fat;
+    data['servings'] = servings;
+    data['total_time'] = totalTime;
+    data['is_featured'] = isFeatured;
+    data['status'] = status;
+    data['ingredients'] = ingredients;
+    data['description'] = description;
+    data['diet_image'] = dietImage;
+    data['is_premium'] = isPremium;
+    data['categorydiet_id'] = categorydietId;
+    data['categorydiet_title'] = categorydietTitle;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['is_favourite'] = isFavourite;
     return data;
   }
 }
@@ -205,12 +205,12 @@ class Workouttype {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['status'] = this.status;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['status'] = status;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

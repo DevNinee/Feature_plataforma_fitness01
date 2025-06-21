@@ -34,7 +34,7 @@ adShow() async {
         : Platform.isIOS
             ? userStore.admobInterstitialIdIos
             : userStore.admobInterstitialId,
-    request: AdRequest(),
+    request: const AdRequest(),
     adLoadCallback: InterstitialAdLoadCallback(
       onAdLoaded: (InterstitialAd ad) {
         print('$ad loaded');
@@ -71,15 +71,15 @@ String? getBannerAdUnitId() {
 }
 
 Widget showBannerAds( BuildContext context) {
-  return Container(
+  return SizedBox(
     height: 50,
     width: MediaQuery.of(context).size.width,
     child: AdWidget(
       ad: BannerAd(
         adUnitId: getBannerAdUnitId()!,
         size: AdSize.fullBanner,
-        request: AdRequest(),
-        listener: BannerAdListener(),
+        request: const AdRequest(),
+        listener: const BannerAdListener(),
       )..load(),
     ),
   );

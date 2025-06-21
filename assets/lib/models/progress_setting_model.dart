@@ -15,10 +15,10 @@ class ProgressSettingModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['isEnable'] = this.isEnable;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['isEnable'] = isEnable;
     return data;
   }
 }

@@ -15,7 +15,7 @@ class BlogComponent extends StatefulWidget {
   final BlogModel? mBlogModel;
   final Function? onCall;
 
-  BlogComponent({this.mBlogModel, this.onCall});
+  const BlogComponent({super.key, this.mBlogModel, this.onCall});
 
   @override
   _BlogComponentState createState() => _BlogComponentState();
@@ -26,8 +26,8 @@ class _BlogComponentState extends State<BlogComponent> {
   Widget build(BuildContext context) {
     return Container(
       decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius()) : boxDecorationRoundedWithShadow(defaultRadius.toInt()),
-      padding: EdgeInsets.fromLTRB(10, 10, 10, 8),
-      margin: EdgeInsets.only(bottom: 8, top: 8),
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 8),
+      margin: const EdgeInsets.only(bottom: 8, top: 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

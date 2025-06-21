@@ -23,7 +23,7 @@ class NoDataWidget extends StatelessWidget {
   final VoidCallback? onRetry;
   final String? retryText;
 
-  NoDataWidget({
+  const NoDataWidget({
     this.image,
     this.imageSize,
     this.imageWidget,
@@ -34,8 +34,8 @@ class NoDataWidget extends StatelessWidget {
     this.retryText,
     this.titleTextStyle,
     this.subTitleTextStyle,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class NoDataWidget extends StatelessWidget {
 
   Widget _imageWidget() {
     if (imageWidget != null) return imageWidget!;
-    if (image == null) return Offstage();
+    if (image == null) return const Offstage();
 
     if (image.validate().startsWith('http')) {
       return Image.network(

@@ -24,6 +24,8 @@ import '../utils/app_constants.dart';
 class ProgressScreen extends StatefulWidget {
   static String tag = '/ProgressScreen';
 
+  const ProgressScreen({super.key});
+
   @override
   ProgressScreenState createState() => ProgressScreenState();
 }
@@ -89,7 +91,7 @@ class ProgressScreenState extends State<ProgressScreen> {
       children: [
         Text(value!, style: boldTextStyle()),
         8.width,
-        Icon(Icons.keyboard_arrow_right, color: primaryColor),
+        const Icon(Icons.keyboard_arrow_right, color: primaryColor),
       ],
     ).paddingSymmetric(horizontal: 16, vertical: 8);
   }
@@ -101,16 +103,16 @@ class ProgressScreenState extends State<ProgressScreen> {
         appBar: appBarWidget(languages.lblReport, showBack: false, color: appStore.isDarkMode ? scaffoldColorDark : Colors.white, context: context, titleSpacing: 16),
         body: Observer(builder: (context) {
           return SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    StepCountComponent().expand(),
+                    const StepCountComponent().expand(),
                     16.width,
-                    BMIComponent().expand().visible(userStore.weightUnit.isNotEmpty && userStore.heightUnit.isNotEmpty),
+                    const BMIComponent().expand().visible(userStore.weightUnit.isNotEmpty && userStore.heightUnit.isNotEmpty),
                   ],
                 ).paddingSymmetric(horizontal: 16),
                 16.height,
@@ -118,9 +120,9 @@ class ProgressScreenState extends State<ProgressScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    BMRComponent().expand().visible(userStore.weightUnit.isNotEmpty && userStore.heightUnit.isNotEmpty),
+                    const BMRComponent().expand().visible(userStore.weightUnit.isNotEmpty && userStore.heightUnit.isNotEmpty),
                     16.width,
-                    IdealWeightComponent().expand().visible(userStore.gender.isNotEmpty && userStore.heightUnit.isNotEmpty),
+                    const IdealWeightComponent().expand().visible(userStore.gender.isNotEmpty && userStore.heightUnit.isNotEmpty),
                   ],
                 ).paddingSymmetric(horizontal: 16),
                 16.height,
@@ -128,13 +130,13 @@ class ProgressScreenState extends State<ProgressScreen> {
                   FutureBuilder(
                     future: getProgressApi(METRICS_WEIGHT),
                     builder: (context, snapshot) {
-                      if (snapshot.hasData)
+                      if (snapshot.hasData) {
                         return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          margin: const EdgeInsets.symmetric(horizontal: 16),
                           decoration: appStore.isDarkMode
                               ? boxDecorationWithRoundedCorners(borderRadius: radius(16), backgroundColor: context.cardColor)
                               : boxDecorationRoundedWithShadow(16, backgroundColor: context.cardColor),
-                          padding: EdgeInsets.symmetric(vertical: 8),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -154,20 +156,21 @@ class ProgressScreenState extends State<ProgressScreen> {
                             }
                           }),
                         );
-                      return snapWidgetHelper(snapshot, loadingWidget: SizedBox());
+                      }
+                      return snapWidgetHelper(snapshot, loadingWidget: const SizedBox());
                     },
                   ).visible(userStore.weight.isNotEmpty && userStore.weightUnit.isNotEmpty),
                 if (isHeartRate == true)
                   FutureBuilder(
                     future: getProgressApi(METRICS_HEART_RATE),
                     builder: (context, snapshot) {
-                      if (snapshot.hasData)
+                      if (snapshot.hasData) {
                         return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                           decoration: appStore.isDarkMode
                               ? boxDecorationWithRoundedCorners(borderRadius: radius(16), backgroundColor: context.cardColor)
                               : boxDecorationRoundedWithShadow(16, backgroundColor: context.cardColor),
-                          padding: EdgeInsets.symmetric(vertical: 8),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -185,20 +188,21 @@ class ProgressScreenState extends State<ProgressScreen> {
                             }
                           }),
                         );
-                      return snapWidgetHelper(snapshot, loadingWidget: SizedBox());
+                      }
+                      return snapWidgetHelper(snapshot, loadingWidget: const SizedBox());
                     },
                   ),
                 if (isPush == true)
                   FutureBuilder(
                     future: getProgressApi(PUSH_UP_MIN),
                     builder: (context, snapshot) {
-                      if (snapshot.hasData)
+                      if (snapshot.hasData) {
                         return Container(
-                          margin: EdgeInsets.symmetric(horizontal: 16),
+                          margin: const EdgeInsets.symmetric(horizontal: 16),
                           decoration: appStore.isDarkMode
                               ? boxDecorationWithRoundedCorners(borderRadius: radius(16), backgroundColor: context.cardColor)
                               : boxDecorationRoundedWithShadow(16, backgroundColor: context.cardColor),
-                          padding: EdgeInsets.symmetric(vertical: 8),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -216,6 +220,7 @@ class ProgressScreenState extends State<ProgressScreen> {
                             }
                           }),
                         );
+                      }
                       return snapWidgetHelper(snapshot);
                     },
                   ),

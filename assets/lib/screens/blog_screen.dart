@@ -24,6 +24,8 @@ import '../utils/app_images.dart';
 import 'no_data_screen.dart';
 
 class BlogScreen extends StatefulWidget {
+  const BlogScreen({super.key});
+
   @override
   _BlogScreenState createState() => _BlogScreenState();
 }
@@ -60,7 +62,7 @@ class _BlogScreenState extends State<BlogScreen> {
     });
     mSearch.addListener(() {
       setState(() {
-        _showClearButton = mSearch.text.length > 0;
+        _showClearButton = mSearch.text.isNotEmpty;
       });
     });
   }
@@ -141,7 +143,7 @@ class _BlogScreenState extends State<BlogScreen> {
           onPressed: () {
             onCall!.call();
           },
-          icon: Icon(
+          icon: const Icon(
             Feather.chevron_right,
             color: primaryColor,
           ),
@@ -157,7 +159,7 @@ class _BlogScreenState extends State<BlogScreen> {
       body: Stack(
         children: [
           SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
                 2.height,
@@ -183,7 +185,7 @@ class _BlogScreenState extends State<BlogScreen> {
                             children: [
                               8.height,
                               mHeading(languages.lblTopFitnessReads, onCall: () {
-                                ViewAllBlogScreen(isFeatured: true).launch(context);
+                                const ViewAllBlogScreen(isFeatured: true).launch(context);
                               }),
                               SizedBox(
                                 width: context.width(),
@@ -208,13 +210,13 @@ class _BlogScreenState extends State<BlogScreen> {
                             children: [
                               16.height,
                               mHeading(languages.lblTrendingBlogs, onCall: () {
-                                ViewAllBlogScreen(isFeatured: false).launch(context);
+                                const ViewAllBlogScreen(isFeatured: false).launch(context);
                               }),
                               ListView.builder(
                                 shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
+                                physics: const NeverScrollableScrollPhysics(),
                                 controller: scrollController,
-                                padding: EdgeInsets.symmetric(horizontal: 16),
+                                padding: const EdgeInsets.symmetric(horizontal: 16),
                                 itemCount: mOtherBlogList.length,
                                 itemBuilder: (context, index) {
                                   return BlogComponent(mBlogModel: mOtherBlogList[index]);
@@ -228,9 +230,9 @@ class _BlogScreenState extends State<BlogScreen> {
                         children: [
                           ListView.builder(
                             shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             controller: scrollController,
-                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
                             itemCount: mSearchBlogList.length,
                             itemBuilder: (context, index) {
                               return BlogComponent(mBlogModel: mSearchBlogList[index]);
@@ -249,8 +251,8 @@ class _BlogScreenState extends State<BlogScreen> {
               ? NoDataScreen(
                   mTitle: languages.lblResultNoFound,
                 ).visible(!appStore.isLoading)
-              : SizedBox(),
-          Loader().center().visible(appStore.isLoading)
+              : const SizedBox(),
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
     );
@@ -269,7 +271,7 @@ class _BlogScreenState extends State<BlogScreen> {
         mSearchValue = "";
         hideKeyboard(context);
       },
-      icon: Icon(Icons.clear),
+      icon: const Icon(Icons.clear),
     );
   }
 }

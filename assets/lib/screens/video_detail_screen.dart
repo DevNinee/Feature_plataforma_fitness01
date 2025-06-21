@@ -27,7 +27,7 @@ class _VideoDetailScreenState extends State<VideoDetailScreen> {
             16.height,
             Text("title", style: boldTextStyle()),
             8.height,
-            HtmlWidget(postContent: "widget.mExerciseInstruction.validate()").paddingSymmetric(horizontal: 8),
+            const HtmlWidget(postContent: "widget.mExerciseInstruction.validate()").paddingSymmetric(horizontal: 8),
           ],
         ),
       ),

@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.mighty_fitness.app-mergeDebugResources-134:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\ricar\\.gradle\\caches\\8.12\\transforms\\fb6f04d2bdd941eadeed6b3a0071eee6\\transformed\\material-1.12.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,191",
+                        "endColumns": "135,140",
+                        "endOffsets": "186,327"
+                    },
+                    "to": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "97,233",
+                        "endColumns": "135,140",
+                        "endOffsets": "228,369"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\ricar\\.gradle\\caches\\8.12\\transforms\\d61578587545d378e82155b787ecfba6\\transformed\\jetified-crisp-sdk-2.0.12\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endLines": "2,19",
+                        "endColumns": "41,12",
+                        "endOffsets": "92,1045"
+                    },
+                    "to": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,374",
+                        "endLines": "2,21",
+                        "endColumns": "41,12",
+                        "endOffsets": "92,1322"
+                    }
+                }
+            ]
+        }
+    ]
+}

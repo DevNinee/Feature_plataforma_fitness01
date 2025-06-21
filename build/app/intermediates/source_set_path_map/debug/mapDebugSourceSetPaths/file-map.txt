@@ -1,0 +1,175 @@
+com.example.mighty_fitness.app-jetified-flexbox-3.0.0-0 C:\Users\ricar\.gradle\caches\8.12\transforms\000f7df1988217f4b30c630bbe3e0673\transformed\jetified-flexbox-3.0.0\res
+com.example.mighty_fitness.app-drawerlayout-1.1.1-1 C:\Users\ricar\.gradle\caches\8.12\transforms\026eaf91a704f686abc435b9c478bb2d\transformed\drawerlayout-1.1.1\res
+com.example.mighty_fitness.app-jetified-ui-util-release-2 C:\Users\ricar\.gradle\caches\8.12\transforms\02b24972f5f9b006807986a8d327359f\transformed\jetified-ui-util-release\res
+com.example.mighty_fitness.app-room-runtime-2.6.1-3 C:\Users\ricar\.gradle\caches\8.12\transforms\06155cb8950969a62376c8c166003442\transformed\room-runtime-2.6.1\res
+com.example.mighty_fitness.app-jetified-ui-viewbinding-1.6.8-4 C:\Users\ricar\.gradle\caches\8.12\transforms\081e193b8460ab2887ddc1acd7f1c401\transformed\jetified-ui-viewbinding-1.6.8\res
+com.example.mighty_fitness.app-jetified-profileinstaller-1.4.0-5 C:\Users\ricar\.gradle\caches\8.12\transforms\09d12e707b508dd64098ad851ea0c787\transformed\jetified-profileinstaller-1.4.0\res
+com.example.mighty_fitness.app-jetified-animation-core-release-6 C:\Users\ricar\.gradle\caches\8.12\transforms\09fd5c3b88e96755d07ead7952db3240\transformed\jetified-animation-core-release\res
+com.example.mighty_fitness.app-browser-1.8.0-7 C:\Users\ricar\.gradle\caches\8.12\transforms\0c69679757972620720ec039d7103818\transformed\browser-1.8.0\res
+com.example.mighty_fitness.app-jetified-ui-text-release-8 C:\Users\ricar\.gradle\caches\8.12\transforms\0f2a3a3d87b98f713f69ece7971305f0\transformed\jetified-ui-text-release\res
+com.example.mighty_fitness.app-jetified-runtime-saveable-release-9 C:\Users\ricar\.gradle\caches\8.12\transforms\156dc93b45e3bd0dfe5dcfeda7ce17ce\transformed\jetified-runtime-saveable-release\res
+com.example.mighty_fitness.app-jetified-firebase-crashlytics-19.4.2-10 C:\Users\ricar\.gradle\caches\8.12\transforms\197463ecbc7bd6925ab29a5d1b473fd5\transformed\jetified-firebase-crashlytics-19.4.2\res
+com.example.mighty_fitness.app-jetified-window-1.2.0-11 C:\Users\ricar\.gradle\caches\8.12\transforms\197f12b192a3f06912c946d4cbd2dd7d\transformed\jetified-window-1.2.0\res
+com.example.mighty_fitness.app-jetified-stripe-core-21.6.0-12 C:\Users\ricar\.gradle\caches\8.12\transforms\1b51e3e426cb547f0f3c6d11d8bd338c\transformed\jetified-stripe-core-21.6.0\res
+com.example.mighty_fitness.app-jetified-ui-tooling-preview-release-13 C:\Users\ricar\.gradle\caches\8.12\transforms\1becfe6d434163f6b34b84143a877710\transformed\jetified-ui-tooling-preview-release\res
+com.example.mighty_fitness.app-jetified-accompanist-themeadapter-material3-0.34.0-14 C:\Users\ricar\.gradle\caches\8.12\transforms\1cc6a8c84c5f2ed12f775deb7f340f7a\transformed\jetified-accompanist-themeadapter-material3-0.34.0\res
+com.example.mighty_fitness.app-core-runtime-2.2.0-15 C:\Users\ricar\.gradle\caches\8.12\transforms\1d33f966f1aab687e952d4b7cce6845e\transformed\core-runtime-2.2.0\res
+com.example.mighty_fitness.app-cardview-1.0.0-16 C:\Users\ricar\.gradle\caches\8.12\transforms\1ea03ff4645f48d24e3fb5a42281310d\transformed\cardview-1.0.0\res
+com.example.mighty_fitness.app-jetified-accompanist-themeadapter-core-0.34.0-17 C:\Users\ricar\.gradle\caches\8.12\transforms\1f034da711aa99947c58ebcbc4cc30ab\transformed\jetified-accompanist-themeadapter-core-0.34.0\res
+com.example.mighty_fitness.app-jetified-animation-release-18 C:\Users\ricar\.gradle\caches\8.12\transforms\1fc740350f569dd5ae3891cc118224fc\transformed\jetified-animation-release\res
+com.example.mighty_fitness.app-jetified-lifecycle-viewmodel-compose-release-19 C:\Users\ricar\.gradle\caches\8.12\transforms\240f15e0a88f934b8514b2642d00b0f2\transformed\jetified-lifecycle-viewmodel-compose-release\res
+com.example.mighty_fitness.app-jetified-tracing-1.2.0-20 C:\Users\ricar\.gradle\caches\8.12\transforms\27003765dae66b7dc3bf878451ba1684\transformed\jetified-tracing-1.2.0\res
+com.example.mighty_fitness.app-jetified-paymentsheet-21.6.0-21 C:\Users\ricar\.gradle\caches\8.12\transforms\2a1165b71607a94dafb287c14de2719c\transformed\jetified-paymentsheet-21.6.0\res
+com.example.mighty_fitness.app-jetified-firebase-common-21.0.0-22 C:\Users\ricar\.gradle\caches\8.12\transforms\2da272753831444f8032e334cfd31d8b\transformed\jetified-firebase-common-21.0.0\res
+com.example.mighty_fitness.app-jetified-datastore-core-release-23 C:\Users\ricar\.gradle\caches\8.12\transforms\31eccd218f5b1fd8272959453f411784\transformed\jetified-datastore-core-release\res
+com.example.mighty_fitness.app-swiperefreshlayout-1.1.0-24 C:\Users\ricar\.gradle\caches\8.12\transforms\32150ec382526e3003bd883391653303\transformed\swiperefreshlayout-1.1.0\res
+com.example.mighty_fitness.app-jetified-play-services-cast-framework-21.0.1-25 C:\Users\ricar\.gradle\caches\8.12\transforms\3238c583b69bed375e588edc1efbb48d\transformed\jetified-play-services-cast-framework-21.0.1\res
+com.example.mighty_fitness.app-jetified-activity-ktx-1.9.3-26 C:\Users\ricar\.gradle\caches\8.12\transforms\32f4a2813ac7c771e056d42a720055af\transformed\jetified-activity-ktx-1.9.3\res
+com.example.mighty_fitness.app-jetified-emoji2-views-helper-1.3.0-27 C:\Users\ricar\.gradle\caches\8.12\transforms\37412a42e471848212217b0cac9c0435\transformed\jetified-emoji2-views-helper-1.3.0\res
+com.example.mighty_fitness.app-jetified-credentials-1.2.0-rc01-28 C:\Users\ricar\.gradle\caches\8.12\transforms\3848899b7e93201e983882e2ba4294f0\transformed\jetified-credentials-1.2.0-rc01\res
+com.example.mighty_fitness.app-navigation-runtime-2.7.7-29 C:\Users\ricar\.gradle\caches\8.12\transforms\38fbc403ae0a558301c37fda6d7598e1\transformed\navigation-runtime-2.7.7\res
+com.example.mighty_fitness.app-jetified-stripe-3ds2-android-6.2.0-30 C:\Users\ricar\.gradle\caches\8.12\transforms\3de6b122b1bf20ec0a34fc3c657a60b1\transformed\jetified-stripe-3ds2-android-6.2.0\res
+com.example.mighty_fitness.app-jetified-stripe-ui-core-21.6.0-31 C:\Users\ricar\.gradle\caches\8.12\transforms\3fb632aaef1a7fdd06ed8f66163ff1ee\transformed\jetified-stripe-ui-core-21.6.0\res
+com.example.mighty_fitness.app-jetified-core-common-2.0.4-32 C:\Users\ricar\.gradle\caches\8.12\transforms\4174977573e4fe5ba882e1291f4fa599\transformed\jetified-core-common-2.0.4\res
+com.example.mighty_fitness.app-jetified-lifecycle-runtime-compose-release-33 C:\Users\ricar\.gradle\caches\8.12\transforms\4221ca133cb2320cffb2636a990af95d\transformed\jetified-lifecycle-runtime-compose-release\res
+com.example.mighty_fitness.app-jetified-savedstate-ktx-1.2.1-34 C:\Users\ricar\.gradle\caches\8.12\transforms\425b3275685a974b685af27ff4ed6b1d\transformed\jetified-savedstate-ktx-1.2.1\res
+com.example.mighty_fitness.app-jetified-core-1.0.0-35 C:\Users\ricar\.gradle\caches\8.12\transforms\449958d8d573c37840f9e10ca78b3740\transformed\jetified-core-1.0.0\res
+com.example.mighty_fitness.app-jetified-datastore-release-36 C:\Users\ricar\.gradle\caches\8.12\transforms\479b3bf32f00901a230d7d79262001b9\transformed\jetified-datastore-release\res
+com.example.mighty_fitness.app-jetified-financial-connections-21.6.0-37 C:\Users\ricar\.gradle\caches\8.12\transforms\48f4472e76aa067d2e752738638d59dd\transformed\jetified-financial-connections-21.6.0\res
+com.example.mighty_fitness.app-core-1.15.0-38 C:\Users\ricar\.gradle\caches\8.12\transforms\4f958ee96b464852d797ff4a06c0b43c\transformed\core-1.15.0\res
+com.example.mighty_fitness.app-jetified-lifecycle-viewmodel-savedstate-2.8.7-39 C:\Users\ricar\.gradle\caches\8.12\transforms\511957125cc1b906a05dee6838238bf7\transformed\jetified-lifecycle-viewmodel-savedstate-2.8.7\res
+com.example.mighty_fitness.app-jetified-window-java-1.2.0-40 C:\Users\ricar\.gradle\caches\8.12\transforms\51d67b28f04358995f888f3317b40779\transformed\jetified-window-java-1.2.0\res
+com.example.mighty_fitness.app-navigation-common-ktx-2.7.7-41 C:\Users\ricar\.gradle\caches\8.12\transforms\522cedf0a57fefa5edaff59d67ffed3f\transformed\navigation-common-ktx-2.7.7\res
+com.example.mighty_fitness.app-jetified-credentials-play-services-auth-1.2.0-rc01-42 C:\Users\ricar\.gradle\caches\8.12\transforms\5472a5df6f2e4e509470c3c4185f3d50\transformed\jetified-credentials-play-services-auth-1.2.0-rc01\res
+com.example.mighty_fitness.app-lifecycle-livedata-2.8.7-43 C:\Users\ricar\.gradle\caches\8.12\transforms\54c71f8b86af50ae2bc2eead2539f2dd\transformed\lifecycle-livedata-2.8.7\res
+com.example.mighty_fitness.app-jetified-ui-release-44 C:\Users\ricar\.gradle\caches\8.12\transforms\551599a3d57ba1c3cc605a057b70b760\transformed\jetified-ui-release\res
+com.example.mighty_fitness.app-jetified-lifecycle-service-2.8.7-45 C:\Users\ricar\.gradle\caches\8.12\transforms\5863caa8651ad5778f507ea622fc7f28\transformed\jetified-lifecycle-service-2.8.7\res
+com.example.mighty_fitness.app-jetified-viewpager2-1.1.0-beta02-46 C:\Users\ricar\.gradle\caches\8.12\transforms\5f4a292877ccab2046991d3686864494\transformed\jetified-viewpager2-1.1.0-beta02\res
+com.example.mighty_fitness.app-jetified-lifecycle-viewmodel-ktx-2.8.7-47 C:\Users\ricar\.gradle\caches\8.12\transforms\6212f7480f3b1e8238aade0b034a8fcd\transformed\jetified-lifecycle-viewmodel-ktx-2.8.7\res
+com.example.mighty_fitness.app-jetified-camera-core-1.3.3-48 C:\Users\ricar\.gradle\caches\8.12\transforms\65a4849c3f9c8292a22d0bd2e23bc300\transformed\jetified-camera-core-1.3.3\res
+com.example.mighty_fitness.app-jetified-annotation-experimental-1.4.1-49 C:\Users\ricar\.gradle\caches\8.12\transforms\683cbfde6a58705556f8fa87883a18e1\transformed\jetified-annotation-experimental-1.4.1\res
+com.example.mighty_fitness.app-lifecycle-livedata-core-2.8.7-50 C:\Users\ricar\.gradle\caches\8.12\transforms\6b78e5e5d04fd1ce00b64c8de20f1ba5\transformed\lifecycle-livedata-core-2.8.7\res
+com.example.mighty_fitness.app-webkit-1.12.1-51 C:\Users\ricar\.gradle\caches\8.12\transforms\6d1284f70efaea5e2f7428ac2d9ae231\transformed\webkit-1.12.1\res
+com.example.mighty_fitness.app-jetified-foundation-release-52 C:\Users\ricar\.gradle\caches\8.12\transforms\6dfd41b674b1830d568f1df045773659\transformed\jetified-foundation-release\res
+com.example.mighty_fitness.app-jetified-hcaptcha-21.6.0-53 C:\Users\ricar\.gradle\caches\8.12\transforms\6e18949c239f636943502c5b39b80d75\transformed\jetified-hcaptcha-21.6.0\res
+com.example.mighty_fitness.app-jetified-core-4.6.2-54 C:\Users\ricar\.gradle\caches\8.12\transforms\6ef08e44f76bc87f6948be315795651a\transformed\jetified-core-4.6.2\res
+com.example.mighty_fitness.app-localbroadcastmanager-1.1.0-55 C:\Users\ricar\.gradle\caches\8.12\transforms\7058885b6dd2982185c832c670598b5a\transformed\localbroadcastmanager-1.1.0\res
+com.example.mighty_fitness.app-jetified-media3-exoplayer-1.5.1-56 C:\Users\ricar\.gradle\caches\8.12\transforms\72c190e8e0a1da0cc68763429ee44e42\transformed\jetified-media3-exoplayer-1.5.1\res
+com.example.mighty_fitness.app-navigation-common-2.7.7-57 C:\Users\ricar\.gradle\caches\8.12\transforms\72e559ed4a53dd5bea534d2d62472f5b\transformed\navigation-common-2.7.7\res
+com.example.mighty_fitness.app-jetified-datastore-preferences-release-58 C:\Users\ricar\.gradle\caches\8.12\transforms\7535a935f9e65beb6c79d36312378a64\transformed\jetified-datastore-preferences-release\res
+com.example.mighty_fitness.app-transition-1.5.0-59 C:\Users\ricar\.gradle\caches\8.12\transforms\782d754970964cf1b7475ae88dbc4ce4\transformed\transition-1.5.0\res
+com.example.mighty_fitness.app-jetified-appcompat-resources-1.7.0-60 C:\Users\ricar\.gradle\caches\8.12\transforms\79210c6eb81a402c27b5e5b4c7b483da\transformed\jetified-appcompat-resources-1.7.0\res
+com.example.mighty_fitness.app-jetified-material-ripple-release-61 C:\Users\ricar\.gradle\caches\8.12\transforms\7a9298b8e4b686d0193ef622230f599b\transformed\jetified-material-ripple-release\res
+com.example.mighty_fitness.app-jetified-play-services-basement-18.5.0-62 C:\Users\ricar\.gradle\caches\8.12\transforms\7b33c4ac072486c90a47d13cee761d9b\transformed\jetified-play-services-basement-18.5.0\res
+com.example.mighty_fitness.app-jetified-location-5.1.34-63 C:\Users\ricar\.gradle\caches\8.12\transforms\7cb87c77b2fef89e9dfc4540395055b5\transformed\jetified-location-5.1.34\res
+com.example.mighty_fitness.app-jetified-savedstate-1.2.1-64 C:\Users\ricar\.gradle\caches\8.12\transforms\7f734b899c9b5bcf473e5c8a79b68b93\transformed\jetified-savedstate-1.2.1\res
+com.example.mighty_fitness.app-jetified-lifecycle-runtime-ktx-release-65 C:\Users\ricar\.gradle\caches\8.12\transforms\80bfbfb0670cbf4b9a5b18f354c88cc2\transformed\jetified-lifecycle-runtime-ktx-release\res
+com.example.mighty_fitness.app-jetified-startup-runtime-1.1.1-66 C:\Users\ricar\.gradle\caches\8.12\transforms\85879f220671a879b538e8ef16ed1744\transformed\jetified-startup-runtime-1.1.1\res
+com.example.mighty_fitness.app-media-1.7.0-67 C:\Users\ricar\.gradle\caches\8.12\transforms\86dbeb9e89d2997dabb91d940a369d9a\transformed\media-1.7.0\res
+com.example.mighty_fitness.app-jetified-payment-sdk-6.7.0-68 C:\Users\ricar\.gradle\caches\8.12\transforms\8e742092d4947891618310e6836804b7\transformed\jetified-payment-sdk-6.7.0\res
+com.example.mighty_fitness.app-jetified-camera-video-1.3.3-69 C:\Users\ricar\.gradle\caches\8.12\transforms\91cc79087d4e27931c9035927d3122a2\transformed\jetified-camera-video-1.3.3\res
+com.example.mighty_fitness.app-constraintlayout-2.2.0-70 C:\Users\ricar\.gradle\caches\8.12\transforms\926d1b2175e2d5c3bc5dce39beec6caa\transformed\constraintlayout-2.2.0\res
+com.example.mighty_fitness.app-coordinatorlayout-1.1.0-71 C:\Users\ricar\.gradle\caches\8.12\transforms\92e25ebfa9da2ff8052a055da0acd6ca\transformed\coordinatorlayout-1.1.0\res
+com.example.mighty_fitness.app-jetified-activity-1.9.3-72 C:\Users\ricar\.gradle\caches\8.12\transforms\93eeca70efd8419049cd49df8af72af1\transformed\jetified-activity-1.9.3\res
+com.example.mighty_fitness.app-appcompat-1.7.0-73 C:\Users\ricar\.gradle\caches\8.12\transforms\96765eecf42631f032c9a14940f4c5b8\transformed\appcompat-1.7.0\res
+com.example.mighty_fitness.app-jetified-camera-lifecycle-1.3.3-74 C:\Users\ricar\.gradle\caches\8.12\transforms\97288e053d427c4ea9fb57453e6ac23d\transformed\jetified-camera-lifecycle-1.3.3\res
+com.example.mighty_fitness.app-jetified-ads-adservices-java-1.1.0-beta11-75 C:\Users\ricar\.gradle\caches\8.12\transforms\99bb3b712005fd2917858cd813cd885d\transformed\jetified-ads-adservices-java-1.1.0-beta11\res
+com.example.mighty_fitness.app-jetified-camera-view-1.3.3-76 C:\Users\ricar\.gradle\caches\8.12\transforms\9a663591385f607f045acf8a662f8a3d\transformed\jetified-camera-view-1.3.3\res
+com.example.mighty_fitness.app-work-runtime-2.8.1-77 C:\Users\ricar\.gradle\caches\8.12\transforms\9afb31c75cdd321eb1d7dc2fef0c4e5a\transformed\work-runtime-2.8.1\res
+com.example.mighty_fitness.app-jetified-play-services-auth-21.1.0-78 C:\Users\ricar\.gradle\caches\8.12\transforms\9f25f32b34ee349c625687ef81bee590\transformed\jetified-play-services-auth-21.1.0\res
+com.example.mighty_fitness.app-jetified-ads-adservices-1.1.0-beta11-79 C:\Users\ricar\.gradle\caches\8.12\transforms\a1a24f4bb2c37cae8017775dcf0c1a7d\transformed\jetified-ads-adservices-1.1.0-beta11\res
+com.example.mighty_fitness.app-jetified-material-icons-core-release-80 C:\Users\ricar\.gradle\caches\8.12\transforms\a921c9e0d02600ecd1e02a70ac26f255\transformed\jetified-material-icons-core-release\res
+com.example.mighty_fitness.app-jetified-material3-1.0.1-81 C:\Users\ricar\.gradle\caches\8.12\transforms\aa448b87b72b91e97e6efd2bbe3003c1\transformed\jetified-material3-1.0.1\res
+com.example.mighty_fitness.app-jetified-lifecycle-runtime-release-82 C:\Users\ricar\.gradle\caches\8.12\transforms\ad8082b815ad637a27bc1f7391b9211e\transformed\jetified-lifecycle-runtime-release\res
+com.example.mighty_fitness.app-jetified-lifecycle-process-2.8.7-83 C:\Users\ricar\.gradle\caches\8.12\transforms\ad96eb741a92645dddd8dccfd6825e55\transformed\jetified-lifecycle-process-2.8.7\res
+com.example.mighty_fitness.app-jetified-material-release-84 C:\Users\ricar\.gradle\caches\8.12\transforms\b1bb9d5dee05ccf235c8cd1152856dba\transformed\jetified-material-release\res
+com.example.mighty_fitness.app-jetified-core-5.1.34-85 C:\Users\ricar\.gradle\caches\8.12\transforms\b3abf9e81bf1412bcaf1206d80ac473f\transformed\jetified-core-5.1.34\res
+com.example.mighty_fitness.app-jetified-foundation-layout-release-86 C:\Users\ricar\.gradle\caches\8.12\transforms\b412b0b626091f17d94bee12895bb101\transformed\jetified-foundation-layout-release\res
+com.example.mighty_fitness.app-jetified-ui-unit-release-87 C:\Users\ricar\.gradle\caches\8.12\transforms\b4da6fd454e6ecdaa7b43dca78c7a3f5\transformed\jetified-ui-unit-release\res
+com.example.mighty_fitness.app-jetified-shimmer-0.5.0-88 C:\Users\ricar\.gradle\caches\8.12\transforms\b7acfc939952e0031ce1175b2fe4d2c4\transformed\jetified-shimmer-0.5.0\res
+com.example.mighty_fitness.app-jetified-emoji2-1.3.0-89 C:\Users\ricar\.gradle\caches\8.12\transforms\b7e75b03e101770619fc6bb13ffab348\transformed\jetified-emoji2-1.3.0\res
+com.example.mighty_fitness.app-preference-1.2.1-90 C:\Users\ricar\.gradle\caches\8.12\transforms\b83b8b00b8346c9e7414a1f1298f055d\transformed\preference-1.2.1\res
+com.example.mighty_fitness.app-jetified-glide-4.16.0-91 C:\Users\ricar\.gradle\caches\8.12\transforms\b934cd912baf3247713c028244c66499\transformed\jetified-glide-4.16.0\res
+com.example.mighty_fitness.app-jetified-in-app-messages-5.1.34-92 C:\Users\ricar\.gradle\caches\8.12\transforms\bf8bf37b9a278513f31a2f4aecd6ee93\transformed\jetified-in-app-messages-5.1.34\res
+com.example.mighty_fitness.app-jetified-play-services-maps-18.0.2-93 C:\Users\ricar\.gradle\caches\8.12\transforms\c686028905d75f5b8b0ee794c81e0927\transformed\jetified-play-services-maps-18.0.2\res
+com.example.mighty_fitness.app-jetified-customview-poolingcontainer-1.0.0-94 C:\Users\ricar\.gradle\caches\8.12\transforms\c9357d05bd488135ebfd5ae8ca1f9fa5\transformed\jetified-customview-poolingcontainer-1.0.0\res
+com.example.mighty_fitness.app-jetified-ext-tables-4.6.2-95 C:\Users\ricar\.gradle\caches\8.12\transforms\caaa001fec42a05330e8403b271e723d\transformed\jetified-ext-tables-4.6.2\res
+com.example.mighty_fitness.app-jetified-accompanist-themeadapter-appcompat-0.34.0-96 C:\Users\ricar\.gradle\caches\8.12\transforms\cab6beeceb3c53481115dc300badf41d\transformed\jetified-accompanist-themeadapter-appcompat-0.34.0\res
+com.example.mighty_fitness.app-jetified-core-ktx-1.15.0-97 C:\Users\ricar\.gradle\caches\8.12\transforms\cc77f214097347dd090a046ace804f34\transformed\jetified-core-ktx-1.15.0\res
+com.example.mighty_fitness.app-jetified-payments-core-21.6.0-98 C:\Users\ricar\.gradle\caches\8.12\transforms\d1ff1569b651bde047763ffcf7623f46\transformed\jetified-payments-core-21.6.0\res
+com.example.mighty_fitness.app-work-runtime-ktx-2.8.1-99 C:\Users\ricar\.gradle\caches\8.12\transforms\d2a24f6d2c0d58470aae742f399566f4\transformed\work-runtime-ktx-2.8.1\res
+com.example.mighty_fitness.app-jetified-lifecycle-viewmodel-release-100 C:\Users\ricar\.gradle\caches\8.12\transforms\d4ac97fa1625eb25f0f50dfca8b23d95\transformed\jetified-lifecycle-viewmodel-release\res
+com.example.mighty_fitness.app-jetified-crisp-sdk-2.0.12-101 C:\Users\ricar\.gradle\caches\8.12\transforms\d61578587545d378e82155b787ecfba6\transformed\jetified-crisp-sdk-2.0.12\res
+com.example.mighty_fitness.app-sqlite-2.4.0-102 C:\Users\ricar\.gradle\caches\8.12\transforms\d9eefb7f4f9637e739fdae115bf6e19f\transformed\sqlite-2.4.0\res
+com.example.mighty_fitness.app-jetified-standard-core-1.6.51-103 C:\Users\ricar\.gradle\caches\8.12\transforms\db31292dd263126996c06b6e8612507e\transformed\jetified-standard-core-1.6.51\res
+com.example.mighty_fitness.app-jetified-navigation-compose-2.7.7-104 C:\Users\ricar\.gradle\caches\8.12\transforms\db3b8dbf5efe0a301036785d7bf87629\transformed\jetified-navigation-compose-2.7.7\res
+com.example.mighty_fitness.app-jetified-ui-geometry-release-105 C:\Users\ricar\.gradle\caches\8.12\transforms\dbfd1d4573ec12786e1cee901950cad7\transformed\jetified-ui-geometry-release\res
+com.example.mighty_fitness.app-jetified-activity-compose-1.9.3-106 C:\Users\ricar\.gradle\caches\8.12\transforms\e1cd2aa20d06bc5bbb6dfc992ae861ea\transformed\jetified-activity-compose-1.9.3\res
+com.example.mighty_fitness.app-jetified-play-services-base-18.5.0-107 C:\Users\ricar\.gradle\caches\8.12\transforms\e1f6d2e0b1aa38467964f5b59b4f29f9\transformed\jetified-play-services-base-18.5.0\res
+com.example.mighty_fitness.app-jetified-play-services-cast-21.0.1-108 C:\Users\ricar\.gradle\caches\8.12\transforms\e276345b130e23e1f2c11c04431d58d0\transformed\jetified-play-services-cast-21.0.1\res
+com.example.mighty_fitness.app-jetified-notifications-5.1.34-109 C:\Users\ricar\.gradle\caches\8.12\transforms\e339771a47873adbc868a6c552496241\transformed\jetified-notifications-5.1.34\res
+com.example.mighty_fitness.app-jetified-firebase-messaging-24.1.1-110 C:\Users\ricar\.gradle\caches\8.12\transforms\e4623bee9755d77b485c2395b1cb13f4\transformed\jetified-firebase-messaging-24.1.1\res
+com.example.mighty_fitness.app-jetified-play-services-ads-23.6.0-111 C:\Users\ricar\.gradle\caches\8.12\transforms\e5aa58ad971ef0b034990717d52ef9e6\transformed\jetified-play-services-ads-23.6.0\res
+com.example.mighty_fitness.app-jetified-fragment-ktx-1.8.6-112 C:\Users\ricar\.gradle\caches\8.12\transforms\e71e40a446ad6131a04d3ae7bf24c14c\transformed\jetified-fragment-ktx-1.8.6\res
+com.example.mighty_fitness.app-sqlite-framework-2.4.0-113 C:\Users\ricar\.gradle\caches\8.12\transforms\e7fad093ebca3fd9f8e5cd52d70a49b7\transformed\sqlite-framework-2.4.0\res
+com.example.mighty_fitness.app-fragment-1.8.6-114 C:\Users\ricar\.gradle\caches\8.12\transforms\e862fb37564ab1dc4fb7f24a74fed7b4\transformed\fragment-1.8.6\res
+com.example.mighty_fitness.app-jetified-lifecycle-livedata-core-ktx-2.8.7-115 C:\Users\ricar\.gradle\caches\8.12\transforms\e87333264a09c4cac3f29233d2781c47\transformed\jetified-lifecycle-livedata-core-ktx-2.8.7\res
+com.example.mighty_fitness.app-navigation-runtime-ktx-2.7.7-116 C:\Users\ricar\.gradle\caches\8.12\transforms\eb6d6f068d89b4991f1e6e052d6bfb39\transformed\navigation-runtime-ktx-2.7.7\res
+com.example.mighty_fitness.app-recyclerview-1.3.2-117 C:\Users\ricar\.gradle\caches\8.12\transforms\ebf709c00a834053aef92f02dbcc08de\transformed\recyclerview-1.3.2\res
+com.example.mighty_fitness.app-jetified-ui-graphics-release-118 C:\Users\ricar\.gradle\caches\8.12\transforms\ec5d9ba80ee4b36171cb136109fc44c2\transformed\jetified-ui-graphics-release\res
+com.example.mighty_fitness.app-mediarouter-1.3.1-119 C:\Users\ricar\.gradle\caches\8.12\transforms\ed8a6b56fd70781c556ccd1ae4238f34\transformed\mediarouter-1.3.1\res
+com.example.mighty_fitness.app-jetified-lifecycle-livedata-ktx-2.8.7-120 C:\Users\ricar\.gradle\caches\8.12\transforms\f1b995e5be976aed474037caaaa3931d\transformed\jetified-lifecycle-livedata-ktx-2.8.7\res
+com.example.mighty_fitness.app-jetified-android-gif-drawable-1.2.28-121 C:\Users\ricar\.gradle\caches\8.12\transforms\f40c4f8c7b6abff6dd444773138fd308\transformed\jetified-android-gif-drawable-1.2.28\res
+com.example.mighty_fitness.app-jetified-play-services-wallet-19.4.0-122 C:\Users\ricar\.gradle\caches\8.12\transforms\f431771b345c774ff4b549faa3e80f1d\transformed\jetified-play-services-wallet-19.4.0\res
+com.example.mighty_fitness.app-jetified-runtime-release-123 C:\Users\ricar\.gradle\caches\8.12\transforms\f658f1979ff63f3bbda7e87bb1448145\transformed\jetified-runtime-release\res
+com.example.mighty_fitness.app-jetified-payments-model-21.6.0-124 C:\Users\ricar\.gradle\caches\8.12\transforms\f70572f4536b7a23c8f0b940ad6a0278\transformed\jetified-payments-model-21.6.0\res
+com.example.mighty_fitness.app-slidingpanelayout-1.2.0-125 C:\Users\ricar\.gradle\caches\8.12\transforms\f71e40716bc29995f4cada24da499d83\transformed\slidingpanelayout-1.2.0\res
+com.example.mighty_fitness.app-material-1.12.0-126 C:\Users\ricar\.gradle\caches\8.12\transforms\fb6f04d2bdd941eadeed6b3a0071eee6\transformed\material-1.12.0\res
+com.example.mighty_fitness.app-jetified-play-services-ads-lite-23.6.0-127 C:\Users\ricar\.gradle\caches\8.12\transforms\fc83ed23dd70c2212cc258f35335ac1d\transformed\jetified-play-services-ads-lite-23.6.0\res
+com.example.mighty_fitness.app-jetified-payments-ui-core-21.6.0-128 C:\Users\ricar\.gradle\caches\8.12\transforms\feb00ae4bb5f89e52ae2b91b3709ae74\transformed\jetified-payments-ui-core-21.6.0\res
+com.example.mighty_fitness.app-jetified-accompanist-themeadapter-material-0.34.0-129 C:\Users\ricar\.gradle\caches\8.12\transforms\ff0ac53c163d40e5b1f44ed72ca62f06\transformed\jetified-accompanist-themeadapter-material-0.34.0\res
+com.example.mighty_fitness.app-debug-130 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\android\app\src\debug\res
+com.example.mighty_fitness.app-main-131 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\android\app\src\main\res
+com.example.mighty_fitness.app-pngs-132 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\app\generated\res\pngs\debug
+com.example.mighty_fitness.app-resValues-133 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\app\generated\res\resValues\debug
+com.example.mighty_fitness.app-packageDebugResources-134 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\app\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.mighty_fitness.app-packageDebugResources-135 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\app\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.mighty_fitness.app-debug-136 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\app\intermediates\merged_res\debug\mergeDebugResources
+com.example.mighty_fitness.app-debug-137 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\audioplayers_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-138 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\awesome_notifications\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-139 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\cloud_firestore\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-140 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\connectivity_plus\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-141 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\crisp_chat\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-142 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\device_info_plus\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-143 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\file_picker\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-144 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\firebase_analytics\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-145 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\firebase_auth\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-146 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\firebase_core\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-147 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\firebase_crashlytics\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-148 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\firebase_messaging\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-149 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\firebase_storage\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-150 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\flutter_chrome_cast\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-151 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\flutter_inappwebview_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-152 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\flutter_native_splash\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-153 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\flutter_paytabs_bridge\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-154 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-155 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\flutter_tts\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-156 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\fluttertoast\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-157 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\google_mobile_ads\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-158 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\google_sign_in_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-159 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\image_picker_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-160 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\onesignal_flutter\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-161 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\package_info_plus\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-162 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\path_provider_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-163 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\pedometer\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-164 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\permission_handler_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-165 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\razorpay_flutter\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-166 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\share_plus\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-167 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\shared_preferences_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-168 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\simple_pip_mode\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-169 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\sqflite_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-170 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\stripe_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-171 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\url_launcher_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-172 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\video_player_android\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-173 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\wakelock_plus\intermediates\packaged_res\debug\packageDebugResources
+com.example.mighty_fitness.app-debug-174 C:\Users\ricar\OneDrive\Documentos\Feature Plataforma fitness\Feature_plataforma_fitness01\build\webview_flutter_android\intermediates\packaged_res\debug\packageDebugResources

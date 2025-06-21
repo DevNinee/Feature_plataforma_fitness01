@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Ein tími síðani
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d tímar síðani
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Ein minuttur síðani
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d minuttir síðani
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Ein tími
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d tímar
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			ein_minutt
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d minuttir
+		</item>
+	</plurals>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">Tú stavaði tín teldupost skeivt, kanst tú kanna hann?</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">Nýggj boð niðanfyri. Trýst fyri at síggja.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">Vit eru ikki online. Vit senda tær teldupost.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">Takk! Við eiga at svara heilt skjótt.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">Vinarliga fyll út formin áðrenn tú heldur fram.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">Trýst fyri at skriva tín teldupost fyri at fáa boð.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">Vinarliga skriva tín teldupost fyri at halda fram.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">Trýst fyri at seta tína telefon til at fáa boð.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">Vinarliga skriva títt telefonnummar fyri at halda fram.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">Hevur tú viðmerkingar?</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">Send tína reyting</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">Hvussu kláraðu vit okkum?</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">Ein feilur hendi meðan fílan var uppsend. Royn aftur.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">Daglig mongd av innlesing er rokkin. Royn aftur seinni.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">Fílan er ov stór. Minka fíluna og royn at senda aftur.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">Send eina fílu</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">Fyrireikar</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">Innlesur</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">Reyta hetta kjattið</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">Kjattið er ikki tøkt.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">Skriva tíni boð…</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">Send</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">Innset eina emoji</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">At skifta vindeyga áðrenn ljóðupptøkan er send merkir at upptøkan er horvin.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">Fekk ikki upptikið ljóð við mikrofonini. Gavst tú loyvi til atgongd?</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">Ljóðboð</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">Steðga at spæla</string>
+    <string name="crisp_sdk_chat_chat_header_channels">Fleiri kanalir</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">Mest lisnu greinir</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">Leiting eftir greinum</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">og %1$s afturat</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">Kjatta</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">Hjálparsíða</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">Halt fram á %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">Teldupostur</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">Telefon</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">frá</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">Hjálpari er burturfrá</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">Var virkin fyri %1$s síðani</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">Svarar vanliga innan %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">Hjálpari er online</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">Sí okkara statussíðu</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">fyri fleiri dagføringar.</string>
+    <string name="crisp_sdk_chat_chat_health_main">Onkrar av okkara tænastum eru óvirknar.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">Einki leitiúrslit. Royn onnur leitiorð.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">Leita í okkara hjálparsíðu…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">Ongar greinir eru á hjálparsíðuni í løtuni.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">Vís á hjálparsíðu</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">Fekk ikki spælt ljóðfíluna. Hon kann vera útgingin.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">Sending misseydnaðist. Royn aftur?</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">Viðheft fíla</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">Lisið!</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">Onkur boð eru ikki send. Gert tú handlingar í kaganum meðan sent verður, verða boðini ikki send.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">Rættað</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">Luttakari</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">Umsett</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">Vilt tú reyta okkara hjálp?</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">Takk fyri at tú kjattaði við okkum.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">Nei takk</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">Reyta hjálp</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">Takk fyri tína afturmelding!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">Meðan tú bíðar, vilt tú spæla eitt spæl?</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">Hmmm, hetta tekur okkum eina løtu, sær tað út til.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">Nei takk</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">Spæl eitt spæl</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">Hvussu skulu vit seta okkum í samband við teg?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">Hvør er tín teldupostur?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">Skriva tín teldupost…</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">Skriva títt telefonnummar…</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">Hvat er títt telefonnummar?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">Um tú fert frá ella vit svara seinni:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">Teldupostur</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">Telefon</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">Offline. Vinaliga innles síðuna av nýggjum.</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">Offline. Tú vart óvirkin eina løtu.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">Eingi boð kunnu móttakast ella sendast í løtuni.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">Send eini boð fyri at Kjatta víðari.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">Sambandið er slitið. Sambindur aftur…</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">Einki úrslit. Royn at leita aftur.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">Finn GIFar…</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFar</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">Smileys</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">Sambinding miseydnaðist. Kjattið kann vera óvirkið í løtuni.</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">Skriva títt svar</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">Boð frá</string>
+    <string name="crisp_sdk_date_now">Beint nú</string>
+    <string name="crisp_sdk_date_second">Fá sekund síðani</string>
+    <string name="crisp_sdk_duration_days">Nakrir dagar</string>
+    <string name="crisp_sdk_duration_now">Nú</string>
+    <string name="crisp_sdk_duration_second">Um fá sekund</string>
+    <string name="crisp_sdk_theme_text_1_chat">Hevur tú ein spurning? Kjatta við meg!</string>
+    <string name="crisp_sdk_theme_text_2_chat">Spyr okkum her!</string>
+    <string name="crisp_sdk_theme_text_3_chat">Spyr meg tín spurning!</string>
+    <string name="crisp_sdk_theme_text_4_chat">Kjatta við hjálpara</string>
+    <string name="crisp_sdk_theme_text_default_chat">Hevur tú ein spurning? Kjatta við okkum!</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">Hey, vilt tú kjatta við okkum?</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">Hevur tú ein spurning?</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">Hey, spyr okkum einhvønn spurning um %1$s.</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">Hey, hvussu kann eg hjálpa tær?</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">Hevur tú spurningar um %1$s?</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">Hvussu kunnu vit hjálpa %1$s?</string>
+</resources>

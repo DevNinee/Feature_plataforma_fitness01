@@ -20,7 +20,7 @@ class ViewAllDiet extends StatefulWidget {
   final bool? isAssign;
   final bool? isFav;
 
-  ViewAllDiet({this.isFeatured = false, this.isCategory, this.mCategoryId, this.mTitle, this.isFav = false, this.isAssign = false});
+  const ViewAllDiet({super.key, this.isFeatured = false, this.isCategory, this.mCategoryId, this.mTitle, this.isFav = false, this.isAssign = false});
 
   @override
   _ViewAllDietState createState() => _ViewAllDietState();
@@ -81,7 +81,7 @@ class _ViewAllDietState extends State<ViewAllDiet> {
   Widget build(BuildContext context) {
     print("dfgdfgdfgdfgdfg");
     return Scaffold(
-      appBar: widget.isAssign == true || widget.isFav == true ? PreferredSize(preferredSize: Size.fromHeight(0), child: SizedBox()) : appBarWidget(widget.mTitle.validate(), context: context),
+      appBar: widget.isAssign == true || widget.isFav == true ? const PreferredSize(preferredSize: Size.fromHeight(0), child: SizedBox()) : appBarWidget(widget.mTitle.validate(), context: context),
       body: Stack(
         children: [
           mDietList.isNotEmpty
@@ -104,10 +104,10 @@ class _ViewAllDietState extends State<ViewAllDiet> {
                   },
                 )
               : NoDataScreen(mTitle: languages.lblResultNoFound).visible(!appStore.isLoading),
-          Loader().center().visible(appStore.isLoading)
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
-      bottomNavigationBar: userStore.adsBannerDetailShowBannerAdsOnDiet == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : SizedBox(),
+      bottomNavigationBar: userStore.adsBannerDetailShowBannerAdsOnDiet == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : const SizedBox(),
     );
   }
 }

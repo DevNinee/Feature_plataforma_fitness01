@@ -25,7 +25,7 @@ class ChattingScreen extends StatefulWidget {
 
   final bool isDirect;
 
-  ChattingScreen({this.isDirect = false});
+  const ChattingScreen({super.key, this.isDirect = false});
 
   @override
   _ChattingScreenState createState() => _ChattingScreenState();
@@ -74,7 +74,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
 
   void statusListener(String status) {
     setState(() {
-      lastStatus = "$status";
+      lastStatus = status;
     });
   }
 
@@ -179,11 +179,11 @@ class _ChattingScreenState extends State<ChattingScreen> {
             height: context.height(),
             width: context.width(),
             margin: EdgeInsets.only(bottom: 66 + (isShowOption ? 50 : 0)),
-            padding: EdgeInsets.only(left: 16, right: 16),
+            padding: const EdgeInsets.only(left: 16, right: 16),
             child: ListView.separated(
-              separatorBuilder: (_, i) => Divider(color: Colors.transparent),
+              separatorBuilder: (_, i) => const Divider(color: Colors.transparent),
               reverse: true,
-              padding: EdgeInsets.only(bottom: 8, top: 16),
+              padding: const EdgeInsets.only(bottom: 8, top: 16),
               controller: scrollController,
               itemCount: questionAnswers.length,
               itemBuilder: (_, index) {
@@ -231,7 +231,7 @@ class _ChattingScreenState extends State<ChattingScreen> {
                       child: IconButton(
                         highlightColor: Colors.transparent,
                         splashColor: Colors.transparent,
-                        icon: Icon(Icons.send, size: 16, color: Colors.white),
+                        icon: const Icon(Icons.send, size: 16, color: Colors.white),
                         onPressed: () {
                           if (msgController.text.isNotEmpty) {
                             sendMessage();

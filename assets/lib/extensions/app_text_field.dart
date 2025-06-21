@@ -80,7 +80,7 @@ class AppTextField extends StatefulWidget {
   final String? errorInvalidURL;
   final String? errorInvalidUsername;
 
-  AppTextField({
+  const AppTextField({
     this.controller,
     required this.textFieldType,
     this.decoration,
@@ -129,8 +129,8 @@ class AppTextField extends StatefulWidget {
     this.suffixPasswordVisibleWidget,
     this.suffixPasswordInvisibleWidget,
     this.contextMenuBuilder,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _AppTextFieldState createState() => _AppTextFieldState();
@@ -152,7 +152,7 @@ class _AppTextFieldState extends State<AppTextField> {
       } else if (widget.textFieldType == TextFieldType.PASSWORD) {
         return (s) {
           if (s!.trim().isEmpty) return widget.errorThisFieldRequired.validate(value: errorThisFieldRequired);
-          if (s.trim().length < passwordLengthGlobal) return widget.errorMinimumPasswordLength.validate(value: languages.lblMinimumPasswordLengthShouldBe + ' ' + '$passwordLengthGlobal');
+          if (s.trim().length < passwordLengthGlobal) return widget.errorMinimumPasswordLength.validate(value: '${languages.lblMinimumPasswordLengthShouldBe} $passwordLengthGlobal');
           return null;
         };
       } else if (widget.textFieldType == TextFieldType.NAME || widget.textFieldType == TextFieldType.PHONE || widget.textFieldType == TextFieldType.NUMBER) {
@@ -302,7 +302,7 @@ class _AppTextFieldState extends State<AppTextField> {
           ? (widget.decoration!.copyWith(
               suffixIcon: suffixIcon(),
             ))
-          : InputDecoration(),
+          : const InputDecoration(),
       focusNode: widget.focus,
       style: widget.textStyle ?? primaryTextStyle(),
       textAlign: widget.textAlign ?? TextAlign.start,
@@ -316,13 +316,13 @@ class _AppTextFieldState extends State<AppTextField> {
       maxLength: widget.maxLength,
       enableSuggestions: widget.enableSuggestions.validate(value: true),
       autofillHints: widget.autoFillHints ?? applyAutofillHints(),
-      scrollPadding: widget.scrollPadding ?? EdgeInsets.all(20),
+      scrollPadding: widget.scrollPadding ?? const EdgeInsets.all(20),
       cursorWidth: widget.cursorWidth.validate(value: 2.0),
       cursorHeight: widget.cursorHeight,
       cursorRadius: radiusCircular(4),
       onTap: widget.onTap,
       buildCounter: widget.buildCounter,
-      scrollPhysics: BouncingScrollPhysics(),
+      scrollPhysics: const BouncingScrollPhysics(),
       enableInteractiveSelection: true,
       inputFormatters: widget.inputFormatters,
       textAlignVertical: widget.textAlignVertical,

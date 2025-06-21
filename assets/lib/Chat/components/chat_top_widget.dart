@@ -26,7 +26,7 @@ import '../screen/chat_user_profile_screen.dart';
 class ChatAppBarWidget extends StatefulWidget {
   final UserModel? receiverUser;
 
-  ChatAppBarWidget({required this.receiverUser});
+  const ChatAppBarWidget({super.key, required this.receiverUser});
 
   @override
   ChatAppBarWidgetState createState() => ChatAppBarWidgetState();
@@ -90,7 +90,7 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
                   onTap: () {
                     Navigator.of(context).popUntil((route) => route.isFirst);
                   },
-                  child: Icon(Icons.arrow_back, color: whiteColor),
+                  child: const Icon(Icons.arrow_back, color: whiteColor),
                 ),
                 8.width,
                 InkWell(
@@ -106,7 +106,7 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
                               data.profileImage!.isNotEmpty)
                           ? Hero(
                               tag: data.uid??'',
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                   radius: 22,
                                   backgroundImage: AssetImage(ic_profile)),
                             )
@@ -142,8 +142,7 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
                           ? Text('Online',
                               style: secondaryTextStyle(color: Colors.white70))
                           : Marquee(
-                        text: "Last seen" +
-                            " ${getTime(data.lastSeen?.validate() ?? 0)}",
+                        text: "Last seen" " ${getTime(data.lastSeen?.validate() ?? 0)}",
                         style: secondaryTextStyle(size: 12, color:  Colors.white70),
                         scrollAxis: Axis.horizontal,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -163,8 +162,8 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
       actions: [
         PopupMenuButton(
           padding: EdgeInsets.zero,
-          offset: Offset(10, -40),
-          icon: Icon(Icons.more_vert, color: whiteColor),
+          offset: const Offset(10, -40),
+          icon: const Icon(Icons.more_vert, color: whiteColor),
           color: white,
           onSelected: (dynamic value) async {
             if (value == 1) {
@@ -181,8 +180,7 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
                 showConfirmDialogCustom(
                   context,
                   dialogAnimation: DialogAnimation.SCALE,
-                  title: "Block" +
-                      " ${widget.receiverUser?.firstName??''}?",
+                  title: "Block" " ${widget.receiverUser?.firstName??''}?",
                   subTitle:
                       "Blocked contact will no longer be able to call you or send you messages.",
                   onAccept: (v) {
@@ -194,7 +192,7 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
                     decoration: boxDecorationDefault(
                         color: primaryLightColor,
                         borderRadius: BorderRadius.circular(40)),
-                    child: Icon(Icons.block, size: 28, color: primaryColor),
+                    child: const Icon(Icons.block, size: 28, color: primaryColor),
                   ),
                   positiveText: "Block",
                   negativeText: "Cancel",
@@ -215,7 +213,7 @@ class ChatAppBarWidgetState extends State<ChatAppBarWidget> {
                   decoration: boxDecorationDefault(
                       color: primaryLightColor,
                       borderRadius: BorderRadius.circular(40)),
-                  child: Icon(Icons.clear, size: 28, color: primaryColor),
+                  child: const Icon(Icons.clear, size: 28, color: primaryColor),
                 ),
                 onAccept: (v) {
                   chatMessageService

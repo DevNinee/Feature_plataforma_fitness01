@@ -16,14 +16,14 @@ import 'package:top_snackbar_flutter/custom_snack_bar.dart';
 import 'package:top_snackbar_flutter/top_snack_bar.dart';
 
 class GameHomeScreen extends StatefulWidget {
-  GameHomeScreen({Key? key}) : super(key: key);
+  const GameHomeScreen({super.key});
 
   @override
   State<GameHomeScreen> createState() => _GameHomeScreenState();
 }
 
 class _GameHomeScreenState extends State<GameHomeScreen> {
-  final buttonStyle = ElevatedButton.styleFrom(padding: EdgeInsets.fromLTRB(75, 5, 75, 5));
+  final buttonStyle = ElevatedButton.styleFrom(padding: const EdgeInsets.fromLTRB(75, 5, 75, 5));
 
   var  colorizeColors = [
     Colors.black,
@@ -32,7 +32,7 @@ class _GameHomeScreenState extends State<GameHomeScreen> {
     Colors.red,
   ];
 
-  var colorizeTextStyle = TextStyle(
+  var colorizeTextStyle = const TextStyle(
     fontSize: 25,
     fontWeight: FontWeight.bold,
   );
@@ -96,7 +96,7 @@ class _GameHomeScreenState extends State<GameHomeScreen> {
           onTap: () {
             finish(context);
           },
-          child: Icon(
+          child: const Icon(
             Octicons.chevron_left,
             color: primaryColor,
             size: 28,
@@ -135,7 +135,6 @@ class _GameHomeScreenState extends State<GameHomeScreen> {
               Lottie.asset('assets/mindgif.json', width: 300, height: 300),
               50.height,
               ElevatedButton(
-                child: Text('Start', style: primaryTextStyle(weight: FontWeight.bold, size: 18, color: appStore.isDarkMode ? Colors.white : scaffoldColorDark)),
                 onPressed: () async {
                   final canClick = await _canClick();
                   if (canClick) {
@@ -144,7 +143,7 @@ class _GameHomeScreenState extends State<GameHomeScreen> {
                   } else {
                     final hoursSinceLastClick = await _getHoursSinceLastClick();
                     final hoursRemaining = 24 - (hoursSinceLastClick ?? 0);
-                    print("---------121>>>${hoursRemaining}");
+                    print("---------121>>>$hoursRemaining");
                     showTopSnackBar(
                       Overlay.of(context),
                       CustomSnackBar.success(
@@ -156,6 +155,7 @@ class _GameHomeScreenState extends State<GameHomeScreen> {
                   }
                 },
                 style: buttonStyle,
+                child: Text('Start', style: primaryTextStyle(weight: FontWeight.bold, size: 18, color: appStore.isDarkMode ? Colors.white : scaffoldColorDark)),
               )
             ],
           ),

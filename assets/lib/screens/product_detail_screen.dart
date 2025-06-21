@@ -23,7 +23,7 @@ class ProductDetailScreen extends StatefulWidget {
   static String tag = '/productDetailScreen';
   final ProductModel? productModel;
 
-  ProductDetailScreen({this.productModel});
+  const ProductDetailScreen({super.key, this.productModel});
 
   @override
   ProductDetailScreenState createState() => ProductDetailScreenState();

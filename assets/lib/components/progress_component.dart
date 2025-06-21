@@ -26,7 +26,7 @@ class ProgressComponent extends StatefulWidget {
   final String? mUnit;
   final Function? onCall;
 
-  ProgressComponent({this.mGraphModel, this.mType, this.mUnit, this.onCall});
+  const ProgressComponent({super.key, this.mGraphModel, this.mType, this.mUnit, this.onCall});
 
   @override
   ProgressComponentState createState() => ProgressComponentState();
@@ -101,16 +101,16 @@ class ProgressComponentState extends State<ProgressComponent> {
     return Padding(
       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxHeight: 500),
+        constraints: const BoxConstraints(maxHeight: 500),
         child: Container(
           decoration: boxDecorationWithRoundedCorners(
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(18), topRight: Radius.circular(18)),
+            borderRadius: const BorderRadius.only(topLeft: Radius.circular(18), topRight: Radius.circular(18)),
             backgroundColor: appStore.isDarkMode ? cardDarkColor : cardLightColor,
           ),
           child: Form(
             key: formKey,
             child: SingleChildScrollView(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -125,7 +125,7 @@ class ProgressComponentState extends State<ProgressComponent> {
                         },
                         child: Container(
                           decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: appStore.isDarkMode ? cardDarkColor : context.cardColor),
-                          padding: EdgeInsets.all(2),
+                          padding: const EdgeInsets.all(2),
                           child: Icon(Icons.close, color: appStore.isDarkMode ? cardLightColor : cardDarkColor),
                         ),
                       )
@@ -152,7 +152,7 @@ class ProgressComponentState extends State<ProgressComponent> {
                       setState(() {});
                     },
                     onTap: () async {
-                      FocusScope.of(context).requestFocus(new FocusNode());
+                      FocusScope.of(context).requestFocus(FocusNode());
                       pickedDate = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2000), lastDate: DateTime.now());
                       if (pickedDate != null) {
                         print(pickedDate);
@@ -164,7 +164,7 @@ class ProgressComponentState extends State<ProgressComponent> {
                       } else {}
                     },
                     readOnly: true,
-                    suffix: Icon(Icons.calendar_today),
+                    suffix: const Icon(Icons.calendar_today),
                     decoration: defaultInputDecoration(context, label: languages.lblDate),
                     validator: (s) {
                       if (s!.trim().isEmpty) return errorThisFieldRequired;

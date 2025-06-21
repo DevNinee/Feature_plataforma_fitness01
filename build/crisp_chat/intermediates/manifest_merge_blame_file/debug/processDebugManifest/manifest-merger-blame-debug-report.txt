@@ -1,0 +1,11 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.alaminkarno.flutter_crisp_chat" >
+4
+5    <uses-sdk android:minSdkVersion="21" />
+6
+7    <uses-permission android:name="android.permission.INTERNET" />
+7-->C:\Users\ricar\AppData\Local\Pub\Cache\hosted\pub.dev\crisp_chat-2.3.0\android\src\main\AndroidManifest.xml:4:1-62
+7-->C:\Users\ricar\AppData\Local\Pub\Cache\hosted\pub.dev\crisp_chat-2.3.0\android\src\main\AndroidManifest.xml:4:18-60
+8
+9</manifest>

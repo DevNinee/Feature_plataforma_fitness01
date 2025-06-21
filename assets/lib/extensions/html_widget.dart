@@ -25,10 +25,10 @@ class HtmlWidget extends StatelessWidget {
   final Color? color;
   final int? size;
 
-  HtmlWidget({this.postContent, this.color, this.size});
+  const HtmlWidget({super.key, this.postContent, this.color, this.size});
 
   void printContent() {
-    debugPrint("POST CONTENT::::: ${postContent}");
+    debugPrint("POST CONTENT::::: $postContent");
   }
 
   @override
@@ -55,9 +55,9 @@ class HtmlWidget extends StatelessWidget {
             border: Border(
                 bottom: BorderSide(color: Colors.black45.withOpacity(0.5)))),
         "th": Style(
-            padding: EdgeInsets.all(6),
+            padding: const EdgeInsets.all(6),
             backgroundColor: Colors.black45.withOpacity(0.5)),
-        "td": Style(padding: EdgeInsets.all(6), alignment: Alignment.center),
+        "td": Style(padding: const EdgeInsets.all(6), alignment: Alignment.center),
         'embed': Style(
             color: color ?? transparentColor,
             fontStyle: FontStyle.italic,
@@ -131,7 +131,7 @@ class HtmlWidget extends StatelessWidget {
           color: color ?? textPrimaryColorGlobal,
           fontSize: FontSize(
               getIntAsync(FONT_SIZE_PREF, defaultValue: size ?? 16).toDouble()),
-          padding: EdgeInsets.only(left: 16),
+          padding: const EdgeInsets.only(left: 16),
           margin: EdgeInsets.zero,
           alignment: Alignment.centerLeft,
         ),
@@ -206,7 +206,7 @@ class HtmlWidget extends StatelessWidget {
                     .toDouble())),
         'img': Style(
             width: context.width(),
-            padding: EdgeInsets.only(bottom: 8),
+            padding: const EdgeInsets.only(bottom: 8),
             fontSize: FontSize(
                 getIntAsync(FONT_SIZE_PREF, defaultValue: size ?? 16)
                     .toDouble())),
@@ -234,7 +234,7 @@ class HtmlWidget extends StatelessWidget {
           log("=======================");
           log(renderContext.tree.element!.innerHtml);
           if (renderContext.tree.element!.innerHtml.contains('youtu.be')) {
-            log("${renderContext.tree.element!.innerHtml.splitBetween('<div class="wp-block-embed__wrapper">', "</div>")}");
+            log(renderContext.tree.element!.innerHtml.splitBetween('<div class="wp-block-embed__wrapper">', "</div>"));
             return YouTubeEmbedWidget(renderContext.tree.element!.innerHtml
                 .splitBetween('<div class="wp-block-embed__wrapper">', "</div>")
                 .replaceAll('<br>', '')
@@ -245,7 +245,7 @@ class HtmlWidget extends StatelessWidget {
                 .replaceAll('<br>', '')
                 .splitAfter('com/'));
           } else if (renderContext.tree.element!.innerHtml.contains('audio')) {
-            return Container(
+            return SizedBox(
                 width: context.width(),
                 child: Html(
                   data: renderContext.tree.element!.innerHtml,

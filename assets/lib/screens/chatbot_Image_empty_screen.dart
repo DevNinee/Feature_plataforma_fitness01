@@ -10,7 +10,7 @@ class ChatbotImageEmptyScreen extends StatefulWidget {
   final bool isScroll;
 
 
-  ChatbotImageEmptyScreen({Key? key, required this.onTap, this.isScroll = false}) : super(key: key);
+  const ChatbotImageEmptyScreen({super.key, required this.onTap, this.isScroll = false});
 
   @override
   State<ChatbotImageEmptyScreen> createState() => _ChatbotImageEmptyScreenState();

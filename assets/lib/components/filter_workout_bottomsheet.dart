@@ -53,7 +53,7 @@ class _FilterWorkoutBottomSheetState extends State<FilterWorkoutBottomSheet> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
+                        const Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
                           finish(context);
                         }),
                         16.width,
@@ -79,9 +79,9 @@ class _FilterWorkoutBottomSheetState extends State<FilterWorkoutBottomSheet> {
                     ).paddingSymmetric(horizontal: 16, vertical: 16),
                     AnimatedListView(
                       itemCount: widget.mWorkoutTypesList!.length,
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
                         if (widget.mWorkoutTypesList?[index].select == true) {
                           if (!mWorkoutIdList.contains(widget.mWorkoutTypesList?[index].id.validate())) {
@@ -94,7 +94,7 @@ class _FilterWorkoutBottomSheetState extends State<FilterWorkoutBottomSheet> {
                         return Row(
                           children: [
                             Text(widget.mWorkoutTypesList![index].title.validate(), style: primaryTextStyle()).expand(),
-                            widget.mWorkoutTypesList![index].select == true ? Icon(Ionicons.md_checkbox, color: primaryColor) : Icon(MaterialCommunityIcons.checkbox_blank_outline, color: primaryColor)
+                            widget.mWorkoutTypesList![index].select == true ? const Icon(Ionicons.md_checkbox, color: primaryColor) : const Icon(MaterialCommunityIcons.checkbox_blank_outline, color: primaryColor)
                           ],
                         ).paddingSymmetric(vertical: 8).onTap(() async {
                           widget.mWorkoutTypesList?[index].select = !widget.mWorkoutTypesList![index].select.validate();
@@ -133,7 +133,7 @@ class _FilterWorkoutBottomSheetState extends State<FilterWorkoutBottomSheet> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
+                        const Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
                           finish(context);
                         }),
                         16.width,
@@ -159,9 +159,9 @@ class _FilterWorkoutBottomSheetState extends State<FilterWorkoutBottomSheet> {
                     ).paddingSymmetric(horizontal: 16, vertical: 16),
                     AnimatedListView(
                       itemCount: widget.mLevelList!.length,
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
                         if (widget.mLevelList![index].select == true) {
                           if (!mLevelIdList.contains(widget.mLevelList![index].id.validate())) {
@@ -173,7 +173,7 @@ class _FilterWorkoutBottomSheetState extends State<FilterWorkoutBottomSheet> {
                         return Row(
                           children: [
                             Text(widget.mLevelList![index].title.validate(), style: primaryTextStyle()).expand(),
-                            widget.mLevelList![index].select == true ? Icon(Ionicons.md_checkbox, color: primaryColor) : Icon(MaterialCommunityIcons.checkbox_blank_outline, color: primaryColor),
+                            widget.mLevelList![index].select == true ? const Icon(Ionicons.md_checkbox, color: primaryColor) : const Icon(MaterialCommunityIcons.checkbox_blank_outline, color: primaryColor),
                           ],
                         ).paddingSymmetric(vertical: 8).onTap(() async {
                           widget.mLevelList![index].select = !widget.mLevelList![index].select.validate();

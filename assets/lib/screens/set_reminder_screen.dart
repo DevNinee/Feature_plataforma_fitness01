@@ -24,7 +24,7 @@ class SetReminderScreen extends StatefulWidget {
 
   final bool? isDaily;
 
-  SetReminderScreen({this.isDaily = false});
+  const SetReminderScreen({super.key, this.isDaily = false});
 
   @override
   SetReminderScreenState createState() => SetReminderScreenState();
@@ -81,7 +81,7 @@ class SetReminderScreenState extends State<SetReminderScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               hourMinute12H(),
-              Divider(),
+              const Divider(),
               8.height,
               if (widget.isDaily != true)
                 Column(
@@ -96,7 +96,7 @@ class SetReminderScreenState extends State<SetReminderScreen> {
                         itemCount: weekdays.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Container(
-                                  padding: EdgeInsets.all(12),
+                                  padding: const EdgeInsets.all(12),
                                   decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: selectedDay == index ? primaryColor : primaryOpacity),
                                   child: Text(weekdays[index].substring(0, 1).toUpperCase(), style: boldTextStyle(color: selectedDay == index ? white : primaryColor)).center())
                               .onTap(() {
@@ -181,7 +181,7 @@ class SetReminderScreenState extends State<SetReminderScreen> {
   }
 
   Widget hourMinute12H() {
-    return new TimePickerSpinner(
+    return TimePickerSpinner(
       spacing: 50,
       normalTextStyle: boldTextStyle(size: 24, color: textColor),
       highlightedTextStyle: boldTextStyle(size: 28),

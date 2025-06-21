@@ -15,6 +15,8 @@ import '../utils/app_images.dart';
 class BMRComponent extends StatefulWidget {
   static String tag = '/BMRComponent';
 
+  const BMRComponent({super.key});
+
   @override
   BMRComponentState createState() => BMRComponentState();
 }
@@ -44,7 +46,7 @@ class BMRComponentState extends State<BMRComponent> {
 
   //Convert lbs to kg
   void convertLbsToKg() {
-    print("user weight->" + userStore.weight.toString());
+    print("user weight->${userStore.weight}");
     double a = double.parse(userStore.weight.toString()) * 2.2046;
     mKg = userStore.weightUnit == LBS ? a : double.parse(userStore.weight.validate());
   }
@@ -62,8 +64,8 @@ class BMRComponentState extends State<BMRComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 8),
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       decoration:
           appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(16), backgroundColor: context.cardColor) : boxDecorationRoundedWithShadow(16, backgroundColor: context.cardColor),
       child: Column(
@@ -74,7 +76,7 @@ class BMRComponentState extends State<BMRComponent> {
             children: [
               Container(
                 decoration: boxDecorationWithRoundedCorners(borderRadius: radius(8), backgroundColor: appStore.isDarkMode ? Colors.black : Colors.white),
-                padding: EdgeInsets.all(6),
+                padding: const EdgeInsets.all(6),
                 child: Image.asset(ic_bmr, width: 22, height: 22, color: primaryColor),
               ),
               Text(languages.lblBmr, style: boldTextStyle(color: appStore.isDarkMode ? primaryColor : black), overflow: TextOverflow.ellipsis, maxLines: 2),

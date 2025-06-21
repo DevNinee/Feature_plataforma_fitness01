@@ -9,7 +9,7 @@ import 'dart:collection';
 /// By using it, You can emit values to any stream with data value from anywhere in the application.
 /// Observers will receive data events when the value of subscribed stream is updated.
 class LiveStream {
-  _DataStore? _mStorage = _DataStore.getInstance();
+  final _DataStore? _mStorage = _DataStore.getInstance();
 
   /// Sets a new value [value] to the data stream [stream].
   /// If there are active subscribers, the value will be dispatched to them.
@@ -45,7 +45,7 @@ class _DataStore {
   static _DataStore? _instance;
 
   // Map instance to store data values with data stream.
-  HashMap<String, _DataItem>? _mDataItemsMap = HashMap();
+  final HashMap<String, _DataItem> _mDataItemsMap = HashMap();
 
   // Sets/Adds the new value to the given key.
   void setValue(String key, var value) {
@@ -58,7 +58,7 @@ class _DataStore {
     item.value = value;
 
     // Reset item to the map.
-    _mDataItemsMap![key] = item;
+    _mDataItemsMap[key] = item;
 
     // Dispatch new value to all callbacks.
     item.callbacks?.forEach((callback) {
@@ -72,7 +72,7 @@ class _DataStore {
 
   void removeAll() {
     _mDataItemsMap?.forEach((key, value) {
-      _mDataItemsMap?.remove(key);
+      _mDataItemsMap.remove(key);
     });
   }
 
@@ -96,7 +96,7 @@ class _DataStore {
         item.callbacks = callbacks;
 
         // Set the data item to the map.
-        _mDataItemsMap![key] = item;
+        _mDataItemsMap[key] = item;
       }
 
       // Add the given callback into List of callback functions.

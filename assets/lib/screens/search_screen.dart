@@ -29,7 +29,7 @@ import '../utils/app_images.dart';
 class SearchScreen extends StatefulWidget {
   final int? id;
 
-  const SearchScreen({
+  const SearchScreen({super.key, 
     this.id,
   });
 
@@ -87,7 +87,7 @@ class _SearchScreenState extends State<SearchScreen> {
     });
     mSearch.addListener(() {
       setState(() {
-        _showClearButton = mSearch.text.length > 0;
+        _showClearButton = mSearch.text.isNotEmpty;
       });
     });
   }
@@ -237,10 +237,10 @@ class _SearchScreenState extends State<SearchScreen> {
               ).paddingSymmetric(horizontal: 16, vertical: 16),
               HorizontalList(
                 itemCount: list.length,
-                padding: EdgeInsets.only(left: 16, right: 8),
+                padding: const EdgeInsets.only(left: 16, right: 8),
                 itemBuilder: (context, index) {
                   return Container(
-                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
                     decoration: boxDecorationWithRoundedCorners(
                         borderRadius: radius(24),
                         backgroundColor: list[index].select! ? primaryColor : context.scaffoldBackgroundColor,
@@ -296,9 +296,9 @@ class _SearchScreenState extends State<SearchScreen> {
               mSearchValue.isEmptyOrNull
                   ? mExerciseList.isNotEmpty
                       ? AnimatedListView(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemCount: mExerciseList.length,
-                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
                           shrinkWrap: true,
                           itemBuilder: (context, index) {
                             return ExerciseComponent(
@@ -325,7 +325,7 @@ class _SearchScreenState extends State<SearchScreen> {
             ]),
           ),
           Observer(builder: (context) {
-            return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: Loader().center()).visible(appStore.isLoading);
+            return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: const Loader().center()).visible(appStore.isLoading);
           })
         ],
       ),
@@ -362,7 +362,7 @@ class _SearchScreenState extends State<SearchScreen> {
           mSearch.clear();
         });
       },
-      icon: Icon(Icons.clear),
+      icon: const Icon(Icons.clear),
     );
   }
 }

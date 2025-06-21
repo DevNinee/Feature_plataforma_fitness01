@@ -14,12 +14,12 @@ class PaymentListModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
     }
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     return data;
   }
@@ -66,20 +66,20 @@ class PaymentModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['created_at'] = this.createdAt;
-    data['gateway_image'] = this.gatewayLogo;
-    data['id'] = this.id;
-    data['is_test'] = this.isTest;
-    data['status'] = this.status;
-    data['title'] = this.title;
-    data['type'] = this.type;
-    data['updated_at'] = this.updatedAt;
-    if (this.liveValue != null) {
-      data['live_value'] = this.liveValue!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['created_at'] = createdAt;
+    data['gateway_image'] = gatewayLogo;
+    data['id'] = id;
+    data['is_test'] = isTest;
+    data['status'] = status;
+    data['title'] = title;
+    data['type'] = type;
+    data['updated_at'] = updatedAt;
+    if (liveValue != null) {
+      data['live_value'] = liveValue!.toJson();
     }
-    if (this.testValue != null) {
-      data['test_value'] = this.testValue!.toJson();
+    if (testValue != null) {
+      data['test_value'] = testValue!.toJson();
     }
     return data;
   }
@@ -138,21 +138,21 @@ class LiveValue {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['publishable_key'] = this.publishableKey;
-    data['secret_key'] = this.secretKey;
-    data['url'] = this.url;
-    data['secret_id'] = this.secretId;
-    data['key_id'] = this.keyId;
-    data['public_key'] = this.publicKey;
-    data['tokenization_key'] = this.tokenizationKey;
-    data['access_token'] = this.accessToken;
-    data['encryption_key'] = this.encryptionKey;
-    data['profile_id'] = this.profileId;
-    data['server_key'] = this.serverKey;
-    data['client_key'] = this.clientKey;
-    data['merchant_id'] = this.merchantId;
-    data['merchant_key'] = this.merchantKey;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['publishable_key'] = publishableKey;
+    data['secret_key'] = secretKey;
+    data['url'] = url;
+    data['secret_id'] = secretId;
+    data['key_id'] = keyId;
+    data['public_key'] = publicKey;
+    data['tokenization_key'] = tokenizationKey;
+    data['access_token'] = accessToken;
+    data['encryption_key'] = encryptionKey;
+    data['profile_id'] = profileId;
+    data['server_key'] = serverKey;
+    data['client_key'] = clientKey;
+    data['merchant_id'] = merchantId;
+    data['merchant_key'] = merchantKey;
 
     return data;
   }

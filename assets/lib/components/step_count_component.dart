@@ -18,6 +18,8 @@ import '../utils/app_images.dart';
 class StepCountComponent extends StatefulWidget {
   static String tag = '/StepCountComponent';
 
+  const StepCountComponent({super.key});
+
   @override
   StepCountComponentState createState() => StepCountComponentState();
 }
@@ -102,8 +104,8 @@ class StepCountComponentState extends State<StepCountComponent> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 8),
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(16),backgroundColor: context.cardColor):boxDecorationRoundedWithShadow(16,backgroundColor: context.cardColor),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -113,7 +115,7 @@ class StepCountComponentState extends State<StepCountComponent> {
             children: [
               Container(
                 decoration: boxDecorationWithRoundedCorners(borderRadius: radius(8), backgroundColor: appStore.isDarkMode ? Colors.black : Colors.white),
-                padding: EdgeInsets.all(6),
+                padding: const EdgeInsets.all(6),
                 child: Image.asset(ic_step, width: 22, height: 22, color: primaryColor),
               ),
               Text(languages.lblSteps, style: boldTextStyle(color: appStore.isDarkMode ? primaryColor : black), overflow: TextOverflow.ellipsis, maxLines: 2),

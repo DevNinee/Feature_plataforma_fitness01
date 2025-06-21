@@ -15,6 +15,8 @@ import '../models/body_part_response.dart';
 import '../network/rest_api.dart';
 
 class ViewBodyPartScreen extends StatefulWidget {
+  const ViewBodyPartScreen({super.key});
+
   @override
   _ViewBodyPartScreenState createState() => _ViewBodyPartScreenState();
 }
@@ -84,7 +86,7 @@ class _ViewBodyPartScreenState extends State<ViewBodyPartScreen> {
           children: [
             bodyPartList.isNotEmpty? SingleChildScrollView(
               controller: scrollController,
-              padding: EdgeInsets.only(bottom: 16, top: 20, right: 16, left: 16),
+              padding: const EdgeInsets.only(bottom: 16, top: 20, right: 16, left: 16),
               child:LayoutBuilder(
                 builder: (context, constraints) {
                   double spacing = constraints.maxWidth > 600 ? 15 : 15;
@@ -112,13 +114,13 @@ class _ViewBodyPartScreenState extends State<ViewBodyPartScreen> {
               ],
             ).center(),
             Observer(builder: (context) {
-              return Container(
+              return SizedBox(
                   height: double.infinity,
                   width: double.infinity,
-                  child: Loader().center()).visible(appStore.isLoading);
+                  child: const Loader().center()).visible(appStore.isLoading);
             })
           ],
         ),
-        bottomNavigationBar: userStore.adsBannerDetailShowBannerOnBodyPart == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : SizedBox());
+        bottomNavigationBar: userStore.adsBannerDetailShowBannerOnBodyPart == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : const SizedBox());
   }
 }

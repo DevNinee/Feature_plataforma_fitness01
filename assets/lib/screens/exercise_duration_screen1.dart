@@ -31,7 +31,7 @@ class ExerciseDurationScreen1 extends StatefulWidget {
   static String tag = '/ExerciseDurationScreen';
   final ExerciseDetailResponse? mExerciseModel;
 
-  ExerciseDurationScreen1(this.mExerciseModel);
+  const ExerciseDurationScreen1(this.mExerciseModel, {super.key});
 
   @override
   ExerciseDurationScreen1State createState() => ExerciseDurationScreen1State();
@@ -75,10 +75,10 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
       _tabata = Tabata(
           sets: 1,
           reps: widget.mExerciseModel!.data!.sets!.length,
-          startDelay: Duration(seconds: 3),
+          startDelay: const Duration(seconds: 3),
           exerciseTime: mExTime,
           restTime: mRestTime,
-          breakTime: Duration(seconds: 60),
+          breakTime: const Duration(seconds: 60),
           status: widget.mExerciseModel!.data!.based == "reps" ? "reps" : "second");
     }
 
@@ -88,10 +88,10 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
 
     if (videoId != null) videoId = YoutubePlayer.convertUrlToId(widget.mExerciseModel!.data!.videoUrl.validate());
     if (flutterTts != null) flutterTts!.awaitSpeakCompletion(true);
-    if (videoId != null)
+    if (videoId != null) {
       youtubePlayerController = YoutubePlayerController(
         initialVideoId: videoId!,
-        flags: YoutubePlayerFlags(
+        flags: const YoutubePlayerFlags(
           mute: false,
           autoPlay: true,
           disableDragSeek: false,
@@ -102,9 +102,10 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
           showLiveFullscreenButton: false,
         ),
       )..addListener(listener);
+    }
     _idController = TextEditingController();
     _seekToController = TextEditingController();
-    if (youtubePlayerController != null)
+    if (youtubePlayerController != null) {
       youtubePlayerController!.addListener(() {
         if (_playerState == PlayerState.playing) {
           if (isChanged == true) {
@@ -118,6 +119,7 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
           isChanged = true;
         }
       });
+    }
     videoMetaData = const YoutubeMetaData();
     _playerState = PlayerState.unknown;
   }
@@ -225,7 +227,7 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
       finish(context);
     }
 
-    this.setState(() {});
+    setState(() {});
   }
 
   _start() {
@@ -262,9 +264,9 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
   Widget mData(List<Sets> strings) {
     List<Widget> list = [];
     for (var i = 0; i < strings.length; i++) {
-      list.add(new Text(strings[i].time.toString()));
+      list.add(Text(strings[i].time.toString()));
     }
-    return new Row(children: list);
+    return Row(children: list);
   }
 
   @override
@@ -325,7 +327,7 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
                       return Future.value(true);
                     },
                     child: Scaffold(
-                      body: Container(
+                      body: SizedBox(
                         height: context.height(),
                         child: Stack(
                           alignment: Alignment.topLeft,
@@ -338,7 +340,7 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     IconButton(
-                                        icon: Icon(CupertinoIcons.gobackward_10, color: Colors.white, size: 30),
+                                        icon: const Icon(CupertinoIcons.gobackward_10, color: Colors.white, size: 30),
                                         onPressed: () {
                                           Duration currentPosition = youtubePlayerController!.value.position;
                                           Duration targetPosition = currentPosition - const Duration(seconds: 10);
@@ -351,10 +353,10 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
                                           setState(() {});
                                         }
                                       },
-                                      child: SizedBox(height: 50, width: 50),
+                                      child: const SizedBox(height: 50, width: 50),
                                     ),
                                     IconButton(
-                                        icon: Icon(CupertinoIcons.goforward_10, color: Colors.white, size: 30),
+                                        icon: const Icon(CupertinoIcons.goforward_10, color: Colors.white, size: 30),
                                         onPressed: () {
                                           Duration currentPosition = youtubePlayerController!.value.position;
                                           Duration targetPosition = currentPosition + const Duration(seconds: 10);
@@ -387,9 +389,9 @@ class ExerciseDurationScreen1State extends State<ExerciseDurationScreen1> {
                                         setState(() {});
                                       }).enterPipMode();
                                     },
-                                    icon: Icon(Icons.picture_in_picture_alt_outlined, color: Colors.white, size: 25.0),
+                                    icon: const Icon(Icons.picture_in_picture_alt_outlined, color: Colors.white, size: 25.0),
                                   )
-                                      : SizedBox(),
+                                      : const SizedBox(),
                                 ],
                               ).paddingOnly(top: 30, left: 8, right: 8),
                           ],

@@ -145,20 +145,20 @@ class ScheduledResponse {
 
   ScheduledResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <ScheduledModelData>[];
       json['data'].forEach((v) {
-        data!.add(new ScheduledModelData.fromJson(v));
+        data!.add(ScheduledModelData.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -184,11 +184,11 @@ class Pagination {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['total_items'] = this.totalItems;
-    data['per_page'] = this.perPage;
-    data['currentPage'] = this.currentPage;
-    data['totalPages'] = this.totalPages;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['total_items'] = totalItems;
+    data['per_page'] = perPage;
+    data['currentPage'] = currentPage;
+    data['totalPages'] = totalPages;
     return data;
   }
 }
@@ -252,24 +252,24 @@ class ScheduledModelData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['class_name'] = this.className;
-    data['workout_id'] = this.workoutId;
-    data['workout'] = this.workout;
-    data['workout_title'] = this.workoutTitle;
-    data['workout_type'] = this.workoutType;
-    data['start_date'] = this.startDate;
-    data['end_date'] = this.endDate;
-    data['start_time'] = this.startTime;
-    data['end_time'] = this.endTime;
-    data['name'] = this.name;
-    data['link'] = this.link;
-    data['is_paid'] = this.isPaid;
-    data['price'] = this.price;
-    data['is_class_schedule_plan'] = this.isClassSchedulePlan;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['class_name'] = className;
+    data['workout_id'] = workoutId;
+    data['workout'] = workout;
+    data['workout_title'] = workoutTitle;
+    data['workout_type'] = workoutType;
+    data['start_date'] = startDate;
+    data['end_date'] = endDate;
+    data['start_time'] = startTime;
+    data['end_time'] = endTime;
+    data['name'] = name;
+    data['link'] = link;
+    data['is_paid'] = isPaid;
+    data['price'] = price;
+    data['is_class_schedule_plan'] = isClassSchedulePlan;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

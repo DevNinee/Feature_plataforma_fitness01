@@ -25,7 +25,7 @@ class DietDetailScreen extends StatefulWidget {
   final bool? isCategory;
   final bool? isFeatured;
 
-  DietDetailScreen({
+  const DietDetailScreen({super.key, 
     this.dietModel,
     this.onCall,
     this.isFeatured,
@@ -128,7 +128,7 @@ class _DietDetailScreenState extends State<DietDetailScreen> {
                       top: context.statusBarHeight + 10,
                       right: 16,
                       child: Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: Colors.white.withOpacity(0.5)),
                           child: Image.asset(
                             widget.dietModel!.isFavourite == 1 ? ic_favorite_fill : ic_favorite,
@@ -153,13 +153,13 @@ class _DietDetailScreenState extends State<DietDetailScreen> {
                           overflow: TextOverflow.ellipsis,
                         ).expand(),
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                          margin: EdgeInsets.only(left: 16),
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                          margin: const EdgeInsets.only(left: 16),
                           decoration: boxDecorationWithRoundedCorners(backgroundColor: appStore.isDarkMode ? Colors.black.withOpacity(0.6) : whiteColor.withOpacity(0.3), borderRadius: radius(8)),
                           child: RichText(
                             text: TextSpan(
                               children: [
-                                WidgetSpan(child: Icon(Feather.clock, color: Colors.white, size: 16).paddingRight(4)),
+                                WidgetSpan(child: const Icon(Feather.clock, color: Colors.white, size: 16).paddingRight(4)),
                                 TextSpan(text: widget.dietModel!.totalTime.validate(), style: secondaryTextStyle(color: Colors.white)),
                               ],
                             ),
@@ -186,24 +186,24 @@ class _DietDetailScreenState extends State<DietDetailScreen> {
                       8.height,
                       Row(
                         children: [
-                          getVitamins(ic_calories, widget.dietModel!.calories.validate() + " " + languages.lblKcal, languages.lblCalories).expand(),
+                          getVitamins(ic_calories, "${widget.dietModel!.calories.validate()} ${languages.lblKcal}", languages.lblCalories).expand(),
                           dividerHorizontalLine(),
-                          getVitamins(ic_carbs, widget.dietModel!.carbs.validate() + " ${languages.lblG}", languages.lblCarbs).expand(),
+                          getVitamins(ic_carbs, "${widget.dietModel!.carbs.validate()} ${languages.lblG}", languages.lblCarbs).expand(),
                           dividerHorizontalLine(),
-                          getVitamins(ic_fat, widget.dietModel!.fat.validate() + " ${languages.lblG}", languages.lblFat).expand(),
+                          getVitamins(ic_fat, "${widget.dietModel!.fat.validate()} ${languages.lblG}", languages.lblFat).expand(),
                           dividerHorizontalLine(),
-                          getVitamins(ic_protein, widget.dietModel!.protein.validate() + " ${languages.lblG}", languages.lblProtein).expand(),
+                          getVitamins(ic_protein, "${widget.dietModel!.protein.validate()} ${languages.lblG}", languages.lblProtein).expand(),
                         ],
                       ).paddingSymmetric(horizontal: 10, vertical: 8),
                       8.height,
                       Divider(color: appStore.isDarkMode ? Colors.white : context.dividerColor, indent: 16, endIndent: 16, height: 0.5),
                       8.height,
                       Container(
-                        padding: EdgeInsets.only(top: 22),
+                        padding: const EdgeInsets.only(top: 22),
                         decoration: BoxDecoration(border: Border(bottom: BorderSide(color: appStore.isDarkMode ? whiteColor : context.dividerColor, width: 0.5))),
                         child: Row(children: [
                           Container(
-                                  padding: EdgeInsets.only(bottom: 8),
+                                  padding: const EdgeInsets.only(bottom: 8),
                                   decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1.5, color: select ? primaryColor : Colors.transparent))),
                                   child: Text(languages.lblIngredients, style: boldTextStyle(color: select ? primaryColor : textSecondaryColorGlobal)).center())
                               .onTap(() {
@@ -212,7 +212,7 @@ class _DietDetailScreenState extends State<DietDetailScreen> {
                             });
                           }).expand(),
                           Container(
-                            padding: EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.only(bottom: 8),
                             decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1.5, color: select ? Colors.transparent : primaryColor))),
                             child: Text(languages.lblInstruction, style: boldTextStyle(color: select ? textSecondaryColorGlobal : primaryColor)).center(),
                           ).onTap(() {

@@ -8,19 +8,19 @@ class ProductResponse {
   ProductResponse({this.pagination, this.data});
 
   ProductResponse.fromJson(Map<String, dynamic> json) {
-    pagination = json['pagination'] != null ? new Pagination.fromJson(json['pagination']) : null;
+    pagination = json['pagination'] != null ? Pagination.fromJson(json['pagination']) : null;
     if (json['data'] != null) {
       data = <ProductModel>[];
       json['data'].forEach((v) {
-        data!.add(new ProductModel.fromJson(v));
+        data!.add(ProductModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -69,18 +69,18 @@ class ProductModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['description'] = this.description;
-    data['affiliate_link'] = this.affiliateLink;
-    data['price'] = this.price;
-    data['productcategory_id'] = this.productcategoryId;
-    data['featured'] = this.featured;
-    data['status'] = this.status;
-    data['product_image'] = this.productImage;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['description'] = description;
+    data['affiliate_link'] = affiliateLink;
+    data['price'] = price;
+    data['productcategory_id'] = productcategoryId;
+    data['featured'] = featured;
+    data['status'] = status;
+    data['product_image'] = productImage;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

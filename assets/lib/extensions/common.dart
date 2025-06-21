@@ -59,7 +59,7 @@ void snackBar(
         onVisible: onVisible?.call(),
         content: content ??
             Padding(
-              padding: padding ?? EdgeInsets.symmetric(vertical: 4),
+              padding: padding ?? const EdgeInsets.symmetric(vertical: 4),
               child: Text(
                 title,
                 style: primaryTextStyle(color: textColor ?? Colors.white),
@@ -175,7 +175,7 @@ Widget dialogAnimatedWrapperWidget({
 
     case DialogAnimation.SLIDE_BOTTOM_TOP:
       return SlideTransition(
-        position: Tween(begin: Offset(0, 1), end: Offset.zero)
+        position: Tween(begin: const Offset(0, 1), end: Offset.zero)
             .chain(CurveTween(curve: curve))
             .animate(animation),
         child: Opacity(
@@ -186,7 +186,7 @@ Widget dialogAnimatedWrapperWidget({
 
     case DialogAnimation.SLIDE_LEFT_RIGHT:
       return SlideTransition(
-        position: Tween(begin: Offset(1.0, 0.0), end: Offset.zero)
+        position: Tween(begin: const Offset(1.0, 0.0), end: Offset.zero)
             .chain(CurveTween(curve: curve))
             .animate(animation),
         child: Opacity(
@@ -197,7 +197,7 @@ Widget dialogAnimatedWrapperWidget({
 
     case DialogAnimation.SLIDE_RIGHT_LEFT:
       return SlideTransition(
-        position: Tween(begin: Offset(-1, 0), end: Offset.zero)
+        position: Tween(begin: const Offset(-1, 0), end: Offset.zero)
             .chain(CurveTween(curve: curve))
             .animate(animation),
         child: Opacity(
@@ -230,7 +230,8 @@ Route<T> buildPageRoute<T>(
         pageBuilder: (c, a1, a2) => child,
         transitionsBuilder: (c, anim, a2, child) {
           return RotationTransition(
-              child: child, turns: ReverseAnimation(anim));
+              turns: ReverseAnimation(anim),
+              child: child);
         },
         transitionDuration: duration ?? pageRouteTransitionDurationGlobal,
       );
@@ -238,7 +239,7 @@ Route<T> buildPageRoute<T>(
       return PageRouteBuilder(
         pageBuilder: (c, a1, a2) => child,
         transitionsBuilder: (c, anim, a2, child) {
-          return ScaleTransition(child: child, scale: anim);
+          return ScaleTransition(scale: anim, child: child);
         },
         transitionDuration: duration ?? pageRouteTransitionDurationGlobal,
       );
@@ -247,11 +248,11 @@ Route<T> buildPageRoute<T>(
         pageBuilder: (c, a1, a2) => child,
         transitionsBuilder: (c, anim, a2, child) {
           return SlideTransition(
-            child: child,
             position: Tween(
-              begin: Offset(1.0, 0.0),
-              end: Offset(0.0, 0.0),
+              begin: const Offset(1.0, 0.0),
+              end: const Offset(0.0, 0.0),
             ).animate(anim),
+            child: child,
           );
         },
         transitionDuration: duration ?? pageRouteTransitionDurationGlobal,
@@ -261,11 +262,11 @@ Route<T> buildPageRoute<T>(
         pageBuilder: (c, a1, a2) => child,
         transitionsBuilder: (c, anim, a2, child) {
           return SlideTransition(
-            child: child,
             position: Tween(
-              begin: Offset(0.0, 1.0),
-              end: Offset(0.0, 0.0),
+              begin: const Offset(0.0, 1.0),
+              end: const Offset(0.0, 0.0),
             ).animate(anim),
+            child: child,
           );
         },
         transitionDuration: duration ?? pageRouteTransitionDurationGlobal,
@@ -277,11 +278,11 @@ Route<T> buildPageRoute<T>(
 
 EdgeInsets dynamicAppButtonPadding(BuildContext context) {
   if (context.isDesktop()) {
-    return EdgeInsets.symmetric(vertical: 20, horizontal: 20);
+    return const EdgeInsets.symmetric(vertical: 20, horizontal: 20);
   } else if (context.isTablet()) {
-    return EdgeInsets.symmetric(vertical: 16, horizontal: 16);
+    return const EdgeInsets.symmetric(vertical: 16, horizontal: 16);
   } else {
-    return EdgeInsets.symmetric(vertical: 16, horizontal: 16);
+    return const EdgeInsets.symmetric(vertical: 16, horizontal: 16);
   }
 }
 
@@ -307,21 +308,21 @@ Uri mailTo({
   List<String> cc = const [],
   List<String> bcc = const [],
 }) {
-  String _subject = '';
-  if (subject.isNotEmpty) _subject = '&subject=$subject';
+  String subject0 = '';
+  if (subject.isNotEmpty) subject0 = '&subject=$subject';
 
-  String _body = '';
-  if (body.isNotEmpty) _body = '&body=$body';
+  String body0 = '';
+  if (body.isNotEmpty) body0 = '&body=$body';
 
-  String _cc = '';
-  if (cc.isNotEmpty) _cc = '&cc=${cc.join(',')}';
+  String cc0 = '';
+  if (cc.isNotEmpty) cc0 = '&cc=${cc.join(',')}';
 
-  String _bcc = '';
-  if (bcc.isNotEmpty) _bcc = '&bcc=${bcc.join(',')}';
+  String bcc0 = '';
+  if (bcc.isNotEmpty) bcc0 = '&bcc=${bcc.join(',')}';
 
   return Uri(
     scheme: 'mailto',
-    query: 'to=${to.join(',')}$_subject$_body$_cc$_bcc',
+    query: 'to=${to.join(',')}$subject0$body0$cc0$bcc0',
   );
 }
 
@@ -337,7 +338,7 @@ Widget dotIndicator(list, i, {bool isPersonal = false}) {
           return Container(
             height: 4,
             width:  i == ind?30:12,
-            margin: EdgeInsets.all(4),
+            margin: const EdgeInsets.all(4),
             decoration: BoxDecoration(
                 color: i == ind
                     ? appStore.isDarkMode == true

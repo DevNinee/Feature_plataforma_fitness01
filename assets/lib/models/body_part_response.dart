@@ -8,20 +8,20 @@ class BodyPartResponse {
 
   BodyPartResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <BodyPartModel>[];
       json['data'].forEach((v) {
-        data!.add(new BodyPartModel.fromJson(v));
+        data!.add(BodyPartModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -63,15 +63,15 @@ class BodyPartModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['status'] = this.status;
-    data['description'] = this.description;
-    data['bodypart_image'] = this.bodypartImage;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['select'] = this.select;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['status'] = status;
+    data['description'] = description;
+    data['bodypart_image'] = bodypartImage;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['select'] = select;
     return data;
   }
 }

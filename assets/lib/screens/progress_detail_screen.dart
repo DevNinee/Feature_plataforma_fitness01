@@ -31,7 +31,7 @@ class ProgressDetailScreen extends StatefulWidget {
 
   final Function? onCall;
 
-  ProgressDetailScreen({this.mType, this.mUnit, this.mTitle, this.onCall});
+  const ProgressDetailScreen({super.key, this.mType, this.mUnit, this.mTitle, this.onCall});
 
   @override
   ProgressDetailScreenState createState() => ProgressDetailScreenState();
@@ -157,8 +157,8 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
                         ? context.cardColor
                         : GreyLightColor,
                   ),
-                  padding: EdgeInsets.all(8),
-                  margin: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(8),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -167,7 +167,7 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
                       mWeightOption(languages.lblKg, 1),
                     ],
                   ),
-                ):SizedBox.shrink(),
+                ):const SizedBox.shrink(),
                 PopupMenuButton<SampleItem>(
                   icon: Icon(Icons.more_vert, color: appStore.isDarkMode ? Colors.white : Colors.black54),
                   shape: RoundedRectangleBorder(borderRadius: radius()),
@@ -209,7 +209,7 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
                       mType: widget.mType,
                       mUnit: widget.mUnit,
                       onCall: () {
-                        print("${isLBSClicked}");
+                        print("$isLBSClicked");
                         if(isLBSClicked==true){
                           initLbs();
                         }else{
@@ -227,7 +227,7 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
                     //   );
                   });
             },
-            child: Icon(Icons.add, color: Colors.white),
+            child: const Icon(Icons.add, color: Colors.white),
           ),
           body: Stack(
             children: [
@@ -247,13 +247,13 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
                             ListView.separated(
                               itemCount: mGraphModel!.data!.length,
                               shrinkWrap: true,
-                              padding: EdgeInsets.only(top: 16, bottom: 16),
-                              physics: NeverScrollableScrollPhysics(),
+                              padding: const EdgeInsets.only(top: 16, bottom: 16),
+                              physics: const NeverScrollableScrollPhysics(),
                               itemBuilder: (context, index) {
                                 return SettingItemWidget(
                                   title: '${mGraphModel!.data![index].value.validate().replaceAll('user', '')} ${mGraphModel!.data![index].unit!.toString()}',
                                   trailing: Text(progressDateStringWidget(mGraphModel!.data![index].date.toString()), style: secondaryTextStyle()),
-                                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                                   titleTextStyle: boldTextStyle(size: 14),
                                   onTap: () async {
                                     /*await showModalBottomSheet(
@@ -286,13 +286,13 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
                                 );
                               },
                               separatorBuilder: (context, index) {
-                                return Divider(thickness: 0.3);
+                                return const Divider(thickness: 0.3);
                               },
                             ),
                           ],
                         ),
                       ),
-              Loader().visible(appStore.isLoading)
+              const Loader().visible(appStore.isLoading)
             ],
           )),
     );
@@ -307,7 +307,7 @@ class ProgressDetailScreenState extends State<ProgressDetailScreen> {
               : appStore.isDarkMode
               ? context.cardColor
               : GreyLightColor),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Text(value!, style: secondaryTextStyle(color: mWeight == index ? Colors.white : textSecondaryColorGlobal)),
     ).onTap(() {
       mWeight = index;

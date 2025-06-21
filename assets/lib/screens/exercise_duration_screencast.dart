@@ -33,7 +33,7 @@ class ExerciseDurationScreencast extends StatefulWidget {
   final ExerciseDetailResponse? mExerciseModel;
   final String? workOutId;
 
-  ExerciseDurationScreencast({this.mExerciseModel, this.workOutId});
+  const ExerciseDurationScreencast({super.key, this.mExerciseModel, this.workOutId});
 
   @override
   ExerciseDurationScreencastState createState() => ExerciseDurationScreencastState();
@@ -75,7 +75,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
   late TextEditingController _seekToController;
   late PlayerState? _playerState;
   late YoutubeMetaData videoMetaData;
-  bool _isPlayerReady = false;
+  final bool _isPlayerReady = false;
   String? videoId = '';
 
   bool visibleOption = true;
@@ -99,10 +99,10 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
       _tabata = Tabata(
           sets: 1,
           reps: widget.mExerciseModel!.data!.sets!.length,
-          startDelay: Duration(seconds: 3),
+          startDelay: const Duration(seconds: 3),
           exerciseTime: mExTime,
           restTime: mRestTime,
-          breakTime: Duration(seconds: 60),
+          breakTime: const Duration(seconds: 60),
           status: widget.mExerciseModel!.data!.based == "reps" ? "reps" : "second");
     }
 
@@ -114,10 +114,10 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
     if (videoId != null) videoId = YoutubePlayer.convertUrlToId(widget.mExerciseModel!.data!.videoUrl.validate());
     // if (flutterTts != null) flutterTts!.awaitSpeakCompletion(true);
     // flutterTts!.pause();
-    if (videoId != null)
+    if (videoId != null) {
       youtubePlayerController = YoutubePlayerController(
         initialVideoId: videoId!,
-        flags: YoutubePlayerFlags(
+        flags: const YoutubePlayerFlags(
           mute: false,
           autoPlay: true,
           disableDragSeek: false,
@@ -128,9 +128,10 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
           showLiveFullscreenButton: false,
         ),
       )..addListener(listener);
+    }
     _idController = TextEditingController();
     _seekToController = TextEditingController();
-    if (youtubePlayerController != null)
+    if (youtubePlayerController != null) {
       youtubePlayerController!.addListener(() {
         if (_playerState == PlayerState.playing) {
           if (isChanged == true) {
@@ -144,6 +145,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
           // isChanged = true;
         }
       });
+    }
     videoMetaData = const YoutubeMetaData();
     _playerState = PlayerState.unknown;
     initPlatformState();
@@ -204,7 +206,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
 
       await GoogleCastContext.instance.setSharedInstanceWithOptions(options!);
       print("GoogleCastContext initialized successfully");
-    } catch (e, s) {
+    } catch (e) {
       if (retryCount < maxRetries) {
         await Future.delayed(Duration(seconds: retryCount + 1));
         return initPlatformState(retryCount: retryCount + 1, maxRetries: maxRetries);
@@ -235,7 +237,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
 
     if (youtubePlayerController != null) youtubePlayerController!.pause();
     if (youtubePlayerController != null) youtubePlayerController!.dispose();
-    if (_idController != null) _idController.dispose();
+    _idController.dispose();
     GoogleCastSessionManager.instance.endSessionAndStopCasting();
     GoogleCastSessionManager.instance.endSession();
     _hideTimer?.cancel();
@@ -343,7 +345,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
 
   void _skipForward() {
     final currentPosition = _controller.value.position;
-    final newPosition = currentPosition + Duration(seconds: 10);
+    final newPosition = currentPosition + const Duration(seconds: 10);
 
     if (newPosition < _controller.value.duration) {
       _controller.seekTo(newPosition);
@@ -362,7 +364,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
 
   void _skipBackward() {
     final currentPosition = _controller.value.position;
-    final newPosition = currentPosition - Duration(seconds: 10);
+    final newPosition = currentPosition - const Duration(seconds: 10);
     if (newPosition > Duration.zero) {
       _controller.seekTo(newPosition);
       if (GoogleCastSessionManager.instance.connectionState == GoogleCastConnectState.ConnectionStateConnected) {
@@ -391,7 +393,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
       }
       // finish(context);
     }
-    if (mounted) this.setState(() {});
+    if (mounted) setState(() {});
   }
 
   _start() {
@@ -440,9 +442,9 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
   Widget mData(List<Sets> strings) {
     List<Widget> list = [];
     for (var i = 0; i < strings.length; i++) {
-      list.add(new Text(strings[i].time.toString()));
+      list.add(Text(strings[i].time.toString()));
     }
-    return new Row(children: list);
+    return Row(children: list);
   }
 
   @override
@@ -463,7 +465,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                   builder: (context, snapshot) {
                     final devices = snapshot.data ?? [];
                     bool? isConnected = GoogleCastSessionManager.instance.connectionState == GoogleCastConnectState.ConnectionStateConnected;
-                    print("---------232>>>${isConnected}");
+                    print("---------232>>>$isConnected");
                     GoogleCastSessionManager.instance.setDeviceVolume(0);
                     return Row(
                       children: [
@@ -498,7 +500,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                 ),
               ]),
         body: SingleChildScrollView(
-          physics: isLandscape ? NeverScrollableScrollPhysics() : AlwaysScrollableScrollPhysics(),
+          physics: isLandscape ? const NeverScrollableScrollPhysics() : const AlwaysScrollableScrollPhysics(),
           child: Column(
             children: [
               widget.mExerciseModel!.data!.videoUrl.validate().contains("https://youtu") || widget.mExerciseModel!.data!.videoUrl.validate().contains("https://www.youtu")
@@ -530,7 +532,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                               children: [
                                 cachedImage(widget.mExerciseModel!.data!.exerciseImage.validate(), fit: BoxFit.fill, height: context.height(), width: double.infinity).cornerRadiusWithClipRRect(0),
                                 if (!_controller.value.isInitialized) ...[
-                                  Center(
+                                  const Center(
                                     child: CircularProgressIndicator(),
                                   ),
                                 ],
@@ -575,7 +577,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                           style: boldTextStyle(size: 110),
                         ),
                       )
-                    : SizedBox.shrink(),
+                    : const SizedBox.shrink(),
               ),
               16.height,
               16.height,
@@ -647,7 +649,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                             style: boldTextStyle(color: Colors.white, size: 13),
                           ),
                           Text(
-                            ' / ${_totalTime}',
+                            ' / $_totalTime',
                             style: primaryTextStyle(color: Colors.white, size: 13),
                           ),
                           IconButton(
@@ -673,7 +675,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                       )
                     ],
                   ),
-                  Container(
+                  SizedBox(
                     height: 5,
                     child: SliderTheme(
                       data: SliderTheme.of(context).copyWith(
@@ -682,7 +684,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
                         //overlayShape: SliderComponentShape.noThumb,
                         thumbColor: primaryColor,
                         trackShape: SliderCustomTrackShape(),
-                        thumbShape: RoundSliderThumbShape(enabledThumbRadius: 6.0),
+                        thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.0),
                       ),
                       child: Slider(
                         value: _videoProgress,
@@ -841,7 +843,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
       isDismissible: true,
       elevation: 0,
       enableDrag: false,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       transitionAnimationController: AnimationController(vsync: this, duration: const Duration(seconds: 1)),
@@ -852,7 +854,7 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
         child: Container(
           decoration: BoxDecoration(
             color: appStore.isDarkMode ? Colors.black54 : Colors.black12,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
           ),
           height: MediaQuery.of(context).size.height * 0.3,
           child: _buildDeviceList(),
@@ -862,6 +864,6 @@ class ExerciseDurationScreencastState extends State<ExerciseDurationScreencast> 
       setState(() {
         _isBottomSheetOpen = false;
       });
-    });;
+    });
   }
 }

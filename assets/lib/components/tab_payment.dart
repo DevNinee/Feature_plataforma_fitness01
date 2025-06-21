@@ -105,7 +105,7 @@ class _PayTabScreenState extends State<PayTabScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: Center(
           child: SizedBox.shrink(),

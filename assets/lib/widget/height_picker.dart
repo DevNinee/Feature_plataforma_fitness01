@@ -19,7 +19,7 @@ class HeightSlider extends StatefulWidget {
   final ValueChanged<int> onChange;
 
   const HeightSlider(
-      {Key? key,
+      {super.key,
         required this.height,
         required this.onChange,
         this.maxHeight = 245,
@@ -31,8 +31,7 @@ class HeightSlider extends StatefulWidget {
         this.numberLineColor,
         this.currentHeightTextColor,
         this.sliderCircleColor,
-        this.personImagePath})
-      : super(key: key);
+        this.personImagePath});
 
   int get totalUnits => maxHeight - minHeight;
 
@@ -57,7 +56,7 @@ class _HeightSliderState extends State<HeightSlider> {
   }
 
   double get _drawingHeight {
-    double totalHeight = this.widgetHeight;
+    double totalHeight = widgetHeight;
     double marginBottom = 12.0;
     double marginTop = 12.0;
     return totalHeight - (marginBottom + marginTop + labelFontSize);
@@ -66,14 +65,14 @@ class _HeightSliderState extends State<HeightSlider> {
   @override
   Widget build(BuildContext context) {
     return  Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: LayoutBuilder(builder: (context, constraints) {
-          this.widgetHeight = constraints.maxHeight;
+          widgetHeight = constraints.maxHeight;
           return GestureDetector(
             behavior: HitTestBehavior.translucent,
-            onTapDown: this._onTapDown,
-            onVerticalDragStart: this._onDragStart,
-            onVerticalDragUpdate: this._onDragUpdate,
+            onTapDown: _onTapDown,
+            onVerticalDragStart: _onDragStart,
+            onVerticalDragUpdate: _onDragUpdate,
             child: Stack(
               clipBehavior: Clip.none,
               children: <Widget>[
@@ -124,6 +123,9 @@ class _HeightSliderState extends State<HeightSlider> {
 
   Widget _drawSlider() {
     return Positioned(
+      left: 0.0,
+      right: 0.0,
+      bottom: _sliderPosition,
       child: HeightSliderInternal(
           height: widget.height,
           tabIndex: widget.tabIndex,
@@ -134,9 +136,6 @@ class _HeightSliderState extends State<HeightSlider> {
           widget.currentHeightTextColor ?? Theme.of(context).colorScheme.secondary,
           sliderCircleColor:
           widget.sliderCircleColor ?? Theme.of(context).primaryColor),
-      left: 0.0,
-      right: 0.0,
-      bottom: _sliderPosition,
     );
   }
 
@@ -144,7 +143,7 @@ class _HeightSliderState extends State<HeightSlider> {
     int labelsToDisplay = widget.totalUnits ~/ 5 + 1;
     List<Widget> labels = List.generate(labelsToDisplay, (idx) {
         return Text(
-          widget.tabIndex==0?"${widget.maxHeight - 5 * idx}":"${((widget.maxHeight - 5 * idx)/30.48).toStringAsFixed(1)}",
+          widget.tabIndex==0?"${widget.maxHeight - 5 * idx}":((widget.maxHeight - 5 * idx)/30.48).toStringAsFixed(1),
           style: TextStyle(
             color: widget.numberLineColor ?? Theme.of(context).colorScheme.secondary,
             fontSize: labelFontSize,
@@ -157,14 +156,14 @@ class _HeightSliderState extends State<HeightSlider> {
       alignment: Alignment.centerRight,
       child: IgnorePointer(
         child: Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             right: 12.0,
             bottom: 12.0,
             top: 12.0,
           ),
           child: Column(
-            children: labels,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: labels,
           ),
         ),
       ),
@@ -179,7 +178,7 @@ class _HeightSliderState extends State<HeightSlider> {
    // if (widget.personImagePath == null) {
       return Align(
         alignment: Alignment.bottomCenter,
-        child: Container(
+        child: SizedBox(
             width: maxWidth,
             height: personImageHeight,
             child: Image.asset(userStore.gender == "male"?"assets/ic_male.png":"assets/ic_female_selected.png", width: personImageHeight / 3, height: personImageHeight, fit: BoxFit.contain)
@@ -188,7 +187,7 @@ class _HeightSliderState extends State<HeightSlider> {
    // }
     return Align(
       alignment: Alignment.bottomCenter,
-      child: Container(
+      child: SizedBox(
         width: maxWidth,
         height: personImageHeight,
         child: Image.asset(

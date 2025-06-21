@@ -30,22 +30,22 @@ class RegisterRequest {
     phoneNumber = json['phone_number'];
     gender = json['gender'];
     userProfile = json['user_profile'] != null
-        ? new UserProfile.fromJson(json['user_profile'])
+        ? UserProfile.fromJson(json['user_profile'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['first_name'] = this.firstName;
-    data['last_name'] = this.lastName;
-    data['username'] = this.username;
-    data['email'] = this.email;
-    data['password'] = this.password;
-    data['user_type'] = this.userType;
-    data['phone_number'] = this.phoneNumber;
-    data['gender'] = this.gender;
-    if (this.userProfile != null) {
-      data['user_profile'] = this.userProfile!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
+    data['username'] = username;
+    data['email'] = email;
+    data['password'] = password;
+    data['user_type'] = userType;
+    data['phone_number'] = phoneNumber;
+    data['gender'] = gender;
+    if (userProfile != null) {
+      data['user_profile'] = userProfile!.toJson();
     }
     return data;
   }
@@ -77,13 +77,13 @@ class UserProfile {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['age'] = this.age;
-    data['weight'] = this.weight;
-    data['weight_unit'] = this.weightUnit;
-    data['height'] = this.height;
-    data['height_unit'] = this.heightUnit;
-    data['address'] = this.address;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['age'] = age;
+    data['weight'] = weight;
+    data['weight_unit'] = weightUnit;
+    data['height'] = height;
+    data['height_unit'] = heightUnit;
+    data['address'] = address;
     return data;
   }
 }

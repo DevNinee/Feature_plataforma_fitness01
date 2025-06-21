@@ -9,7 +9,7 @@ import 'package:mighty_fitness/utils/app_colors.dart';
 import 'package:mighty_fitness/utils/app_common.dart';
 
 class LeaderboardBottomSheet extends StatefulWidget {
-  const LeaderboardBottomSheet({Key? key}) : super(key: key);
+  const LeaderboardBottomSheet({super.key});
 
   @override
   State<LeaderboardBottomSheet> createState() => _LeaderboardBottomSheetState();
@@ -145,12 +145,12 @@ class PlayerListItem extends StatelessWidget {
   final String countryFlag;
 
   const PlayerListItem({
-    Key? key,
+    super.key,
     required this.playerRank,
     required this.playerName,
     required this.score,
     required this.countryFlag,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

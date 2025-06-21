@@ -15,6 +15,8 @@ import 'about_us_screen.dart';
 class AboutAppScreen extends StatefulWidget {
   static String tag = '/AboutAppScreen';
 
+  const AboutAppScreen({super.key});
+
   @override
   AboutAppScreenState createState() => AboutAppScreenState();
 }
@@ -28,20 +30,20 @@ class AboutAppScreenState extends State<AboutAppScreen> {
         child: Column(
           children: [
             mOption(ic_rate_us, languages.lblPrivacyPolicy, () {
-              PrivacyPolicyScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+              const PrivacyPolicyScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
             }).visible(getStringAsync(PRIVACY_POLICY).isNotEmpty),
-            Divider(height: 0).visible(getStringAsync(PRIVACY_POLICY).isNotEmpty),
+            const Divider(height: 0).visible(getStringAsync(PRIVACY_POLICY).isNotEmpty),
             mOption(ic_terms, languages.lblTermsOfServices, () {
-              TermsAndConditionScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+              const TermsAndConditionScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
             }).visible(getStringAsync(TERMS_SERVICE).isNotEmpty),
-            Divider(height: 0).visible(getStringAsync(TERMS_SERVICE).isNotEmpty),
+            const Divider(height: 0).visible(getStringAsync(TERMS_SERVICE).isNotEmpty),
 
             mOption(ic_info, languages.lblAboutUs, () {
-              AboutUsScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+              const AboutUsScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
             }),
 
             mOption(ic_info, 'Informações médicas', () {
-              MedicalPolicyScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+              const MedicalPolicyScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
             }),
 
 

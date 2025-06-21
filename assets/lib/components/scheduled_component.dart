@@ -8,7 +8,7 @@ import 'package:mighty_fitness/utils/app_colors.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class ScheduledComponent extends StatefulWidget {
-  ScheduledComponent({super.key, required this.scheduledWorkoutList,required this.myCallback});
+  const ScheduledComponent({super.key, required this.scheduledWorkoutList,required this.myCallback});
 
   final ScheduledModelData scheduledWorkoutList;
   final Function(String price,String id) myCallback;
@@ -65,8 +65,8 @@ class _ScheduledComponentState extends State<ScheduledComponent> {
                 // width: 60,
                 alignment: Alignment.topLeft,
                 child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    decoration: const BoxDecoration(
                       color: primaryColor,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10),
@@ -79,7 +79,7 @@ class _ScheduledComponentState extends State<ScheduledComponent> {
                           : widget.scheduledWorkoutList.price != null && widget.scheduledWorkoutList.isClassSchedulePlan == 1
                           ? 'Parches'
                           : 'Free',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
@@ -94,12 +94,12 @@ class _ScheduledComponentState extends State<ScheduledComponent> {
                     widget.scheduledWorkoutList.className ?? '',
                     style: primaryTextStyle(color: appStore.isDarkMode?Colors.white:Colors.black, size: 18, weight: FontWeight.bold),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     '${widget.scheduledWorkoutList.startDate}  TO  ${widget.scheduledWorkoutList.endDate}',
                     style: primaryTextStyle(color: appStore.isDarkMode?Colors.white:Colors.black, size: 12),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     formatTime(widget.scheduledWorkoutList.startTime ?? '', widget.scheduledWorkoutList.endTime ?? ''),
                     style: primaryTextStyle(color: appStore.isDarkMode?Colors.white:Colors.black, size: 12),
@@ -108,8 +108,8 @@ class _ScheduledComponentState extends State<ScheduledComponent> {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              margin: EdgeInsets.only(right: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              margin: const EdgeInsets.only(right: 15),
               decoration: BoxDecoration(
                 color: primaryColor,
                 borderRadius: BorderRadius.circular(5),

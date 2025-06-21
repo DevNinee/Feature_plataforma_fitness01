@@ -37,6 +37,8 @@ import '../utils/app_common.dart';
 import '../utils/app_images.dart';
 
 class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({super.key});
+
   @override
   _EditProfileScreenState createState() => _EditProfileScreenState();
 }
@@ -108,12 +110,12 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
   getGender() {
     GenderList.add(GenderModel(0, languages.lblMale, MALE));
     GenderList.add(GenderModel(1, languages.lblFemale, FEMALE));
-    GenderList.forEach((element) {
-      print('userStore.gender' + userStore.gender.toString());
+    for (var element in GenderList) {
+      print('userStore.gender${userStore.gender}');
       if (element.key == userStore.gender) {
         selectGender = element.id.validate();
       }
-    });
+    }
   }
 
   Future save() async {
@@ -145,10 +147,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
         if ((data as String).isJson()) {
           UserResponse res = UserResponse.fromJson(jsonDecode(data));
           setValue(COUNTRY_CODE, countryCode);
-          await userStore.weight.isEmpty;
-          await userStore.weightUnit.isEmpty;
-          await userStore.height.isEmpty;
-          await userStore.heightUnit.isEmpty;
+          userStore.weight.isEmpty;
+          userStore.weightUnit.isEmpty;
+          userStore.height.isEmpty;
+          userStore.heightUnit.isEmpty;
           await userStore.setUserEmail(res.data!.email.validate());
           await userStore.setFirstName(res.data!.firstName.validate());
           await userStore.setLastName(res.data!.lastName.validate());
@@ -219,14 +221,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
     print("----------221>>>${userStore.weightUnit}");
 
     if (userStore.weightUnit == 'LBS' || userStore.weightUnit == 'lbs') {
-      req = {"id":'${userStore.weightId}',"value": '${weightInKilograms.toStringAsFixed(2)} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
+      req = {"id":userStore.weightId,"value": '${weightInKilograms.toStringAsFixed(2)} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
       print("----------224>>>${weightInKilograms.toStringAsFixed(2)}");
     } else {
-      req = {"id":'${userStore.weightId}',"value": '${userStore.weight} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
+      req = {"id":userStore.weightId,"value": '${userStore.weight} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
       String weightText = userStore.weight.replaceAll(' lbs', '');
 
       print("----------230>>>${userStore.weight}");
-      print("----------231>>>${weightText}");
+      print("----------231>>>$weightText");
     }
 
     await setProgressApi(req).then((value) {
@@ -252,10 +254,6 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
     if (mounted) super.setState(fn);
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   Widget mHeightOption(String? value, int? index) {
     return Container(
@@ -266,7 +264,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
               : appStore.isDarkMode
                   ? context.cardColor
                   : GreyLightColor),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Text(value.toString(), style: secondaryTextStyle(color: mHeight == index ? Colors.white : textColor)),
     ).onTap(() {
       mHeight = index;
@@ -320,9 +318,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
             ? primaryColor
             : appStore.isDarkMode
                 ? Colors.black
-                : Color(0xffD9D9D9),
+                : const Color(0xffD9D9D9),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Text(value!, style: secondaryTextStyle(color: mWeight == index ? Colors.white : textColor)),
     ).onTap(() {
       mWeight = index;
@@ -369,21 +367,21 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
   Widget profileImage() {
     if (image != null) {
       return Container(
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, border: Border.all(width: 2, color: primaryColor.withOpacity(0.5))),
         child: Image.file(File(image!.path), height: 90, width: 90, fit: BoxFit.cover).cornerRadiusWithClipRRect(65),
       );
     } else if (!profileImg.isEmptyOrNull) {
       return Container(
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, border: Border.all(width: 2, color: primaryColor.withOpacity(0.5))),
         child: cachedImage(profileImg, width: 90, height: 90, fit: BoxFit.cover).cornerRadiusWithClipRRect(65),
       );
     } else {
       return Container(
-        padding: EdgeInsets.all(1),
+        padding: const EdgeInsets.all(1),
         decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, border: Border.all(width: 2, color: primaryColor.withOpacity(0.5))),
-        child: CircleAvatar(maxRadius: 60, backgroundColor: Colors.white, backgroundImage: AssetImage(ic_logo)),
+        child: const CircleAvatar(maxRadius: 60, backgroundColor: Colors.white, backgroundImage: AssetImage(ic_logo)),
       );
     }
   }
@@ -431,7 +429,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
                       profileImage(),
                       Container(
                               decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: primaryOpacity),
-                              padding: EdgeInsets.all(6),
+                              padding: const EdgeInsets.all(6),
                               child: Image.asset(ic_camera, color: primaryColor, height: 20, width: 20))
                           .onTap(() {
                         getImage();
@@ -577,7 +575,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
                               onTap: () {
                                 CustomeHeightPicker(
                                   heightSelected: (val) {
-                                    mHeightCont.text = "${val} ${userStore.heightUnit.validate()}";
+                                    mHeightCont.text = "$val ${userStore.heightUnit.validate()}";
                                   },
                                 ).launch(context);
                               },
@@ -596,8 +594,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
                       DropdownButtonFormField<GenderModel>(
                         items: GenderList.map((e) {
                           return DropdownMenuItem<GenderModel>(
-                            child: Text(e.name.validate().capitalizeFirstLetter(), style: primaryTextStyle()),
                             value: e,
+                            child: Text(e.name.validate().capitalizeFirstLetter(), style: primaryTextStyle()),
                           );
                         }).toList(),
                         isExpanded: false,
@@ -629,7 +627,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
             )),
             Observer(
               builder: (context) {
-                return Loader().center().visible(appStore.isLoading);
+                return const Loader().center().visible(appStore.isLoading);
               },
             )
           ],
@@ -651,8 +649,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
         return StatefulBuilder(builder: (context, setState) {
           return Container(
             decoration: BoxDecoration(
-              color: appStore.isDarkMode ? Colors.black : Color(0xffD9D9D9),
-              borderRadius: BorderRadius.only(
+              color: appStore.isDarkMode ? Colors.black : const Color(0xffD9D9D9),
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
@@ -703,8 +701,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
         userStore.setWeightUnit(res.item1.name.toString().toLowerCase());
         weightType = res.item1;
         weight = res.item2;
-        print("-----------768>>>${weightType}");
-        print("-----------769>>>${weight}");
+        print("-----------768>>>$weightType");
+        print("-----------769>>>$weight");
       });
     }
   }
@@ -721,7 +719,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
         return Container(
           decoration: BoxDecoration(
             color: appStore.isDarkMode ? scaffoldColorDark : Colors.white,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(30),
               topRight: Radius.circular(30),
             ),
@@ -731,8 +729,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: appStore.isDarkMode ? Colors.black : Color(0xffD9D9D9),
-                  borderRadius: BorderRadius.only(
+                  color: appStore.isDarkMode ? Colors.black : const Color(0xffD9D9D9),
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
                   ),
@@ -743,15 +741,15 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        color: appStore.isDarkMode ? Color(0xffD9D9D9) : Colors.black,
+                        color: appStore.isDarkMode ? const Color(0xffD9D9D9) : Colors.black,
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                         icon: const Icon(Icons.close),
                       ),
-                      Text(languages.lblAge, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: appStore.isDarkMode ? Color(0xffD9D9D9) : Colors.black)),
+                      Text(languages.lblAge, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: appStore.isDarkMode ? const Color(0xffD9D9D9) : Colors.black)),
                       IconButton(
-                        color: appStore.isDarkMode ? Color(0xffD9D9D9) : Colors.black,
+                        color: appStore.isDarkMode ? const Color(0xffD9D9D9) : Colors.black,
                         onPressed: () {
                           mAgeCont.text = mSelectedIndex.toString();
                           Navigator.of(context).pop();
@@ -770,7 +768,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> with TickerProvid
                       magnification: 1.4,
                       squeeze: 0.8,
                       useMagnifier: true,
-                      selectionOverlay: SizedBox(),
+                      selectionOverlay: const SizedBox(),
                       itemExtent: 32.0,
                       scrollController: FixedExtentScrollController(initialItem: userStore.age.validate().toInt() - 17),
                       onSelectedItemChanged: (int selectedItem) {

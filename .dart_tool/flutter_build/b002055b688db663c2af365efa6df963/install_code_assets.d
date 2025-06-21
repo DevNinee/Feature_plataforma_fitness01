@@ -1,0 +1,1 @@
+ C:\\Users\\ricar\\OneDrive\\Documentos\\Feature\ Plataforma\ fitness\\Feature_plataforma_fitness01\\.dart_tool\\flutter_build\\b002055b688db663c2af365efa6df963\\native_assets.json: 

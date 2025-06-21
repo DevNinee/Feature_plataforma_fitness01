@@ -24,14 +24,13 @@ import '../models/models.dart';
 import 'youtube_player_screen.dart';
 import 'package:flutter_chrome_cast/lib.dart';
 import 'dart:async';
-import 'package:flutter_chrome_cast/widgets/mini_controller.dart';
 
 class ExerciseDurationScreen2 extends StatefulWidget {
   static String tag = '/ExerciseDurationScreen';
   final ExerciseDetailResponse? mExerciseModel;
   final String? workOutId;
 
-  ExerciseDurationScreen2(this.mExerciseModel, this.workOutId);
+  const ExerciseDurationScreen2(this.mExerciseModel, this.workOutId, {super.key});
 
   @override
   ExerciseDurationScreen2State createState() => ExerciseDurationScreen2State();
@@ -72,10 +71,10 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
       _tabata = Tabata(
           sets: 1,
           reps: widget.mExerciseModel!.data!.sets!.length,
-          startDelay: Duration(seconds: 3),
+          startDelay: const Duration(seconds: 3),
           exerciseTime: mExTime,
           restTime: mRestTime,
-          breakTime: Duration(seconds: 60),
+          breakTime: const Duration(seconds: 60),
           status: widget.mExerciseModel?.data?.based == "reps" ? "reps" : "second");
     }
 
@@ -97,7 +96,7 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
   Future<void> initPlatformState() async {
     try {
       const appId = GoogleCastDiscoveryCriteria.kDefaultApplicationId;
-      print("-----------24>>>>${appId}");
+      print("-----------24>>>>$appId");
 
       if (Platform.isIOS) {
         options = IOSGoogleCastOptions(
@@ -153,7 +152,7 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
       Navigator.pop(context);
      // finish(context);
     }
-    if(mounted)this.setState(() {});
+    if(mounted)setState(() {});
   }
 
 
@@ -204,9 +203,9 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
   Widget mData(List<Sets> strings) {
     List<Widget> list = [];
     for (var i = 0; i < strings.length; i++) {
-      list.add(new Text(strings[i].time.toString()));
+      list.add(Text(strings[i].time.toString()));
     }
-    return new Row(children: list);
+    return Row(children: list);
   }
 
   @override
@@ -221,7 +220,7 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 56),
+        preferredSize: const Size(double.infinity, 56),
         child: Visibility(
             visible: mode == 'portrait' ? true : false,
             child: appBarWidget(widget.mExerciseModel!.data!.title.validate(), context: context, actions: [
@@ -246,7 +245,7 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
                 builder: (context, snapshot) {
                   final devices = snapshot.data ?? [];
                   bool? isConnected = GoogleCastSessionManager.instance.connectionState == GoogleCastConnectState.ConnectionStateConnected;
-                  print("---------232>>>${isConnected}");
+                  print("---------232>>>$isConnected");
 
                   return IconButton(
                       onPressed: () {
@@ -266,7 +265,7 @@ class ExerciseDurationScreen2State extends State<ExerciseDurationScreen2> {
             ])),
       ),
       body: SingleChildScrollView(
-        physics: mode == 'portrait' ? AlwaysScrollableScrollPhysics() : NeverScrollableScrollPhysics(),
+        physics: mode == 'portrait' ? const AlwaysScrollableScrollPhysics() : const NeverScrollableScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

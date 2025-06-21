@@ -23,7 +23,7 @@ import '../utils/app_common.dart';
 class BlogDetailScreen extends StatefulWidget {
   final BlogModel? mBlogModel;
 
-  BlogDetailScreen({this.mBlogModel});
+  const BlogDetailScreen({super.key, this.mBlogModel});
 
   @override
   _BlogDetailScreenState createState() => _BlogDetailScreenState();
@@ -108,12 +108,12 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
                         left: 16,
                         child: Container(
                           decoration: boxDecorationWithRoundedCorners(backgroundColor: whiteColor.withOpacity(0.4), borderRadius: radius(8)),
-                          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                           child: RichText(
                             text: TextSpan(
                               children: [
                                 WidgetSpan(
-                                  child: Icon(Icons.access_time_outlined, color: Colors.white, size: 16).paddingRight(4),
+                                  child: const Icon(Icons.access_time_outlined, color: Colors.white, size: 16).paddingRight(4),
                                 ),
                                 TextSpan(text: parseDocumentDate(DateTime.parse(widget.mBlogModel!.datetime.validate())), style: secondaryTextStyle(color: Colors.white)),
                               ],
@@ -154,7 +154,7 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
                                           setState(() {});
                                         }),
                                         child: Container(
-                                          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                           decoration: boxDecorationWithRoundedCorners(
                                               backgroundColor: appStore.isDarkMode ? context.cardColor : Colors.white, borderRadius: radius(24), border: Border.all(width: 0.3, color: primaryColor)),
                                           child: Text(widget.mBlogModel?.tagsName?[index].title ?? '', style: secondaryTextStyle(color: primaryColor), maxLines: 1, overflow: TextOverflow.ellipsis),
@@ -163,7 +163,7 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
                                     },
                                   ),
                                 ).paddingOnly(left: 16, bottom: 16, top: 16, right: appStore.selectedLanguageCode == 'ar' ? 16 : 0)
-                              : SizedBox().paddingOnly(top: 16),
+                              : const SizedBox().paddingOnly(top: 16),
                            widget.mBlogModel!.categoryName!.isNotEmpty?
                            Wrap(
                             direction: Axis.horizontal,
@@ -184,7 +184,7 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
                                         ))
                                     .toList() ??
                                 [],
-                          ):SizedBox.shrink(),
+                          ):const SizedBox.shrink(),
 
                           /* ? Wrap(
                                   runSpacing: 9,
@@ -208,7 +208,7 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
               ],
             ),
             Observer(builder: (context) {
-              return Loader().center().visible(appStore.isLoading);
+              return const Loader().center().visible(appStore.isLoading);
             }),
           ],
         ),

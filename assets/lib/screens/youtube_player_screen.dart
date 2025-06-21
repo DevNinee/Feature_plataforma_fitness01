@@ -16,7 +16,7 @@ class YoutubePlayerScreen extends StatefulWidget {
   final bool? autoPlay;
   final bool? hideControl;
 
-  YoutubePlayerScreen({this.url, this.img,this.autoPlay=false,this.hideControl=false});
+  const YoutubePlayerScreen({super.key, this.url, this.img,this.autoPlay=false,this.hideControl=false});
 
   @override
   YoutubePlayerScreenState createState() => YoutubePlayerScreenState();
@@ -47,7 +47,7 @@ class YoutubePlayerScreenState extends State<YoutubePlayerScreen> {
       DeviceOrientation.portraitDown,
     ]);
     videoId = YoutubePlayer.convertUrlToId(widget.url!)!;
-    print("--------50>>>${videoId}");
+    print("--------50>>>$videoId");
 
     youtubePlayerController = YoutubePlayerController(
       initialVideoId: videoId,
@@ -176,7 +176,7 @@ class YoutubePlayerScreenState extends State<YoutubePlayerScreen> {
             return Future.value(true);
           },
           child: Scaffold(
-            body: Container(
+            body: SizedBox(
               height: context.height(),
               child: Stack(
                 alignment: Alignment.topLeft,
@@ -189,7 +189,7 @@ class YoutubePlayerScreenState extends State<YoutubePlayerScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           IconButton(
-                              icon: Icon(CupertinoIcons.gobackward_10, color: Colors.white, size: 30),
+                              icon: const Icon(CupertinoIcons.gobackward_10, color: Colors.white, size: 30),
                               onPressed: () {
                                 Duration currentPosition = youtubePlayerController.value.position;
                                 Duration targetPosition = currentPosition - const Duration(seconds: 10);
@@ -202,10 +202,10 @@ class YoutubePlayerScreenState extends State<YoutubePlayerScreen> {
                                 setState(() {});
                               }
                             },
-                            child: SizedBox(height: 50, width: 50),
+                            child: const SizedBox(height: 50, width: 50),
                           ),
                           IconButton(
-                              icon: Icon(CupertinoIcons.goforward_10, color: Colors.white, size: 30),
+                              icon: const Icon(CupertinoIcons.goforward_10, color: Colors.white, size: 30),
                               onPressed: () {
                                 Duration currentPosition = youtubePlayerController.value.position;
                                 Duration targetPosition = currentPosition + const Duration(seconds: 10);
@@ -238,9 +238,9 @@ class YoutubePlayerScreenState extends State<YoutubePlayerScreen> {
                                     setState(() {});
                                   }).enterPipMode();
                                 },
-                                icon: Icon(Icons.picture_in_picture_alt_outlined, color: Colors.white, size: 25.0),
+                                icon: const Icon(Icons.picture_in_picture_alt_outlined, color: Colors.white, size: 25.0),
                               )
-                            : SizedBox(),
+                            : const SizedBox(),
                       ],
                     ).paddingOnly(top: 30, left: 8, right: 8),
                 ],

@@ -4,7 +4,6 @@ import 'package:mighty_fitness/models/login_response.dart';
 import 'package:mighty_fitness/utils/app_colors.dart';
 import 'package:mighty_fitness/utils/app_constants.dart';
 
-import '../../../extensions/colors.dart';
 import '../../../extensions/common.dart';
 import '../../../extensions/confirmation_dialog.dart';
 import '../../../extensions/constants.dart';
@@ -18,7 +17,7 @@ import '../../../utils/app_common.dart';
 class ChatOptionDialog extends StatefulWidget {
   final UserModel? receiverUser;
 
-  ChatOptionDialog({this.receiverUser});
+  const ChatOptionDialog({super.key, this.receiverUser});
 
   @override
   ChatOptionDialogState createState() => ChatOptionDialogState();
@@ -55,10 +54,10 @@ class ChatOptionDialogState extends State<ChatOptionDialog> {
   Widget build(BuildContext context) {
     return Container(
       width: context.width(),
-      padding: EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: ListView.builder(
         shrinkWrap: true,
-        padding: EdgeInsets.all(0),
+        padding: const EdgeInsets.all(0),
         itemCount: chatOptionList.length,
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
@@ -76,7 +75,7 @@ class ChatOptionDialogState extends State<ChatOptionDialog> {
                       decoration: boxDecorationDefault(
                           color: primaryLightColor,
                           borderRadius: BorderRadius.circular(40)),
-                      child: Icon(Icons.clear, size: 28, color: primaryColor),
+                      child: const Icon(Icons.clear, size: 28, color: primaryColor),
                     ), onAccept: (v) {
                   appStore.setLoading(true);
 
@@ -101,7 +100,7 @@ class ChatOptionDialogState extends State<ChatOptionDialog> {
                       decoration: boxDecorationDefault(
                           color: primaryLightColor,
                           borderRadius: BorderRadius.circular(40)),
-                      child: Icon(Icons.delete, size: 28, color: primaryColor),
+                      child: const Icon(Icons.delete, size: 28, color: primaryColor),
                     ),
                     dialogAnimation: DialogAnimation.SCALE,
                     title: "All Chat will be cleared and deleted",

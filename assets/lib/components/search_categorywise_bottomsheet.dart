@@ -30,7 +30,7 @@ class SearchCategoryBottomSheet extends StatefulWidget {
   final List<EquipmentModel>? mEquipmentList;
   final List<LevelModel>? mLevelList;
 
-  SearchCategoryBottomSheet({super.key, this.listId, this.onCall, this.equipmentId, this.mEquipmentList, this.mLevelList});
+  const SearchCategoryBottomSheet({super.key, this.listId, this.onCall, this.equipmentId, this.mEquipmentList, this.mLevelList});
 
   @override
   State<SearchCategoryBottomSheet> createState() => _SearchCategoryBottomSheetState();
@@ -70,7 +70,7 @@ class _SearchCategoryBottomSheetState extends State<SearchCategoryBottomSheet> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
+                        const Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
                           finish(context);
                         }),
                         10.width,
@@ -120,17 +120,17 @@ class _SearchCategoryBottomSheetState extends State<SearchCategoryBottomSheet> {
                               ).cornerRadiusWithClipRRect(12),
                             ),
                             Container(
-                              margin: EdgeInsets.only(bottom: 1),
+                              margin: const EdgeInsets.only(bottom: 1),
                               child: ClipRRect(
                                 borderRadius: radius(12),
                                 child: BackdropFilter(
                                   filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
                                   child: Container(
-                                    margin: EdgeInsets.only(bottom: 0),
+                                    margin: const EdgeInsets.only(bottom: 0),
                                     width: (context.width() - 54) / 3,
-                                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                                     decoration: boxDecorationWithRoundedCorners(
-                                      borderRadius: BorderRadius.only(bottomRight: Radius.circular(12), bottomLeft: Radius.circular(12)),
+                                      borderRadius: const BorderRadius.only(bottomRight: Radius.circular(12), bottomLeft: Radius.circular(12)),
                                       backgroundColor: Colors.white.withOpacity(0.7),
                                     ),
                                     child: Text(
@@ -182,7 +182,7 @@ class _SearchCategoryBottomSheetState extends State<SearchCategoryBottomSheet> {
                   children: [
                     Row(
                       children: [
-                        Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
+                        const Icon(Icons.close, size: 24, color: primaryColor).onTap(() {
                           finish(context);
                         }),
                         10.width,
@@ -208,9 +208,9 @@ class _SearchCategoryBottomSheetState extends State<SearchCategoryBottomSheet> {
                     ).paddingSymmetric(horizontal: 16, vertical: 16),
                     AnimatedListView(
                       itemCount: widget.mLevelList!.length,
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       shrinkWrap: true,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) {
                         if (widget.mLevelList![index].select == true) {
                           if (!mLevelIdList.contains(widget.mLevelList![index].id.validate())) {
@@ -222,7 +222,7 @@ class _SearchCategoryBottomSheetState extends State<SearchCategoryBottomSheet> {
                         return Row(
                           children: [
                             Text(widget.mLevelList![index].title.validate(), style: primaryTextStyle()).expand(),
-                            widget.mLevelList![index].select == true ? Icon(Ionicons.md_checkbox, color: primaryColor) : Icon(MaterialCommunityIcons.checkbox_blank_outline, color: primaryColor),
+                            widget.mLevelList![index].select == true ? const Icon(Ionicons.md_checkbox, color: primaryColor) : const Icon(MaterialCommunityIcons.checkbox_blank_outline, color: primaryColor),
                           ],
                         ).paddingSymmetric(vertical: 8).onTap(() async {
                           widget.mLevelList![index].select = !widget.mLevelList![index].select.validate();

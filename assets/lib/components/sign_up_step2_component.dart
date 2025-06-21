@@ -16,7 +16,7 @@ import '../utils/app_constants.dart';
 class SignUpStep2Component extends StatefulWidget {
   final bool? isNewTask;
 
-  SignUpStep2Component({this.isNewTask = false});
+  const SignUpStep2Component({super.key, this.isNewTask = false});
 
   @override
   _SignUpStep2ComponentState createState() => _SignUpStep2ComponentState();
@@ -40,7 +40,7 @@ class _SignUpStep2ComponentState extends State<SignUpStep2Component> {
 
   Widget mGender(String? image, String? title, int i, Function? onnCall) {
     return Bounce(
-      duration: Duration(milliseconds: 110),
+      duration: const Duration(milliseconds: 110),
       onPressed: () {
         onnCall!.call();
       },
@@ -51,7 +51,7 @@ class _SignUpStep2ComponentState extends State<SignUpStep2Component> {
             alignment: Alignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 20, bottom: 20),
+                margin: const EdgeInsets.only(top: 20, bottom: 20),
                 decoration: boxDecorationWithRoundedCorners(border: Border.all(color: context.dividerColor, width: 1), backgroundColor: mCurrentValue == i ? primaryColor : context.scaffoldBackgroundColor),
                 height: context.height() * 0.3,
                 width: context.width() * 0.4,

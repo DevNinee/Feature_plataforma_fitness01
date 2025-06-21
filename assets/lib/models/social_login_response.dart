@@ -10,14 +10,14 @@ class SocialLoginResponse {
     status = json['status'];
     isUserExist = json['is_user_exist'];
     message = json['message'];
-    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['is_user_exist'] = this.isUserExist;
-    data['message'] = this.message;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    data['is_user_exist'] = isUserExist;
+    data['message'] = message;
     if (this.data != null) {
       data['data'] = this.data!.toJson();
     }
@@ -80,22 +80,22 @@ class Data {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['username'] = this.username;
-    data['first_name'] = this.firstName;
-    data['last_name'] = this.lastName;
-    data['email'] = this.email;
-    data['phone_number'] = this.phoneNumber;
-    data['user_type'] = this.userType;
-    data['status'] = this.status;
-    data['login_type'] = this.loginType;
-    data['gender'] = this.gender;
-    data['display_name'] = this.displayName;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['api_token'] = this.apiToken;
-    data['profile_image'] = this.profileImage;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['username'] = username;
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
+    data['email'] = email;
+    data['phone_number'] = phoneNumber;
+    data['user_type'] = userType;
+    data['status'] = status;
+    data['login_type'] = loginType;
+    data['gender'] = gender;
+    data['display_name'] = displayName;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['api_token'] = apiToken;
+    data['profile_image'] = profileImage;
     return data;
   }
 }

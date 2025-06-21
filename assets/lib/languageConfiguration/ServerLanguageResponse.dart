@@ -11,15 +11,15 @@ class ServerLanguageResponse {
     if (json['data'] != null) {
       data = <LanguageJsonData>[];
       json['data'].forEach((v) {
-        data!.add(new LanguageJsonData.fromJson(v));
+        data!.add(LanguageJsonData.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['version_code'] = this.currentVersionNo;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    data['version_code'] = currentVersionNo;
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
     }
@@ -45,13 +45,13 @@ class LanguageJsonData {
     id = json['id'];
     languageName = json['language_name'];
     isDefaultLanguage = json['id_default_language'];
-    languageCode = json['language_code'] == null ? "en" : json['language_code'];
+    languageCode = json['language_code'] ?? "en";
     countryCode = json['country_code'];
     isRtl = json['is_rtl'];
     if (json['contentdata'] != null) {
       contentData = <ContentData>[];
       json['contentdata'].forEach((v) {
-        contentData!.add(new ContentData.fromJson(v));
+        contentData!.add(ContentData.fromJson(v));
       });
     }
     createdAt = json['created_at'];
@@ -60,19 +60,19 @@ class LanguageJsonData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['language_name'] = this.languageName;
-    data['country_code'] = this.countryCode;
-    data['language_code'] = this.languageCode;
-    data['id_default_language'] = this.isDefaultLanguage;
-    data['is_rtl'] = this.isRtl;
-    if (this.contentData != null) {
-      data['contentdata'] = this.contentData!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['language_name'] = languageName;
+    data['country_code'] = countryCode;
+    data['language_code'] = languageCode;
+    data['id_default_language'] = isDefaultLanguage;
+    data['is_rtl'] = isRtl;
+    if (contentData != null) {
+      data['contentdata'] = contentData!.map((v) => v.toJson()).toList();
     }
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['language_image'] = this.languageImage;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['language_image'] = languageImage;
     return data;
   }
 }
@@ -93,10 +93,10 @@ class ContentData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['keyword_id'] = this.keywordId;
-    data['keyword_name'] = this.keywordName;
-    data['keyword_value'] = this.keywordValue;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['keyword_id'] = keywordId;
+    data['keyword_name'] = keywordName;
+    data['keyword_value'] = keywordValue;
     return data;
   }
 }

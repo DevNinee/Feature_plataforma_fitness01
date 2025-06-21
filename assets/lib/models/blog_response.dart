@@ -8,20 +8,20 @@ class BlogResponse {
 
   BlogResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <BlogModel>[];
       json['data'].forEach((v) {
-        data!.add(new BlogModel.fromJson(v));
+        data!.add(BlogModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -66,7 +66,7 @@ class BlogModel {
     if (json['tags_name'] != null) {
       tagsName = <TagsName>[];
       json['tags_name'].forEach((v) {
-        tagsName!.add(new TagsName.fromJson(v));
+        tagsName!.add(TagsName.fromJson(v));
       });
     }
     tagsId = json['tags_id'].cast<String>();
@@ -74,7 +74,7 @@ class BlogModel {
     if (json['category_name'] != null) {
       categoryName = <TagsName>[];
       json['category_name'].forEach((v) {
-        categoryName!.add(new TagsName.fromJson(v));
+        categoryName!.add(TagsName.fromJson(v));
       });
     }
     datetime = json['datetime'];
@@ -87,25 +87,25 @@ class BlogModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    if (this.tagsName != null) {
-      data['tags_name'] = this.tagsName!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    if (tagsName != null) {
+      data['tags_name'] = tagsName!.map((v) => v.toJson()).toList();
     }
-    data['tags_id'] = this.tagsId;
-    data['category_ids'] = this.categoryIds;
-    if (this.categoryName != null) {
+    data['tags_id'] = tagsId;
+    data['category_ids'] = categoryIds;
+    if (categoryName != null) {
       data['category_name'] =
-          this.categoryName!.map((v) => v.toJson()).toList();
+          categoryName!.map((v) => v.toJson()).toList();
     }
-    data['datetime'] = this.datetime;
-    data['status'] = this.status;
-    data['is_featured'] = this.isFeatured;
-    data['post_image'] = this.postImage;
-    data['description'] = this.description;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['datetime'] = datetime;
+    data['status'] = status;
+    data['is_featured'] = isFeatured;
+    data['post_image'] = postImage;
+    data['description'] = description;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }
@@ -122,9 +122,9 @@ class TagsName {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
     return data;
   }
 }

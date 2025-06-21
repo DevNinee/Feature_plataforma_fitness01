@@ -22,7 +22,7 @@ import '../model/chat_message_model.dart';
 class ChatItemWidget extends StatefulWidget {
   final ChatMessageModel? data;
 
-  ChatItemWidget({this.data});
+  const ChatItemWidget({super.key, this.data});
 
   @override
   _ChatItemWidgetState createState() => _ChatItemWidgetState();
@@ -74,10 +74,10 @@ class _ChatItemWidgetState extends State<ChatItemWidget> {
                   2.width,
                   widget.data!.isMe!
                       ? !widget.data!.isMessageRead!
-                          ? Icon(Icons.done, size: 12, color: Colors.white60)
-                          : Icon(Icons.done_all,
+                          ? const Icon(Icons.done, size: 12, color: Colors.white60)
+                          : const Icon(Icons.done_all,
                               size: 12, color: Colors.white60)
-                      : Offstage()
+                      : const Offstage()
                 ],
               ),
             ],
@@ -108,17 +108,17 @@ class _ChatItemWidgetState extends State<ChatItemWidget> {
                         2.width,
                         widget.data!.isMe!
                             ? !widget.data!.isMessageRead!
-                                ? Icon(Icons.done,
+                                ? const Icon(Icons.done,
                                     size: 12, color: Colors.white60)
-                                : Icon(Icons.done_all,
+                                : const Icon(Icons.done_all,
                                     size: 12, color: Colors.white60)
-                            : Offstage()
+                            : const Offstage()
                       ],
                     ))
               ],
             );
           } else {
-            return Container(child: Loader(), height: 250, width: 250);
+            return const SizedBox(height: 250, width: 250, child: Loader());
           }
         default:
           return Container();
@@ -128,11 +128,11 @@ class _ChatItemWidgetState extends State<ChatItemWidget> {
     EdgeInsetsGeometry customPadding(String? messageTypes) {
       switch (messageTypes) {
         case TEXT:
-          return EdgeInsets.symmetric(horizontal: 12, vertical: 8);
+          return const EdgeInsets.symmetric(horizontal: 12, vertical: 8);
         case IMAGE:
-          return EdgeInsets.symmetric(horizontal: 4, vertical: 4);
+          return const EdgeInsets.symmetric(horizontal: 4, vertical: 4);
         default:
-          return EdgeInsets.symmetric(horizontal: 4, vertical: 4);
+          return const EdgeInsets.symmetric(horizontal: 4, vertical: 4);
       }
     }
 
@@ -161,6 +161,7 @@ class _ChatItemWidgetState extends State<ChatItemWidget> {
               }
             },
       child: Container(
+        margin: const EdgeInsets.only(top: 2, bottom: 2),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: widget.data?.isMe??false
@@ -204,7 +205,6 @@ class _ChatItemWidgetState extends State<ChatItemWidget> {
             ),
           ],
         ),
-        margin: EdgeInsets.only(top: 2, bottom: 2),
       ),
     );
   }

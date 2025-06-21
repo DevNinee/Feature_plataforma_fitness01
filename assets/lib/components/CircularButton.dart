@@ -9,7 +9,7 @@ class CircularButton extends StatelessWidget {
   final String? image;
   final Function? onClick;
 
-  CircularButton({this.color, this.width, this.height, this.icon,this.image, this.onClick});
+  const CircularButton({super.key, this.color, this.width, this.height, this.icon,this.image, this.onClick});
 
 
   @override

@@ -7,7 +7,6 @@ import 'package:mighty_fitness/extensions/extension_util/string_extensions.dart'
 import 'package:mighty_fitness/extensions/text_styles.dart';
 import '../extensions/extension_util/bool_extensions.dart';
 
-import 'app_common.dart';
 
 /// Default App Button
 class AppButtonWidget extends StatefulWidget {
@@ -30,7 +29,7 @@ class AppButtonWidget extends StatefulWidget {
   final bool? enabled;
   final bool? enableScaleAnimation;
 
-  AppButtonWidget({
+  const AppButtonWidget({super.key, 
     this.onTap,
     this.text,
     this.width,
@@ -114,6 +113,14 @@ class _AppButtonWidgetState extends State<AppButtonWidget> with SingleTickerProv
           padding: widget.padding ?? dynamicAppButtonPadding(context),
           onPressed: widget.enabled.validate(value: true) ? widget.onTap as void Function()? : null,
           color: widget.color ?? appButtonBackgroundColorGlobal,
+          shape: widget.shapeBorder ?? defaultAppButtonShapeBorder,
+          elevation: widget.elevation ?? defaultAppButtonElevation,
+          animationDuration: const Duration(milliseconds: 300),
+          height: widget.height,
+          disabledColor: widget.disabledColor,
+          focusColor: widget.focusColor,
+          hoverColor: widget.hoverColor,
+          splashColor: widget.splashColor,
           child: widget.child ??
               Text(
                 widget.text!.validate(),
@@ -122,14 +129,6 @@ class _AppButtonWidgetState extends State<AppButtonWidget> with SingleTickerProv
                       color: widget.textColor ?? Colors.white,
                     ),
               ),
-          shape: widget.shapeBorder ?? defaultAppButtonShapeBorder,
-          elevation: widget.elevation ?? defaultAppButtonElevation,
-          animationDuration: Duration(milliseconds: 300),
-          height: widget.height,
-          disabledColor: widget.disabledColor,
-          focusColor: widget.focusColor,
-          hoverColor: widget.hoverColor,
-          splashColor: widget.splashColor,
         ),
       ),
     );

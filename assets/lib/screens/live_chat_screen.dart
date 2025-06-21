@@ -20,7 +20,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
    @override
   void initState() {
     super.initState();
-    User user = User(email: userStore.email, nickName: "${userStore.displayName}", avatar: userStore.profileImage ?? "");
+    User user = User(email: userStore.email, nickName: userStore.displayName, avatar: userStore.profileImage ?? "");
     config = CrispConfig(
       user: user,
       tokenId: userStore.userId.toString(),
@@ -63,14 +63,9 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                             () async {
                           String? sessionId =
                               await FlutterCrispChat.getSessionIdentifier();
-                          if (sessionId != null) {
-                            if (kDebugMode) {
-                            }
-                          } else {
-                            if (kDebugMode) {
-                            }
+                          if (kDebugMode) {
                           }
-                        });
+                                                });
                       },
                       child: const Text('Open Crisp Chat'),
                     ),

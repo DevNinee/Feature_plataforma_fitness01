@@ -15,7 +15,7 @@ class ExerciseComponent extends StatefulWidget {
   final ExerciseModel? mExerciseModel;
   final Function? onCall;
 
-  ExerciseComponent({this.mExerciseModel, this.onCall});
+  const ExerciseComponent({super.key, this.mExerciseModel, this.onCall});
 
   @override
   _ExerciseComponentState createState() => _ExerciseComponentState();
@@ -28,14 +28,14 @@ class _ExerciseComponentState extends State<ExerciseComponent> {
   void initState() {
     if (widget.mExerciseModel!.type == SETS) {
       if (widget.mExerciseModel!.sets != null) {
-        widget.mExerciseModel!.sets!.forEach((element) {
+        for (var element in widget.mExerciseModel!.sets!) {
           if (widget.mExerciseModel!.based.toString() == TIME) {
-            mSets!.add(element.time.toString() + "s");
+            mSets!.add("${element.time}s");
           } else {
-            mSets!.add(element.reps.toString() + "x");
+            mSets!.add("${element.reps}x");
           }
           setState(() {});
-        });
+        }
       }
     }
     super.initState();
@@ -45,8 +45,8 @@ class _ExerciseComponentState extends State<ExerciseComponent> {
   Widget build(BuildContext context) {
     return Container(
       decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(12)) : boxDecorationRoundedWithShadow(12),
-      padding: EdgeInsets.fromLTRB(10, 10, 10, 8),
-      margin: EdgeInsets.only(bottom: 8, top: 8),
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 8),
+      margin: const EdgeInsets.only(bottom: 8, top: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,7 +65,7 @@ class _ExerciseComponentState extends State<ExerciseComponent> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      if (widget.mExerciseModel!.type == DURATION) Text(widget.mExerciseModel!.duration.validate() + " " + languages.lblDuration, style: secondaryTextStyle(size: 12)),
+                      if (widget.mExerciseModel!.type == DURATION) Text("${widget.mExerciseModel!.duration.validate()} ${languages.lblDuration}", style: secondaryTextStyle(size: 12)),
                       if (widget.mExerciseModel!.type == SETS) Text(mSets!.join(" ").toString(), style: secondaryTextStyle(size: 12)),
                       if (userStore.subscription == "1")
                         if (widget.mExerciseModel!.isPremium == 1) mPro()
@@ -81,7 +81,7 @@ class _ExerciseComponentState extends State<ExerciseComponent> {
       userStore.subscription == "1"
           ? widget.mExerciseModel!.isPremium == 1
               ? userStore.isSubscribe == 0
-                  ? await SubscribeScreen().launch(context)
+                  ? await const SubscribeScreen().launch(context)
                   : await ExerciseDetailScreen(mExerciseName: widget.mExerciseModel!.title.validate(), mExerciseId: widget.mExerciseModel!.id.validate()).launch(context)
               : await ExerciseDetailScreen(mExerciseName: widget.mExerciseModel!.title.validate(), mExerciseId: widget.mExerciseModel!.id.validate()).launch(context)
           : await ExerciseDetailScreen(mExerciseName: widget.mExerciseModel!.title.validate(), mExerciseId: widget.mExerciseModel!.id.validate()).launch(context);

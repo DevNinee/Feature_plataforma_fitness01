@@ -29,7 +29,7 @@ import '../model/file_model.dart';
 class ChatScreen extends StatefulWidget {
   final UserModel? userData;
 
-  ChatScreen({this.userData});
+  const ChatScreen({super.key, this.userData});
 
   @override
   _ChatScreenState createState() => _ChatScreenState();
@@ -90,7 +90,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
     String? message = '';
     if (data.messageType == TYPE_IMAGE) {
-      message = " Sent you " + MessageType.IMAGE.name.capitalizeFirstLetter();
+      message = " Sent you ${MessageType.IMAGE.name.capitalizeFirstLetter()}";
     } else {
       message = messageCont.text.trim().validate();
     }
@@ -164,8 +164,8 @@ class _ChatScreenState extends State<ChatScreen> {
         return Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            padding: EdgeInsets.only(top: 16, bottom: 16, left: 12, right: 12),
-            margin: EdgeInsets.only(bottom: 78, left: 12, right: 12),
+            padding: const EdgeInsets.only(top: 16, bottom: 16, left: 12, right: 12),
+            margin: const EdgeInsets.only(bottom: 78, left: 12, right: 12),
             decoration: BoxDecoration(
                 color: primaryColor, borderRadius: BorderRadius.circular(12)),
             child: Material(
@@ -215,12 +215,12 @@ class _ChatScreenState extends State<ChatScreen> {
                         image.add(File(e.path.validate()));
                       }).toList();
                       finish(context);
-                      image.forEach((element) {
+                      for (var element in image) {
                         sendMessage(
                             result: result,
                             filepath: File(element.path.validate()),
                             type: TYPE_IMAGE);
-                      });
+                      }
                     } else {
                       // User canceled the picker
                     }
@@ -244,25 +244,25 @@ class _ChatScreenState extends State<ChatScreen> {
           receiverUser: widget.userData!,
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: context.height(),
         width: context.width(),
         child: Stack(
           children: [
-            Container(
+            SizedBox(
               height: context.height(),
               width: context.width(),
               child: PaginateFirestore(
                 reverse: true,
                 isLive: true,
-                padding: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 0),
-                physics: BouncingScrollPhysics(),
+                padding: const EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 0),
+                physics: const BouncingScrollPhysics(),
                 query: chatMessageService.chatMessagesWithPagination(
                     currentUserId: getStringAsync(UID),
                     receiverUserId: widget.userData!.uid.validate()),
                 itemsPerPage: PER_PAGE_CHAT_COUNT,
                 shrinkWrap: true,
-                onEmpty: Offstage(),
+                onEmpty: const Offstage(),
                 onLoaded: (page) {
                   isFirstMsg = page.documentSnapshots.isEmpty;
                 },
@@ -287,7 +287,8 @@ class _ChatScreenState extends State<ChatScreen> {
                   blurRadius: 1,
                   backgroundColor: context.cardColor,
                 ),
-                padding: EdgeInsets.only(left: 8, right: 8),
+                padding: const EdgeInsets.only(left: 8, right: 8),
+                width: context.width(),
                 child: Row(
                   children: [
                     TextField(
@@ -297,7 +298,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         hintText: "Write a Message",
                         hintStyle: secondaryTextStyle(),
                         contentPadding:
-                            EdgeInsets.symmetric(vertical: 18, horizontal: 4),
+                            const EdgeInsets.symmetric(vertical: 18, horizontal: 4),
                       ),
                       cursorColor: Colors.black,
                       focusNode: messageFocus,
@@ -315,10 +316,10 @@ class _ChatScreenState extends State<ChatScreen> {
                       maxLines: 5,
                     ).expand(),
                     IconButton(
-                      visualDensity: VisualDensity(horizontal: 0, vertical: 1),
-                      icon: Icon(Icons.attach_file),
+                      visualDensity: const VisualDensity(horizontal: 0, vertical: 1),
+                      icon: const Icon(Icons.attach_file),
                       iconSize: 25.0,
-                      padding: EdgeInsets.all(2),
+                      padding: const EdgeInsets.all(2),
                       color: Colors.grey,
                       onPressed: () {
                         showAttachmentDialog();
@@ -326,7 +327,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       },
                     ),
                     IconButton(
-                      icon: Icon(Icons.send, color: primaryColor),
+                      icon: const Icon(Icons.send, color: primaryColor),
                       onPressed: () {
                         if (!messageCont.text.isEmptyOrNull) {
                           sendMessage();
@@ -335,7 +336,6 @@ class _ChatScreenState extends State<ChatScreen> {
                     )
                   ],
                 ),
-                width: context.width(),
               ),
             )
           ],

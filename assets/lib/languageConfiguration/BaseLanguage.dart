@@ -7,7 +7,7 @@ class BaseLanguage {
     try {
       return Localizations.of<BaseLanguage>(context, BaseLanguage);
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 

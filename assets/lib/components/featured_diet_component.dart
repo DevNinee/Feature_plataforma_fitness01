@@ -27,7 +27,7 @@ class FeaturedDietComponent extends StatefulWidget {
 
   final Function? onCall;
 
-  FeaturedDietComponent({this.mDietModel, this.isList = false, this.isFeatured, this.isCategory, this.mCategoryId, this.onCall});
+  const FeaturedDietComponent({super.key, this.mDietModel, this.isList = false, this.isFeatured, this.isCategory, this.mCategoryId, this.onCall});
 
   @override
   _FeaturedDietComponentState createState() => _FeaturedDietComponentState();
@@ -63,7 +63,7 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
   Widget build(BuildContext context) {
     return widget.isList
         ? Container(
-            margin: EdgeInsets.only(bottom: 16),
+            margin: const EdgeInsets.only(bottom: 16),
             width: context.width(),
             decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(16)) : boxDecorationRoundedWithShadow(16),
             child: Column(
@@ -77,7 +77,7 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
                       top: 12,
                       right: 12,
                       child: Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: Colors.white.withOpacity(0.5)),
                           child: Image.asset(
                             widget.mDietModel!.isFavourite == 1 ? ic_favorite_fill : ic_favorite,
@@ -94,8 +94,8 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
                     userStore.subscription == "1"
                         ? widget.mDietModel!.isPremium == 1
                             ? Positioned(top: 12, left: 12, child: mPro())
-                            : SizedBox()
-                        : SizedBox(),
+                            : const SizedBox()
+                        : const SizedBox(),
                   ],
                 ),
                 Text(widget.mDietModel!.title.validate(), style: primaryTextStyle(), maxLines: 2, overflow: TextOverflow.ellipsis).paddingSymmetric(horizontal: 16, vertical: 12),
@@ -105,7 +105,7 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
             userStore.subscription == "1"
                 ? widget.mDietModel!.isPremium == 1
                     ? userStore.isSubscribe == 0
-                        ? await SubscribeScreen().launch(context)
+                        ? await const SubscribeScreen().launch(context)
                         : await DietDetailScreen(dietModel: widget.mDietModel!).launch(context)
                     : await DietDetailScreen(dietModel: widget.mDietModel!).launch(context)
                 : await DietDetailScreen(dietModel: widget.mDietModel!).launch(context);
@@ -116,7 +116,7 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
             setState(() {});
           })
         : Container(
-            margin: EdgeInsets.only(bottom: 16, right: 8),
+            margin: const EdgeInsets.only(bottom: 16, right: 8),
             width: context.width() * 0.65,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +128,7 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
                         top: 12,
                         right: 12,
                         child: Container(
-                          padding: EdgeInsets.all(6),
+                          padding: const EdgeInsets.all(6),
                           decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: Colors.white.withOpacity(0.5)),
                           child: Image.asset(widget.mDietModel!.isFavourite == 1 ? ic_favorite_fill : ic_favorite,
                               height: 20, width: 20, color: widget.mDietModel!.isFavourite == 1 ? primaryColor : white),
@@ -139,8 +139,8 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
                     userStore.subscription == "1"
                         ? widget.mDietModel!.isPremium == 1
                             ? Positioned(top: 12, left: 12, child: mPro())
-                            : SizedBox()
-                        : SizedBox(),
+                            : const SizedBox()
+                        : const SizedBox(),
                     Positioned(
                       bottom: 0,
                       left: 0,
@@ -170,7 +170,7 @@ class _FeaturedDietComponentState extends State<FeaturedDietComponent> {
             userStore.subscription == "1"
                 ? widget.mDietModel!.isPremium == 1
                     ? userStore.isSubscribe == 0
-                        ? SubscribeScreen().launch(context)
+                        ? const SubscribeScreen().launch(context)
                         : DietDetailScreen(dietModel: widget.mDietModel!).launch(context)
                     : await DietDetailScreen(dietModel: widget.mDietModel!).launch(context)
                 : DietDetailScreen(dietModel: widget.mDietModel!).launch(context);

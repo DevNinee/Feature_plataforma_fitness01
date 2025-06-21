@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			ஒரு மணி நேரத்திற்கு முன்பாக
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d மணி நேரத்திற்கு முன்பாக
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			ஒரு நிமிடத்திற்கு முன்பாக
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			 %1$d நிமிடங்களுக்கு முன்பாக
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			ஒரு மணி நேரம்
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d மணி நேரம்
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			ஒரு நிமிடம்
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d நிமிடங்கள்
+		</item>
+	</plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d புதிய அறிவிப்பு</item>
+    <item quantity="other">%d புதிய அறிவிப்புகள்</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"முகப்பிற்குச் செல்லும்"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"மேலே செல்லும்"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"மேலும் விருப்பங்கள்"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"முடிந்தது"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"அனைத்தையும் காட்டு"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"ஆப்ஸைத் தேர்வுசெய்க"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ஆஃப்"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ஆன்"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt மற்றும்"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl மற்றும்"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function மற்றும்"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta மற்றும்"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift மற்றும்"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"space"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym மற்றும்"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu மற்றும்"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"தேடுக…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"வினவலை அழிக்கும்"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"தேடல் வினவல்"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"தேடும்"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"வினவலைச் சமர்ப்பிக்கும்"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"குரல் தேடல்"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"இதில் பகிர்"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns2:g id="APPLICATION_NAME">%s</ns2:g> மூலம் பகிர்"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"சுருக்கும்"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"கடவுச்சொல்"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"கடவுச்சாவி"</string>
+    <string name="bottomsheet_action_collapse">கீழ்ப்புறச் சீட்டைச் சுருக்கும்</string>
+    <string name="bottomsheet_action_expand">கீழ்ப்புறச் சீட்டை விரிவாக்கும்</string>
+    <string name="bottomsheet_action_expand_halfway">பாதியளவு விரிவாக்கும்</string>
+    <string name="bottomsheet_drag_handle_clicked">இழுப்பதற்கான ஹேண்டில் இருமுறை தட்டப்பட்டது</string>
+    <string name="bottomsheet_drag_handle_content_description">இழுப்பதற்கான ஹேண்டில்</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"பதிலளி"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"வீடியோ"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"நிராகரி"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"துண்டி"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"உள்வரும் அழைப்பு"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"செயலில் இருக்கும் அழைப்பு"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"உள்வரும் அழைப்பை மதிப்பாய்வு செய்கிறது"</string>
+    <string name="cast_ad_label">விளம்பரம்</string>
+    <string name="cast_casting_to_device">%1$sக்கு அனுப்புகிறது</string>
+    <string name="cast_closed_captions">வசனம்</string>
+    <string name="cast_closed_captions_unavailable">வசனம் இல்லை</string>
+    <string name="cast_connecting_to_device">%1$s உடன் இணைக்கிறது</string>
+    <string name="cast_disconnect">தொடர்பைத் துண்டி</string>
+    <string name="cast_dynamic_group_name_format">%1$s + %2$d</string>
+    <string name="cast_expanded_controller_ad_image_description">Cast ரிசீவர் விளம்பரத்தை இயக்கும் போது காட்டப்படும் படம்</string>
+    <string name="cast_expanded_controller_ad_in_progress">விளம்பரம் செயலில் உள்ளது…</string>
+    <string name="cast_expanded_controller_background_image">ஆல்பம் ஆர்ட்</string>
+    <string name="cast_expanded_controller_live_head_description">நேரடி ஒளிபரப்பின் மேற்பகுதியில் தற்போது உள்ளது</string>
+    <string name="cast_expanded_controller_live_stream_indicator">லைவ் ஸ்ட்ரீம்</string>
+    <string name="cast_expanded_controller_loading">ஏற்றுகிறது…</string>
+    <string name="cast_expanded_controller_skip_ad_label">விளம்பரத்தைத் தவிர்</string>
+    <string name="cast_expanded_controller_skip_ad_text">%1$d இல் விளம்பரத்தைத் தவிர்க்கலாம்…</string>
+    <string name="cast_forward">முன்செல்</string>
+    <string name="cast_forward_10">பத்து வினாடிகள் முன்செல்</string>
+    <string name="cast_forward_30">முப்பது வினாடிகள் முன்செல்</string>
+    <string name="cast_intro_overlay_button_text">@android:string/ok</string>
+    <string name="cast_live_label">நேரலை</string>
+    <string name="cast_mute">ஒலியடக்கு</string>
+    <string name="cast_notification_connected_message">%1$s உடன் இணைக்கப்பட்டது</string>
+    <string name="cast_notification_connecting_message">%1$s உடன் இணைக்கிறது</string>
+    <string name="cast_notification_default_channel_name">Cast</string>
+    <string name="cast_notification_disconnect">இணைப்பைத் துண்டி</string>
+    <string name="cast_pause">இடைநிறுத்து</string>
+    <string name="cast_play">இயக்கு</string>
+    <string name="cast_rewind">பின்செல்</string>
+    <string name="cast_rewind_10">பத்து வினாடிகள் பின்செல்</string>
+    <string name="cast_rewind_30">முப்பது வினாடிகள் பின்செல்</string>
+    <string name="cast_seek_bar">பிளேபேக் நகர்தல் கட்டுப்பாடு</string>
+    <string name="cast_skip_next">அடுத்த உருப்படிக்குச் செல்</string>
+    <string name="cast_skip_prev">முந்தைய உருப்படிக்குச் செல்</string>
+    <string name="cast_stop">நிறுத்து</string>
+    <string name="cast_stop_live_stream">லைவ் ஸ்ட்ரீமை நிறுத்து</string>
+    <string name="cast_tracks_chooser_dialog_audio">ஆடியோ</string>
+    <string name="cast_tracks_chooser_dialog_cancel">ரத்துசெய்</string>
+    <string name="cast_tracks_chooser_dialog_closed_captions">வசனம்</string>
+    <string name="cast_tracks_chooser_dialog_default_track_name">டிராக்: %1$d</string>
+    <string name="cast_tracks_chooser_dialog_none">ஏதுமில்லை</string>
+    <string name="cast_tracks_chooser_dialog_ok">சரி</string>
+    <string name="cast_tracks_chooser_dialog_subtitles">வசனங்கள்</string>
+    <string name="cast_unmute">ஒலி இயக்கு</string>
+    <string name="character_counter_content_description">%2$d இல் %1$d எழுத்துகள் உள்ளிடப்பட்டுள்ளன</string>
+    <string name="character_counter_overflowed_content_description">%2$d இல் %1$d எழுத்து வரம்பு மீறப்பட்டது</string>
+    <string name="clear_text_end_icon_content_description">உரையை அழிக்கும்</string>
+    <string msgid="406453423630273620" name="close_drawer">"வழிசெலுத்தல் மெனுவை மூடும்"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"ஷீட்டை மூடும்"</string>
+    <string msgid="5389587048670450460" name="collapsed">"சுருக்கப்பட்டது"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">இயக்கு</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play சேவைகளை இயக்கவும்</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">நிறுவு</string>
+    <string name="common_google_play_services_install_text">Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s இயங்கும். அவை உங்கள் சாதனத்தில் இல்லை.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play சேவைகளைப் பெறவும்</string>
+    <string name="common_google_play_services_notification_channel_name">கிடைக்கும் Google Play சேவைகள்</string>
+    <string name="common_google_play_services_notification_ticker">Google Play சேவைகள் பிழை</string>
+    <string name="common_google_play_services_unknown_issue">Google Play சேவைகளில் சிக்கல் ஏற்பட்டதால், %1$s ஆப்ஸை அணுக முடியவில்லை. மீண்டும் முயலவும்.</string>
+    <string name="common_google_play_services_unsupported_text">Google Play சேவைகள் இருந்தால் மட்டுமே %1$s ஆப்ஸ் இயங்கும். ஆனால், உங்கள் சாதனத்தில் அவை ஆதரிக்கப்படவில்லை.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">புதுப்பி</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Google Play சேவைகளை இயக்கினால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play சேவைகளைப் புதுப்பிக்கவும்</string>
+    <string name="common_google_play_services_updating_text">தற்போது புதுப்பிக்கப்படும், Google Play சேவைகள் இருந்தால் மட்டுமே, %1$s செயல்படும்.</string>
+    <string name="common_google_play_services_wear_update_text">Google Play சேவைகளின் புதிய பதிப்பு தேவை. அது விரைவில் தானாகவே புதுப்பிக்கப்படும்.</string>
+    <string name="common_open_on_phone">மொபைலில் திற</string>
+    <string name="common_signin_button_text">உள்நுழைக</string>
+    <string name="common_signin_button_text_long">Google மூலம் உள்நுழைக</string>
+    <string msgid="6083905920877235314" name="copy">"நகலெடு"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"கிளிப்-போர்டுக்கு இணைப்பு நகலெடுக்கப்பட்டது"</string>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">உங்கள் மின்னஞ்சலை மீண்டும் சரிபார்க்க.</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">புதிய விடுகைகளை காண சொடுக்குக.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">நாங்கள் இணைப்பில் இல்லை. தங்களை மின்னஞ்சலில் தொடர்பு கொள்கிறோம்.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">நன்றி! இன்னும் சற்று நேரத்தில் தொடர்பு கொள்கிறோம்.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">தொடர, படிவத்தை நிரப்பவும்.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">அறிவிப்புகளை பெற உங்கள் மின்னஞ்சல் அமைக்க கிளிக் செய்க.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">உங்கள் மின்னஞ்சல் முகவரியை அமைக்கவும்.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">அறிவிப்புகளை பெற உங்கள் தொலைபேசியின் அமைக்க கிளிக் செய்க.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">தொடர்வதற்கு, உங்கள் தொலைபேசியில் அமைக்கவும்.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">ஏதாவது சொல்ல வேண்டுமா?</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">உங்கள் மதிப்பீட்டை அனுப்பவும்</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">நாங்கள் எப்படி செய்தோம்?</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">கோப்பை பதிவேற்றுகையில் பிழை ஆகி விட்டது. மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">தினசரி கோப்பு பதிவேற்ற ஒதுக்கீடு மீறப்பட்டுள்ளது. இதைப் பின்னர் பதிவேற்ற முயற்சிக்கவும்.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">கோப்பின் அளவு அதிகமாக உள்ளது, அளவை குறைத்து முயற்சிக்கவும்.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">ஒரு கோப்பை அனுப்புக.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">தயாராகிறது</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">பதிவேற்றுகிறது</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">இந்த அரட்டையை மதிப்பிடவும்</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">செய்தி கிடைக்கவில்லை.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">புதிய கருத்தை உள்ளிடுக.</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">அனுப்பு</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">உணர்வானை சேர்க்க.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">உங்கள் ஆடியோ பதிவை அனுப்புவதற்கு முன் வழிசெலுத்துவது அதை இழக்கும்.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">உங்கள் மைக்ரோஃபோனிலிருந்து ஆடியோவைப் பதிவுசெய்ய முடியவில்லை. அணுகலை அனுமதித்தீர்களா?</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">ஆடியோ செய்தியை பதிவு செய்யவும்</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">இயக்குவதை நிறுத்துக</string>
+    <string name="crisp_sdk_chat_chat_header_channels">மேலும் சேனல்கள்</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">அடிக்கடி படிக்கும் கட்டுரைகள்</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">தேடப்பட்ட கட்டுரைகள்</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">மேலும் %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">உரையாடல்</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">உதவி மையம்</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">%1$s இல் தொடர்க</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">மின்னஞ்சல்</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">தொலைபேசி</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">அனுப்புனர்</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">உதவியாளர் இணைப்பில் இல்லை.</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">%1$s -க்கு முன்பு இணைப்பில் இருந்தார்.</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">%1$s - ற்குள் பதில் கிடைக்கும்.</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">உதவியாளர் இணைப்பில் உள்ளார்.</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">எங்கள் நிலைப் பக்கத்தைக் காண்க</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">மேலும் மேம்படுத்தல்கள்.</string>
+    <string name="crisp_sdk_chat_chat_health_main">எங்கள் சேவைகளில் சில வேலை செய்யவில்லை.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">தேடல் முடிவுகள் இல்லை. Try other keywords</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">எங்கள் உதவி மையத்தைத் தேடவும்…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">உதவி மையத்தில் இதுவரை கட்டுரைகள் எதுவும் இல்லை.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">ஹெல்ப் டெஸ்கில் பார்க்கவும்</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">இந்த ஆடியோ கோப்பை இயக்க முடியவில்லை. அது காலாவதியானிருக்கலாம்.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">அனுப்ப முடியவில்லை. மீண்டும் முயற்சிக்கவா?</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">இணைக்கப்பட்ட கோப்பு</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">படிக்க</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">ஒரு சில கருத்துகள் அனுப்பப்படவில்லை, இந்த பக்கத்தில் இருந்து வெளியேறினால் அவை அனுப்பப்பட மாட்டாது.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">திருத்தப்பட்ட</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">பங்கேற்பாளராக</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">மொழிபெயர்க்க</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">எங்கள் ஆதரவை மதிப்பிட விரும்புகிறீர்களா?</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">எங்களுடன் அரட்டையடித்ததற்கு நன்றி.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">இல்லை, நன்றி</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">ஆதரவை மதிப்பிடுங்கள்</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">உங்கள் கருத்துக்கு நன்றி!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">நீங்கள் காத்திருக்கும்போது, ஒரு வேடிக்கை விளையாட்டு விளையாட வேண்டும்?</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">நாங்கள் பதில் நேரம் ஒதுக்கியதற்கு தெரிகிறது.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">இல்லை, நன்றி</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">விளையாடு</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">நாங்கள் உங்களிடம் திரும்பி வருவது எப்படி?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">உங்கள் மின்னஞ்சல் முகவரி என்ன?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">உங்கள் மின்னஞ்சல் முகவரியை உள்ளிடவும்</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">உங்கள் தொலைபேசி எண்ணை உள்ளிடவும்</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">உங்கள் தொலைபேசி எண் என்ன?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">வெறும் வழக்கில் நீங்கள் விட்டு அல்லது நாம் பின்னர் பதில்:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">மின்னஞ்சல்</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">தொலைபேசி</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">ஆஃப்லைன்.</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">ஆஃப்லைனில். நீங்கள் சிறிது நேரம் செயலற்ற நிலையில் இருந்தீர்கள்.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">இப்போது எந்த செய்திகளையும் பெறவோ அனுப்பவோ முடியாது.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">அரட்டையுடன் மீண்டும் இணைக்க ஒரு செய்தியை அனுப்பவும்.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">மீண்டும் இணைக்கிறது …</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">ஏதும் கிடைக்கவில்லை, மீண்டும் தேடுக.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">GIF களை தேடுக</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFs</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">சிரிப்பான்கள்</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">இணைக்க முடியவில்லை. செய்தி தற்போது கிடைக்கவில்லை</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">புதிய கருத்தை உள்ளிடுக</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">அனுப்புனர்</string>
+    <string name="crisp_sdk_date_now">தற்போது</string>
+    <string name="crisp_sdk_date_second">ஒரு சில நொடிகளுக்கு முன்பாக</string>
+    <string name="crisp_sdk_duration_days">ஒரு சில நாட்கள்</string>
+    <string name="crisp_sdk_duration_now">உடனடியாக</string>
+    <string name="crisp_sdk_duration_second">ஒரு சில வினாடிகள்</string>
+    <string name="crisp_sdk_theme_text_1_chat">சந்தேகமா? என்னுடன்  உரையாடுங்கள்</string>
+    <string name="crisp_sdk_theme_text_2_chat">உங்கள் கேள்விகளை எங்களிடம் கேளுங்கள்</string>
+    <string name="crisp_sdk_theme_text_3_chat">உங்கள் கேள்விகளை என்னிடம் கேளுங்கள்</string>
+    <string name="crisp_sdk_theme_text_4_chat">உதவியாளருடன் உரையாட</string>
+    <string name="crisp_sdk_theme_text_default_chat">சந்தேகமா? எங்களோடு உரையாடுங்கள்</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">வணக்கம், எங்களிடத்து உரையாட வேண்டுமா?</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">ஏதேனும் கேட்க வேண்டுமா?</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">வணக்கம், %1$s -ஐ பற்றி என்ன வேண்டுமானாலும் கேளுங்கள்</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">வணக்கம்! தங்களுக்கு நான் எப்படி உதவலாம்?</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">%1$s -ஐ பற்றி ஏதேனும் சந்தேகம் உள்ளதா?</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">%1$s- ல் நாங்கள் எப்படி உங்களுக்கு உதவலாம்?</string>
+    <string msgid="8038256446254964252" name="default_error_message">"தவறான உள்ளீடு"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"பாப்-அப் சாளரம்"</string>
+    <string msgid="4057925834421392736" name="dialog">"உரையாடல்"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"கீழ்த்தோன்றல் மெனு"</string>
+    <string name="error_a11y_label">பிழை: தவறானது</string>
+    <string name="error_icon_content_description">பிழை</string>
+    <string name="exo_download_completed">பதிவிறக்கப்பட்டது</string>
+    <string name="exo_download_description">பதிவிறக்கும் பட்டன்</string>
+    <string name="exo_download_downloading">பதிவிறக்குகிறது</string>
+    <string name="exo_download_failed">பதிவிறக்க முடியவில்லை</string>
+    <string name="exo_download_notification_channel_name">பதிவிறக்கங்கள்</string>
+    <string name="exo_download_paused">பதிவிறக்கங்கள் இடைநிறுத்தப்பட்டன</string>
+    <string name="exo_download_paused_for_network">நெட்வொர்க்கிற்காகக் காத்திருக்கின்றன</string>
+    <string name="exo_download_paused_for_wifi">Wi-Fiகாகக் காத்திருக்கின்றன</string>
+    <string name="exo_download_removing">பதிவிறக்கங்கள் அகற்றப்படுகின்றன</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"மேம்பட்டவை"</string>
+    <string msgid="5974471714631304645" name="expanded">"விரிக்கப்பட்டது"</string>
+    <string name="exposed_dropdown_menu_content_description">கீழ் தோன்றல் மெனுவைக் காட்டும் பட்டன்</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"இணைப்பை நகலெடு"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"உலாவியில் திற"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"இணைப்பைப் பகிர்"</string>
+    <string name="gpay_logo_description">Google Pay</string>
+    <string name="icon_content_description">உரையாடல் ஐகான்</string>
+    <string msgid="6827826412747255547" name="in_progress">"செயலிலுள்ளது"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"சில மட்டுமே தேர்ந்தெடுக்கப்பட்டுள்ளன"</string>
+    <string name="item_view_role_description">தாவல்</string>
+    <string name="material_clock_toggle_content_description">AM அல்லது PMமைத் தேர்ந்தெடுக்க உதவும்</string>
+    <string name="material_hour_24h_suffix">%1$s மணிநேரம்</string>
+    <string name="material_hour_selection">மணிநேரத்தைத் தேர்ந்தெடுக்க உதவும்</string>
+    <string name="material_hour_suffix">%1$s மணி</string>
+    <string name="material_minute_selection">நிமிடத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="material_minute_suffix">%1$s நிமிடங்கள்</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">நேர உள்ளீட்டிற்காக, கடிகாரப் பயன்முறைக்கு மாற்றும்.</string>
+    <string name="material_timepicker_hour">மணிநேரம்</string>
+    <string name="material_timepicker_minute">நிமிடம்</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">நேரத்தைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="material_timepicker_text_input_mode_description">உரை உள்ளீட்டிற்காக, கடிகாரப் பயன்முறைக்கு மாற்றும்.</string>
+    <string msgid="2939063992730535343" name="mr_button_content_description">"அனுப்பும்"</string>
+    <string msgid="6073720094880410356" name="mr_cast_button_connected">"அனுப்பும். இணைக்கப்பட்டது"</string>
+    <string msgid="6629927151350192407" name="mr_cast_button_connecting">"அனுப்பும். இணைக்கிறது"</string>
+    <string msgid="8071109333469380363" name="mr_cast_button_disconnected">"அனுப்பும். தொடர்பு துண்டிக்கப்பட்டது"</string>
+    <string msgid="2175930138959078155" name="mr_cast_dialog_title_view_placeholder">"தகவல் எதுவுமில்லை"</string>
+    <string msgid="6114250663023140921" name="mr_chooser_searching">"சாதனங்களைத் தேடுகிறது"</string>
+    <string msgid="1419936397646839840" name="mr_chooser_title">"இதற்கு அலைபரப்பு:"</string>
+    <string msgid="3330502667672708728" name="mr_controller_album_art">"ஆல்பம் ஆர்ட்"</string>
+    <string msgid="9171231064758955152" name="mr_controller_casting_screen">"திரையை அலைபரப்புகிறது"</string>
+    <string msgid="5684434439232634509" name="mr_controller_close_description">"மூடுவதற்கான பட்டன்"</string>
+    <string msgid="2585048604188129749" name="mr_controller_collapse_group">"சுருக்குவதற்கான பட்டன்"</string>
+    <string msgid="7812275474138309497" name="mr_controller_disconnect">"தொடர்பைத் துண்டி"</string>
+    <string msgid="4521419834052044261" name="mr_controller_expand_group">"விரிப்பதற்கான பட்டன்"</string>
+    <string msgid="855271725131981086" name="mr_controller_no_info_available">"தகவல் எதுவுமில்லை"</string>
+    <string msgid="5495452265246139458" name="mr_controller_no_media_selected">"மீடியா எதுவும் தேர்ந்தெடுக்கப்படவில்லை"</string>
+    <string msgid="747801650871398383" name="mr_controller_pause">"இடைநிறுத்துவதற்கான பட்டன்"</string>
+    <string msgid="1253345086594430054" name="mr_controller_play">"இயக்குவதற்கான பட்டன்"</string>
+    <string msgid="5497722768305745508" name="mr_controller_stop">"நிறுத்துவதற்கான பட்டன்"</string>
+    <string msgid="804210341192624074" name="mr_controller_stop_casting">"அலைபரப்புவதை நிறுத்து"</string>
+    <string msgid="2955862765169128170" name="mr_controller_volume_slider">"ஒலியளவு ஸ்லைடர்"</string>
+    <string msgid="4115858704575247342" name="mr_dialog_default_group_name">"குழு"</string>
+    <string msgid="4307018456678388936" name="mr_dialog_groupable_header">"சாதனத்தைச் சேர்த்தல்"</string>
+    <string msgid="6068257520605505468" name="mr_dialog_transferable_header">"குழுவில் இயக்கு"</string>
+    <string msgid="7449553026175453403" name="mr_system_route_name">"சிஸ்டம்"</string>
+    <string msgid="4088331695424166162" name="mr_user_route_category_name">"சாதனங்கள்"</string>
+    <string name="mtrl_badge_numberless_content_description">புதிய அறிவிப்பு</string>
+    <string name="mtrl_checkbox_state_description_checked">தேர்வுசெய்யப்பட்டுள்ளது</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">பாதி தேர்வுசெய்யப்பட்டுள்ளது</string>
+    <string name="mtrl_checkbox_state_description_unchecked">தேர்வுசெய்யப்படவில்லை</string>
+    <string name="mtrl_chip_close_icon_content_description">%1$sஐ அகற்று</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns1:ignore="PluralsCandidate">%1$d+ புதிய அறிவிப்புகள்</string>
+    <string name="mtrl_picker_a11y_next_month">அடுத்த மாதத்தைக் காட்டு</string>
+    <string name="mtrl_picker_a11y_prev_month">முந்தைய மாதத்தைக் காட்டு</string>
+    <string name="mtrl_picker_announce_current_range_selection">தொடங்கும் தேதியைத் தேர்ந்தெடுங்கள்: %1$s – முடியும் தேதியைத் தேர்ந்தெடுங்கள்: %2$s</string>
+    <string name="mtrl_picker_announce_current_selection">தற்போதைய தேர்வு: %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">எதுவுமில்லை</string>
+    <string name="mtrl_picker_cancel">ரத்துசெய்</string>
+    <string name="mtrl_picker_confirm">சரி</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">தேதியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="mtrl_picker_date_header_unselected">தேர்ந்தெடுக்கப்பட்ட தேதி</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">முடியும் தேதி %1$s</string>
+    <string name="mtrl_picker_invalid_format">தவறான வடிவம்.</string>
+    <string name="mtrl_picker_invalid_format_example">உதாரணம்: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">%1$sஐப் பயன்படுத்துக</string>
+    <string name="mtrl_picker_invalid_range">தவறான வரம்பு.</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">தற்போதைய வருடத்திற்கு (%1$d) செல்லும்</string>
+    <string name="mtrl_picker_navigate_to_year_description">%1$d ஆம் ஆண்டிற்குச் செல்லும்</string>
+    <string name="mtrl_picker_out_of_range">எல்லைக்கு வெளியே உள்ளது: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">தொடக்கத் தேதி – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – முடிவுத் தேதி</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">வரம்பைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="mtrl_picker_range_header_unselected">தொடக்கத் தேதி - முடிவுத் தேதி</string>
+    <string name="mtrl_picker_save">சேமி</string>
+    <string name="mtrl_picker_start_date_description">தொடங்கும் தேதி %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">தேதி</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">முடிவுத் தேதி</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">தொடக்கத் தேதி</string>
+    <string name="mtrl_picker_text_input_day_abbr">நா</string>
+    <string name="mtrl_picker_text_input_month_abbr">மா</string>
+    <string name="mtrl_picker_text_input_year_abbr">ஆ</string>
+    <string name="mtrl_picker_today_description">இன்று %1$s</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">கேலெண்டர் உள்ளீட்டு முறைக்கு மாற்றும்</string>
+    <string name="mtrl_picker_toggle_to_day_selection">கேலெண்டர் காட்சிக்கு மாற தட்டவும்</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">உரை உள்ளீட்டு முறைக்கு மாற்றும்</string>
+    <string name="mtrl_picker_toggle_to_year_selection">ஆண்டுக் காட்சிக்கு மாற தட்டவும்</string>
+    <string name="mtrl_timepicker_cancel">ரத்துசெய்</string>
+    <string name="mtrl_timepicker_confirm">சரி</string>
+    <string name="native_body">உள்ளடக்கம்</string>
+    <string name="native_headline">தலைப்பு</string>
+    <string name="native_media_view">மீடியா காட்சி</string>
+    <string msgid="542007171693138492" name="navigation_menu">"வழிசெலுத்தல் மெனு"</string>
+    <string msgid="6610465462668679431" name="not_selected">"தேர்ந்தெடுக்கப்படவில்லை"</string>
+    <string msgid="6573031135582639649" name="not_set">"அமைக்கப்படவில்லை"</string>
+    <string name="notifications_permission_confirm">அனுமதி</string>
+    <string name="notifications_permission_decline">அனுமதிக்க வேண்டாம்</string>
+    <string name="notifications_permission_title">உங்களுக்கு அறிவிப்புகளை அனுப்ப ஆப்ஸை அனுமதிக்கவா?</string>
+    <string msgid="875452955155264703" name="off">"முடக்கப்பட்டுள்ளது"</string>
+    <string name="offline_dialog_image_description">ஐகான்</string>
+    <string name="offline_dialog_text">உங்கள் ஆர்வத்திற்கு நன்றி.\nநீங்கள் மீண்டும் ஆன்லைனுக்கு வரும்போது இன்னும் கூடுதல் தகவல்களைப் பகிர்வோம்.</string>
+    <string name="offline_notification_title">மீண்டும் ஆன்லைனுக்கு வந்துவிட்டீர்கள்! விட்ட இடத்திலிருந்தே தொடரலாம்</string>
+    <string name="offline_notification_title_with_advertiser">மீண்டும் ஆன்லைனுக்கு வந்துவிட்டீர்கள்! %s பற்றி அறிந்துகொள்வதைத் தொடருங்கள்</string>
+    <string name="offline_opt_in_confirm">சரி</string>
+    <string name="offline_opt_in_decline">வேண்டாம்</string>
+    <string name="offline_opt_in_message">விளம்பரதாரரின் தளத்திற்கான இணைப்புடன் கூடிய அறிவிப்பை உங்களுக்கு அனுப்புவோம்.</string>
+    <string name="offline_opt_in_title">மீண்டும் ஆன்லைனுக்கு வரும்போது விளம்பரம் திறக்கப்படும்.</string>
+    <string msgid="8655164131929253426" name="on">"இயக்கப்பட்டுள்ளது"</string>
+    <string name="password_toggle_content_description">கடவுச்சொல்லைக் காட்டு</string>
+    <string msgid="6685851473431805375" name="preference_copied">"\"<ns2:g id="SUMMARY">%1$s</ns2:g>\" கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது."</string>
+    <string msgid="5941395253238309765" name="range_end">"வரம்பு முடிவு"</string>
+    <string msgid="7097486360902471446" name="range_start">"வரம்பு தொடக்கம்"</string>
+    <string name="s1">படத்தைச் சேமி</string>
+    <string name="s2">பட கேலரியில் படத்தைச் சேமிக்க, விளம்பரத்தை அனுமதிக்கவா?</string>
+    <string name="s3">அனுமதி</string>
+    <string name="s4">நிராகரி</string>
+    <string name="s5">கேலெண்டர் நிகழ்வை உருவாக்கு</string>
+    <string name="s6">கேலெண்டர் நிகழ்வை உருவாக்க, விளம்பரத்தை அனுமதிக்கவா?</string>
+    <string name="s7">சோதனை விளம்பரம்</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"தேடல்"</string>
+    <string name="searchview_clear_text_content_description">வார்த்தைகளை அழிக்கும்</string>
+    <string name="searchview_navigation_content_description">பின்செல்லும்</string>
+    <string msgid="6043586758067023" name="selected">"தேர்ந்தெடுக்கப்பட்டுள்ளது"</string>
+    <string name="side_sheet_accessibility_pane_title">பக்கவாட்டுத் தாள்</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="stripe_hcaptcha_loading_text">நீங்கள் மனிதர் என்பதை சரிபார்க்கிறது</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns2:g id="CURRENT_ITEMS">%1$s</ns2:g>, <ns2:g id="ADDED_ITEMS">%2$s</ns2:g>"</string>
+    <string msgid="2561197295334830845" name="switch_role">"மாற்றுதல்"</string>
+    <string msgid="1672349317127674378" name="tab">"பிரிவு"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns2:g id="PERCENTAGE">%1$d</ns2:g> சதவீதம்."</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"உதவிக்குறிப்பு"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"உதவிக்குறிப்பைக் காட்டும்"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"ஆஃப்"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ஆன்"</string>
+    <string name="wallet_buy_button_place_holder">Google மூலம் வாங்கு</string>
+    <string name="watermark_label_prefix">AdMob - </string>
+</resources>

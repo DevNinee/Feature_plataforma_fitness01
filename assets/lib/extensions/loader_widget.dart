@@ -15,15 +15,15 @@ class Loader extends StatefulWidget {
   final double? value;
   final Animation<Color?>? valueColor;
 
-  Loader({
+  const Loader({
     this.color,
     this.decoration,
     this.size,
     this.value,
     this.valueColor,
     this.accentColor,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   LoaderState createState() => LoaderState();
@@ -48,7 +48,7 @@ class LoaderState extends State<Loader> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       height: widget.size.validate(value: 40).toDouble(),
       width: widget.size.validate(value: 40).toDouble(),
       decoration: widget.decoration ??

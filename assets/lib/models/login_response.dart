@@ -6,11 +6,11 @@ class LoginResponse {
   LoginResponse({this.data});
 
   LoginResponse.fromJson(Map<String, dynamic> json) {
-    data = json['data'] != null ? new UserModel.fromJson(json['data']) : null;
+    data = json['data'] != null ? UserModel.fromJson(json['data']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.toJson();
     }
@@ -106,34 +106,34 @@ class UserModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['username'] = this.username;
-    data['first_name'] = this.firstName;
-    data['last_name'] = this.lastName;
-    data['email'] = this.email;
-    data['phone_number'] = this.phoneNumber;
-    data['email_verified_at'] = this.emailVerifiedAt;
-    data['user_type'] = this.userType;
-    data['status'] = this.status;
-    data['login_type'] = this.loginType;
-    data['gender'] = this.gender;
-    data['display_name'] = this.displayName;
-    data['player_id'] = this.playerId;
-    data['is_subscribe'] = this.isSubscribe;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['api_token'] = this.apiToken;
-    data['profile_image'] = this.profileImage;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['username'] = username;
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
+    data['email'] = email;
+    data['phone_number'] = phoneNumber;
+    data['email_verified_at'] = emailVerifiedAt;
+    data['user_type'] = userType;
+    data['status'] = status;
+    data['login_type'] = loginType;
+    data['gender'] = gender;
+    data['display_name'] = displayName;
+    data['player_id'] = playerId;
+    data['is_subscribe'] = isSubscribe;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['api_token'] = apiToken;
+    data['profile_image'] = profileImage;
 
-    data['uid'] = this.uid;
-    data['case_search'] = this.caseSearch;
-    data['is_present'] = this.isPresence;
-    data['last_seen'] = this.lastSeen;
-    data['blocked_to'] = this.blockedTo;
-    data['firebase_created_at'] = this.firebaseCreatedAt;
-    data['firebase_updated_at'] = this.firebaseUpdatedAt;
-    data['pin'] = this.pin;
+    data['uid'] = uid;
+    data['case_search'] = caseSearch;
+    data['is_present'] = isPresence;
+    data['last_seen'] = lastSeen;
+    data['blocked_to'] = blockedTo;
+    data['firebase_created_at'] = firebaseCreatedAt;
+    data['firebase_updated_at'] = firebaseUpdatedAt;
+    data['pin'] = pin;
     return data;
   }
 }

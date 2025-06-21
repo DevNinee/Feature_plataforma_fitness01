@@ -26,7 +26,7 @@ class GameData {
   void nextLevel(int timeLeft) {
     targetIndex = Random().nextInt((getGridSize() * getGridSize()) - 1);
     level++;
-    print("-------24>>>${timeLeft}");
+    print("-------24>>>$timeLeft");
     addScore(1 + timeLeft);
     // score = 0;
     totalTime += (10 - timeLeft);

@@ -42,14 +42,12 @@ Future<User> signInWithGoogle() async {
     String firstName = '';
     String lastName = '';
 
-    if (googleSignInAccount != null) {
-      firstName = googleSignInAccount.displayName?.split(' ').first ?? '';
-      lastName = googleSignInAccount.displayName?.split(' ').last ?? '';
+    firstName = googleSignInAccount.displayName?.split(' ').first ?? '';
+    lastName = googleSignInAccount.displayName?.split(' ').last ?? '';
 
-      print("First Name: $firstName");
-      print("Last Name: $lastName");
-    }
-
+    print("First Name: $firstName");
+    print("Last Name: $lastName");
+  
 
     await userStore.setUserImage(currentUser.photoURL.validate());
 
@@ -103,7 +101,7 @@ Future<void> loginWithOTP(BuildContext context, String phoneNumber, String mobil
         throw e.toString();
       }
     },
-    timeout: Duration(minutes: 1),
+    timeout: const Duration(minutes: 1),
     codeSent: (String verificationId, int? resendToken) async {
       finish(context);
       VerifyOTPScreen(
@@ -122,7 +120,7 @@ Future<void> loginWithOTP(BuildContext context, String phoneNumber, String mobil
 Future<void> appleLogIn(BuildContext context) async {
   if (await TheAppleSignIn.isAvailable()) {
     final AuthorizationResult result = await TheAppleSignIn.performRequests([
-      AppleIdRequest(requestedScopes: [Scope.email, Scope.fullName])
+      const AppleIdRequest(requestedScopes: [Scope.email, Scope.fullName])
     ]);
     switch (result.status) {
       case AuthorizationStatus.authorized:
@@ -185,9 +183,9 @@ void socialLogin(req, BuildContext context) async {
     await userStore.setDisplayName(res.data!.displayName.validate());
     await userStore.setPhoneNo(res.data!.phoneNumber.validate());
     getUSerDetail(context, res.data!.id.validate()).then((value) {
-      DashboardScreen().launch(context, isNewTask: true);
+      const DashboardScreen().launch(context, isNewTask: true);
     }).catchError((e) {
-      print("error=>" + e.toString());
+      print("error=>$e");
     });
   }).catchError((error) {
     appStore.setLoading(false);
@@ -229,9 +227,9 @@ Future<void> saveAppleDataWithoutEmail(AuthorizationResult result, String? acces
     await userStore.setDisplayName(value.data!.displayName.validate());
     await userStore.setPhoneNo(value.data!.phoneNumber.validate());
     getUSerDetail(context, value.data!.id.validate()).then((value) {
-      DashboardScreen().launch(context, isNewTask: true);
+      const DashboardScreen().launch(context, isNewTask: true);
     }).catchError((e) {
-      print("error=>" + e.toString());
+      print("error=>$e");
     });
   }).catchError((e) {
     log("e->" + e);

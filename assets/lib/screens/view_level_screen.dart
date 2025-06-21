@@ -11,6 +11,8 @@ import '../models/level_response.dart';
 import '../network/rest_api.dart';
 
 class ViewLevelScreen extends StatefulWidget {
+  const ViewLevelScreen({super.key});
+
   @override
   _ViewLevelScreenState createState() => _ViewLevelScreenState();
 }
@@ -94,18 +96,18 @@ class _ViewLevelScreenState extends State<ViewLevelScreen> {
           AnimatedListView(
             controller: scrollController,
             shrinkWrap: true,
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
             itemCount: mLevelList.length,
             itemBuilder: (context, index) {
               return LevelComponent(mLevelModel: mLevelList[index]);
             },
           ),
           Observer(builder: (context) {
-            return Loader().center().visible(appStore.isLoading);
+            return const Loader().center().visible(appStore.isLoading);
           })
         ],
       ),
-      bottomNavigationBar: userStore.adsBannerDetailShowBannerOnLevel == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : SizedBox(),
+      bottomNavigationBar: userStore.adsBannerDetailShowBannerOnLevel == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : const SizedBox(),
     );
   }
 }

@@ -29,43 +29,43 @@ Locale setDefaultLocate() {
   if (getJsonData.isNotEmpty) {
     ServerLanguageResponse languageSettings =
     ServerLanguageResponse.fromJson(json.decode(getJsonData.trim()));
-    if (languageSettings.data!.length > 0) {
+    if (languageSettings.data!.isNotEmpty) {
       defaultServerLanguageData = languageSettings.data;
       performLanguageOperation(defaultServerLanguageData);
     }
   }
   if (defaultServerLanguageData != null &&
-      defaultServerLanguageData!.length > 0) {
+      defaultServerLanguageData!.isNotEmpty) {
     performLanguageOperation(defaultServerLanguageData);
   }
 
   return defaultLanguageLocale;
 }
 
-performLanguageOperation(List<LanguageJsonData>? _defaultServerLanguageData) {
+performLanguageOperation(List<LanguageJsonData>? defaultServerLanguageData) {
   String selectedLanguageCode =
   getStringAsync(SELECTED_LANGUAGE_CODE, defaultValue: "");
   bool isFoundLocalSelectedLanguage = false;
   bool isFoundSelectedLanguageFromServer = false;
 
-  for (int index = 0; index < _defaultServerLanguageData!.length; index++) {
+  for (int index = 0; index < defaultServerLanguageData!.length; index++) {
     if (selectedLanguageCode.isNotEmpty) {
-      if (_defaultServerLanguageData[index].languageCode ==
+      if (defaultServerLanguageData[index].languageCode ==
           selectedLanguageCode) {
         isFoundLocalSelectedLanguage = true;
         defaultLanguageLocale = Locale(
-            _defaultServerLanguageData[index].languageCode!,
-            _defaultServerLanguageData[index].countryCode!);
-        selectedServerLanguageData = _defaultServerLanguageData[index];
+            defaultServerLanguageData[index].languageCode!,
+            defaultServerLanguageData[index].countryCode!);
+        selectedServerLanguageData = defaultServerLanguageData[index];
         break;
       }
     }
-    if (_defaultServerLanguageData[index].isDefaultLanguage == 1) {
+    if (defaultServerLanguageData[index].isDefaultLanguage == 1) {
       isFoundSelectedLanguageFromServer = true;
       defaultLanguageLocale = Locale(
-          _defaultServerLanguageData[index].languageCode!,
-          _defaultServerLanguageData[index].countryCode!);
-      selectedServerLanguageData = _defaultServerLanguageData[index];
+          defaultServerLanguageData[index].languageCode!,
+          defaultServerLanguageData[index].countryCode!);
+      selectedServerLanguageData = defaultServerLanguageData[index];
     }
   }
 
@@ -78,7 +78,7 @@ List<Locale> getSupportedLocales() {
   print("get supported called");
   List<Locale> list = [];
   if (defaultServerLanguageData != null &&
-      defaultServerLanguageData!.length > 0) {
+      defaultServerLanguageData!.isNotEmpty) {
     for (int index = 0; index < defaultServerLanguageData!.length; index++) {
       list.add(Locale(defaultServerLanguageData![index].languageCode!,
           defaultServerLanguageData![index].countryCode!));
@@ -114,7 +114,7 @@ String getContentValueFromKey(int keywordId) {
     }
   }
   if (!isFoundKey) {
-    defaultKeyValue = defaultKeyValue + "($keywordId)";
+    defaultKeyValue = "$defaultKeyValue($keywordId)";
   }
   return defaultKeyValue.toString().trim();
 }
@@ -124,7 +124,7 @@ initJsonFile() async {
   final String jsonString =
   await rootBundle.loadString('assets/fitness_language.json');
   final list = json.decode(jsonString) as List;
-  print("list==========================${list}");
+  print("list==========================$list");
   List<LocalLanguageResponse> finalList = list
       .map((jsonElement) => LocalLanguageResponse.fromJson(jsonElement))
       .toList();
@@ -150,12 +150,12 @@ String getCountryCode() {
   String selectedLang =
   getStringAsync(SELECTED_LANGUAGE_CODE, defaultValue: defaultLanguageCode);
   if (defaultServerLanguageData != null &&
-      defaultServerLanguageData!.length > 0) {
+      defaultServerLanguageData!.isNotEmpty) {
     for (int index = 0; index < defaultServerLanguageData!.length; index++) {
       if (selectedLang == defaultServerLanguageData![index].languageCode) {
         List<String> selectedCoutry =
         defaultServerLanguageData![index].countryCode!.split("-");
-        if (selectedCoutry.length > 0) {
+        if (selectedCoutry.isNotEmpty) {
           defaultCode = selectedCoutry[1];
         }
       }

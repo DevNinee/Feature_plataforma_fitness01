@@ -14,11 +14,11 @@ class Pagination {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['total_items'] = this.totalItems;
-    data['per_page'] = this.perPage;
-    data['currentPage'] = this.currentPage;
-    data['totalPages'] = this.totalPages;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['total_items'] = totalItems;
+    data['per_page'] = perPage;
+    data['currentPage'] = currentPage;
+    data['totalPages'] = totalPages;
     return data;
   }
 }

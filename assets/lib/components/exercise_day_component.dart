@@ -17,7 +17,7 @@ class ExerciseDayComponent extends StatefulWidget {
   final List<String>? mSets;
   final String? workOutId;
 
-  ExerciseDayComponent({this.mDayExerciseModel,this.workOutId, this.mSets});
+  const ExerciseDayComponent({super.key, this.mDayExerciseModel,this.workOutId, this.mSets});
 
   @override
   ExerciseDayComponentState createState() => ExerciseDayComponentState();
@@ -30,8 +30,8 @@ class ExerciseDayComponentState extends State<ExerciseDayComponent> {
 
     return Container(
       decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(12)) : boxDecorationRoundedWithShadow(12),
-      padding: EdgeInsets.fromLTRB(10, 10, 10, 8),
-      margin: EdgeInsets.only(bottom: 8, top: 8),
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 8),
+      margin: const EdgeInsets.only(bottom: 8, top: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,7 +51,7 @@ class ExerciseDayComponentState extends State<ExerciseDayComponent> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       if (widget.mDayExerciseModel?.exercise?.type == DURATION)
-                        Text(widget.mDayExerciseModel?.exercise?.duration.toString()??'' + " " + languages.lblDuration, style: secondaryTextStyle(size: 12)),
+                        Text(widget.mDayExerciseModel?.exercise?.duration.toString()??'' " " + languages.lblDuration, style: secondaryTextStyle(size: 12)),
                       if (widget.mDayExerciseModel?.exercise?.type == SETS) Text(widget.mSets!.join(" ").toString(), style: secondaryTextStyle(size: 12)),
                       if (userStore.subscription == "1")
                         if (widget.mDayExerciseModel?.exercise?.isPremium == 1) mPro()
@@ -70,7 +70,7 @@ class ExerciseDayComponentState extends State<ExerciseDayComponent> {
       userStore.subscription == "1"
           ? widget.mDayExerciseModel!.exercise!.isPremium == 1
           ? userStore.isSubscribe == 0
-          ? SubscribeScreen().launch(context)
+          ? const SubscribeScreen().launch(context)
           : ExerciseDetailScreen(mExerciseName: widget.mDayExerciseModel!.exerciseTitle.validate(), mExerciseId: widget.mDayExerciseModel!.exerciseId.validate(),workOutId: widget.workOutId).launch(context)
           : ExerciseDetailScreen(mExerciseName: widget.mDayExerciseModel!.exerciseTitle.validate(), mExerciseId: widget.mDayExerciseModel!.exerciseId.validate(),workOutId: widget.workOutId).launch(context)
           : ExerciseDetailScreen(mExerciseName: widget.mDayExerciseModel!.exerciseTitle.validate(), mExerciseId: widget.mDayExerciseModel!.exerciseId.validate(),workOutId: widget.workOutId).launch(context);

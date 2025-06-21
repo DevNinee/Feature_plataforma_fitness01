@@ -21,7 +21,7 @@ import 'package:mighty_fitness/utils/app_constants.dart';
 import 'package:mighty_fitness/utils/app_images.dart';
 
 class Game extends StatefulWidget {
-  const Game({Key? key}) : super(key: key);
+  const Game({super.key});
 
   @override
   _GameState createState() => _GameState();
@@ -50,7 +50,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
   final List<GlobalKey> _boxKeys = List.generate(100, (_) => GlobalKey());
   final GlobalKey _actionBarKey = GlobalKey();
 
-  List<bool> _starVisibilities = [false, false, false, false, false];
+  final List<bool> _starVisibilities = [false, false, false, false, false];
 
   @override
   void dispose() {
@@ -106,7 +106,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
       });
 
       // Reset animation after completion
-      Future.delayed(Duration(milliseconds: 500), () {
+      Future.delayed(const Duration(milliseconds: 500), () {
         setState(() {
           _isAnimating = false;
         });
@@ -218,7 +218,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
     }
   }
 
-  ParticleOptions particleOptions = ParticleOptions(
+  ParticleOptions particleOptions = const ParticleOptions(
     baseColor: primaryColor,
     spawnOpacity: 0.0,
     opacityChangeRate: 0.25,
@@ -267,7 +267,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
                         onTap: () {
                           finish(context);
                         },
-                        child: Icon(
+                        child: const Icon(
                           Octicons.chevron_left,
                           color: primaryColor,
                           size: 28,
@@ -337,13 +337,13 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
                                         color: (gameData.targetIndex == index ? targetColor : dummyColor)!.withOpacity(0.3),
                                         blurRadius: 10.0,
                                         spreadRadius: 2.0,
-                                        offset: Offset(0, 0),
+                                        offset: const Offset(0, 0),
                                       ),
                                       BoxShadow(
                                         color: (gameData.targetIndex == index ? targetColor : dummyColor)!.withOpacity(0.3),
                                         blurRadius: 20.0,
                                         spreadRadius: 5.0,
-                                        offset: Offset(0, 0),
+                                        offset: const Offset(0, 0),
                                       ),
                                     ],
                                   ),
@@ -360,7 +360,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
               if (_isAnimating)
                 TweenAnimationBuilder(
                   tween: Tween<Offset>(begin: _startPosition, end: _endPosition),
-                  duration: Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 500),
                   curve: Curves.easeInOut,
                   builder: (context, Offset value, child) {
                     return Positioned(
@@ -436,7 +436,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
   Widget _buildStar(int index) {
     return AnimatedOpacity(
       opacity: _starVisibilities[index] ? 1.0 : 0.0,
-      duration: Duration(milliseconds: 100),
+      duration: const Duration(milliseconds: 100),
       child: Lottie.asset(
         'assets/star.json',
         width: 90,
@@ -462,7 +462,7 @@ class _GameState extends State<Game> with TickerProviderStateMixin {
             backgroundColor: Colors.transparent,
             elevation: 10,
             child: Container(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 width: MediaQuery.of(context).size.width * 0.75,
                 decoration: BoxDecoration(
                   color: appStore.isDarkMode ? scaffoldColorDark : Colors.white,

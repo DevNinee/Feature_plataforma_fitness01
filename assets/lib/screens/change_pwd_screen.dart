@@ -21,6 +21,8 @@ import '../utils/app_common.dart';
 import '../utils/app_constants.dart';
 
 class ChangePwdScreen extends StatefulWidget {
+  const ChangePwdScreen({super.key});
+
   @override
   _ChangePwdScreenState createState() => _ChangePwdScreenState();
 }
@@ -144,7 +146,7 @@ class _ChangePwdScreenState extends State<ChangePwdScreen> {
           ),
           Observer(
             builder: (context) {
-              return Loader().center().visible(appStore.isLoading);
+              return const Loader().center().visible(appStore.isLoading);
             },
           )
         ],

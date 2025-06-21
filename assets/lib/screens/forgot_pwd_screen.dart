@@ -19,6 +19,8 @@ import '../utils/app_common.dart';
 import '../utils/app_images.dart';
 
 class ForgotPwdScreen extends StatefulWidget {
+  const ForgotPwdScreen({super.key});
+
   @override
   _ForgotPwdScreenState createState() => _ForgotPwdScreenState();
 }
@@ -87,7 +89,7 @@ class _ForgotPwdScreenState extends State<ForgotPwdScreen> {
                 ).paddingSymmetric(horizontal: 16),
               ),
             ),
-            Loader().visible(appStore.isLoading)
+            const Loader().visible(appStore.isLoading)
           ],
         );
       }),

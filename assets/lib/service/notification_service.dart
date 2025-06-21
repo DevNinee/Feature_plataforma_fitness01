@@ -18,7 +18,7 @@ class NotificationService {
       String? receiverPlayerId}) async {
     Map? req;
     var header = {
-      HttpHeaders.authorizationHeader: 'Basic ${mOneSignalAppId}',
+      HttpHeaders.authorizationHeader: 'Basic $mOneSignalAppId',
       HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8',
       'Content-Type': 'application/json'
     };

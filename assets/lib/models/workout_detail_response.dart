@@ -5,22 +5,22 @@ class WorkoutDetailResponse {
   WorkoutDetailResponse({this.data, this.workoutday});
 
   WorkoutDetailResponse.fromJson(Map<String, dynamic> json) {
-    data = json['data'] != null ? new WorkoutDetailModel.fromJson(json['data']) : null;
+    data = json['data'] != null ? WorkoutDetailModel.fromJson(json['data']) : null;
     if (json['workoutday'] != null) {
       workoutday = <Workoutday>[];
       json['workoutday'].forEach((v) {
-        workoutday!.add(new Workoutday.fromJson(v));
+        workoutday!.add(Workoutday.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.toJson();
     }
-    if (this.workoutday != null) {
-      data['workoutday'] = this.workoutday!.map((v) => v.toJson()).toList();
+    if (workoutday != null) {
+      data['workoutday'] = workoutday!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -80,22 +80,22 @@ class WorkoutDetailModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['status'] = this.status;
-    data['is_premium'] = this.isPremium;
-    data['level_id'] = this.levelId;
-    data['level_title'] = this.levelTitle;
-    data['level_rate'] = this.levelRate;
-    data['workout_image'] = this.workoutImage;
-    data['workout_type_id'] = this.workoutTypeId;
-    data['workout_type_title'] = this.workoutTypeTitle;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['is_favourite'] = this.isFavourite;
-    data['isFavouriteLocally'] = this.isFavouriteLocally;
-    data['description'] = this.description;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['status'] = status;
+    data['is_premium'] = isPremium;
+    data['level_id'] = levelId;
+    data['level_title'] = levelTitle;
+    data['level_rate'] = levelRate;
+    data['workout_image'] = workoutImage;
+    data['workout_type_id'] = workoutTypeId;
+    data['workout_type_title'] = workoutTypeTitle;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['is_favourite'] = isFavourite;
+    data['isFavouriteLocally'] = isFavouriteLocally;
+    data['description'] = description;
     return data;
   }
 }
@@ -126,13 +126,13 @@ class Workoutday {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['workout_id'] = this.workoutId;
-    data['sequence'] = this.sequence;
-    data['is_rest'] = this.isRest;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['workout_id'] = workoutId;
+    data['sequence'] = sequence;
+    data['is_rest'] = isRest;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

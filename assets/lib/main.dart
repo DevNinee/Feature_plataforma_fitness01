@@ -47,7 +47,7 @@ late SharedPreferences sharedPreferences;
 final navigatorKey = GlobalKey<NavigatorState>();
 late BaseLanguage languages;
 UserService userService = UserService();
-late List<FileModel> fileList = [];
+List<FileModel> fileList = [];
 bool mIsEnterKey = false;
 NotificationService notificationService = NotificationService();
 
@@ -99,7 +99,7 @@ Future<void> main() async {
     userStore.addAllProgressSettingsListItem(progressSettingList());
   }
 
-    runApp(MyApp());
+    runApp(const MyApp());
 }
 
 Future<void> updatePlayerId() async {
@@ -117,6 +117,8 @@ Future<void> updatePlayerId() async {
 
 class MyApp extends StatefulWidget {
   static String tag = '/MyApp';
+
+  const MyApp({super.key});
 
   @override
   MyAppState createState() => MyAppState();
@@ -137,7 +139,7 @@ class MyAppState extends State<MyApp> {
       if (e == ConnectivityResult.none) {
         log('not connected');
         isCurrentlyOnNoInternet = true;
-        push(NoInternetScreen());
+        push(const NoInternetScreen());
       } else {
         if (isCurrentlyOnNoInternet) {
           pop();
@@ -172,7 +174,7 @@ class MyAppState extends State<MyApp> {
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
         themeMode: appStore.isDarkMode ? ThemeMode.dark : ThemeMode.light,
-        localizationsDelegates: [
+        localizationsDelegates: const [
           AppLocalizations(),
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
@@ -181,7 +183,7 @@ class MyAppState extends State<MyApp> {
         localeResolutionCallback: (locale, supportedLocales) => locale,
         supportedLocales: getSupportedLocales(),
         locale: Locale(appStore.selectedLanguageCode.validate(value: DEFAULT_LANGUAGE)),
-        home: SplashScreen(),
+        home: const SplashScreen(),
       );
     });
   }

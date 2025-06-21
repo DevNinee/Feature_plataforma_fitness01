@@ -121,10 +121,11 @@ Future<WorkoutResponse> getWorkoutListApi(bool? isFav, bool? isAssign, {int? pag
   if (isAssign == true) {
     return WorkoutResponse.fromJson(await handleResponse(await buildHttpResponse('assign-workout-list?page=$page', method: HttpMethod.GET)));
   } else {
-    if (isFav != true)
+    if (isFav != true) {
       return WorkoutResponse.fromJson(await (handleResponse(await buildHttpResponse("workout-list?page=$page", method: HttpMethod.GET))));
-    else
+    } else {
       return WorkoutResponse.fromJson(await handleResponse(await buildHttpResponse('get-favourite-workout?page=$page', method: HttpMethod.GET)));
+    }
   }
 }
 

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			1 ժամ առաջ
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d ժամ առաջ
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			1 րոպե առաջ
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d րոպե առաջ
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Ժամ
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d ժամ
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Րոպե
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d րոպե
+		</item>
+	</plurals>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d նոր ծանուցում</item>
+    <item quantity="other">%d նոր ծանուցում</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Անցնել գլխավոր էջ"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Անցնել վերև"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Այլ ընտրանքներ"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Պատրաստ է"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Տեսնել բոլորը"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Ընտրել հավելված"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ԱՆՋԱՏԵԼ"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ՄԻԱՑՆԵԼ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"բացատ"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Որոնում…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Ջնջել հարցումը"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Որոնման հարցում"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Որոնել"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Ուղարկել հարցումը"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Ձայնային որոնում"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Կիսվել…"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Կիսվել <ns2:g id="APPLICATION_NAME">%s</ns2:g> հավելվածի միջոցով"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Ծալել"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Գաղտնաբառ"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Անցաբառ"</string>
+    <string name="bottomsheet_action_collapse">Ծալել ներքևի էկրանը</string>
+    <string name="bottomsheet_action_expand">Ծավալել ներքևի էկրանը</string>
+    <string name="bottomsheet_action_expand_halfway">Ծավալել կիսով չափ</string>
+    <string name="bottomsheet_drag_handle_clicked">Կրկնակի հպում տեղափոխման նշիչին</string>
+    <string name="bottomsheet_drag_handle_content_description">Տեղափոխման նշիչ</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Պատասխանել"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Տեսազանգ"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Մերժել"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Ավարտել"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Մուտքային զանգ"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Ընթացիկ զանգ"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Մուտքային զանգի զտում"</string>
+    <string name="cast_ad_label">Գովազդ</string>
+    <string name="cast_casting_to_device">Հեռարձակվում է %1$s-ում</string>
+    <string name="cast_closed_captions">Թաքցված ենթագրեր</string>
+    <string name="cast_closed_captions_unavailable">Թաքցված ենթագրերն անհասանելի են</string>
+    <string name="cast_connecting_to_device">Միանում է %1$s-ին</string>
+    <string name="cast_disconnect">Անջատել</string>
+    <string name="cast_dynamic_group_name_format">%1$s + %2$d</string>
+    <string name="cast_expanded_controller_ad_image_description">Պատկեր, որը երևում է երբ Google Cast ընդունիչը ցուցադրում է գովազդ</string>
+    <string name="cast_expanded_controller_ad_in_progress">Գովազդը հեռարձակվում է…</string>
+    <string name="cast_expanded_controller_background_image">Ալբոմի շապիկ</string>
+    <string name="cast_expanded_controller_live_head_description">Ընթացիկ դիրքը գտնվում է ուղիղ հեռարձակման սկզբում</string>
+    <string name="cast_expanded_controller_live_stream_indicator">Ուղիղ հեռարձակում</string>
+    <string name="cast_expanded_controller_loading">Բեռնում…</string>
+    <string name="cast_expanded_controller_skip_ad_label">Բաց թողնել գովազդը</string>
+    <string name="cast_expanded_controller_skip_ad_text">Գովազդը կարող եք բաց թողնել %1$d-ից…</string>
+    <string name="cast_forward">Առաջ անցնել</string>
+    <string name="cast_forward_10">Տաս վայրկյան առաջ անցնել</string>
+    <string name="cast_forward_30">Երեսուն վայրկյան առաջ անցնել</string>
+    <string name="cast_intro_overlay_button_text">@android:string/ok</string>
+    <string name="cast_live_label">ՈՒՂԻՂ ԵԹԵՐ</string>
+    <string name="cast_mute">Անջատել ձայնը</string>
+    <string name="cast_notification_connected_message">Միացված է %1$s-ին</string>
+    <string name="cast_notification_connecting_message">Միանում է %1$s-ին</string>
+    <string name="cast_notification_default_channel_name">Cast</string>
+    <string name="cast_notification_disconnect">Անջատել</string>
+    <string name="cast_pause">Դադարեցնել</string>
+    <string name="cast_play">Նվագարկել</string>
+    <string name="cast_rewind">Հետ անցնել</string>
+    <string name="cast_rewind_10">Տաս վայրկյան հետ անցնել</string>
+    <string name="cast_rewind_30">Երեսուն վայրկյան հետ անցնել</string>
+    <string name="cast_seek_bar">Վերարտադրման որոնման կառավար</string>
+    <string name="cast_skip_next">Անցնել հաջորդ միավորին</string>
+    <string name="cast_skip_prev">Անցնել նախորդ միավորին</string>
+    <string name="cast_stop">Դադարեցնել</string>
+    <string name="cast_stop_live_stream">Դադարեցնել ուղիղ հեռարձակումը</string>
+    <string name="cast_tracks_chooser_dialog_audio">Աուդիո</string>
+    <string name="cast_tracks_chooser_dialog_cancel">Չեղարկել</string>
+    <string name="cast_tracks_chooser_dialog_closed_captions">Ենթագրեր</string>
+    <string name="cast_tracks_chooser_dialog_default_track_name">Կատարում %1$d</string>
+    <string name="cast_tracks_chooser_dialog_none">Ոչ մեկը</string>
+    <string name="cast_tracks_chooser_dialog_ok">Հաստատել</string>
+    <string name="cast_tracks_chooser_dialog_subtitles">Ենթագրեր</string>
+    <string name="cast_unmute">Միացնել ձայնը</string>
+    <string name="character_counter_content_description">Մուտքագրված նիշեր՝ %1$d/%2$d</string>
+    <string name="character_counter_overflowed_content_description">Նիշերի առավելագույն քանակը գերազանցվել է (%1$d/%2$d)</string>
+    <string name="clear_text_end_icon_content_description">Ջնջել տեքստը</string>
+    <string msgid="406453423630273620" name="close_drawer">"Փակել նավիգացիայի ընտրացանկը"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Փակել թերթը"</string>
+    <string msgid="5389587048670450460" name="collapsed">"Ծալված է"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Միացնել</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s հավելվածը չի աշխատի մինչև չմիացնեք Google Play ծառայությունները:</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Միացնել Google Play ծառայությունները</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Տեղադրել</string>
+    <string name="common_google_play_services_install_text">%1$s հավելվածը չի աշխատի առանց Google Play ծառայությունների, որոնք չկան ձեր սարքում:</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Տեղադրել Google Play ծառայությունները</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play ծառայությունների հասանելիություն</string>
+    <string name="common_google_play_services_notification_ticker">Google Play ծառայությունների սխալ կա</string>
+    <string name="common_google_play_services_unknown_issue">%1$s հավելվածը Google Play ծառայությունների հետ կապված խնդիր ունի: Փորձեք նորից:</string>
+    <string name="common_google_play_services_unsupported_text">%1$s հավելվածը չի աշխատի առանց Google Play ծառայությունների, որոնք ձեր սարքում չեն աջակցվում:</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Թարմացնել</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s հավելվածը չի աշխատի մինչև չթարմացնեք Google Play ծառայությունները:</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Թարմացնել Google Play ծառայությունները</string>
+    <string name="common_google_play_services_updating_text">%1$s հավելվածը չի աշխատի առանց Google Play ծառայությունների, որոնք այս պահին թարմացվում են:</string>
+    <string name="common_google_play_services_wear_update_text">Անհրաժեշտ է Google Play ծառայությունների նոր տարբերակը: Այն շուտով կթարմացվի ավտոմատ կերպով:</string>
+    <string name="common_open_on_phone">Բացել հեռախոսով</string>
+    <string name="common_signin_button_text">Մուտք գործել</string>
+    <string name="common_signin_button_text_long">Մուտք գործել Google-ով</string>
+    <string msgid="6083905920877235314" name="copy">"Պատճենել"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Հղումը պատճենվեց սեղմատախտակին"</string>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">Սխալ էլ. փոստի հասցե, խնդրում ենք ուղղել։</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">Կան նոր հաղորդագրություններ։ Սեղմեք տեսնելու համար։</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">Մենք օնլայն չենք։ Ձեզ կպատասխանենք էլ. փոստով։</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">Շնորհակալություն, շուտով Ձեզ կպատասխանենք։</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">Շարունակելու համար խնդրում ենք լրացնել ձևը:</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">Ավելացնել էլ. փոստը ծանուցումներ ստանալու համար։</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">Լրացրեք էլ. փոստը շարունակելու համար։</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">Ավելացնել հեռախոսահամարը ծանուցումներ ստանալու համար։</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">Լրացրեք հեռախոսահամարը շարունակելու համար։</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">Ասելու բան կա՞:</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">Ուղարկեք ձեր գնահատականը</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">Ինչպե՞ս վարվեցինք:</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">Ֆայլի վերբեռման սխալ։ Փորձեք նորից։</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">Օրական ֆայլի վերբեռնման քվոտան գերազանցվել է: Փորձեք վերբեռնեք սա ավելի ուշ:</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">Ֆայլի չափը գերազանցում է թույլատրված սահմանը։</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">Ուղարկել ֆայլ</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">Պատրաստում</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">Վերբեռնում</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">Գնահատեք այս զրույցը</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">Հաղորդագրությունների մատչումը անհասանելի է:</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">Գրել հաղորդագրությունը</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">Ուղարկել</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">Ավելացնել emoji</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">Աուդիո ձայնագրությունը ուղարկելուց առաջ նավարկելու դեպքում այն կկորչի:</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">Չհաջողվեց ձայնագրել ձեր խոսափողից: Դուք թույլատրե՞լ եք մուտք գործել:</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">Ձայնագրեք աուդիո հաղորդագրություն</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">Ավարտել խաղը</string>
+    <string name="crisp_sdk_chat_chat_header_channels">Ավելի շատ ալիքներ</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">Ամենահաճախ կարդացվող հոդվածները</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">Որոնված հոդվածներ</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">Եվ ևս %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">Զրույց</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">Օգնության կենտրոն</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">Շարունակել %1$s-ում</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">Էլ. փոստ</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">Հեռախոս</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">ուղարկող</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">Մենք ժամանակավորապես անհասանելի ենք։</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">Վերջին ակտիվությունը %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">Պատասխանում է միջինում %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">Մենք օնլայն ենք</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">Տես մեր կարգավիճակի էջը</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">ավելի թարմացումների համար:</string>
+    <string name="crisp_sdk_chat_chat_health_main">Մեր ծառայություններից ոմանք չեն աշխատում:</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">Որոնման արդյունքներ չկան: Փորձեք այլ հիմնաբառեր:</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">Որոնեք մեր օգնության կենտրոնում…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">Օգնության կենտրոնում դեռևս հոդվածներ չկան:</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">Դիտել Helpdesk-ում</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">Չհաջողվեց նվագարկել այս աուդիո ֆայլը: Հնարավոր է ՝ այն լրացել է:</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">Ուղարկումն ձախողվեց։ Կրկնե՞լ։</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">Կցված ֆայլը</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">Կարդալ</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">Որոշ հաղորդագրություններ դեռ չեն ուղարկվել։ Էջը փոխելը կհանգեցնի դրանց չեղարկման։</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">Փոփոխված</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">Մասնակից</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">Թարգմանված է</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">Դեմ կլինե՞ք գնահատել մեր աջակցությունը:</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">Շնորհակալություն մեզ հետ զրուցելու համար:</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">Ոչ, շնորհակալություն</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">Գնահատեք աջակցությունը</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">Շնորհակալություն արձագանքի համար:</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">Մինչ սպասում եք, կցանկանա՞ք խաղալ զվարճալի մի խաղ։</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">Ցավոք ստիպված ենք Ձեզ սպասեցնել սովորականից շատ։</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">Ոչ, շնորհակալ եմ</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">Խաղալ</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">ինչպե՞ս կնախընտրեք կապնվենք Ձեր հետ։</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">Մուտքագրեք Ձեր էլ. փոստը։</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">Ձեր էլ. փոստը</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">Ձեր հեռախոսահամարը</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">Մուտքագրեք Ձեր հեռախոսահամարը։</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">Կապի ընդհատման կամ մեր ուշ արձագանքման դեպքում</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">Էլ. փոստ</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">Հեռախոսահամար</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">Անցանց:</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">Անցանց: Դուք որոշ ժամանակ անգործ եք եղել:</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">Առայժմ ոչ մի հաղորդագրություն հնարավոր չէ ստանալ կամ ուղարկել:</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">Ուղարկեք հաղորդագրություն ՝ նորից զրուցելու համար:</string>
+    <string name="crisp_sdk_chat_chat_offline_main">Կապի խափանում։ Փորձում ենք նորից միանալ…</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">Ոչինչ չի գտնվել։ Փորձեք այլ հարցմամբ։</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">Գտնել GIF-ը</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFs</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">Սմայլիկներ</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">Չհաջողվեց կապել: Ուղերձը կարող է լինել անհասանելի պահին</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">Գրել պատասխան</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">Նամակը ուղարկել է</string>
+    <string name="crisp_sdk_date_now">Հենց նոր</string>
+    <string name="crisp_sdk_date_second">Վարկյաններ առաջ</string>
+    <string name="crisp_sdk_duration_days">Մի քանի օր</string>
+    <string name="crisp_sdk_duration_now">Անմիջապես</string>
+    <string name="crisp_sdk_duration_second">Մի քանի վայրկյան</string>
+    <string name="crisp_sdk_theme_text_1_chat">Ունե՞ք հարցեր։ Գրեք ինձ։</string>
+    <string name="crisp_sdk_theme_text_2_chat">Տվեք Ձեր հարցերը</string>
+    <string name="crisp_sdk_theme_text_3_chat">Հարցրեք ինձ</string>
+    <string name="crisp_sdk_theme_text_4_chat">Գրել սպասարկման մասնագետին</string>
+    <string name="crisp_sdk_theme_text_default_chat">Ունե՞ք հարցեր։ Գրեք մեզ։</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">Ողջույն։ Ուզու՞մ եք խոսել մեր հետ։</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">Ունե՞ք որեւէ հարց։</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">Ողջույն։ Տվեք Ձեր բոլոր հարցերը %1$s մասին։</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">Ողջույն։ Ինչո՞վ կարող եմ օգտակար լինել :)</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">Ունե՞ք հարցեր %1$s շուրջ։</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">Ինչպե՞ս կարող ենք օգնել %1$s հարցով։</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Սխալ ներածում"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Ելնող պատուհան"</string>
+    <string msgid="4057925834421392736" name="dialog">"Երկխոսության պատուհան"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Իջնող ցանկ"</string>
+    <string name="error_a11y_label">Սխալ՝ անվավեր է</string>
+    <string name="error_icon_content_description">Սխալ</string>
+    <string name="exo_download_completed">Ներբեռնումն ավարտվեց</string>
+    <string name="exo_download_description">Ներբեռնել</string>
+    <string name="exo_download_downloading">Ներբեռնում</string>
+    <string name="exo_download_failed">Չհաջողվեց ներբեռնել</string>
+    <string name="exo_download_notification_channel_name">Ներբեռնումներ</string>
+    <string name="exo_download_paused">Ներբեռնումները դադարեցված են</string>
+    <string name="exo_download_paused_for_network">Ցանցի որոնում</string>
+    <string name="exo_download_paused_for_wifi">Wi-Fi ցանցի որոնում</string>
+    <string name="exo_download_removing">Ներբեռնումները հեռացվում են</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Լրացուցիչ"</string>
+    <string msgid="5974471714631304645" name="expanded">"Ծավալված է"</string>
+    <string name="exposed_dropdown_menu_content_description">Ցույց տալ իջնող ընտրացանկը</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Պատճենել հղումը"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Բացել դիտարկիչում"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Կիսվել հղումով"</string>
+    <string name="gpay_logo_description">Google Pay</string>
+    <string name="icon_content_description">Երկխոսության պատուհանի պատկերակ</string>
+    <string msgid="6827826412747255547" name="in_progress">"Ընթացքում է"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Մասնակի նշված"</string>
+    <string name="item_view_role_description">Ներդիր</string>
+    <string name="material_clock_toggle_content_description">Ընտրել AM կամ PM</string>
+    <string name="material_hour_24h_suffix">%1$s ժամ</string>
+    <string name="material_hour_selection">Ընտրել ժամը</string>
+    <string name="material_hour_suffix">Ժամը %1$s է</string>
+    <string name="material_minute_selection">Ընտրեք րոպեն</string>
+    <string name="material_minute_suffix">%1$s րոպե</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Ժամը մուտքագրելու համար միացրեք ժամացույցի ռեժիմը:</string>
+    <string name="material_timepicker_hour">Ժամ</string>
+    <string name="material_timepicker_minute">Րոպե</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Ժամանակի ընտրություն</string>
+    <string name="material_timepicker_text_input_mode_description">Ժամը մուտքագրելու համար միացրեք տեքստի մուտքագրման ռեժիմը:</string>
+    <string msgid="2939063992730535343" name="mr_button_content_description">"Հեռարձակել"</string>
+    <string msgid="6073720094880410356" name="mr_cast_button_connected">"Հեռարձակել։ Միացած է"</string>
+    <string msgid="6629927151350192407" name="mr_cast_button_connecting">"Հեռարձակել։ Միանում է"</string>
+    <string msgid="8071109333469380363" name="mr_cast_button_disconnected">"Հեռարձակել։ Անջատած է"</string>
+    <string msgid="2175930138959078155" name="mr_cast_dialog_title_view_placeholder">"Հասանելի տեղեկություններ չկան"</string>
+    <string msgid="6114250663023140921" name="mr_chooser_searching">"Սարքերի որոնում"</string>
+    <string msgid="1419936397646839840" name="mr_chooser_title">"Ընտրեք սարք"</string>
+    <string msgid="3330502667672708728" name="mr_controller_album_art">"Ալբոմի շապիկ"</string>
+    <string msgid="9171231064758955152" name="mr_controller_casting_screen">"Էկրանի հեռարձակում"</string>
+    <string msgid="5684434439232634509" name="mr_controller_close_description">"Փակել"</string>
+    <string msgid="2585048604188129749" name="mr_controller_collapse_group">"Ծալել"</string>
+    <string msgid="7812275474138309497" name="mr_controller_disconnect">"Անջատել"</string>
+    <string msgid="4521419834052044261" name="mr_controller_expand_group">"Ծավալել"</string>
+    <string msgid="855271725131981086" name="mr_controller_no_info_available">"Տեղեկություններ չկան"</string>
+    <string msgid="5495452265246139458" name="mr_controller_no_media_selected">"Մեդիա ֆայլ չի ընտրվել"</string>
+    <string msgid="747801650871398383" name="mr_controller_pause">"Դադարեցնել"</string>
+    <string msgid="1253345086594430054" name="mr_controller_play">"Նվագարկել"</string>
+    <string msgid="5497722768305745508" name="mr_controller_stop">"Կանգնեցնել"</string>
+    <string msgid="804210341192624074" name="mr_controller_stop_casting">"Դադարեցնել հեռարձակումը"</string>
+    <string msgid="2955862765169128170" name="mr_controller_volume_slider">"Ձայնի ուժգնության կարգավորիչ"</string>
+    <string msgid="4115858704575247342" name="mr_dialog_default_group_name">"Խումբ"</string>
+    <string msgid="4307018456678388936" name="mr_dialog_groupable_header">"Ավելացրեք սարք"</string>
+    <string msgid="6068257520605505468" name="mr_dialog_transferable_header">"Նվագարկեք սարքերի խմբում"</string>
+    <string msgid="7449553026175453403" name="mr_system_route_name">"Համակարգ"</string>
+    <string msgid="4088331695424166162" name="mr_user_route_category_name">"Սարքեր"</string>
+    <string name="mtrl_badge_numberless_content_description">Նոր ծանուցում</string>
+    <string name="mtrl_checkbox_state_description_checked">Նշված է</string>
+    <string name="mtrl_checkbox_state_description_indeterminate">Մասնակի է նշված</string>
+    <string name="mtrl_checkbox_state_description_unchecked">Նշված չէ</string>
+    <string name="mtrl_chip_close_icon_content_description">Հեռացնել (%1$s)</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns1:ignore="PluralsCandidate">Ավելի քան %1$d նոր ծանուցում</string>
+    <string name="mtrl_picker_a11y_next_month">Անցնել հաջորդ ամիս</string>
+    <string name="mtrl_picker_a11y_prev_month">Անցնել նախորդ ամիս</string>
+    <string name="mtrl_picker_announce_current_range_selection">Մեկնարկի ամսաթվի ընտրություն՝ %1$s – Ավարտի ամսաթվի ընտրություն՝ %2$s</string>
+    <string name="mtrl_picker_announce_current_selection">Ներկայիս ընտրությունը՝ %1$s</string>
+    <string name="mtrl_picker_announce_current_selection_none">ոչ մեկը</string>
+    <string name="mtrl_picker_cancel">Չեղարկել</string>
+    <string name="mtrl_picker_confirm">Եղավ</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Ընտրեք ամսաթիվը</string>
+    <string name="mtrl_picker_date_header_unselected">Ընտրված ամսաթիվ</string>
+    <string name="mtrl_picker_day_of_week_column_header">%1$s</string>
+    <string name="mtrl_picker_end_date_description">Ավարտի ամսաթիվը՝ %1$s</string>
+    <string name="mtrl_picker_invalid_format">Ձևաչափը սխալ է։</string>
+    <string name="mtrl_picker_invalid_format_example">Օրինակ՝ %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Օգտագործեք՝ %1$s</string>
+    <string name="mtrl_picker_invalid_range">Ընդգրկույթն անվավեր է:</string>
+    <string name="mtrl_picker_navigate_to_current_year_description">Անցնել ընթացիկ տարվան (%1$d)</string>
+    <string name="mtrl_picker_navigate_to_year_description">Անցնել %1$d թվական</string>
+    <string name="mtrl_picker_out_of_range">Ընդգրկույթից դուրս է՝ %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Մեկնարկի ամսաթիվը – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – Ավարտի ամսաթիվը</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Ընտրեք ընդգրկույթը</string>
+    <string name="mtrl_picker_range_header_unselected">Մեկնարկի ամսաթիվը – Ավարտի ամսաթիվը</string>
+    <string name="mtrl_picker_save">Պահել</string>
+    <string name="mtrl_picker_start_date_description">Սկզբի ամսաթիվը՝ %1$s</string>
+    <string name="mtrl_picker_text_input_date_hint">Ամսաթիվ</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Ավարտի ամսաթիվը</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Մեկնարկի ամսաթիվը</string>
+    <string name="mtrl_picker_text_input_day_abbr">օ</string>
+    <string name="mtrl_picker_text_input_month_abbr">ա</string>
+    <string name="mtrl_picker_text_input_year_abbr">տ</string>
+    <string name="mtrl_picker_today_description">Այսօր (%1$s)</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Անցնել օրացույցի մուտքագրման ռեժիմ</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Հպեք՝ Օրացույցի դիտակերպին անցնելու համար</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Անցնել տեքստի մուտքագրման ռեժիմին</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Հպեք՝ տարվա դիտակերպին անցնելու համար</string>
+    <string name="mtrl_timepicker_cancel">Չեղարկել</string>
+    <string name="mtrl_timepicker_confirm">Եղավ</string>
+    <string name="native_body">Հիմնական տեքստ</string>
+    <string name="native_headline">Վերնագիր</string>
+    <string name="native_media_view">Մեդիա տեսք</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Նավիգացիայի ընտրացանկ"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ընտրված չէ"</string>
+    <string msgid="6573031135582639649" name="not_set">"Կարգավորված չէ"</string>
+    <string name="notifications_permission_confirm">Թույլատրել</string>
+    <string name="notifications_permission_decline">Չթույլատրել</string>
+    <string name="notifications_permission_title">Թույլատրե՞լ հավելվածին, որ ձեզ ծանուցումներ ուղարկի։</string>
+    <string msgid="875452955155264703" name="off">"Անջատված է"</string>
+    <string name="offline_dialog_image_description">Պատկերակ</string>
+    <string name="offline_dialog_text">Շնորհակալություն հետաքրքրություն ցուցաբերելու համար։\nՄենք ձեզ հետ լրացուցիչ տեղեկություններով կկիսվենք, հենց որ նորից միանաք ցանցին։</string>
+    <string name="offline_notification_title">Դուք նորից առցանց եք։ Շարունակեք այն պահից, որտեղ կանգ էիք առել</string>
+    <string name="offline_notification_title_with_advertiser">Դուք նորից առցանց եք։ Շարունակեք ծանոթանալ %s-ին</string>
+    <string name="offline_opt_in_confirm">Եղավ</string>
+    <string name="offline_opt_in_decline">Ոչ, շնորհակալություն</string>
+    <string name="offline_opt_in_message">Դուք կստանաք ծանուցում՝ գովազդատուի կայքի հղումով։</string>
+    <string name="offline_opt_in_title">Բացեք հայտարարությունը, երբ նորից միանաք ցանցին։</string>
+    <string msgid="8655164131929253426" name="on">"Միացված է"</string>
+    <string name="password_toggle_content_description">Ցուցադրել գաղտնաբառը</string>
+    <string msgid="6685851473431805375" name="preference_copied">"«<ns2:g id="SUMMARY">%1$s</ns2:g>». պատճենվեց սեղմատախտակին:"</string>
+    <string msgid="5941395253238309765" name="range_end">"Ընդգրկույթի վերջ"</string>
+    <string msgid="7097486360902471446" name="range_start">"Ընդգրկույթի սկիզբ"</string>
+    <string name="s1">Պահել պատկերը</string>
+    <string name="s2">Թույլատրե՞լ Գովազդին պահել պատկերը Պատկերասրահում:</string>
+    <string name="s3">Ընդունել</string>
+    <string name="s4">Մերժել</string>
+    <string name="s5">Ստեղծել օրացույցի միջոցառում</string>
+    <string name="s6">Թույլատրե՞լ Գովազդին ստեղծել օրացույցի միջոցառում:</string>
+    <string name="s7">Փորձարկել գովազդը</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Որոնել"</string>
+    <string name="searchview_clear_text_content_description">Ջնջել տեքստը</string>
+    <string name="searchview_navigation_content_description">Հետ</string>
+    <string msgid="6043586758067023" name="selected">"Ընտրված է"</string>
+    <string name="side_sheet_accessibility_pane_title">Կողային վահանակ</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="stripe_hcaptcha_loading_text">Հաստատելով, որ դուք մարդ եք</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns2:g id="CURRENT_ITEMS">%1$s</ns2:g>, <ns2:g id="ADDED_ITEMS">%2$s</ns2:g>"</string>
+    <string msgid="2561197295334830845" name="switch_role">"Փոխանջատիչ"</string>
+    <string msgid="1672349317127674378" name="tab">"Ներդիր"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns2:g id="PERCENTAGE">%1$d</ns2:g> տոկոս։"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"հուշակ"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"ցուցադրել հուշակ"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"ԱՆՋԱՏԱԾ"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ՄԻԱՑՎԱԾ"</string>
+    <string name="wallet_buy_button_place_holder">Գնել Google-ի միջոցով</string>
+    <string name="watermark_label_prefix">AdMob – </string>
+</resources>

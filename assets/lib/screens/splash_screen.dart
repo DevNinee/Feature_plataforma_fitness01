@@ -23,6 +23,8 @@ import 'walk_through_screen.dart';
 class SplashScreen extends StatefulWidget {
   static String tag = '/SplashScreen';
 
+  const SplashScreen({super.key});
+
   @override
   SplashScreenState createState() => SplashScreenState();
 }
@@ -40,12 +42,12 @@ class SplashScreenState extends State<SplashScreen> {
   init() async {
     await 1.seconds.delay;
     if (!getBoolAsync(IS_FIRST_TIME)) {
-      WalkThroughScreen().launch(context, isNewTask: true);
+      const WalkThroughScreen().launch(context, isNewTask: true);
     } else {
       if (userStore.isLoggedIn) {
-        DashboardScreen().launch(context, isNewTask: true);
+        const DashboardScreen().launch(context, isNewTask: true);
       } else {
-        SignInScreen().launch(context, isNewTask: true);
+        const SignInScreen().launch(context, isNewTask: true);
       }
     }
   }
@@ -57,13 +59,13 @@ class SplashScreenState extends State<SplashScreen> {
 
   void _checkNotifyPermission() async {
     String versionNo =  getStringAsync(CURRENT_LAN_VERSION,defaultValue: LanguageVersion);
-    print("---------59>>>${versionNo}");
+    print("---------59>>>$versionNo");
     await getLanguageList(versionNo).then((value) {
       print("---------61>>>${value.data?.length}");
       appStore.setLoading(false);
       if (value.status == true) {
         setValue(CURRENT_LAN_VERSION, value.currentVersionNo.toString());
-        if (value.data!.length > 0) {
+        if (value.data!.isNotEmpty) {
           defaultServerLanguageData = value.data;
           performLanguageOperation(defaultServerLanguageData);
           setValue(LanguageJsonDataRes, value.toJson());
@@ -88,7 +90,7 @@ class SplashScreenState extends State<SplashScreen> {
 
         if (getJsonData.isNotEmpty) {
           ServerLanguageResponse languageSettings = ServerLanguageResponse.fromJson(json.decode(getJsonData.trim()));
-          if (languageSettings.data!.length > 0) {
+          if (languageSettings.data!.isNotEmpty) {
             defaultServerLanguageData = languageSettings.data;
             performLanguageOperation(defaultServerLanguageData);
           }

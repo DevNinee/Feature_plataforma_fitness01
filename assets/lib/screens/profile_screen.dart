@@ -30,6 +30,8 @@ import 'about_app_screen.dart';
 import 'favourite_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -43,7 +45,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget mOtherInfo(String title, String value, String heading) {
     return Container(
       decoration: boxDecorationWithRoundedCorners(borderRadius: radius(12), backgroundColor: primaryOpacity),
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -53,7 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             text: TextSpan(
               children: [
                 TextSpan(text: value, style: boldTextStyle(size: 18, color: primaryColor)),
-                WidgetSpan(child: Padding(padding: EdgeInsets.only(right: 4))),
+                const WidgetSpan(child: Padding(padding: EdgeInsets.only(right: 4))),
                 TextSpan(text: heading, style: boldTextStyle(size: 14, color: primaryColor)),
               ],
             ),
@@ -101,10 +103,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           children: [
                             16.height,
                             Container(
-                              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 4),
+                              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 4),
                               decoration: boxDecorationWithRoundedCorners(
                                   backgroundColor: appStore.isDarkMode ? socialBackground : context.cardColor,
-                                  boxShadow: [BoxShadow(color: shadowColorGlobal, offset: Offset(0, 1), spreadRadius: 2, blurRadius: 10, blurStyle: BlurStyle.outer)],
+                                  boxShadow: [BoxShadow(color: shadowColorGlobal, offset: const Offset(0, 1), spreadRadius: 2, blurRadius: 10, blurStyle: BlurStyle.outer)],
                                   borderRadius: radius(14)),
                               child: Column(
                                 children: [
@@ -119,7 +121,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                           ),
                                           Container(
                                             decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, border: Border.all(width: 2, color: white), backgroundColor: primaryColor),
-                                            padding: EdgeInsets.all(4),
+                                            padding: const EdgeInsets.all(4),
                                             child: Image.asset(ic_edit, color: white, height: 14, width: 14),
                                           )
                                         ],
@@ -128,14 +130,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          Text(userStore.fName.validate().capitalizeFirstLetter() + " " + userStore.lName.capitalizeFirstLetter(), style: boldTextStyle(size: 20)),
+                                          Text("${userStore.fName.validate().capitalizeFirstLetter()} ${userStore.lName.capitalizeFirstLetter()}", style: boldTextStyle(size: 20)),
                                           2.height,
                                           Text(userStore.email.validate(), style: secondaryTextStyle()),
                                         ],
                                       ).expand(),
                                     ],
                                   ).paddingSymmetric(horizontal: 16).onTap(() async {
-                                    bool? res = await EditProfileScreen().launch(context);
+                                    bool? res = await const EditProfileScreen().launch(context);
                                     if (res == true) {
                                       setState(() {});
                                     }
@@ -160,46 +162,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                             8.height,
                             mOption(ic_blog, languages.lblBlog, () {
-                              BlogScreen().launch(context);
+                              const BlogScreen().launch(context);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
 
                             // ///TODO
                             // mOption(ic_blog, "Videos", () {
                             //   VideoScreen().launch(context);
                             // }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
 
                             if (userStore.subscription == "1")
                               mOption(ic_subscription_plan, languages.lblSubscriptionPlans, () {
-                                SubscriptionDetailScreen().launch(context);
+                                const SubscriptionDetailScreen().launch(context);
                               }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_fav_outline, languages.lblFavoriteWorkoutAndNutristions, () {
-                              FavouriteScreen(index: 0).launch(context);
+                              const FavouriteScreen(index: 0).launch(context);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_reminder, languages.lblDailyReminders, () {
-                              ReminderScreen().launch(context);
+                              const ReminderScreen().launch(context);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_assigned, languages.lblPlan, () {
-                              AssignScreen().launch(context);
+                              const AssignScreen().launch(context);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_setting, languages.lblSettings, () {
-                              SettingScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+                              const SettingScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_info, languages.lblAboutApp, () {
-                              AboutAppScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+                              const AboutAppScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_report, 'Workout History', () {
 
-                              WorkoutHistoryScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+                              const WorkoutHistoryScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
                             }),
-                            Divider(height: 0, color: grayColor),
+                            const Divider(height: 0, color: grayColor),
                             mOption(ic_logout, languages.lblLogout, () {
                               showConfirmDialogCustom(context,
                                   dialogType: DialogType.DELETE,
@@ -209,7 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   image: ic_logout, onAccept: (buildContext) {
                                 logout(context, onLogout: () {
                                   isFirstTimeGraph = false;
-                                  SignInScreen().launch(context, isNewTask: true);
+                                  const SignInScreen().launch(context, isNewTask: true);
                                 });
                                 finish(context);
                               });

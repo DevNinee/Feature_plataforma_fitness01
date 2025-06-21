@@ -21,6 +21,8 @@ import '../utils/app_config.dart';
 import '../utils/app_images.dart';
 
 class LanguageScreen extends StatefulWidget {
+  const LanguageScreen({super.key});
+
   @override
   _LanguageScreenState createState() => _LanguageScreenState();
 }
@@ -40,7 +42,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
       appBar: appBarWidget(languages.lblSelectLanguage, context: context),
       body: AnimatedListView(
         itemCount: defaultServerLanguageData?.length,
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         shrinkWrap: true,
         itemBuilder: (context, index) {
         //  LanguageDataModel data = localeLanguageList[index];
@@ -49,8 +51,8 @@ class _LanguageScreenState extends State<LanguageScreen> {
          // LanguageJsonData data = defaultServerLanguageData[index];
 
           return Container(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-            margin: EdgeInsets.only(bottom: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+            margin: const EdgeInsets.only(bottom: 16),
             decoration: boxDecorationWithRoundedCorners(
                 backgroundColor: getStringAsync(SELECTED_LANGUAGE_CODE, defaultValue: DEFAULT_LANGUAGE) == data?.languageCode.validate()
                     ? primaryColor

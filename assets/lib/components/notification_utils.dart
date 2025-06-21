@@ -55,32 +55,32 @@ Future<NotificationWeekAndTime?> pickSchedule(
   int? currentIndex = -1;
   await showInDialog(context,
       shape: RoundedRectangleBorder(borderRadius: radius()),
-      builder: (_) => Container(
+      builder: (_) => SizedBox(
             width: context.width(),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   alignment: Alignment.topLeft,
                   decoration: boxDecorationWithShadow(backgroundColor: primaryColor, borderRadius: radiusOnly(topRight: defaultRadius, topLeft: defaultRadius)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(languages.lblRepeat, style: boldTextStyle(size: 20, color: Colors.white)).paddingLeft(12),
-                      CloseButton(color: Colors.white),
+                      const CloseButton(color: Colors.white),
                     ],
                   ),
                 ),
                 ListView.builder(
                   shrinkWrap: true,
-                  padding: EdgeInsets.only(bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 8),
                   itemCount: weekdays.length,
                   itemBuilder: (BuildContext context, int index) {
                     return RadioListTile(
                       value: index,
                       dense: true,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 8),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 8),
                       groupValue: currentIndex,
                       activeColor: primaryColor,
                       title: Text(weekdays[index], style: primaryTextStyle()),
@@ -103,13 +103,13 @@ Future<NotificationWeekAndTime?> pickSchedule(
         context: context,
         initialTime: TimeOfDay.fromDateTime(
           now.add(
-            Duration(minutes: 1),
+            const Duration(minutes: 1),
           ),
         ),
         builder: (BuildContext context, Widget? child) {
           return Theme(
             data: ThemeData(
-              colorScheme: ColorScheme.light(primary: primaryColor),
+              colorScheme: const ColorScheme.light(primary: primaryColor),
             ),
             child: child!,
           );

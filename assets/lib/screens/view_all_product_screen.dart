@@ -86,8 +86,8 @@ class _ViewAllProductScreenState extends State<ViewAllProductScreen> {
           mProductList.isNotEmpty
               ? SingleChildScrollView(
                   controller: scrollController,
-                  physics: BouncingScrollPhysics(),
-                  padding: EdgeInsets.only(bottom: 16, top: 4),
+                  physics: const BouncingScrollPhysics(),
+                  padding: const EdgeInsets.only(bottom: 16, top: 4),
                   child: AnimatedWrap(
                     runSpacing: 16,
                     spacing: 16,
@@ -103,10 +103,10 @@ class _ViewAllProductScreenState extends State<ViewAllProductScreen> {
                   ).paddingSymmetric(horizontal: 16),
                 )
               : NoDataScreen(mTitle: languages.lblResultNoFound).center().visible(!appStore.isLoading),
-          Loader().center().visible(appStore.isLoading)
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
-      bottomNavigationBar: userStore.adsBannerDetailShowBannerOnProduct == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : SizedBox(),
+      bottomNavigationBar: userStore.adsBannerDetailShowBannerOnProduct == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : const SizedBox(),
     );
   }
 }

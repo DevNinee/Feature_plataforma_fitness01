@@ -8,12 +8,12 @@ class DoublePressBackWidget extends StatelessWidget {
   final String? message;
   final WillPopCallback? onWillPop;
 
-  DoublePressBackWidget({
-    Key? key,
+  const DoublePressBackWidget({
+    super.key,
     required this.child,
     this.message,
     this.onWillPop,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class DoublePressBackWidget extends StatelessWidget {
 
         onWillPop?.call();
         if (_currentBackPressTime == null ||
-            now.difference(_currentBackPressTime!) > Duration(seconds: 2)) {
+            now.difference(_currentBackPressTime!) > const Duration(seconds: 2)) {
           _currentBackPressTime = now;
          // snackBar(message ?? 'Press back again to exit');
 

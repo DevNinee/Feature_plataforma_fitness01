@@ -49,15 +49,15 @@ class _NotificationScreenState extends State<NotificationScreen> {
               return snapshot.data!.notificationData!.isNotEmpty
                   ? AnimatedListView(
                       itemCount: snapshot.data!.notificationData!.length,
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       shrinkWrap: true,
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       itemBuilder: (context, i) {
                         NotificationData mNotification = snapshot.data!.notificationData![i];
                         return Container(
                           decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(backgroundColor: cardDarkColor, borderRadius: radius(16)) : boxDecorationRoundedWithShadow(16),
-                          padding: EdgeInsets.all(12),
-                          margin: EdgeInsets.only(bottom: 16),
+                          padding: const EdgeInsets.all(12),
+                          margin: const EdgeInsets.only(bottom: 16),
                           child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,7 +90,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                 children: [
                                   Text(mNotification.createdAt.validate(), style: secondaryTextStyle(size: 12)),
                                   4.width,
-                                  mNotification.readAt.isEmptyOrNull ? Icon(Icons.circle, size: 8, color: GreenColor) : SizedBox(),
+                                  mNotification.readAt.isEmptyOrNull ? const Icon(Icons.circle, size: 8, color: GreenColor) : const SizedBox(),
                                 ],
                               ),
                             ),

@@ -12,6 +12,8 @@ import '../models/category_diet_response.dart';
 import '../network/rest_api.dart';
 
 class ViewDietCategoryScreen extends StatefulWidget {
+  const ViewDietCategoryScreen({super.key});
+
   @override
   _ViewDietCategoryScreenState createState() => _ViewDietCategoryScreenState();
 }
@@ -78,7 +80,7 @@ class _ViewDietCategoryScreenState extends State<ViewDietCategoryScreen> {
         children: [
           SingleChildScrollView(
             controller: scrollController,
-            padding: EdgeInsets.only(bottom: 16, top: 4),
+            padding: const EdgeInsets.only(bottom: 16, top: 4),
             child: AnimatedWrap(
               runSpacing: 2,
               spacing: 16,
@@ -93,7 +95,7 @@ class _ViewDietCategoryScreenState extends State<ViewDietCategoryScreen> {
               }),
             ).paddingSymmetric(horizontal: 16),
           ),
-          Loader().center().visible(appStore.isLoading)
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
     );

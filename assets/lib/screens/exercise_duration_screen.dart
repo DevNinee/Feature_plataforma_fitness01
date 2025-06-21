@@ -31,7 +31,7 @@ class ExerciseDurationScreen extends StatefulWidget {
   final ExerciseDetailResponse? mExerciseModel;
   final String? workOutId;
 
-  ExerciseDurationScreen(this.mExerciseModel, this.workOutId);
+  const ExerciseDurationScreen(this.mExerciseModel, this.workOutId, {super.key});
 
   @override
   ExerciseDurationScreenState createState() => ExerciseDurationScreenState();
@@ -62,7 +62,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
   late TextEditingController _seekToController;
   late PlayerState _playerState;
   late YoutubeMetaData videoMetaData;
-  bool _isPlayerReady = false;
+  final bool _isPlayerReady = false;
   String? videoId = '';
 
   bool visibleOption = true;
@@ -79,7 +79,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
   void initState() {
     super.initState();
     WakelockPlus.enable();
-    print("----------229>>>${ExerciseDurationScreenState}");
+    print("----------229>>>$ExerciseDurationScreenState");
     init();
     flutterTts = FlutterTts();
     initializePlayer();
@@ -97,14 +97,15 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
   init() async {
     durationstring = widget.mExerciseModel!.data!.duration.validate();
     duration1 = parseDuration(durationstring!);
-    if (widget.mExerciseModel!.data!.duration != null && widget.mExerciseModel!.data!.videoUrl.validate().contains("https://youtu"))
+    if (widget.mExerciseModel!.data!.duration != null && widget.mExerciseModel!.data!.videoUrl.validate().contains("https://youtu")) {
       duration1 = parseDuration(widget.mExerciseModel!.data!.duration.validate());
+    }
 
     if (videoId != null) videoId = YoutubePlayer.convertUrlToId(widget.mExerciseModel!.data!.videoUrl.validate());
-    if (videoId != null)
+    if (videoId != null) {
       youtubePlayerController = YoutubePlayerController(
         initialVideoId: videoId!,
-        flags: YoutubePlayerFlags(
+        flags: const YoutubePlayerFlags(
           mute: false,
           autoPlay: true,
           disableDragSeek: false,
@@ -115,9 +116,10 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
           showLiveFullscreenButton: false,
         ),
       )..addListener(listener);
+    }
     _idController = TextEditingController();
     _seekToController = TextEditingController();
-    if (youtubePlayerController != null)
+    if (youtubePlayerController != null) {
       youtubePlayerController!.addListener(() {
         if (_playerState == PlayerState.playing) {
           if (isChanged == true) {
@@ -131,6 +133,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
           isChanged = true;
         }
       });
+    }
     videoMetaData = const YoutubeMetaData();
     _playerState = PlayerState.unknown;
   }
@@ -301,7 +304,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
 
   void _skipForward() {
     final currentPosition = _controller.value.position;
-    final newPosition = currentPosition + Duration(seconds: 10);
+    final newPosition = currentPosition + const Duration(seconds: 10);
 
     if (newPosition < _controller.value.duration) {
       _controller.seekTo(newPosition);
@@ -320,7 +323,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
 
   void _skipBackward() {
     final currentPosition = _controller.value.position;
-    final newPosition = currentPosition - Duration(seconds: 10);
+    final newPosition = currentPosition - const Duration(seconds: 10);
     if (newPosition > Duration.zero) {
       _controller.seekTo(newPosition);
       if (GoogleCastSessionManager.instance.connectionState == GoogleCastConnectState.ConnectionStateConnected) {
@@ -409,7 +412,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 56),
+        preferredSize: const Size(double.infinity, 56),
         child: Visibility(
             visible: mode == 'portrait' ? true : false,
             child: appBarWidget(widget.mExerciseModel!.data!.title.validate(), context: context, actions: [
@@ -457,7 +460,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
             ])),
       ),
       body: SingleChildScrollView(
-        physics: mode == 'portrait' ? AlwaysScrollableScrollPhysics() : NeverScrollableScrollPhysics(),
+        physics: mode == 'portrait' ? const AlwaysScrollableScrollPhysics() : const NeverScrollableScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -491,7 +494,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
                             children: [
                               cachedImage(widget.mExerciseModel!.data!.exerciseImage.validate(), fit: BoxFit.fill, height: context.height(), width: double.infinity).cornerRadiusWithClipRRect(0),
                               if (!_controller.value.isInitialized) ...[
-                                Center(
+                                const Center(
                                   child: CircularProgressIndicator(),
                                 ),
                               ],
@@ -598,7 +601,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
                             style: boldTextStyle(color: Colors.white, size: 13),
                           ),
                           Text(
-                            ' / ${_totalTime}',
+                            ' / $_totalTime',
                             style: primaryTextStyle(color: Colors.white, size: 13),
                           ),
                           IconButton(
@@ -624,7 +627,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
                       )
                     ],
                   ),
-                  Container(
+                  SizedBox(
                     height: 5,
                     child: SliderTheme(
                       data: SliderTheme.of(context).copyWith(
@@ -633,7 +636,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
                         //overlayShape: SliderComponentShape.noThumb,
                         thumbColor: primaryColor,
                         trackShape: SliderCustomTrackShape(),
-                        thumbShape: RoundSliderThumbShape(enabledThumbRadius: 6.0),
+                        thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6.0),
                       ),
                       child: Slider(
                         value: _videoProgress,
@@ -775,7 +778,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
       isDismissible: true,
       elevation: 0,
       enableDrag: false,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       transitionAnimationController: AnimationController(vsync: this, duration: const Duration(seconds: 1)),
@@ -786,7 +789,7 @@ class ExerciseDurationScreenState extends State<ExerciseDurationScreen> with Tic
         child: Container(
           decoration: BoxDecoration(
             color: appStore.isDarkMode ? Colors.black54 : Colors.black12,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
           ),
           height: MediaQuery.of(context).size.height * 0.3,
           child: _buildDeviceList(),

@@ -35,8 +35,8 @@ class _UpdateAvailableState extends State<UpdateAvailable> {
           runAlignment: WrapAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 45,),
-              padding: EdgeInsets.all(16),
+              margin: const EdgeInsets.symmetric(horizontal: 45,),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12)
@@ -45,20 +45,20 @@ class _UpdateAvailableState extends State<UpdateAvailable> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(width: context.width() * 0.40, child: Image.asset(updateAvailableImg)),
-                    SizedBox(height: 16,),
+                    SizedBox(width: context.width() * 0.40, child: Image.asset(updateAvailableImg)),
+                    const SizedBox(height: 16,),
                     Text(
                       textAlign: TextAlign.center,
                       languages.lblUpdateAvailable,
                       style: boldTextStyle(color: primaryColor),
                     ),
-                    SizedBox(height: 8,),
+                    const SizedBox(height: 8,),
                     Text(
                       textAlign: TextAlign.center,
                         languages.lblUpdateNote,
                       style: secondaryTextStyle(color: primaryColor),
                     ),
-                    SizedBox(height: 32),
+                    const SizedBox(height: 32),
                     Row(
                       mainAxisAlignment: widget.force!=true?MainAxisAlignment.spaceBetween:MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.max,
@@ -69,19 +69,19 @@ class _UpdateAvailableState extends State<UpdateAvailable> {
                           textStyle: boldTextStyle( size: 18,color: Colors.white),
                           onTap: () {
                             if (Platform.isAndroid) {
-                              launchUrl(Uri.parse('${widget.storeUrl}'), mode: LaunchMode.externalApplication);
+                              launchUrl(Uri.parse(widget.storeUrl), mode: LaunchMode.externalApplication);
                             } else if (Platform.isIOS) {
-                              launchUrl(Uri.parse("${widget.storeUrl}"), mode: LaunchMode.externalApplication);
+                              launchUrl(Uri.parse(widget.storeUrl), mode: LaunchMode.externalApplication);
                             }
                           },
                         ),
                         if(widget.force!=true)
-                        SizedBox(width: 8,),
+                        const SizedBox(width: 8,),
                         if(widget.force!=true)
                           AppButtonWidget(
                           text: languages.lblSkip,
                           color: Colors.white,
-                          shapeBorder: RoundedRectangleBorder(side: BorderSide(color: primaryColor),borderRadius: BorderRadius.circular(12)),
+                          shapeBorder: RoundedRectangleBorder(side: const BorderSide(color: primaryColor),borderRadius: BorderRadius.circular(12)),
                           textStyle: boldTextStyle( size: 18,color: primaryColor),
                           onTap: () {
                            Navigator.pop(context);

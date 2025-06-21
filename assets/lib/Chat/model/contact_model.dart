@@ -21,10 +21,10 @@ class ContactModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data[KEY_UID] = this.uid;
-    data[KEY_ADDED_ON] = this.addedOn;
-    data[KEY_LAST_MESSAGE_TIME] = this.lastMessageTime;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data[KEY_UID] = uid;
+    data[KEY_ADDED_ON] = addedOn;
+    data[KEY_LAST_MESSAGE_TIME] = lastMessageTime;
 
     return data;
   }

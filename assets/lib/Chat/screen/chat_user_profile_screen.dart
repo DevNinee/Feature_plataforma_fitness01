@@ -22,7 +22,7 @@ class ChatUserProfileScreen extends StatefulWidget {
   final String uid;
   final String? heroId;
 
-  ChatUserProfileScreen({required this.uid, this.heroId = ''});
+  const ChatUserProfileScreen({super.key, required this.uid, this.heroId = ''});
 
   @override
   _ChatUserProfileScreenState createState() => _ChatUserProfileScreenState();
@@ -110,7 +110,7 @@ class _ChatUserProfileScreenState extends State<ChatUserProfileScreen> {
   Widget aboutDetail() {
     return Container(
       color: context.cardColor,
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       width: context.width(),
       child: Column(
         children: [
@@ -119,7 +119,7 @@ class _ChatUserProfileScreenState extends State<ChatUserProfileScreen> {
               style: boldTextStyle(letterSpacing: 0.5)),
           8.height,
           if (currentUser.phoneNumber != null)
-            Text('+91' + '*' * (currentUser.phoneNumber!.length - 3),
+            Text('+91${'*' * (currentUser.phoneNumber!.length - 3)}',
                     style: secondaryTextStyle())
                 .visible(!currentUser.phoneNumber.isEmptyOrNull),
           8.height,
@@ -153,7 +153,7 @@ class _ChatUserProfileScreenState extends State<ChatUserProfileScreen> {
     return Container(
         //  color: Colors.red,
         //    margin: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
-        padding: EdgeInsets.only(left: 8),
+        padding: const EdgeInsets.only(left: 8),
         width: context.width(),
         child: Row(
           children: [
@@ -185,15 +185,15 @@ class _ChatUserProfileScreenState extends State<ChatUserProfileScreen> {
     return Container(
         //  color: Colors.red,
         //   margin: EdgeInsets.symmetric(vertical: 16, horizontal: 8),
-        padding: EdgeInsets.only(left: 10),
+        padding: const EdgeInsets.only(left: 10),
         width: context.width(),
         child: Row(
           children: [
             Icon(Icons.block, color: Colors.red[800]),
             8.width,
             Text(isBlocked
-                ? "${"Unblock"}${' ' + currentUser.firstName.validate()}"
-                : "${"Block"}${' ' + currentUser.firstName.validate()}")
+                ? "${"Unblock"}${' ${currentUser.firstName.validate()}'}"
+                : "${"Block"}${' ${currentUser.firstName.validate()}'}")
           ],
         )).onTap(() {
       if (isBlocked) {
@@ -202,7 +202,7 @@ class _ChatUserProfileScreenState extends State<ChatUserProfileScreen> {
         showConfirmDialogCustom(
           context,
           dialogAnimation: DialogAnimation.SCALE,
-          title: "Block" + " ${currentUser.firstName.validate()}? ",
+          title: "Block" " ${currentUser.firstName.validate()}? ",
           subTitle:
               "Blocked contact will no longer be able to call you or send you message",
           imageShow: Container(
@@ -211,7 +211,7 @@ class _ChatUserProfileScreenState extends State<ChatUserProfileScreen> {
             decoration: boxDecorationDefault(
                 color: primaryLightColor,
                 borderRadius: BorderRadius.circular(40)),
-            child: Icon(Icons.block, size: 28, color: primaryColor),
+            child: const Icon(Icons.block, size: 28, color: primaryColor),
           ),
           onAccept: (v) {
             blockMessage();

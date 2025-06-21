@@ -42,6 +42,7 @@ class UserService extends BaseService {
     });
   }
 
+  @override
   Stream<List<UserModel>> users({String? searchText}) {
     return ref!
         .where(KEY_CASE_SEARCH,
@@ -114,6 +115,7 @@ class UserService extends BaseService {
     return userService.ref!.doc(uid);
   }
 
+  @override
   Future<void> removeDocument(String? id) => userService.ref!.doc(id).delete();
 
   Future<String> unBlockUser(Map<String, dynamic> data) async {

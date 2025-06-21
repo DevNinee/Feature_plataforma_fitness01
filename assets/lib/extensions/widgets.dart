@@ -98,7 +98,7 @@ Future<T?> showInDialog<T>(
           shape: shape ?? defaultDialogShape,
           title: title,
           titleTextStyle: titleTextStyle,
-          contentPadding: contentPadding ?? EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
+          contentPadding: contentPadding ?? const EdgeInsets.fromLTRB(24.0, 20.0, 24.0, 24.0),
           //scrollable: scrollable,
           backgroundColor: backgroundColor,
           elevation: elevation ?? defaultElevation.toDouble(),
@@ -185,9 +185,9 @@ Widget snapWidgetHelper<T>(
           style: primaryTextStyle(),
         ).center();
   } else if (!snap.hasData) {
-    return loadingWidget ?? Loader();
+    return loadingWidget ?? const Loader();
   } else {
-    return SizedBox();
+    return const SizedBox();
   }
 }
 
@@ -197,7 +197,7 @@ bool isSnapshotLoading(AsyncSnapshot snap, {bool checkHasData = false}) {
 }
 
 backArrow(BuildContext context) {
-  return Icon(
+  return const Icon(
     Icons.arrow_back_ios_new,
     color: primaryColor,
   ).onTap(() {
@@ -227,7 +227,7 @@ class PriceWidget extends StatefulWidget {
   Color? color;
   TextStyle? textStyle;
 
-  PriceWidget({Key? key, this.price, this.color, this.size, this.textStyle}) : super(key: key);
+  PriceWidget({super.key, this.price, this.color, this.size, this.textStyle});
 
   @override
   PriceWidgetState createState() => PriceWidgetState();
@@ -252,10 +252,10 @@ class PriceWidgetState extends State<PriceWidget> {
   Widget build(BuildContext context) {
     if (userStore.currencyPosition == "left") {
       return Text('$currency ${widget.price.toString().replaceAll(".00", "")}',
-          style: widget.textStyle ?? GoogleFonts.inter(fontSize: widget.size, color: widget.color != null ? widget.color : primaryColor, fontWeight: FontWeight.w600));
+          style: widget.textStyle ?? GoogleFonts.inter(fontSize: widget.size, color: widget.color ?? primaryColor, fontWeight: FontWeight.w600));
     } else {
       return Text('${widget.price.toString().replaceAll(".00", "")} $currency',
-          style: widget.textStyle ?? GoogleFonts.inter(fontSize: widget.size, color: widget.color != null ? widget.color : primaryColor, fontWeight: FontWeight.w600));
+          style: widget.textStyle ?? GoogleFonts.inter(fontSize: widget.size, color: widget.color ?? primaryColor, fontWeight: FontWeight.w600));
     }
   }
 }
@@ -269,7 +269,7 @@ void openPhotoViewer(BuildContext context, ImageProvider imageProvider) {
           minScale: PhotoViewComputedScale.contained,
           maxScale: 1.0,
         ),
-        Positioned(top: 35, left: 16, child: BackButton(color: Colors.white)),
+        const Positioned(top: 35, left: 16, child: BackButton(color: Colors.white)),
       ],
     ),
   ).launch(context);

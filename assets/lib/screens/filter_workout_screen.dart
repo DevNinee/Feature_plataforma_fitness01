@@ -108,8 +108,8 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
       appStore.setLoading(false);
       setState(() {});
     }).whenComplete(() {
-      print("-------------111>>>${page}");
-      print("-------------112>>>${pages}");
+      print("-------------111>>>$page");
+      print("-------------112>>>$pages");
       if (page > pages) {
         pages++;
         getWorkoutDataFavorites();
@@ -258,10 +258,10 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
                 children: [
                   HorizontalList(
                       itemCount: list.length,
-                      padding: EdgeInsets.only(left: 16, right: 8),
+                      padding: const EdgeInsets.only(left: 16, right: 8),
                       itemBuilder: (context, index) {
                         return Container(
-                          padding: EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+                          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
                           decoration: boxDecorationWithRoundedCorners(
                               backgroundColor: list[index].select! ? primaryColor : context.scaffoldBackgroundColor,
                               borderRadius: radius(24),
@@ -304,7 +304,7 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
                       ? AnimatedListView(
                           shrinkWrap: true,
                           itemCount: mWorkoutList.length,
-                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           itemBuilder: (context, int i) {
                             return InkWell(
                               highlightColor: Colors.transparent,
@@ -315,12 +315,12 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
                                 userStore.subscription == "1"
                                     ? mWorkoutList[i].isPremium == 1
                                         ? userStore.isSubscribe == 0
-                                            ? await SubscribeScreen().launch(context)
+                                            ? await const SubscribeScreen().launch(context)
                                             : await WorkoutDetailScreen(
                                                 id: mWorkoutList[i].id,
                                                 mWorkoutModel: mWorkoutList[i],
                                                 onCall: (status) {
-                                                  print("--------323>>${saveIndex}");
+                                                  print("--------323>>$saveIndex");
                                                   page = 1;
                                                   mWorkoutList.clear();
                                                   getWorkoutDataCallBack();
@@ -330,8 +330,8 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
                                             id: mWorkoutList[i].id,
                                             mWorkoutModel: mWorkoutList[i],
                                             onCall: (status) {
-                                              print("--------331>>${saveIndex}");
-                                              print("--------333>>${status}");
+                                              print("--------331>>$saveIndex");
+                                              print("--------333>>$status");
                                               page = 1;
                                               mWorkoutList.clear();
                                               getWorkoutDataCallBack();
@@ -365,11 +365,11 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
                                         userStore.subscription == "1"
                                             ? mWorkoutList[i].isPremium == 1
                                                 ? mPro()
-                                                : SizedBox()
-                                            : SizedBox(),
+                                                : const SizedBox()
+                                            : const SizedBox(),
                                         Container(
                                                 decoration: boxDecorationWithRoundedCorners(backgroundColor: Colors.white.withOpacity(0.5), boxShape: BoxShape.circle),
-                                                padding: EdgeInsets.all(5),
+                                                padding: const EdgeInsets.all(5),
                                                 child: Image.asset(
                                                   mWorkoutList[i].isFavouriteLocally == 1 || mWorkoutList[i].isFavourite == 1 ? ic_favorite_fill : ic_favorite,
                                                   color: mWorkoutList[i].isFavouriteLocally == 1 || mWorkoutList[i].isFavourite == 1 ? primaryColor : white,
@@ -404,8 +404,8 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
                                         Row(
                                           children: [
                                             Container(
-                                                margin: EdgeInsets.only(right: 6), height: 6, width: 6, decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: white)),
-                                            Text('${mWorkoutList[i].workoutTypeTitle.validate()}', style: secondaryTextStyle(color: white)),
+                                                margin: const EdgeInsets.only(right: 6), height: 6, width: 6, decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: white)),
+                                            Text(mWorkoutList[i].workoutTypeTitle.validate(), style: secondaryTextStyle(color: white)),
                                             8.width,
                                             Container(height: 14, width: 2, color: primaryColor),
                                             8.width,
@@ -428,7 +428,7 @@ class _FilterWorkoutScreenState extends State<FilterWorkoutScreen> {
               ),
             ),
             Observer(builder: (context) {
-              return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: Loader().center()).visible(appStore.isLoading);
+              return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: const Loader().center()).visible(appStore.isLoading);
             })
           ],
         ));

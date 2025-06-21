@@ -140,12 +140,12 @@ Widget? getCenteredImage(
           color: getDialogPrimaryColor(context, dialogType, primaryColor).withOpacity(0.2),
           shape: BoxShape.circle,
         ),
+        padding: const EdgeInsets.all(16),
         child: Icon(
           Icons.warning_amber_rounded,
           color: getDialogPrimaryColor(context, dialogType, primaryColor),
           size: 40,
         ),
-        padding: EdgeInsets.all(16),
       );
       break;
     case DialogType.DELETE:
@@ -154,8 +154,8 @@ Widget? getCenteredImage(
           color: getDialogPrimaryColor(context, dialogType, primaryColor).withOpacity(0.2),
           shape: BoxShape.circle,
         ),
+        padding: const EdgeInsets.all(16),
         child: Icon(Icons.close, color: getDialogPrimaryColor(context, dialogType, primaryColor), size: 40),
-        padding: EdgeInsets.all(16),
       );
       break;
     case DialogType.UPDATE:
@@ -164,12 +164,12 @@ Widget? getCenteredImage(
           color: getDialogPrimaryColor(context, dialogType, primaryColor).withOpacity(0.2),
           shape: BoxShape.circle,
         ),
+        padding: const EdgeInsets.all(16),
         child: Icon(
           Icons.edit_outlined,
           color: getDialogPrimaryColor(context, dialogType, primaryColor),
           size: 40,
         ),
-        padding: EdgeInsets.all(16),
       );
       break;
     case DialogType.ADD:
@@ -179,12 +179,12 @@ Widget? getCenteredImage(
           color: getDialogPrimaryColor(context, dialogType, primaryColor).withOpacity(0.2),
           shape: BoxShape.circle,
         ),
+        padding: const EdgeInsets.all(16),
         child: Icon(
           Icons.done_outline,
           color: getDialogPrimaryColor(context, dialogType, primaryColor),
           size: 40,
         ),
-        padding: EdgeInsets.all(16),
       );
       break;
     case DialogType.RETRY:
@@ -197,6 +197,7 @@ Widget? getCenteredImage(
           ).withOpacity(0.2),
           shape: BoxShape.circle,
         ),
+        padding: const EdgeInsets.all(16),
         child: Icon(Icons.refresh_rounded,
             color: getDialogPrimaryColor(
               context,
@@ -204,7 +205,6 @@ Widget? getCenteredImage(
               primaryColor,
             ),
             size: 40),
-        padding: EdgeInsets.all(16),
       );
       break;
   }
@@ -245,8 +245,8 @@ Widget buildTitleWidget(
 ) {
   if (customCenterWidget != null) {
     return Container(
-      child: customCenterWidget,
       constraints: BoxConstraints(maxHeight: height, maxWidth: width),
+      child: customCenterWidget,
     );
   } else {
     if (centerImage != null) {
@@ -364,7 +364,7 @@ Future<bool?> showConfirmDialogCustom(
               children: [
                 imageShow ??
                     Container(
-                      padding: EdgeInsets.all(18),
+                      padding: const EdgeInsets.all(18),
                       decoration: boxDecorationWithRoundedCorners(
                           borderRadius: radius(150),
                           border: Border.all(color: primaryColor!),

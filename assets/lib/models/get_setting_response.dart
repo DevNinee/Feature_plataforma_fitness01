@@ -8,21 +8,21 @@ class GetSettingResponse {
     if (json['data'] != null) {
       data = <SettingList>[];
       json['data'].forEach((v) {
-        data!.add(new SettingList.fromJson(v));
+        data!.add(SettingList.fromJson(v));
       });
     }
     currencySetting = json['currency_setting'] != null
-        ? new CurrencySetting.fromJson(json['currency_setting'])
+        ? CurrencySetting.fromJson(json['currency_setting'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
     }
-    if (this.currencySetting != null) {
-      data['currency_setting'] = this.currencySetting!.toJson();
+    if (currencySetting != null) {
+      data['currency_setting'] = currencySetting!.toJson();
     }
     return data;
   }
@@ -44,11 +44,11 @@ class SettingList {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['key'] = this.key;
-    data['type'] = this.type;
-    data['value'] = this.value;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['key'] = key;
+    data['type'] = type;
+    data['value'] = value;
     return data;
   }
 }
@@ -69,11 +69,11 @@ class CurrencySetting {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['symbol'] = this.symbol;
-    data['code'] = this.code;
-    data['position'] = this.position;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['symbol'] = symbol;
+    data['code'] = code;
+    data['position'] = position;
     return data;
   }
 }
