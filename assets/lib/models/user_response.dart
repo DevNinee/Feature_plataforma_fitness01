@@ -5,19 +5,19 @@ class UserResponse {
   UserResponse({this.data, this.subscriptionDetail});
 
   UserResponse.fromJson(Map<String, dynamic> json) {
-    data = json['data'] != null ? new Data.fromJson(json['data']) : null;
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
     subscriptionDetail = json['subscription_detail'] != null
-        ? new SubscriptionDetail.fromJson(json['subscription_detail'])
+        ? SubscriptionDetail.fromJson(json['subscription_detail'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.data != null) {
       data['data'] = this.data!.toJson();
     }
-    if (this.subscriptionDetail != null) {
-      data['subscription_detail'] = this.subscriptionDetail!.toJson();
+    if (subscriptionDetail != null) {
+      data['subscription_detail'] = subscriptionDetail!.toJson();
     }
     return data;
   }
@@ -78,32 +78,32 @@ class Data {
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     userProfile = json['user_profile'] != null
-        ? new UserProfile.fromJson(json['user_profile'])
+        ? UserProfile.fromJson(json['user_profile'])
         : null;
     isSubscribe = json['is_subscribe'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['first_name'] = this.firstName;
-    data['last_name'] = this.lastName;
-    data['display_name'] = this.displayName;
-    data['email'] = this.email;
-    data['username'] = this.username;
-    data['gender'] = this.gender;
-    data['status'] = this.status;
-    data['user_type'] = this.userType;
-    data['phone_number'] = this.phoneNumber;
-    data['player_id'] = this.playerId;
-    data['profile_image'] = this.profileImage;
-    data['login_type'] = this.loginType;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    if (this.userProfile != null) {
-      data['user_profile'] = this.userProfile!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['first_name'] = firstName;
+    data['last_name'] = lastName;
+    data['display_name'] = displayName;
+    data['email'] = email;
+    data['username'] = username;
+    data['gender'] = gender;
+    data['status'] = status;
+    data['user_type'] = userType;
+    data['phone_number'] = phoneNumber;
+    data['player_id'] = playerId;
+    data['profile_image'] = profileImage;
+    data['login_type'] = loginType;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    if (userProfile != null) {
+      data['user_profile'] = userProfile!.toJson();
     }
-    data['is_subscribe'] = this.isSubscribe;
+    data['is_subscribe'] = isSubscribe;
     return data;
   }
 }
@@ -146,17 +146,17 @@ class UserProfile {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['age'] = this.age;
-    data['weight'] = this.weight;
-    data['weight_unit'] = this.weightUnit;
-    data['height'] = this.height;
-    data['height_unit'] = this.heightUnit;
-    data['address'] = this.address;
-    data['user_id'] = this.userId;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['age'] = age;
+    data['weight'] = weight;
+    data['weight_unit'] = weightUnit;
+    data['height'] = height;
+    data['height_unit'] = heightUnit;
+    data['address'] = address;
+    data['user_id'] = userId;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }
@@ -170,15 +170,15 @@ class SubscriptionDetail {
   SubscriptionDetail.fromJson(Map<String, dynamic> json) {
     isSubscribe = json['is_subscribe'];
     subscriptionPlan = json['subscription_plan'] != null
-        ? new SubscriptionPlan.fromJson(json['subscription_plan'])
+        ? SubscriptionPlan.fromJson(json['subscription_plan'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['is_subscribe'] = this.isSubscribe;
-    if (this.subscriptionPlan != null) {
-      data['subscription_plan'] = this.subscriptionPlan!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['is_subscribe'] = isSubscribe;
+    if (subscriptionPlan != null) {
+      data['subscription_plan'] = subscriptionPlan!.toJson();
     }
     return data;
   }
@@ -230,12 +230,12 @@ class SubscriptionPlan {
     paymentType = json['payment_type'];
     txnId = json['txn_id'];
     transactionDetail = json['transaction_detail'] != null
-        ? new TransactionDetail.fromJson(json['transaction_detail'])
+        ? TransactionDetail.fromJson(json['transaction_detail'])
         : null;
     paymentStatus = json['payment_status'];
     status = json['status'];
     packageData = json['package_data'] != null
-        ? new PackageData.fromJson(json['package_data'])
+        ? PackageData.fromJson(json['package_data'])
         : null;
     subscriptionStartDate = json['subscription_start_date'];
     subscriptionEndDate = json['subscription_end_date'];
@@ -244,27 +244,27 @@ class SubscriptionPlan {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['user_id'] = this.userId;
-    data['user_name'] = this.userName;
-    data['package_id'] = this.packageId;
-    data['package_name'] = this.packageName;
-    data['total_amount'] = this.totalAmount;
-    data['payment_type'] = this.paymentType;
-    data['txn_id'] = this.txnId;
-    if (this.transactionDetail != null) {
-      data['transaction_detail'] = this.transactionDetail!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['user_id'] = userId;
+    data['user_name'] = userName;
+    data['package_id'] = packageId;
+    data['package_name'] = packageName;
+    data['total_amount'] = totalAmount;
+    data['payment_type'] = paymentType;
+    data['txn_id'] = txnId;
+    if (transactionDetail != null) {
+      data['transaction_detail'] = transactionDetail!.toJson();
     }
-    data['payment_status'] = this.paymentStatus;
-    data['status'] = this.status;
-    if (this.packageData != null) {
-      data['package_data'] = this.packageData!.toJson();
+    data['payment_status'] = paymentStatus;
+    data['status'] = status;
+    if (packageData != null) {
+      data['package_data'] = packageData!.toJson();
     }
-    data['subscription_start_date'] = this.subscriptionStartDate;
-    data['subscription_end_date'] = this.subscriptionEndDate;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['subscription_start_date'] = subscriptionStartDate;
+    data['subscription_end_date'] = subscriptionEndDate;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }
@@ -304,16 +304,16 @@ class PackageData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['price'] = this.price;
-    data['status'] = this.status;
-    data['duration'] = this.duration;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['description'] = this.description;
-    data['duration_unit'] = this.durationUnit;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['price'] = price;
+    data['status'] = status;
+    data['duration'] = duration;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['description'] = description;
+    data['duration_unit'] = durationUnit;
     return data;
   }
 }
@@ -330,9 +330,9 @@ class TransactionDetail {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['added_by'] = this.addedBy;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['added_by'] = addedBy;
     return data;
   }
 }

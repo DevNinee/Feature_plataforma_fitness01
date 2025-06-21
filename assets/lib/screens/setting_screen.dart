@@ -25,6 +25,8 @@ import 'language_screen.dart';
 class SettingScreen extends StatefulWidget {
   static String tag = '/SettingScreen';
 
+  const SettingScreen({super.key});
+
   @override
   SettingScreenState createState() => SettingScreenState();
 }
@@ -55,7 +57,7 @@ class SettingScreenState extends State<SettingScreen> {
           await removeKey(IS_REMEMBER);
           isFirstTimeGraph = false;
           AwesomeNotifications().dispose();
-          SignInScreen().launch(context, isNewTask: true);
+          const SignInScreen().launch(context, isNewTask: true);
         });
       }).catchError((error) {
         appStore.setLoading(false);
@@ -76,24 +78,24 @@ class SettingScreenState extends State<SettingScreen> {
           body: Column(
             children: [
               mOption(ic_setting, languages.lblMetricsSettings, () async {
-                ProgressSettingScreen().launch(context);
+                const ProgressSettingScreen().launch(context);
               }),
-              Divider(height: 0),
+              const Divider(height: 0),
               mOption(ic_language, languages.lblSelectLanguage, () async{
-                bool? res=await LanguageScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+                bool? res=await const LanguageScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
                 if(res==true){
                   setState(() { });
                 }
               }),
-              Divider(height: 0),
+              const Divider(height: 0),
               mOption(ic_theme, languages.lblAppThemes, () async {
-                await showInDialog(context, shape: RoundedRectangleBorder(borderRadius: radius()), builder: (_) => ThemeSelectionDialog(), contentPadding: EdgeInsets.zero);
+                await showInDialog(context, shape: RoundedRectangleBorder(borderRadius: radius()), builder: (_) => const ThemeSelectionDialog(), contentPadding: EdgeInsets.zero);
               }),
-              Divider(height: 0),
+              const Divider(height: 0),
               mOption(ic_change_password, languages.lblChangePassword, () {
-                ChangePwdScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+                const ChangePwdScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
               }).visible(!getBoolAsync(IS_SOCIAL)),
-              Divider(height: 0).visible(!getBoolAsync(IS_SOCIAL)),
+              const Divider(height: 0).visible(!getBoolAsync(IS_SOCIAL)),
               mOption(ic_delete, languages.lblDeleteAccount, () async {
                 await showConfirmDialogCustom(
                   context,

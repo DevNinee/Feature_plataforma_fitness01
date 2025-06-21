@@ -20,7 +20,7 @@ class WorkoutComponent extends StatefulWidget {
   final Function? onCall;
   final bool isView;
 
-  WorkoutComponent({this.mWorkoutModel, this.onCall, this.isView = false});
+  const WorkoutComponent({super.key, this.mWorkoutModel, this.onCall, this.isView = false});
 
   @override
   _WorkoutComponentState createState() => _WorkoutComponentState();
@@ -30,7 +30,7 @@ class _WorkoutComponentState extends State<WorkoutComponent> {
 
 
   Future<void> setWorkout(int? id) async {
-    print("--------------33>>>${id}");
+    print("--------------33>>>$id");
     appStore.setLoading(true);
     Map req = {"workout_id": id};
     await setWorkoutFavApi(req).then((value) {
@@ -69,11 +69,11 @@ class _WorkoutComponentState extends State<WorkoutComponent> {
               userStore.subscription == "1"
                   ? widget.mWorkoutModel!.isPremium == 1
                       ? mPro()
-                      : SizedBox()
-                  : SizedBox(),
+                      : const SizedBox()
+                  : const SizedBox(),
               Container(
                 decoration: boxDecorationWithRoundedCorners(backgroundColor: Colors.white.withOpacity(0.5), boxShape: BoxShape.circle),
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 child: Image.asset(widget.mWorkoutModel!.isFavourite == 1 ? ic_favorite_fill : ic_favorite, color: widget.mWorkoutModel!.isFavourite == 1 ? primaryColor : white, width: 20, height: 20)
                     .center(),
               ).onTap(() {
@@ -96,8 +96,8 @@ class _WorkoutComponentState extends State<WorkoutComponent> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(margin: EdgeInsets.only(right: 6), height: 4, width: 4, decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: white)),
-                    Text('${widget.mWorkoutModel!.workoutTypeTitle.validate()}', style: secondaryTextStyle(color: white)),
+                    Container(margin: const EdgeInsets.only(right: 6), height: 4, width: 4, decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, backgroundColor: white)),
+                    Text(widget.mWorkoutModel!.workoutTypeTitle.validate(), style: secondaryTextStyle(color: white)),
                     8.width,
                     Container(height: 14, width: 2, color: primaryColor),
                     8.width,
@@ -113,7 +113,7 @@ class _WorkoutComponentState extends State<WorkoutComponent> {
       userStore.subscription == "1"
           ? widget.mWorkoutModel!.isPremium == 1
               ? userStore.isSubscribe == 0
-                  ? SubscribeScreen().launch(context)
+                  ? const SubscribeScreen().launch(context)
                   : WorkoutDetailScreen(id: widget.mWorkoutModel!.id, mWorkoutModel: widget.mWorkoutModel!).launch(context).then((value) {
                       widget.onCall!();
                     })

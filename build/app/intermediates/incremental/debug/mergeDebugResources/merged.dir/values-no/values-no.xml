@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			En time siden
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d timer siden
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Ett minutt siden
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d minutter siden
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			En time
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d timer
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Et minutt
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d minutter
+		</item>
+	</plurals>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">E-postadressen ser ikke ut til å være gyldig, kan du sjekke den?</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">Det er nye meldinger nedenfor. Klikk for å se.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">Vi er ikke pålogget for øyeblikket. Vi svarer deg per e-post.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">Takk! Vi svarer om et lite øyeblikk!</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">Fyll ut skjemaet for å fortsette.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">Klikk for å angi din e-post og få varsler.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">Angi din e-post til å fortsette.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">Klikk for å angi at mobilen skal få meldinger.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">Angi ditt nummer for å fortsette.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">Noe å si?</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">Send din vurdering</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">Hvordan gjorde vi det?</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">Det oppstod en feil ved opplasting. Vennligst prøv igjen.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">Daglig filopplastings kvote er overskredet eller så er filen ugyldig.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">Filen er for stor. Reduser størrelsen og prøv igjen.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">Send en fil</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">Forbereder</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">Laster opp</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">Vurder denne chatten</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">Meldinger er ikke tilgjengelige.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">Skriv din melding…</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">Sende</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">Sett inn en emoji</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">Navigering før lydopptaket sendes vil føre til at det går tapt.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">Kunne ikke ta opp lyd fra mikrofonen. Tillot du tilgang?</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">Ta opp lydmelding</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">Slutte å spille</string>
+    <string name="crisp_sdk_chat_chat_header_channels">Flere kanaler</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">Mest leste artikler</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">Søkte artikler</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">Og %1$s til</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">Samtale</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">Hjelpesenter</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">Fortsett på %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">E-post</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">Telefon</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">fra</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">Kundesupport er borte</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">Var sist aktiv %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">Svarer vanligvis under %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">Kundesupport er pålogget</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">Se vår status-side</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">for flere oppdateringer.</string>
+    <string name="crisp_sdk_chat_chat_health_main">Noen av våre tjenester fungerer ikke.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">Ingen søkeresultater. Prøv andre søkeord.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">Søk i brukerstøtten vår…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">Ingen artikler i brukerstøtten ennå.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">Se i Helpdesk</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">Kunne ikke spille av denne lydfilen. Det kan ha gått ut.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">Kunne ikke sende. Prøve på nytt?</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">Vedlagt fil</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">Lest</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">Noen meldinger er enda ikke er sendt. Navigering vil hindre dem fra å bli sendt.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">Redigert</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">Deltager</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">Oversatt</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">Vil du vurdere støtten vår?</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">Takk for at du chatter med oss.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">Nei takk</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">Vurder støtte</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">Takk for din tilbakemelding!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">Mens du venter, ønsker du å spille et spill?</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">Ser ut som vi bruker tid på å svare.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">Nei takk</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">Spill er spill</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">Hvordan vil du at vi skal komme tilbake til deg?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">Hva er din e-postadresse?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">Angi e-postadressen din</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">Angi telefonnummeret ditt</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">Hva er telefonnummeret ditt?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">Bare i tilfelle du forlater eller vi svarer senere:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">E-post</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">Telefon</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">Nettverk frakoblet.</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">Frakoblet. Du var inaktiv en stund.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">Ingen meldinger kan mottas eller sendes for nå.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">Send en melding for å koble til chatten på nytt.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">Nettverk frakoblet. Kobler til på nytt…</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">Ingen resultater. Prøv et annet søk.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">Finn GIFs …</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFs</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">Emoji</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">Tilkobling mislyktes. Meldinger kan være utilgjengelige for øyeblikket.p</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">Skriv ditt svar</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">Melding fra</string>
+    <string name="crisp_sdk_date_now">Nå</string>
+    <string name="crisp_sdk_date_second">Noen sekunder siden</string>
+    <string name="crisp_sdk_duration_days">Et par dager</string>
+    <string name="crisp_sdk_duration_now">Umiddelbart</string>
+    <string name="crisp_sdk_duration_second">Et par sekunder</string>
+    <string name="crisp_sdk_theme_text_1_chat">Spørsmål? Chat med oss!</string>
+    <string name="crisp_sdk_theme_text_2_chat">Still oss et spørsmål</string>
+    <string name="crisp_sdk_theme_text_3_chat">Still meg et spørsmål</string>
+    <string name="crisp_sdk_theme_text_4_chat">Chat med support</string>
+    <string name="crisp_sdk_theme_text_default_chat">Spørsmål? Chat med oss!</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">Hei, vil du chatte med oss?</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">Noe du lurer på?</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">Hei, spør oss om %1$s.</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">Hei! hvordan kan jeg hjelpe deg? :)</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">Spørsmål om %1$s?</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">Hva kan vi hjelpe deg med %1$s?</string>
+    <string name="stripe_hcaptcha_loading_text">Bekreft at du er menneske</string>
+</resources>

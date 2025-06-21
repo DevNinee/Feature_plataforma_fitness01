@@ -86,7 +86,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
       Iterable it = value.data!;
       it.map((e) => mSubscriptionPlanList.add(e)).toList();
 
-      mSubscriptionPlanList.forEach((e) {});
+      for (var e in mSubscriptionPlanList) {}
 
       setState(() {});
       appStore.setLoading(false);
@@ -100,7 +100,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
   Future<void> cancelPackage({int? id}) async {
     appStore.setLoading(true);
     Map req = {
-      "id": id!=null?id:userStore.subscriptionDetail?.subscriptionPlan?.id,
+      "id": id ?? userStore.subscriptionDetail?.subscriptionPlan?.id,
     };
     await cancelPlanApi(req).then((value) async {
       await getUSerDetail(context, userStore.userId).whenComplete(() {
@@ -150,14 +150,14 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
         userStore.subscriptionDetail!.subscriptionPlan == null ||
         userStore.subscriptionDetail!.subscriptionPlan!.status == "inactive") {
       print("dfgdfgdfgdfg150");
-      for(var status in mSubscriptionPlanList)
+      for(var status in mSubscriptionPlanList) {
         if(status.status=='active'){
           return SingleChildScrollView(
             child: Column(
               children: [
                 16.height,
                 Container(
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   decoration: boxDecorationWithRoundedCorners(
                     backgroundColor: appStore.isDarkMode ? cardDarkColor : GreenColor.withOpacity(0.10),
                   ),
@@ -181,13 +181,9 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
                         ],
                       ),
                       Text(
-                        languages.lblYourPlanValid +
-                            " " +
-                            parseDocumentDate(DateTime.parse(
-                                status.subscriptionStartDate.validate())) +
-                            " ${languages.lblTo} " +
-                            parseDocumentDate(DateTime.parse(
-                                status.subscriptionEndDate.validate())),
+                        "${languages.lblYourPlanValid} ${parseDocumentDate(DateTime.parse(
+                                status.subscriptionStartDate.validate()))} ${languages.lblTo} ${parseDocumentDate(DateTime.parse(
+                                status.subscriptionEndDate.validate()))}",
                         style: primaryTextStyle(color: primaryColor, size: 12),
                       ),
                       8.height,
@@ -212,6 +208,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
             ).paddingSymmetric(horizontal: 16),
           );
         }
+      }
       return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -228,7 +225,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
             width: context.width(),
             color: primaryColor,
             onTap: () {
-              SubscribeScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
+              const SubscribeScreen().launch(context, pageRouteAnimation: PageRouteAnimation.Fade);
             },
           ).paddingAll(16),
         ],
@@ -242,7 +239,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
           children: [
             16.height,
             Container(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: boxDecorationWithRoundedCorners(
                 backgroundColor: appStore.isDarkMode ? cardDarkColor : GreenColor.withOpacity(0.10),
               ),
@@ -266,13 +263,9 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
                     ],
                   ),
                   Text(
-                    languages.lblYourPlanValid +
-                        " " +
-                        parseDocumentDate(DateTime.parse(
-                            userStore.subscriptionDetail!.subscriptionPlan!.subscriptionStartDate.validate())) +
-                        " ${languages.lblTo} " +
-                        parseDocumentDate(DateTime.parse(
-                            userStore.subscriptionDetail!.subscriptionPlan!.subscriptionEndDate.validate())),
+                    "${languages.lblYourPlanValid} ${parseDocumentDate(DateTime.parse(
+                            userStore.subscriptionDetail!.subscriptionPlan!.subscriptionStartDate.validate()))} ${languages.lblTo} ${parseDocumentDate(DateTime.parse(
+                            userStore.subscriptionDetail!.subscriptionPlan!.subscriptionEndDate.validate()))}",
                     style: primaryTextStyle(color: primaryColor, size: 12),
                   ),
                   8.height,
@@ -305,13 +298,13 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
       appBar: appBarWidget(languages.lblSubscriptionPlans,
           context: context,
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(45),
+            preferredSize: const Size.fromHeight(45),
             child: Container(
               decoration: BoxDecoration(border: Border(bottom: BorderSide(color: context.dividerColor))),
               child: Row(
                 children: [
                   Container(
-                    padding: EdgeInsets.only(bottom: 8),
+                    padding: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1.5, color: select ? primaryColor : Colors.transparent))),
                     child: Text(languages.lblActive, style: boldTextStyle(color: select ? primaryColor : textSecondaryColorGlobal)).center(),
                   ).onTap(() {
@@ -320,13 +313,13 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
                     });
                   }).expand(),
                   Container(
-                    padding: EdgeInsets.only(bottom: 8),
+                    padding: const EdgeInsets.only(bottom: 8),
                     decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1.5, color: select ? Colors.transparent : primaryColor))),
                     child: Text(languages.lblHistory, style: boldTextStyle(color: select ? textSecondaryColorGlobal : primaryColor)).center(),
                   ).onTap(() {
                     setState(() {
                       select = !select;
-                      print("-----167>>>${select}");
+                      print("-----167>>>$select");
                     });
                   }).expand(),
                 ],
@@ -425,14 +418,14 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
             : mSubscriptionPlanList.isNotEmpty
                 ? AnimatedListView(
                     itemCount: mSubscriptionPlanList.length,
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                     shrinkWrap: true,
                     controller: scrollController,
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     itemBuilder: (context, index) {
                       return mSubscriptionPlanList[index].status=='inactive'?Container(
-                        padding: EdgeInsets.all(16),
-                        margin: EdgeInsets.only(bottom: 16),
+                        padding: const EdgeInsets.all(16),
+                        margin: const EdgeInsets.only(bottom: 16),
                         decoration: boxDecorationWithRoundedCorners(backgroundColor: appStore.isDarkMode ? cardDarkColor : getBgColor(mSubscriptionPlanList[index].status.validate())),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -450,9 +443,7 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
                             ),
                             8.height,
                             Text(
-                              parseDocumentDate(DateTime.parse(mSubscriptionPlanList[index].subscriptionStartDate.validate())) +
-                                  " ${languages.lblTo} " +
-                                  parseDocumentDate(DateTime.parse(mSubscriptionPlanList[index].subscriptionEndDate.validate())),
+                              "${parseDocumentDate(DateTime.parse(mSubscriptionPlanList[index].subscriptionStartDate.validate()))} ${languages.lblTo} ${parseDocumentDate(DateTime.parse(mSubscriptionPlanList[index].subscriptionEndDate.validate()))}",
                               style: secondaryTextStyle(),
                             ),
                             8.height,
@@ -471,13 +462,13 @@ class _SubscriptionDetailScreenState extends State<SubscriptionDetailScreen>{
                             )
                           ],
                         ),
-                      ):SizedBox.shrink();
+                      ):const SizedBox.shrink();
                     },
                   )
-                : SizedBox(height: context.height() * 0.65, child: NoDataScreen().center()).visible(!appStore.isLoading),
+                : SizedBox(height: context.height() * 0.65, child: const NoDataScreen().center()).visible(!appStore.isLoading),
 
           Observer(builder: (context) {
-            return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: Loader().center()).visible(appStore.isLoading);
+            return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: const Loader().center()).visible(appStore.isLoading);
           })
       ]),
     );

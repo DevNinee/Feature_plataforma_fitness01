@@ -7,7 +7,7 @@ import '../utils/app_common.dart';
 class VimeoEmbedWidget extends StatelessWidget {
   final String videoId;
 
-  VimeoEmbedWidget(this.videoId);
+  const VimeoEmbedWidget(this.videoId, {super.key});
 
   @override
   Widget build(BuildContext context) {

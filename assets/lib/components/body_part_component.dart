@@ -15,7 +15,7 @@ class BodyPartComponent extends StatefulWidget {
   final isFilter;
   final BodyPartModel? bodyPartModel;
 
-  BodyPartComponent({this.bodyPartModel, this.isGrid = false, this.isFilter = false});
+  const BodyPartComponent({super.key, this.bodyPartModel, this.isGrid = false, this.isFilter = false});
 
   @override
   _BodyPartComponentState createState() => _BodyPartComponentState();
@@ -49,9 +49,9 @@ class _BodyPartComponentState extends State<BodyPartComponent> {
       ),
     ).onTap(() {
       setState(() {
-        widget.isFilter == true ? widget.bodyPartModel!.select = true : SizedBox();
+        widget.isFilter == true ? widget.bodyPartModel!.select = true : const SizedBox();
       });
-      widget.isFilter == true ? SizedBox() : ExerciseListScreen(mTitle: widget.bodyPartModel!.title.validate(), isBodyPart: true, id: widget.bodyPartModel!.id.validate()).launch(context);
+      widget.isFilter == true ? const SizedBox() : ExerciseListScreen(mTitle: widget.bodyPartModel!.title.validate(), isBodyPart: true, id: widget.bodyPartModel!.id.validate()).launch(context);
     });
   }
 }

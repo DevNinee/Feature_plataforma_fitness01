@@ -29,7 +29,7 @@ class SettingItemWidget extends StatelessWidget {
   final double? borderRadius;
   final BorderRadius? radius;
 
-  SettingItemWidget({
+  const SettingItemWidget({
     required this.title,
     this.onTap,
     this.width,
@@ -48,18 +48,18 @@ class SettingItemWidget extends StatelessWidget {
     this.hoverColor,
     this.splashColor,
     this.radius,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      padding: padding ?? EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-      decoration: decoration ?? BoxDecoration(),
+      padding: padding ?? const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      decoration: decoration ?? const BoxDecoration(),
       child: Row(
         children: [
-          leading ?? SizedBox(),
+          leading ?? const SizedBox(),
           if (leading != null) paddingAfterLeading.width,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +86,7 @@ class SettingItemWidget extends StatelessWidget {
             ],
           ).expand(),
           if (trailing != null) paddingBeforeTrailing.width,
-          trailing ?? SizedBox(),
+          trailing ?? const SizedBox(),
         ],
       ),
     ).onTap(

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			ساعته مخکې
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d ساعت مخکې
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			یو دقیقه مخکې
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d دقیقې مخکې
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			څو ساعته
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d یو ساعت
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			یوه دقیقه
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d دقیقې
+		</item>
+	</plurals>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">تاسو خپل ناسم بریښناليک ولیکئ، ایا تاسو کولی شئ چک کړئ؟</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">هلته لاندي نوې پیغامونه شته. د لیدلو لپاره یې کلېک وکړئ</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">موږ آنلاین نه یو. موږ به د بریښناليک له لارې بیرته راستون شو</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">مننه! مونږ به په یوه دقیېقه کې ځواب درکړو</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">مهرباني وکړئ د دوام لپاره فورمه ډکه کړئ.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">د خبرتیا ترلاسه کولو لپاره خپل برېښناليک وټاکئ.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">مهرباني وکړئ خپل بریښناليک ته ادامه ورکړئ.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">د خبرتیا ترلاسه کولو لپاره د ټیلیفوني اړیکو لپاره کلیک وکړئ.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">لطفا تلیفون ته ادامه ورکړئ.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">څه ووایم؟</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">خپل درجه بندي واستوئ</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">موږ څنګه وکړل؟</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">د فایل پورته کولو پر مهال کومه تېروتنه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">د خپریدلو ورځني فایلونه تیریدل. لطفا وروسته دا لغوه کولو هڅه وکړئ.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">لوی لوی دوتنه. لطفا د کوچني دوتنې سره بیا هڅه وکړئ.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">دوتنه پورته کړه</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">چمتو کول</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">پورته کول</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">دا چیټ راټیټ کړئ</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">پیغام نشته.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">خپل پیغام ولیکئ …</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">لیږل</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">ایمومیکټ داخل کړئ</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">ستاسو د آډیو ریکارډ لیږلو دمخه نیویګینګ کول به د ورکیدو لامل شي.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">ستاسو د مایکروفون څخه آډیو ثبت نشو کولی. ایا تاسو د لاسرسي اجازه ورکړې؟</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">آډیو پیغام ثبت کړئ</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">لوبه مه کوه</string>
+    <string name="crisp_sdk_chat_chat_header_channels">نور چینلونه</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">ډیری وختونه لوستل شوي مقالې</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">د مقالو لټون</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">او %1$s نور</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">خبرې اترې</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">د مرستې مرکز</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">%1$s ته دوام ورکړئ</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">اړونده کټګورۍ</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">تلیفون</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">له خوا</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">ملاتړ نشته</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">تیر ځل آنلاین %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">په عموما %1$s ته ځوابونه</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">ملاتړ په کرښه دي</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">زموږ د حالت پاڼه وګورئ</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">د نورو تازه معلوماتو لپاره.</string>
+    <string name="crisp_sdk_chat_chat_health_main">زموږ ځینې خدمتونه کار نه کوي.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">د لټون پایلې نشته. د نورو کلیمو هڅه وکړئ.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">زموږ د مرستې مرکز وپلټئ …</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">تراوسه د مرستې په مرکز کې هیڅ مقاله نشته.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">په هیلپ ډیسک کې وګورئ</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">دا آډیو فایل نشي لوبولی. کیدای شی چی دا میشته وی.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">لېږل ونشو. بیا هڅه وکړئ؟</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">ضمیمه دوتنه</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">لوستل</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">ځینې ​​پیغامونه لا تر اوسه ندي لیږل شوي. دوامداره نیولو به د دوی د لېږلو مخه ونیسي.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">تولید شوی</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">برخه اخستونکې</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">ژباړل شوی</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">ایا تاسو زموږ د ملاتړ درجه بندي کوئ؟</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">له موږ سره د خبرو کولو لپاره مننه.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">نه مننه</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">د ملاتړ کچه</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">ستاسو د نظر څخه مننه!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">په داسې حال کې چې تاسو انتظار کوئ، ایا تاسو غواړئ یو ښه لوبه ترسره کړئ؟</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">داسې ښکاري چې ځواب اوږد وخت نیسي.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">نه مننه</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">لوبه کول</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">تاسو څنګه ځواب غواړئ؟</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">ستاسو بریښنالیک څه دی؟</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">خپل برېښناليک وليکئ …</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">خپل د ټیلیفون شمیره وليکئ …</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">ستاسو د تلیفون شمېره څه ده؟</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">که تاسو پریږدئ یا ځنډ وکړئ:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">اړونده کټګورۍ</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">تلیفون</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">اف لاین</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">نښې. تاسو د یو څه وخت لپاره غیر فعال و.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">د اوس لپاره هیڅ پیغام ترلاسه نشو یا لیږل کیدی شي.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">چیٹ ته د بیا وصل کیدو لپاره پیغام واستوئ.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">د شبکې شبکه. نښلول …</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">هیڅ نتیجه نه موندل شوې. د کوم شی لپاره د لټون هڅه وکړئ.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">د GIF وګورئ …</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFs</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">مرمۍ</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">پیوستون ناکام شو. پیغامونه ممکن نه وي.</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">خپل پیغام ولیکئ</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">له خوا پیغام</string>
+    <string name="crisp_sdk_date_now">همداوس</string>
+    <string name="crisp_sdk_date_second">څو ثانې مخکې</string>
+    <string name="crisp_sdk_duration_days">څو ورځي</string>
+    <string name="crisp_sdk_duration_now">ډیر ژر</string>
+    <string name="crisp_sdk_duration_second">یو څو ثانې</string>
+    <string name="crisp_sdk_theme_text_1_chat">آیا کومه پوښتنه لرئ؟ له مونږ سره اړیکه ونیسئ!</string>
+    <string name="crisp_sdk_theme_text_2_chat">خپلې پوښتنې مو له مونږ نه وپوښتئ</string>
+    <string name="crisp_sdk_theme_text_3_chat">خپلې پوښتنې مو له ما نه و پوښتئ</string>
+    <string name="crisp_sdk_theme_text_4_chat">له ملاتړې ټیم سره اړیکه ونیسئ</string>
+    <string name="crisp_sdk_theme_text_default_chat">آيا کومه پوښتنه لرئ؟ له مونږ سره اړیکه ونیسئ!</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">سلام، آیا غواړي له مونږ سره اړیکه ونیسئ؟</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">هر څه چې غواړئ وپوښتئ؟</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">سلام، د %1$s په اړه موږ ته څه ووایاست.</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">سلام! له تاسو سره څه مرسته کولای شم؟ :)</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">د %1$s په اړه کومه پوښتنه؟</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">موږ څنګه کولایشو د %1$s سره مرسته وکړو؟</string>
+    <string name="stripe_hcaptcha_loading_text">تاسو تصدیق کول انسانان دي</string>
+</resources>

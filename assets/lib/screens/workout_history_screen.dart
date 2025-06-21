@@ -12,6 +12,8 @@ import '../../extensions/widgets.dart';
 class WorkoutHistoryScreen extends StatefulWidget {
   static String tag = '/WorkoutHistoryScreen';
 
+  const WorkoutHistoryScreen({super.key});
+
   @override
   WorkoutHistoryScreenState createState() => WorkoutHistoryScreenState();
 }
@@ -73,14 +75,14 @@ class WorkoutHistoryScreenState extends State<WorkoutHistoryScreen> {
             mExerciseList.isNotEmpty?AnimatedListView(
               controller: scrollController,
               shrinkWrap: true,
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
               itemCount: mExerciseList.length,
               itemBuilder: (context, index) {
                 print("---------->>>${mExerciseList[index].id}");
                 return ExerciseComponent(mExerciseModel: mExerciseList[index]);
               },
             ):NoDataScreen(mTitle: languages.lblExerciseNoFound).visible(!appStore.isLoading),
-            Loader().center().visible(appStore.isLoading)
+            const Loader().center().visible(appStore.isLoading)
           ],
         )
 

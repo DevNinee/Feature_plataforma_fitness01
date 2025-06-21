@@ -34,14 +34,14 @@ class Tabata {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['sets'] = this.sets;
-    data['reps'] = this.reps;
-    data['status'] = this.status;
-    data['exerciseTime'] = this.exerciseTime;
-    data['restTime'] = this.restTime;
-    data['breakTime'] = this.breakTime!.inSeconds;
-    data['startDelay'] = this.startDelay!.inSeconds;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['sets'] = sets;
+    data['reps'] = reps;
+    data['status'] = status;
+    data['exerciseTime'] = exerciseTime;
+    data['restTime'] = restTime;
+    data['breakTime'] = breakTime!.inSeconds;
+    data['startDelay'] = startDelay!.inSeconds;
     return data;
   }
 }
@@ -49,10 +49,10 @@ class Tabata {
 enum WorkoutState { initial, starting, exercising, resting, breaking, finished }
 
 class Workout {
-  Tabata _config;
+  final Tabata _config;
 
   /// Callback for when the workout's state has changed.
-  Function _onStateChange;
+  final Function _onStateChange;
 
   WorkoutState _step = WorkoutState.initial;
 
@@ -60,11 +60,11 @@ class Workout {
 
   late Duration _timeLeft;
 
-  Duration _totalTime = Duration(seconds: 0);
+  Duration _totalTime = const Duration(seconds: 0);
 
   int _set = 0;
 
-  String _status = "";
+  final String _status = "";
 
   int _rep = 0;
 
@@ -84,7 +84,7 @@ class Workout {
       }
     }
 
-    _timer = Timer.periodic(Duration(seconds: 1), _tick);
+    _timer = Timer.periodic(const Duration(seconds: 1), _tick);
     _onStateChange();
   }
 
@@ -106,13 +106,13 @@ class Workout {
 
   _tick(Timer timer) {
     if (_step != WorkoutState.starting) {
-      _totalTime += Duration(seconds: 1);
+      _totalTime += const Duration(seconds: 1);
     }
 
     if (_timeLeft.inSeconds == 1) {
       _nextStep();
     } else {
-      _timeLeft -= Duration(seconds: 1);
+      _timeLeft -= const Duration(seconds: 1);
       if (_step == WorkoutState.starting) {
         flutterTts.speak(_timeLeft.inSeconds.toString());
       } else {
@@ -201,7 +201,7 @@ class Workout {
   _finish() {
     _timer?.cancel();
     _step = WorkoutState.finished;
-    _timeLeft = Duration(seconds: 0);
+    _timeLeft = const Duration(seconds: 0);
     flutterTts.speak("Exercise Complete");
     // _playSound(_settings.endWorkout).then((p) {
     //   if (p == null) {

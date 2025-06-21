@@ -11,7 +11,7 @@ import '../utils/app_colors.dart';
 class SignUpStep3Component extends StatefulWidget {
   final bool? isNewTask;
 
-  SignUpStep3Component({this.isNewTask = false});
+  const SignUpStep3Component({super.key, this.isNewTask = false});
 
   @override
   _SignUpStep3ComponentState createState() => _SignUpStep3ComponentState();
@@ -66,7 +66,7 @@ class _SignUpStep3ComponentState extends State<SignUpStep3Component> {
                   magnification: 1.4,
                   squeeze: 0.8,
                   useMagnifier: true,
-                  selectionOverlay: SizedBox(),
+                  selectionOverlay: const SizedBox(),
                   itemExtent: 32.0,
                   scrollController: FixedExtentScrollController(
                     initialItem: userStore.age.validate().toInt()-17

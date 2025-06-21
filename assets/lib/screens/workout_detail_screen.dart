@@ -30,7 +30,7 @@ class WorkoutDetailScreen extends StatefulWidget {
 
   final WorkoutDetailModel? mWorkoutModel;
 
-  WorkoutDetailScreen({this.id, this.mWorkoutModel,this.onCall});
+  const WorkoutDetailScreen({super.key, this.id, this.mWorkoutModel,this.onCall});
 
   @override
   _WorkoutDetailScreenState createState() => _WorkoutDetailScreenState();
@@ -217,7 +217,7 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                                 },
                                 child: Container(
                                   decoration: boxDecorationWithRoundedCorners(backgroundColor: favBackground, boxShape: BoxShape.circle),
-                                  padding: EdgeInsets.all(5),
+                                  padding: const EdgeInsets.all(5),
                                   child: Image.asset(mWorkoutDetailModel!.isFavourite == 1 ? ic_favorite_fill : ic_favorite,
                                           color: mWorkoutDetailModel!.isFavourite == 1 ? primaryColor : white, width: 20, height: 20)
                                       .center(),
@@ -249,7 +249,7 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                                 ],
                               ).paddingSymmetric(horizontal: 32),
                               10.height,
-                              Divider(indent: 16, endIndent: 16),
+                              const Divider(indent: 16, endIndent: 16),
                               10.height,
                               if (!appStore.isLoading)
                                 Column(
@@ -261,7 +261,7 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                                       unselectedLabelStyle: primaryTextStyle(),
                                       labelStyle: boldTextStyle(),
                                       labelColor: primaryColor,
-                                      labelPadding: EdgeInsets.only(bottom: 8, left: 16, right: 16),
+                                      labelPadding: const EdgeInsets.only(bottom: 8, left: 16, right: 16),
                                       unselectedLabelColor: appStore.isDarkMode ? Colors.white : textSecondaryColorGlobal,
                                       isScrollable: true,
                                       tabs: tabs,
@@ -273,15 +273,15 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                                         setState(() {});
                                       },
                                     ),
-                                    Divider(height: 0, indent: 16),
+                                    const Divider(height: 0, indent: 16),
                                     Stack(
                                       children: [
                                         mDayExerciseList.isNotEmpty
                                             ? AnimatedListView(
                                                 controller: scrollController,
                                                 itemCount: mDayExerciseList.length,
-                                                physics: NeverScrollableScrollPhysics(),
-                                                padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                                                physics: const NeverScrollableScrollPhysics(),
+                                                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                                                 shrinkWrap: true,
                                                 itemBuilder: (context, index) {
                                                   List<String>? mSets = [];
@@ -289,9 +289,9 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                                                     if (mDayExerciseList[index].exercise?.sets?.isNotEmpty==true) {
                                                       mDayExerciseList[index].exercise?.sets?.forEach((element) {
                                                         if (mDayExerciseList[index].exercise?.based.toString() == "time") {
-                                                          mSets.add(element.time.toString() + "s");
+                                                          mSets.add("${element.time}s");
                                                         } else {
-                                                          mSets.add(element.reps.toString() + "x");
+                                                          mSets.add("${element.reps}x");
                                                         }
                                                       });
                                                     }
@@ -303,7 +303,7 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                                                 .center()
                                                 .paddingOnly(top: 50)
                                                 .visible(!isLoading == true),
-                                        Loader().center().paddingOnly(top: 50).visible(isLoading == true).center()
+                                        const Loader().center().paddingOnly(top: 50).visible(isLoading == true).center()
                                       ],
                                     ),
                                   ],
@@ -316,7 +316,7 @@ class _WorkoutDetailScreenState extends State<WorkoutDetailScreen> {
                   ],
                 ),
               ),
-            Loader().center().visible(appStore.isLoading)
+            const Loader().center().visible(appStore.isLoading)
           ],
         ),
       ),

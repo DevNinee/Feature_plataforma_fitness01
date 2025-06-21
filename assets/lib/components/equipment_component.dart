@@ -19,7 +19,7 @@ class EquipmentComponent extends StatefulWidget {
 
   final EquipmentModel? mEquipmentModel;
 
-  EquipmentComponent({this.mEquipmentModel, this.isGrid = false, this.isSearch = false, this.isEquId, this.onCall});
+  const EquipmentComponent({super.key, this.mEquipmentModel, this.isGrid = false, this.isSearch = false, this.isEquId, this.onCall});
 
   @override
   _EquipmentComponentState createState() => _EquipmentComponentState();
@@ -50,9 +50,9 @@ class _EquipmentComponentState extends State<EquipmentComponent> {
                   BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                     child: Container(
-                      margin: EdgeInsets.only(bottom: 1),
+                      margin: const EdgeInsets.only(bottom: 1),
                       width: (context.width() - 54) / 3,
-                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                       decoration: boxDecorationWithRoundedCorners(backgroundColor: Colors.grey.shade200.withOpacity(0.5)),
                       child: Text(widget.mEquipmentModel!.title.validate(), style: boldTextStyle(color: Colors.black)).center(),
                     ),
@@ -81,7 +81,7 @@ class _EquipmentComponentState extends State<EquipmentComponent> {
                       filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
                       child: Container(
                         width: width,
-                        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
                         decoration: boxDecorationWithRoundedCorners(backgroundColor: Colors.grey.shade100.withOpacity(0.5)),
                         child: Text(widget.mEquipmentModel!.title.validate(), style: boldTextStyle(color: Colors.black)).center(),
                       ),

@@ -78,7 +78,7 @@ Future handleResponse(Response response) async {
     return jsonDecode(response.body);
   } else {
     var string = await (isJsonValid(response.body));
-    print("jsonDecode(response.body)" + string.toString());
+    print("jsonDecode(response.body)$string");
     if (string!.isNotEmpty) {
       if (string.toString().contains("Unauthenticated")) {
         await removeKey(IS_LOGIN);
@@ -102,7 +102,7 @@ Future handleResponse(Response response) async {
           await removeKey(EMAIL);
         }
         userStore.setLogin(false);
-        push(SignInScreen(), isNewTask: true);
+        push(const SignInScreen(), isNewTask: true);
       } else {
         throw string;
       }
@@ -120,6 +120,7 @@ class TokenException implements Exception {
 
   const TokenException([this.message = ""]);
 
+  @override
   String toString() => "FormatException: $message";
 }
 //endregion
@@ -135,7 +136,7 @@ Future<String?> isJsonValid(json) async {
 }
 
 Future<MultipartRequest> getMultiPartRequest(String endPoint, {String? baseUrl}) async {
-  String url = '${baseUrl ?? buildBaseUrl(endPoint).toString()}';
+  String url = baseUrl ?? buildBaseUrl(endPoint).toString();
   log(url);
   return MultipartRequest('POST', Uri.parse(url));
 }

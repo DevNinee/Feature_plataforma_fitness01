@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Antaŭ unu horo
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			Antaŭ %1$d horoj
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Antaŭ unu minuto
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			Antaŭ %1$d minutoj
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Unu horo
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d horoj
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Unu minuto
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d minutoj
+		</item>
+	</plurals>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">Vi mistajpis vian retadreso, vi povas kontroli ĝin?</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">Novajn mesaĝojn estas sube. Alklaku por vidi.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">Ni estas malkonektita. Ni retpoŝtos vin reen.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">Dankon! Ni devus respondi post kelkaj momentoj.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">Bonvolu plenigi la formularon por daŭrigi.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">Klaku por agordi vian retpoŝtan akiri sciigoj.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">Plaĉi agordi vian retpoŝtan por daŭrigi.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">Klaku por agordi via telefono por ricevi sciigojn.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">Plaĉi agordi vian telefonon por daŭrigi.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">Ĉu io por diri?</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">Sendu vian takson</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">Kiel ni faris?</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">Eraro okazis dum alŝuto de la dosiero. Bonvolu reprovi.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">Ĉiutaga dosierŝuta kotizo estas superita. Provu alŝuti ĉi tion poste.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">Dosiera tro granda. Bonvolu redukti lian grandecon kaj reprovu.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">Sendi dosiero</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">Preparante</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">Alŝuto</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">Tatu ĉi tiun babilejon</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">Mesaĝoj ne estas disponeblaj.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">Tajpu vian mesaĝo…</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">Sendu</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">Aldoni ridulo</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">Navigado antaŭ ol via sonregistraĵo estos sendita, ĝi perdos ĝin.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">Ne eblis registri audio de via mikrofono. Ĉu vi permesis aliron?</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">Registri sonmesaĝon</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">Haltigu ludon</string>
+    <string name="crisp_sdk_chat_chat_header_channels">Pli da kanaloj</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">Plej Ofte Legataj Artikoloj</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">Serĉitaj Artikoloj</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">Kaj %1$s pli</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">Konversacio</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">Helpcentro</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">Daŭrigu sur %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">Retpoŝto</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">Telefono</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">de</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">Helpistoj estas for</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">Lasta aktiva %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">Respondoj sub %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">Helpistoj estas konektita</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">Vidu nian statusan paĝon</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">por pli da ĝisdatigoj.</string>
+    <string name="crisp_sdk_chat_chat_health_main">Kelkaj el niaj servoj ne funkcias.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">Neniuj serĉrezultoj. Provu aliajn ŝlosilvortojn.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">Serĉu nian helpcentron…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">Ankoraŭ neniuj artikoloj en la helpcentro.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">Vidu en Helpdesk</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">Ne povis ludi ĉi tiun sondosieron. Eble ĝi eksvalidiĝis.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">Malsukcesis sendi. Reprovi?</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">Alligiteco dosieron</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">Legi</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">Kelkaj mesaĝoj ne estis senditaj. Ŝanĝi paĝon forigos ilin.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">Redaktita</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">Partoprenanto</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">Tradukita</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">Ĉu vi ŝatus taksi nian subtenon?</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">Dankon pro babili kun ni.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">Ne, dankon</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">Taksa subteno</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">Dankon pro via komento!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">Dum vi atendas, volas ludi amuza ludo?</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">Aspektas kiel ni prenas tempon por respondi.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">Ne, dankon</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">Ludu ludon</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">kiel vi volas, ke ni reiros al vi?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">Kio estas via retpoŝtadreso?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">Enskribu vian retadreson</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">Entajpu vian telefonnumeron</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">Kio estas via telefonnumero?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">Ĉiaokaze vi forlasas aŭ ni respondi poste:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">Retpoŝto</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">Telefono</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">Reto eksterrete.</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">Eksterrete. Vi estis neaktiva dum iom da tempo.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">Neniuj mesaĝoj povas esti ricevitaj aŭ senditaj nuntempe.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">Sendu mesaĝon por rekonekti al babilado.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">Reto eksterrete. Rekonekti …</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">Neniu rezulto. Provu alian serĉon.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">Serĉi GIF…</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIF</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">Riduloj</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">Malsukcesis konekti. Mesaĝoj eble ne estas disponeblaj nuntempe.</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">Tajpu vian mesaĝo</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">Mesaĝo de</string>
+    <string name="crisp_sdk_date_now">Ĵus</string>
+    <string name="crisp_sdk_date_second">Antaŭ kelkaj sekundoj</string>
+    <string name="crisp_sdk_duration_days">Kelkaj tagoj</string>
+    <string name="crisp_sdk_duration_now">Nun</string>
+    <string name="crisp_sdk_duration_second">Kelkaj sekundoj</string>
+    <string name="crisp_sdk_theme_text_1_chat">Demandoj? Babilu kun mi!</string>
+    <string name="crisp_sdk_theme_text_2_chat">Petu al ni viajn demandojn</string>
+    <string name="crisp_sdk_theme_text_3_chat">Petu al mi viajn demandojn</string>
+    <string name="crisp_sdk_theme_text_4_chat">Babilu kun helpistoj</string>
+    <string name="crisp_sdk_theme_text_default_chat">Demandoj? Babilu kun ni!</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">Hej, volas babili kun ni?</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">Ion vi volas demandi?</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">Saluton, demandu al ni pri %1$s.</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">Saluton! Kiel mi povas helpi vin? :)</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">Ajna demando pri %1$s?</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">Kiel ni povas helpi per %1$s?</string>
+    <string name="stripe_hcaptcha_loading_text">Konfirmante, ke vi estas homa</string>
+</resources>

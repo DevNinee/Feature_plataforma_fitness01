@@ -24,7 +24,7 @@ import 'ChatScreen.dart';
 import 'new_chat_screen.dart';
 
 class ChatListScreen extends StatefulWidget {
-  ChatListScreen();
+  const ChatListScreen({super.key});
 
   @override
   State<ChatListScreen> createState() => _ChatListScreenState();
@@ -113,7 +113,7 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
                       return ListView.builder(
                         itemCount: snapshot.data!.docs.length,
                         shrinkWrap: true,
-                        padding: EdgeInsets.only(bottom: 65, top: 8),
+                        padding: const EdgeInsets.only(bottom: 65, top: 8),
                         itemBuilder: (context, index) {
                           ContactModel contact = ContactModel.fromJson(snapshot.data!.docs[index].data() as Map<String, dynamic>);
                           return Column(
@@ -126,10 +126,10 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
                         },
                       );
                     } else {
-                      return Text("No Conversation Found").center();
+                      return const Text("No Conversation Found").center();
                     }
                   }
-                  return snapWidgetHelper(snapshot, loadingWidget: Loader().center());
+                  return snapWidgetHelper(snapshot, loadingWidget: const Loader().center());
                 },
               ).expand(),
             ],
@@ -137,16 +137,16 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: IconButton(
-            onPressed: () {
-              NewChatScreen().launch(context, pageRouteAnimation: PageRouteAnimation.SlideBottomTop, duration: 300.milliseconds);
-            },
-            icon: Icon(Icons.chat, color: white)),
         backgroundColor: primaryColor,
         onPressed: () {
           hideKeyboard(context);
-          NewChatScreen().launch(context, pageRouteAnimation: PageRouteAnimation.SlideBottomTop, duration: 300.milliseconds);
+          const NewChatScreen().launch(context, pageRouteAnimation: PageRouteAnimation.SlideBottomTop, duration: 300.milliseconds);
         },
+        child: IconButton(
+            onPressed: () {
+              const NewChatScreen().launch(context, pageRouteAnimation: PageRouteAnimation.SlideBottomTop, duration: 300.milliseconds);
+            },
+            icon: const Icon(Icons.chat, color: white)),
       ),
     );
   }
@@ -157,15 +157,15 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
       builder: (context, snap) {
         if (snap.hasData && snap.data!.isNotEmpty) {
           return ListView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.all(0),
+            physics: const NeverScrollableScrollPhysics(),
+            padding: const EdgeInsets.all(0),
             itemCount: snap.data!.length,
             shrinkWrap: true,
             itemBuilder: (context, index) {
               UserModel data = snap.data![index];
 
-              if (snap.data!.length == 0) {
-                return Text("No Conversation Found").center();
+              if (snap.data!.isEmpty) {
+                return const Text("No Conversation Found").center();
               }
               return InkWell(
                 onTap: () async {
@@ -180,12 +180,12 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
                   }, contentPadding: EdgeInsets.zero, dialogAnimation: DialogAnimation.SLIDE_TOP_BOTTOM);
                   setState(() {});
                 },
-                child: Container(
+                child: SizedBox(
                   width: context.width(),
                   child: Row(
                     children: [
                       (data.profileImage == null || data.profileImage!.isEmpty)
-                          ? CircleAvatar(
+                          ? const CircleAvatar(
                               radius: 22,
                               backgroundImage: AssetImage(ic_profile),
                             )
@@ -212,7 +212,7 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
                                       child: Text(snap.data.validate().toString(), style: secondaryTextStyle(size: 12, color: Colors.white)).center(),
                                     );
                                   }
-                                  return Offstage();
+                                  return const Offstage();
                                 },
                               ),
                             ],
@@ -233,7 +233,7 @@ class _ChatListScreenState extends State<ChatListScreen> with WidgetsBindingObse
             },
           );
         }
-        return snapWidgetHelper(snap, loadingWidget: Offstage()).center();
+        return snapWidgetHelper(snap, loadingWidget: const Offstage()).center();
       },
     );
   }

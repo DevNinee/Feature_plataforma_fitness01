@@ -55,35 +55,35 @@ class AppSettingResponse {
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     appVersion = json['app_version'] != null
-        ? new AppVersion.fromJson(json['app_version'])
+        ? AppVersion.fromJson(json['app_version'])
         : null;
     crisp_chat = json['crisp_chat'] != null
-        ? new CrispChat.fromJson(json['crisp_chat'])
+        ? CrispChat.fromJson(json['crisp_chat'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['site_name'] = this.siteName;
-    data['site_email'] = this.siteEmail;
-    data['site_description'] = this.siteDescription;
-    data['site_copyright'] = this.siteCopyright;
-    data['facebook_url'] = this.facebookUrl;
-    data['instagram_url'] = this.instagramUrl;
-    data['twitter_url'] = this.twitterUrl;
-    data['linkedin_url'] = this.linkedinUrl;
-    data['language_option'] = this.languageOption;
-    data['contact_email'] = this.contactEmail;
-    data['contact_number'] = this.contactNumber;
-    data['help_support_url'] = this.helpSupportUrl;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    if (this.appVersion != null) {
-      data['app_version'] = this.appVersion!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['site_name'] = siteName;
+    data['site_email'] = siteEmail;
+    data['site_description'] = siteDescription;
+    data['site_copyright'] = siteCopyright;
+    data['facebook_url'] = facebookUrl;
+    data['instagram_url'] = instagramUrl;
+    data['twitter_url'] = twitterUrl;
+    data['linkedin_url'] = linkedinUrl;
+    data['language_option'] = languageOption;
+    data['contact_email'] = contactEmail;
+    data['contact_number'] = contactNumber;
+    data['help_support_url'] = helpSupportUrl;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    if (appVersion != null) {
+      data['app_version'] = appVersion!.toJson();
     }
-    if (this.crisp_chat != null) {
-      data['crisp_chat'] = this.crisp_chat!.toJson();
+    if (crisp_chat != null) {
+      data['crisp_chat'] = crisp_chat!.toJson();
     }
     return data;
   }
@@ -109,13 +109,13 @@ class AppVersion {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['android_force_update'] = this.androidForceUpdate;
-    data['android_version_code'] = this.androidVersionCode;
-    data['playstore_url'] = this.playstoreUrl;
-    data['ios_force_update'] = this.iosForceUpdate;
-    data['ios_version'] = this.iosVersion;
-    data['appstore_url'] = this.appstoreUrl;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['android_force_update'] = androidForceUpdate;
+    data['android_version_code'] = androidVersionCode;
+    data['playstore_url'] = playstoreUrl;
+    data['ios_force_update'] = iosForceUpdate;
+    data['ios_version'] = iosVersion;
+    data['appstore_url'] = appstoreUrl;
     return data;
   }
 }
@@ -133,9 +133,9 @@ class CrispChat {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['crisp_chat_website_id'] = this.crispChatWebsiteId;
-    data['is_crisp_chat_enabled'] = this.isCrispChatEnabled;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['crisp_chat_website_id'] = crispChatWebsiteId;
+    data['is_crisp_chat_enabled'] = isCrispChatEnabled;
     return data;
   }
 }

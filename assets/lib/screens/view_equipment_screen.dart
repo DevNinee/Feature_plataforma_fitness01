@@ -11,6 +11,8 @@ import '../models/equipment_response.dart';
 import '../network/rest_api.dart';
 
 class ViewEquipmentScreen extends StatefulWidget {
+  const ViewEquipmentScreen({super.key});
+
   @override
   _ViewEquipmentScreenState createState() => _ViewEquipmentScreenState();
 }
@@ -94,7 +96,7 @@ class _ViewEquipmentScreenState extends State<ViewEquipmentScreen> {
           children: [
             SingleChildScrollView(
               controller: scrollController,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               child: AnimatedWrap(
                 runSpacing: 16,
                 spacing: 16,
@@ -104,10 +106,10 @@ class _ViewEquipmentScreenState extends State<ViewEquipmentScreen> {
               ),
             ),
             Observer(builder: (context) {
-              return Loader().center().visible(appStore.isLoading);
+              return const Loader().center().visible(appStore.isLoading);
             })
           ],
         ),
-        bottomNavigationBar: userStore.adsBannerDetailShowBannerOnEquipment == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : SizedBox());
+        bottomNavigationBar: userStore.adsBannerDetailShowBannerOnEquipment == 1 && userStore.isSubscribe == 0 ? showBannerAds(context) : const SizedBox());
   }
 }

@@ -8,20 +8,20 @@ class DietResponse {
 
   DietResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <DietModel>[];
       json['data'].forEach((v) {
-        data!.add(new DietModel.fromJson(v));
+        data!.add(DietModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -96,26 +96,26 @@ class DietModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['calories'] = this.calories;
-    data['carbs'] = this.carbs;
-    data['protein'] = this.protein;
-    data['fat'] = this.fat;
-    data['servings'] = this.servings;
-    data['total_time'] = this.totalTime;
-    data['is_featured'] = this.isFeatured;
-    data['status'] = this.status;
-    data['ingredients'] = this.ingredients;
-    data['description'] = this.description;
-    data['diet_image'] = this.dietImage;
-    data['is_premium'] = this.isPremium;
-    data['categorydiet_id'] = this.categorydietId;
-    data['categorydiet_title'] = this.categorydietTitle;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['is_favourite'] = this.isFavourite;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['calories'] = calories;
+    data['carbs'] = carbs;
+    data['protein'] = protein;
+    data['fat'] = fat;
+    data['servings'] = servings;
+    data['total_time'] = totalTime;
+    data['is_featured'] = isFeatured;
+    data['status'] = status;
+    data['ingredients'] = ingredients;
+    data['description'] = description;
+    data['diet_image'] = dietImage;
+    data['is_premium'] = isPremium;
+    data['categorydiet_id'] = categorydietId;
+    data['categorydiet_title'] = categorydietTitle;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['is_favourite'] = isFavourite;
     return data;
   }
 }

@@ -14,7 +14,7 @@ class ChewieScreen extends StatefulWidget {
   final String? image;
   final bool? autoPlay;
 
-  ChewieScreen({this.url, this.image, this.autoPlay = false});
+  const ChewieScreen({super.key, this.url, this.image, this.autoPlay = false});
 
   @override
   State<StatefulWidget> createState() {

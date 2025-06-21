@@ -17,7 +17,7 @@ class DietCategoryComponent extends StatefulWidget {
 
   final Function? onCall;
 
-  DietCategoryComponent({
+  const DietCategoryComponent({super.key, 
     this.mCategoryDietModel,
     this.isGrid = false,
     this.onCall,
@@ -33,8 +33,8 @@ class _DietCategoryComponentState extends State<DietCategoryComponent> {
     return Container(
       width: widget.isGrid ? (context.width() - 48) / 2 : context.width() * 0.38,
       decoration: boxDecorationWithRoundedCorners(borderRadius: radius(12), backgroundColor: appStore.isDarkMode ? context.cardColor : cardBackground),
-      margin: EdgeInsets.only(top: 8),
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         children: [
           cachedImage(widget.mCategoryDietModel!.categorydietImage!.validate(), fit: BoxFit.contain, width: context.width(), height: 100).cornerRadiusWithClipRRectOnly(topRight: 12, topLeft: 12),

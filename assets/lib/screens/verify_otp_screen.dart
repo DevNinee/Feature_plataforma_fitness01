@@ -8,7 +8,6 @@ import '../../extensions/loader_widget.dart';
 import '../../extensions/extension_util/context_extensions.dart';
 import '../../extensions/extension_util/int_extensions.dart';
 import '../../extensions/extension_util/widget_extensions.dart';
-import '../../extensions/otp_text_field.dart';
 import '../extensions/app_button.dart';
 import '../extensions/shared_pref.dart';
 import '../extensions/system_utils.dart';
@@ -29,7 +28,7 @@ class VerifyOTPScreen extends StatefulWidget {
   final bool? isCodeSent;
   final PhoneAuthCredential? credential;
 
-  VerifyOTPScreen({this.verificationId, this.isCodeSent, this.phoneNumber, this.mobileNo, this.credential});
+  const VerifyOTPScreen({super.key, this.verificationId, this.isCodeSent, this.phoneNumber, this.mobileNo, this.credential});
 
   @override
   _VerifyOTPScreenState createState() => _VerifyOTPScreenState();
@@ -73,7 +72,7 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
           userStore.setToken(value.data?.apiToken ?? '');
           await getUSerDetail(context, value.data!.id.validate()).whenComplete(() {
             setValue(IS_REMEMBER, false);
-            DashboardScreen().launch(context, isNewTask: true);
+            const DashboardScreen().launch(context, isNewTask: true);
           });
         }
       }).catchError((e) {
@@ -87,7 +86,7 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
         setState(() {});
       });
     }).catchError((e) {
-      log("error->" + e.toString());
+      log("error->$e");
       toast(e.toString());
       appStore.setLoading(false);
       setState(() {});
@@ -133,7 +132,7 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ).copyWith(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                   ),
                   focusedPinTheme: PinTheme(
                     width: context.width() * 0.1,
@@ -144,7 +143,7 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
                       border: Border.all(color: primaryColor, width: 2),
                     ),
                   ).copyWith(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                   ),
                   length: 6,
                   onChanged: (s) {
@@ -180,7 +179,7 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
           ),
           Observer(
             builder: (context) {
-              return Loader().center().visible(appStore.isLoading);
+              return const Loader().center().visible(appStore.isLoading);
             },
           )
         ],

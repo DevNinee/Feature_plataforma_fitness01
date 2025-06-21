@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Сат пре
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d сати раније
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Минут пре
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d минута раније
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			За сат времена
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d сати
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Минут
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d минута
+		</item>
+	</plurals>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">Погрешно си откуцао имејл, можеш ли да провериш?</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">Имаш нове поруке. Кликни овде да их видиш.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">Нисмо на мрежи. Узвратићемо вам имејл.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">Хвала! По могућности одговорићемо за пар минута.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">Please fill the form to continue.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">Кликните да бисте поставили е-пошти да бисте добијали обавештења.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">Молим вас да поставите ваш емаил да бисте наставили.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">Кликните да бисте поставили телефон да бисте добијали обавештења.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">Молим вас да поставите свој телефон да бисте наставили.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">Имаш ли шта да кажеш?</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">Пошаљите своју оцену</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">Како смо прошли?</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">Дошло је до грешке при слању податка. Покушајте поново.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">Дневне квоте за отпремање датотеке је премашен. Пробај ово отпремање касније.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">Податак превише велики. Молимо Вас да смањите величину и покушате поново.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">Пошаљи податак</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">Припрема</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">Учитавање</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">Оцените ово ћаскање</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">Поруке нису доступне.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">Саставите вашу поруку…</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">Пошаљи</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">Убаци неки emoji</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">Навигација пре него што се ваш аудио снимак пошаље довешће до његовог губитка.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">Није могуће снимити звук са микрофона. Да ли сте дозволили приступ?</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">Снимите аудио поруку</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">Заустави игру</string>
+    <string name="crisp_sdk_chat_chat_header_channels">Више канала</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">Најчешће читани чланци</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">Претражени чланци</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">И још %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">Разговор</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">Центар за помоћ</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">Настави на %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">Е-пошта</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">телефона</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">од</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">Оператер је одсутан</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">Последњи активни %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">Обично одговоре под %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">Оператер је присутан</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">Погледајте нашу страницу са статусом</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">за више ажурирања.</string>
+    <string name="crisp_sdk_chat_chat_health_main">Неке од наших услуга не раде.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">Нема резултата претраге. Покушајте са другим кључним речима.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">Претражите наш центар за помоћ…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">Још нема чланака у центру за помоћ.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">Погледајте у Хелпдеск-у</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">Репродукција ове аудио датотеке није успела. Можда је истекао.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">Слање није успело. Покушати поново?</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">Приложен податак</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">Прочитано</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">Неке поруке још увек нису сачуване. Кретање кроз сајт ће спречити спасавање.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">Измењено</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">Учесник</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">Транслатед</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">Would you mind rating our support?</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">Thanks for chatting with us.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">No, thanks</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">Rate support</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">Thank you for your feedback!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">Док чекате, желиш ли играти забавну игру?</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">Изгледа да ми предузимамо времена за одговор.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">Не</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">Да се играмо</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">како желите да вам се јавити?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">Која је ваша емаил адреса?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">Унесите своју емаил адресу</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">Унесите број телефона</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">Који је ваш број телефона?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">Само у случају да напусти или да одговорити касније:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">маил</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">телефона</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">Нунзин.</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">Одсутан. Неко време сте били неактивни.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">За сада није могуће примати или слати поруке.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">Пошаљите поруку да бисте се поново повезали са ћаскањем.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">Поновно успостављање везе…</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">Нема резултата.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">Наћи GIFs…</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFs</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">Смајлији</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">Неуспело повезивање. Поруке тренутно можда нису доступне</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">Саставите вашу поруку</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">Порука од</string>
+    <string name="crisp_sdk_date_now">Управо сада</string>
+    <string name="crisp_sdk_date_second">Пре неколико секунди</string>
+    <string name="crisp_sdk_duration_days">За неколико дана</string>
+    <string name="crisp_sdk_duration_now">Одмах</string>
+    <string name="crisp_sdk_duration_second">Неколико секунди</string>
+    <string name="crisp_sdk_theme_text_1_chat">Питања? Дописуј се са мном!</string>
+    <string name="crisp_sdk_theme_text_2_chat">Питајте нас</string>
+    <string name="crisp_sdk_theme_text_3_chat">Питај ме</string>
+    <string name="crisp_sdk_theme_text_4_chat">Дописуј се са подршком</string>
+    <string name="crisp_sdk_theme_text_default_chat">Питања? Дописуј се са нама!</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">Еј, желиш ли да се дописујеш са нама?</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">Желите да питате?</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">Здраво, поставите нам било које питање у вези са %1$s.</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">Здраво! Како вам могу помоћи? :)</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">Питања у вези %1$s?</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">Како вам можемо помоћи са %1$s?</string>
+</resources>

@@ -26,7 +26,7 @@ import '../utils/app_common.dart';
 import '../utils/app_images.dart';
 
 class SubscribeScreen extends StatefulWidget {
-  SubscribeScreen({super.key});
+  const SubscribeScreen({super.key});
 
   @override
   State<SubscribeScreen> createState() => _SubscribeScreenState();
@@ -162,20 +162,20 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
                 4.height,
                 Text(languages.lblPackageTitle1, style: secondaryTextStyle()).paddingSymmetric(horizontal: 16, vertical: 8),
                 16.height,
-                Loader().center().visible(appStore.isLoading),
+                const Loader().center().visible(appStore.isLoading),
                 if (!appStore.isLoading)
                   mSubscriptionListNew.isNotEmpty
                       ? Column(
                           children: [
                             AnimatedListView(
                               itemCount: mSubscriptionListNew.length,
-                              padding: EdgeInsets.symmetric(horizontal: 16),
+                              padding: const EdgeInsets.symmetric(horizontal: 16),
                               shrinkWrap: true,
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               itemBuilder: (context, index) {
                                 return Container(
-                                  margin: EdgeInsets.only(bottom: 16),
-                                  padding: appStore.selectedLanguageCode == 'ar' ? EdgeInsets.symmetric(horizontal: 16) : EdgeInsets.symmetric(horizontal: 0),
+                                  margin: const EdgeInsets.only(bottom: 16),
+                                  padding: appStore.selectedLanguageCode == 'ar' ? const EdgeInsets.symmetric(horizontal: 16) : const EdgeInsets.symmetric(horizontal: 0),
                                   decoration: boxDecorationWithRoundedCorners(borderRadius: radius(12), border: Border.all(color: selectedIndex == index ? primaryColor : context.dividerColor)),
                                   child: Column(
                                     children: [
@@ -185,7 +185,7 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
                                             Image.asset(selectedIndex == index ? ic_radio_fill : ic_radio, height: 20, width: 20, color: primaryColor),
                                             8.width,
                                             ConstrainedBox(
-                                              constraints: BoxConstraints(maxWidth: 150),
+                                              constraints: const BoxConstraints(maxWidth: 150),
                                               child: Text(
                                                 mSubscriptionListNew[index].name.validate(),
                                                 maxLines: 2,
@@ -204,8 +204,8 @@ class _SubscribeScreenState extends State<SubscribeScreen> {
                                             ),
                                             2.width,
                                             mSubscriptionListNew[index].durationUnit.toString() == "monthly"
-                                                ? Text("/ " + mSubscriptionListNew[index].duration.toString().validate() + " " + languages.lblMonth, style: primaryTextStyle())
-                                                : Text("/ " + mSubscriptionListNew[index].duration.toString().validate() + " " + languages.lblYear.capitalizeFirstLetter(), style: primaryTextStyle()),
+                                                ? Text("/ ${mSubscriptionListNew[index].duration.toString().validate()} ${languages.lblMonth}", style: primaryTextStyle())
+                                                : Text("/ ${mSubscriptionListNew[index].duration.toString().validate()} ${languages.lblYear.capitalizeFirstLetter()}", style: primaryTextStyle()),
                                           ],
                                         ),
                                       ]),

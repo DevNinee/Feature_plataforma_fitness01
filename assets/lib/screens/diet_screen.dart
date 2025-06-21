@@ -26,6 +26,8 @@ import 'no_data_screen.dart';
 import 'view_diet_category_screen.dart';
 
 class DietScreen extends StatefulWidget {
+  const DietScreen({super.key});
+
   @override
   _DietScreenState createState() => _DietScreenState();
 }
@@ -75,7 +77,7 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
     getDietData();
     mSearch.addListener(() {
       setState(() {
-        _showClearButton = mSearch.text.length > 0;
+        _showClearButton = mSearch.text.isNotEmpty;
       });
     });
   }
@@ -141,7 +143,7 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
           onPressed: () {
             onCall?.call();
           },
-          icon: Icon(Feather.chevron_right, color: primaryColor),
+          icon: const Icon(Feather.chevron_right, color: primaryColor),
         ),
       ],
     );
@@ -150,9 +152,9 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
   Widget mDietSearchList(List<DietModel>? mList) {
     return ListView.builder(
       itemCount: mList!.length,
-      padding: EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return FeaturedDietComponent(
           isList: true,
@@ -169,7 +171,7 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
     return Scaffold(
       appBar: appBarWidget(languages.lblDiet, context: context, showBack: false, titleSpacing: 16, actions: [
         Image.asset(ic_favorite, height: 25, width: 25, color: primaryColor).onTap(()  {
-          FavouriteScreen(index: 1).launch(context).then((value) {
+          const FavouriteScreen(index: 1).launch(context).then((value) {
             getDietData();
             setState(() {});
           });
@@ -178,7 +180,7 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
       body: Stack(
         children: [
           SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -205,12 +207,12 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
                             children: [
                               8.height,
                               mHeading(languages.lblDietCategories, onCall: () {
-                                ViewDietCategoryScreen().launch(context);
+                                const ViewDietCategoryScreen().launch(context);
                               }),
                               HorizontalList(
-                                physics: BouncingScrollPhysics(),
+                                physics: const BouncingScrollPhysics(),
                                 itemCount: mDietCategoryList!.length,
-                                padding: EdgeInsets.only(left: 16, right: 8),
+                                padding: const EdgeInsets.only(left: 16, right: 8),
                                 itemBuilder: (context, index) {
                                   return DietCategoryComponent(
                                     mCategoryDietModel: mDietCategoryList![index],
@@ -230,9 +232,9 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
                                 });
                               }),
                               HorizontalList(
-                                physics: BouncingScrollPhysics(),
+                                physics: const BouncingScrollPhysics(),
                                 itemCount: mFeaturedDietList!.length,
-                                padding: EdgeInsets.only(left: 16, right: 8, top: 4),
+                                padding: const EdgeInsets.only(left: 16, right: 8, top: 4),
                                 itemBuilder: (context, index) {
                                   return FeaturedDietComponent(
                                     mDietModel: mFeaturedDietList![index],
@@ -269,7 +271,7 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
               ],
             ),
           ),
-          Loader().visible(appStore.isLoading)
+          const Loader().visible(appStore.isLoading)
         ],
       ),
     );
@@ -287,7 +289,7 @@ class _DietScreenState extends State<DietScreen> with WidgetsBindingObserver {
         mSearchValue = "";
         setState(() {});
       },
-      icon: Icon(Icons.clear),
+      icon: const Icon(Icons.clear),
     );
   }
 }

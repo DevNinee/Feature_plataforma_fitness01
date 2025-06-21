@@ -8,20 +8,20 @@ class ExerciseResponse {
 
   ExerciseResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <ExerciseModel>[];
       json['data'].forEach((v) {
-        data!.add(new ExerciseModel.fromJson(v));
+        data!.add(ExerciseModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -86,14 +86,14 @@ class ExerciseModel {
     if (json['bodypart_name'] != null) {
       bodypartName = <BodypartName>[];
       json['bodypart_name'].forEach((v) {
-        bodypartName!.add(new BodypartName.fromJson(v));
+        bodypartName!.add(BodypartName.fromJson(v));
       });
     }
     duration = json['duration'];
     if (json['sets'] != null) {
       sets = <Sets>[];
       json['sets'].forEach((v) {
-        sets!.add(new Sets.fromJson(v));
+        sets!.add(Sets.fromJson(v));
       });
     }
     equipmentId = json['equipment_id'];
@@ -109,32 +109,32 @@ class ExerciseModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['status'] = this.status;
-    data['is_premium'] = this.isPremium;
-    data['exercise_image'] = this.exerciseImage;
-    data['video_type'] = this.videoType;
-    data['video_url'] = this.videoUrl;
-    if (this.bodypartName != null) {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['status'] = status;
+    data['is_premium'] = isPremium;
+    data['exercise_image'] = exerciseImage;
+    data['video_type'] = videoType;
+    data['video_url'] = videoUrl;
+    if (bodypartName != null) {
       data['bodypart_name'] =
-          this.bodypartName!.map((v) => v.toJson()).toList();
+          bodypartName!.map((v) => v.toJson()).toList();
     }
-    data['duration'] = this.duration;
-    if (this.sets != null) {
-      data['sets'] = this.sets!.map((v) => v.toJson()).toList();
+    data['duration'] = duration;
+    if (sets != null) {
+      data['sets'] = sets!.map((v) => v.toJson()).toList();
     }
-    data['equipment_id'] = this.equipmentId;
-    data['equipment_title'] = this.equipmentTitle;
-    data['level_id'] = this.levelId;
-    data['level_title'] = this.levelTitle;
-    data['instruction'] = this.instruction;
-    data['tips'] = this.tips;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['type'] = this.type;
-    data['based'] = this.based;
+    data['equipment_id'] = equipmentId;
+    data['equipment_title'] = equipmentTitle;
+    data['level_id'] = levelId;
+    data['level_title'] = levelTitle;
+    data['instruction'] = instruction;
+    data['tips'] = tips;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['type'] = type;
+    data['based'] = based;
     return data;
   }
 }
@@ -153,10 +153,10 @@ class BodypartName {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['bodypart_image'] = this.bodypartImage;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['bodypart_image'] = bodypartImage;
     return data;
   }
 }
@@ -177,11 +177,11 @@ class Sets {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['reps'] = this.reps;
-    data['rest'] = this.rest;
-    data['time'] = this.time;
-    data['weight'] = this.weight;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['reps'] = reps;
+    data['rest'] = rest;
+    data['time'] = time;
+    data['weight'] = weight;
     return data;
   }
 }

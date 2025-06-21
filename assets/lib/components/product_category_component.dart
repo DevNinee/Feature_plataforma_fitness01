@@ -28,8 +28,8 @@ class _ProductCategoryComponentState extends State<ProductCategoryComponent> {
     return Container(
       decoration: boxDecorationWithRoundedCorners(borderRadius: radius(12), backgroundColor: appStore.isDarkMode ? context.cardColor : GreyLightColor),
       width: widget.isGrid ? (context.width() - 48) / 2 : context.width() * 0.37,
-      margin: EdgeInsets.only(top: 4),
-      padding: EdgeInsets.all(2),
+      margin: const EdgeInsets.only(top: 4),
+      padding: const EdgeInsets.all(2),
       child: Column(
         children: [
           cachedImage(widget.mProductCategoryModel!.productcategoryImage.validate(), fit: BoxFit.contain, height: 90),

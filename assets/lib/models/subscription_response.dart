@@ -7,19 +7,19 @@ class SubscriptionResponse {
   SubscriptionResponse({this.pagination, this.data});
 
   SubscriptionResponse.fromJson(Map<String, dynamic> json) {
-    pagination = json['pagination'] != null ? new Pagination.fromJson(json['pagination']) : null;
+    pagination = json['pagination'] != null ? Pagination.fromJson(json['pagination']) : null;
     if (json['data'] != null) {
       data = <SubscriptionModel>[];
       json['data'].forEach((v) {
-        data!.add(new SubscriptionModel.fromJson(v));
+        data!.add(SubscriptionModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -54,16 +54,16 @@ class SubscriptionModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['duration'] = this.duration;
-    data['duration_unit'] = this.durationUnit;
-    data['price'] = this.price;
-    data['description'] = this.description;
-    data['status'] = this.status;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['duration'] = duration;
+    data['duration_unit'] = durationUnit;
+    data['price'] = price;
+    data['description'] = description;
+    data['status'] = status;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }

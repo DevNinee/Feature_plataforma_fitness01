@@ -14,6 +14,8 @@ import '../utils/app_constants.dart';
 class ThemeSelectionDialog extends StatefulWidget {
   static String tag = '/ThemeSelectionDialog';
 
+  const ThemeSelectionDialog({super.key});
+
   @override
   ThemeSelectionDialogState createState() => ThemeSelectionDialogState();
 }
@@ -40,32 +42,32 @@ class ThemeSelectionDialogState extends State<ThemeSelectionDialog> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: context.width(),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             alignment: Alignment.topLeft,
             decoration: boxDecorationWithShadow(backgroundColor: primaryColor, borderRadius: radiusOnly(topRight: defaultRadius, topLeft: defaultRadius)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(languages.lblSelectTheme, style: boldTextStyle(size: 20, color: Colors.white)).paddingLeft(12),
-                CloseButton(color: Colors.white),
+                const CloseButton(color: Colors.white),
               ],
             ),
           ),
           ListView.builder(
             shrinkWrap: true,
-            padding: EdgeInsets.only(bottom: 8),
+            padding: const EdgeInsets.only(bottom: 8),
             itemCount: themeModeList.length,
             itemBuilder: (BuildContext context, int index) {
               return RadioListTile(
                 value: index,
                 dense: true,
-                contentPadding: EdgeInsets.symmetric(horizontal: 8),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 8),
                 groupValue: currentIndex,
                 activeColor: primaryColor,
                 title: Text(themeModeList[index], style: primaryTextStyle()),

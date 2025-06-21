@@ -12,7 +12,7 @@ class HtmlYoutubePlayer extends StatefulWidget {
   final String? url;
   final String? img;
 
-  HtmlYoutubePlayer({this.url, this.img});
+  const HtmlYoutubePlayer({super.key, this.url, this.img});
 
   @override
   HtmlYoutubePlayerState createState() => HtmlYoutubePlayerState();
@@ -44,7 +44,7 @@ class HtmlYoutubePlayerState extends State<HtmlYoutubePlayer> {
 
     youtubePlayerController = YoutubePlayerController(
       initialVideoId: videoId,
-      flags: YoutubePlayerFlags(
+      flags: const YoutubePlayerFlags(
         mute: false,
         autoPlay: false,
         disableDragSeek: false,
@@ -94,8 +94,8 @@ class HtmlYoutubePlayerState extends State<HtmlYoutubePlayer> {
       padding: const EdgeInsets.only(top:10),
       child: YoutubePlayerBuilder(
         player: YoutubePlayer(
-          bottomActions: [
-            const SizedBox(width: 14.0),
+          bottomActions: const [
+            SizedBox(width: 14.0),
          //   CurrentPosition(),
          //   const SizedBox(width: 8.0),
           //  ProgressBar(),
@@ -120,7 +120,7 @@ class HtmlYoutubePlayerState extends State<HtmlYoutubePlayer> {
           },
         ),
         builder: (context, player) => Scaffold(
-          body: Container(
+          body: SizedBox(
             height: context.height(),
             child: Stack(
               alignment: Alignment.topLeft,
@@ -133,7 +133,7 @@ class HtmlYoutubePlayerState extends State<HtmlYoutubePlayer> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         IconButton(
-                            icon: Icon(CupertinoIcons.gobackward_10, color: Colors.white, size: 30),
+                            icon: const Icon(CupertinoIcons.gobackward_10, color: Colors.white, size: 30),
                             onPressed: () {
                               Duration currentPosition = youtubePlayerController.value.position;
                               Duration targetPosition = currentPosition - const Duration(seconds: 10);
@@ -146,10 +146,10 @@ class HtmlYoutubePlayerState extends State<HtmlYoutubePlayer> {
                               setState(() {});
                             }
                           },
-                          child: SizedBox(height: 50, width: 50),
+                          child: const SizedBox(height: 50, width: 50),
                         ),
                         IconButton(
-                            icon: Icon(CupertinoIcons.goforward_10, color: Colors.white, size: 30),
+                            icon: const Icon(CupertinoIcons.goforward_10, color: Colors.white, size: 30),
                             onPressed: () {
                               Duration currentPosition = youtubePlayerController.value.position;
                               Duration targetPosition = currentPosition + const Duration(seconds: 10);

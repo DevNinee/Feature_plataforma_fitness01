@@ -6,7 +6,6 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:intl/intl.dart';
 import 'package:marquee/marquee.dart';
 import 'package:mighty_fitness/extensions/shared_pref.dart';
-import 'package:mighty_fitness/screens/castTester.dart';
 import 'package:mighty_fitness/utils/app_constants.dart';
 import '../../components/level_component.dart';
 import '../../extensions/decorations.dart';
@@ -40,6 +39,8 @@ import 'notification_screen.dart';
 bool? isFirstTimeGraph = false;
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
@@ -48,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen>{
   ScrollController mScrollController = ScrollController();
   TextEditingController mSearchCont = TextEditingController();
   String? mSearchValue = "";
-  bool _showClearButton = false;
+  final bool _showClearButton = false;
 
   @override
   void initState() {
@@ -80,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen>{
     var saveWeightGraph = userStore.weightStoreGraph.replaceAll('user', '').trim();
 
     print("------------175>>>>${weightInKilograms.toStringAsFixed(2)}");
-    print("------------176>>>>${saveWeightGraph}");
+    print("------------176>>>>$saveWeightGraph");
     print("------------177>>>>${userStore.weight}");
 
     //visible(getStringAsync(TERMS_SERVICE).isNotEmpty)
@@ -93,13 +94,13 @@ class _HomeScreenState extends State<HomeScreen>{
     double weightInKilograms = poundsToKilograms(weightInPounds);
     if (userStore.weightUnit == 'lbs') {
       if (userStore.weightId.isNotEmpty) {
-        req = {"id": '${userStore.weightId}', "value": '${weightInKilograms.toStringAsFixed(2)} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
+        req = {"id": userStore.weightId, "value": '${weightInKilograms.toStringAsFixed(2)} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
       } else {
         req = {"value": '${weightInKilograms.toStringAsFixed(2)} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
       }
     } else {
       if (userStore.weightId.isNotEmpty) {
-        req = {"id": '${userStore.weightId}', "value": '${userStore.weight} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
+        req = {"id": userStore.weightId, "value": '${userStore.weight} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
       } else {
         req = {"value": '${userStore.weight} user', "type": 'weight', "unit": 'kg', "date": DateFormat('yyyy-MM-dd').format(DateTime.now())};
       }
@@ -134,22 +135,20 @@ class _HomeScreenState extends State<HomeScreen>{
             print("------------------106>>>${userStore.weightStoreGraph}");
             print("------------------107>>>${weightInKilograms.toStringAsFixed(2)}");
 
-            if (userStore.weightStoreGraph != null) {
-              if (userStore.weightUnit == 'lbs') {
-                if (userStore.weightStoreGraph.replaceAll('user', '').trim() != weightInKilograms.toStringAsFixed(2)) {
-                  graphSave();
-                }
-              } else {
-                if (userStore.weightStoreGraph.replaceAll('user', '').trim() != userStore.weight) {
-                  graphSave();
-                }
-              }
-
-              /*  if(userStore.weightStoreGraph.replaceAll('user', '').trim()!=weightInKilograms.toStringAsFixed(2)){
+            if (userStore.weightUnit == 'lbs') {
+              if (userStore.weightStoreGraph.replaceAll('user', '').trim() != weightInKilograms.toStringAsFixed(2)) {
                 graphSave();
-              }*/
+              }
+            } else {
+              if (userStore.weightStoreGraph.replaceAll('user', '').trim() != userStore.weight) {
+                graphSave();
+              }
             }
-          } else {
+
+            /*  if(userStore.weightStoreGraph.replaceAll('user', '').trim()!=weightInKilograms.toStringAsFixed(2)){
+              graphSave();
+            }*/
+                    } else {
             appStore.setLoading(false);
           }
           userStore.setWeightId(data.id.toString());
@@ -189,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen>{
         IconButton(
             splashColor: Colors.transparent,
             highlightColor: Colors.transparent,
-            icon: Icon(Feather.chevron_right, color: primaryColor),
+            icon: const Icon(Feather.chevron_right, color: primaryColor),
             onPressed: () {
               onCall!.call();
             }).paddingRight(2),
@@ -214,7 +213,7 @@ class _HomeScreenState extends State<HomeScreen>{
                           decoration: boxDecorationWithRoundedCorners(boxShape: BoxShape.circle, border: Border.all(color: primaryColor, width: 1)),
                           child: cachedImage(userStore.profileImage.validate(), width: 42, height: 42, fit: BoxFit.cover).cornerRadiusWithClipRRect(100).paddingAll(1))
                       .onTap(() {
-                    EditProfileScreen().launch(context);
+                    const EditProfileScreen().launch(context);
                   });
                 }),
                 10.width,
@@ -222,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen>{
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(languages.lblHey + userStore.fName.validate().capitalizeFirstLetter() + " " + userStore.lName.capitalizeFirstLetter() + "👋",
+                    Text("${languages.lblHey}${userStore.fName.validate().capitalizeFirstLetter()} ${userStore.lName.capitalizeFirstLetter()}👋",
                         style: boldTextStyle(size: 18), overflow: TextOverflow.ellipsis, maxLines: 2),
                     appStore.selectedLanguageCode == 'ar ' ? 0.height : 2.height,
                     Text(languages.lblHomeWelMsg, style: secondaryTextStyle()),
@@ -235,11 +234,11 @@ class _HomeScreenState extends State<HomeScreen>{
                   borderRadius: radius(16),
                   border: Border.all(color: appStore.isDarkMode ? Colors.white : context.dividerColor.withOpacity(0.9), width: 0.6),
                   backgroundColor: appStore.isDarkMode ? context.scaffoldBackgroundColor : Colors.white),
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               child: Image.asset(ic_notification, width: 24, height: 24, color: appStore.isDarkMode ? Colors.white : Colors.grey),
             ).onTap(
               () {
-                NotificationScreen().launch(context);
+                const NotificationScreen().launch(context);
               },
             )
           ],
@@ -249,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen>{
         backgroundColor: context.scaffoldBackgroundColor,
         onRefresh: () {
           return Future.delayed(
-            Duration(seconds: 1),
+            const Duration(seconds: 1),
             () {
               setState(() {});
             },
@@ -261,7 +260,7 @@ class _HomeScreenState extends State<HomeScreen>{
             if (snapshot.hasData) {
               DashboardResponse? mDashboardResponse = snapshot.data;
               return SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -282,7 +281,7 @@ class _HomeScreenState extends State<HomeScreen>{
                           ),
                         ).onTap(
                           () {
-                            EditProfileScreen().launch(context);
+                            const EditProfileScreen().launch(context);
                           },
                         )
                       ],
@@ -297,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen>{
                       decoration: defaultInputDecoration(context, label: languages.lblSearch, isFocusTExtField: true),
                       onTap: () {
                         hideKeyboard(context);
-                        SearchScreen().launch(context);
+                        const SearchScreen().launch(context);
                       },
                     ).paddingSymmetric(horizontal: 16),
                     16.height,
@@ -305,13 +304,13 @@ class _HomeScreenState extends State<HomeScreen>{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         mHeading(languages.lblBodyPartExercise, onCall: () {
-                          ViewBodyPartScreen().launch(context);
+                          const ViewBodyPartScreen().launch(context);
                         }),
                         HorizontalList(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           controller: mScrollController,
                           itemCount: mDashboardResponse!.bodypart!.length,
-                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           spacing: 16,
                           itemBuilder: (context, index) {
                             return BodyPartComponent(bodyPartModel: mDashboardResponse.bodypart![index]);
@@ -324,12 +323,12 @@ class _HomeScreenState extends State<HomeScreen>{
                       children: [
                         10.height,
                         mHeading(languages.lblEquipmentsExercise, onCall: () {
-                          ViewEquipmentScreen().launch(context);
+                          const ViewEquipmentScreen().launch(context);
                         }),
                         HorizontalList(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           itemCount: mDashboardResponse.equipment!.length,
-                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           spacing: 16,
                           itemBuilder: (context, index) {
                             return EquipmentComponent(mEquipmentModel: mDashboardResponse.equipment![index]);
@@ -342,14 +341,14 @@ class _HomeScreenState extends State<HomeScreen>{
                       children: [
                         10.height,
                         mHeading(languages.lblWorkouts, onCall: () {
-                          FilterWorkoutScreen().launch(context).then((value) {
+                          const FilterWorkoutScreen().launch(context).then((value) {
                             setState(() {});
                           });
                         }),
                         HorizontalList(
-                          physics: BouncingScrollPhysics(),
+                          physics: const BouncingScrollPhysics(),
                           itemCount: mDashboardResponse.workout!.length,
-                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           spacing: 16,
                           itemBuilder: (context, index) {
                             return WorkoutComponent(
@@ -369,12 +368,12 @@ class _HomeScreenState extends State<HomeScreen>{
                       children: [
                         10.height,
                         mHeading(languages.lblLevels, onCall: () {
-                          ViewLevelScreen().launch(context);
+                          const ViewLevelScreen().launch(context);
                         }),
                         ListView.builder(
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                          physics: const NeverScrollableScrollPhysics(),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           itemCount: mDashboardResponse.level!.length,
                           itemBuilder: (context, index) {
                             return LevelComponent(mLevelModel: mDashboardResponse.level![index]);
@@ -387,7 +386,7 @@ class _HomeScreenState extends State<HomeScreen>{
                 ),
               );
             }
-            return snapWidgetHelper(snapshot, loadingWidget: Container(height: mq.height, width: mq.width, color: Colors.transparent, child: Loader()));
+            return snapWidgetHelper(snapshot, loadingWidget: Container(height: mq.height, width: mq.width, color: Colors.transparent, child: const Loader()));
           },
         ),
       ),
@@ -401,7 +400,7 @@ class _HomeScreenState extends State<HomeScreen>{
 
     return IconButton(
       onPressed: () => mSearchCont.clear(),
-      icon: Icon(Icons.clear),
+      icon: const Icon(Icons.clear),
     );
   }
 }

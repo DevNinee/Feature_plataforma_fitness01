@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="crisp_sdk_date_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Há uma hora
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			Há %1$d horas
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_date_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Há um minuto
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			Há %1$d minutos
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_hour" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Uma hora
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d horas
+		</item>
+	</plurals>
+    <plurals name="crisp_sdk_duration_minute" ns1:ignore="MissingQuantity">
+		<item ns1:ignore="ImpliedQuantity" quantity="one">
+			Um minuto
+		</item>
+		<item ns1:ignore="ImpliedQuantity" quantity="other">
+			%1$d minutos
+		</item>
+	</plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Navegar para a página inicial"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Navegar para cima"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Mais opções"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Concluído"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Ver tudo"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Selecionar um app"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"DESATIVADO"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ATIVADO"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"espaço"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Pesquisar…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Limpar consulta"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Consulta de pesquisa"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Pesquisar"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Enviar consulta"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Pesquisa por voz"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Compartilhar com"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Compartilhar com <ns2:g id="APPLICATION_NAME">%s</ns2:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Recolher"</string>
+    <string msgid="8397015543330865059" name="android.credentials.TYPE_PASSWORD_CREDENTIAL">"Senha"</string>
+    <string msgid="3929015085059320822" name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">"Chave de acesso"</string>
+    <string msgid="881409763997275156" name="call_notification_answer_action">"Atender"</string>
+    <string msgid="8793775615905189152" name="call_notification_answer_video_action">"Vídeo"</string>
+    <string msgid="3229508546291798546" name="call_notification_decline_action">"Recusar"</string>
+    <string msgid="2659457946726154263" name="call_notification_hang_up_action">"Desligar"</string>
+    <string msgid="6107532579223922871" name="call_notification_incoming_text">"Alguém está ligando"</string>
+    <string msgid="8623827134497363134" name="call_notification_ongoing_text">"Chamada em andamento"</string>
+    <string msgid="59049573811482460" name="call_notification_screening_text">"Filtrando uma ligação recebida"</string>
+    <string msgid="406453423630273620" name="close_drawer">"Fechar menu de navegação"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Fechar planilha"</string>
+    <string msgid="5389587048670450460" name="collapsed">"Fechado"</string>
+    <string msgid="6083905920877235314" name="copy">"Copiar"</string>
+    <string msgid="3260749812566568062" name="copy_toast_msg">"Link copiado para a área de transferência"</string>
+    <string name="crisp_sdk_chat_chat_alerts_email_invalid">O seu email parece incorreto, pode confirmar?</string>
+    <string name="crisp_sdk_chat_chat_alerts_new_messages">Novas mensagens a baixo. Clique para ver.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_away">Não estamos online. Entraremos em contacto por email.</string>
+    <string name="crisp_sdk_chat_chat_alerts_wait_reply_online">Obrigado! Responderemos brevemente.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_prompt">Por favor, preencha o formulário para continuar.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_default">Clique para definir o seu e-mail para receber notificações.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_email_force">Por favor configure o seu e-mail para continuar.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_default">Clique para definir o telefone para receber notificações.</string>
+    <string name="crisp_sdk_chat_chat_alerts_warn_reply_phone_force">Por favor, configure o seu telefone para continuar.</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_placeholder">Alguma coisa a dizer?</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_submit">Envie a sua avaliação</string>
+    <string name="crisp_sdk_chat_chat_feedback_rate_title">Como é que nos saímos?</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_error">Ocorreu um erro ao enviar. Por favor tente novamente.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_quota">A quota de upload de arquivos diários foi excedida, ou a extensão de ficheiro não é permitida.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_alert_size">O ficheiro é demasiado grande. Por favor tente novamente com um mais pequeno.</string>
+    <string name="crisp_sdk_chat_chat_form_attach_tooltip">Enviar ficheiro</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_preparing">A preparar</string>
+    <string name="crisp_sdk_chat_chat_form_attach_wait_uploading">Carregamento</string>
+    <string name="crisp_sdk_chat_chat_form_feedback_tooltip">Avalie este chat</string>
+    <string name="crisp_sdk_chat_chat_form_field_disabled">Envio de mensagens indisponível.</string>
+    <string name="crisp_sdk_chat_chat_form_field_message">Escreva a sua mensagem…</string>
+    <string name="crisp_sdk_chat_chat_form_send_hint">Enviar</string>
+    <string name="crisp_sdk_chat_chat_form_smiley_tooltip">Inserir um emoticon</string>
+    <string name="crisp_sdk_chat_chat_form_speech_abort_warn">Se navegar antes de a sua gravação áudio ser enviada, esta perder-se-á.</string>
+    <string name="crisp_sdk_chat_chat_form_speech_capture_error">Não foi possível gravar o áudio do seu microfone. Permitiu o acesso?</string>
+    <string name="crisp_sdk_chat_chat_form_speech_tooltip">Gravar mensagem áudio</string>
+    <string name="crisp_sdk_chat_chat_game_controls_stop">Parar de brincar</string>
+    <string name="crisp_sdk_chat_chat_header_channels">Mais canais</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_curated">Artigos mais frequentemente lidos</string>
+    <string name="crisp_sdk_chat_chat_header_helpdesk_results">Artigos Pesquisados</string>
+    <string name="crisp_sdk_chat_chat_header_initial_avatar_website_tooltip">E mais %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_mode_chat">Conversação</string>
+    <string name="crisp_sdk_chat_chat_header_mode_helpdesk">Centro de ajuda</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue">Continuar no %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_email">E-mail</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_channel_continue_phone">Telefone</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_from">de</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_away">O suporte está indisponível</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_last">Ativo pela última vez %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_metrics">Normalmente responde em menos de %1$s</string>
+    <string name="crisp_sdk_chat_chat_header_ongoing_status_online">O suporte está disponível</string>
+    <string name="crisp_sdk_chat_chat_health_label_link">Ver a nossa página de estado</string>
+    <string name="crisp_sdk_chat_chat_health_label_updates">para mais atualizações.</string>
+    <string name="crisp_sdk_chat_chat_health_main">Alguns dos nossos serviços não estão operacionais.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_empty">Sem resultados de pesquisa. Tente outras palavras-chave.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_form_field">Procure no nosso centro de ajuda…</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_search_unpopulated">Ainda não há artigos no centro de ajuda.</string>
+    <string name="crisp_sdk_chat_chat_helpdesk_viewer_open_tooltip">Ver no Helpdesk</string>
+    <string name="crisp_sdk_chat_chat_message_audio_play_error">Não consegui reproduzir este ficheiro de áudio. Pode ter expirado.</string>
+    <string name="crisp_sdk_chat_chat_message_error_retry">Falha no envio. Tentar de novo?</string>
+    <string name="crisp_sdk_chat_chat_message_file_name">Ficheiro anexado</string>
+    <string name="crisp_sdk_chat_chat_message_info_read">Lido</string>
+    <string name="crisp_sdk_chat_chat_message_send_abort_warn">Algumas mensagens ainda não foram enviadas. Se mudar de página as mesmas serão perdidas.</string>
+    <string name="crisp_sdk_chat_chat_message_tag_edited">Editado</string>
+    <string name="crisp_sdk_chat_chat_message_tag_participant">Participante</string>
+    <string name="crisp_sdk_chat_chat_message_tag_translated">Traduzido</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_ask">Importa-se de avaliar o nosso apoio?</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_main">Obrigado por ter conversado connosco.</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_ignore">Não, obrigado</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_pick_rate">Apoio tarifário</string>
+    <string name="crisp_sdk_chat_chat_message_text_feedback_submitted">Obrigado pelo seu feedback!</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_ask">Enquanto aguarda, pretende jogar um jogo?</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_main">Parece que estamos a demorar algum tempo a responder.</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_no">Não</string>
+    <string name="crisp_sdk_chat_chat_message_text_game_pick_yes">Jogar jogo</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask">como pretende ser contactado?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_email">Qual é o seu endereço de e-mail?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_email">Indique o seu endereço de e-mail…</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_field_phone">Indique o seu contacto de telefone…</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_ask_phone">Qual é o seu número de telefone?</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_main">Apenas no caso de abandonar ou nós demorarmos a responder:</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_email">E-mail</string>
+    <string name="crisp_sdk_chat_chat_message_text_identity_pick_phone">Telefone</string>
+    <string name="crisp_sdk_chat_chat_offline_fail">Rede off-line.</string>
+    <string name="crisp_sdk_chat_chat_offline_inactive">Fora de linha. Estiveste inactivo durante algum tempo.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_frozen">Nenhuma mensagem pode ser recebida ou enviada por enquanto.</string>
+    <string name="crisp_sdk_chat_chat_offline_label_resume">Envie uma mensagem para reconectar ao chat.</string>
+    <string name="crisp_sdk_chat_chat_offline_main">Rede off-line. A reconectar…</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_no_results">Sem resultados. Faça outra pesquisa.</string>
+    <string name="crisp_sdk_chat_chat_pickers_gif_search">Encontrar GIFs…</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_gifs">GIFs</string>
+    <string name="crisp_sdk_chat_chat_pickers_selector_smileys">Smileys</string>
+    <string name="crisp_sdk_chat_minimized_connect_alert_failure">Falha na ligação. De momento as mensagens podem estar indisponíveis.</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_compose">Escreva a sua mensagem</string>
+    <string name="crisp_sdk_chat_minimized_tooltip_message_from">Mensagem de</string>
+    <string name="crisp_sdk_date_now">Agora</string>
+    <string name="crisp_sdk_date_second">Há uns segundos</string>
+    <string name="crisp_sdk_duration_days">Alguns dias</string>
+    <string name="crisp_sdk_duration_now">Instantaneamente</string>
+    <string name="crisp_sdk_duration_second">Alguns segundos</string>
+    <string name="crisp_sdk_theme_text_1_chat">Dúvidas? Fale comigo!</string>
+    <string name="crisp_sdk_theme_text_2_chat">Coloque-nos as suas dúvidas</string>
+    <string name="crisp_sdk_theme_text_3_chat">Coloque as suas dúvidas</string>
+    <string name="crisp_sdk_theme_text_4_chat">Fale com a equipa de suporte</string>
+    <string name="crisp_sdk_theme_text_default_chat">Dúvidas? Contacte-nos!</string>
+    <string name="crisp_sdk_theme_welcome_1_chat">Olá, deseja falar connosco?</string>
+    <string name="crisp_sdk_theme_welcome_2_chat">Alguma questão que nos queira colocar?</string>
+    <string name="crisp_sdk_theme_welcome_3_chat">Olá, tire as suas dúvidas sobre %1$s.</string>
+    <string name="crisp_sdk_theme_welcome_4_chat">Olá! Como posso ajudar? :)</string>
+    <string name="crisp_sdk_theme_welcome_5_chat">Alguma questão sobre %1$s?</string>
+    <string name="crisp_sdk_theme_welcome_default_chat">Como podemos ajudar com %1$s?</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Entrada inválida"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Janela pop-up"</string>
+    <string msgid="4057925834421392736" name="dialog">"Caixa de diálogo"</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Menu suspenso"</string>
+    <string name="exo_download_completed">Download concluído</string>
+    <string name="exo_download_description">Fazer o download</string>
+    <string name="exo_download_downloading">Fazendo o download</string>
+    <string name="exo_download_failed">Falha no download</string>
+    <string name="exo_download_notification_channel_name">Downloads</string>
+    <string name="exo_download_paused">Downloads pausados</string>
+    <string name="exo_download_paused_for_network">Downloads aguardando uma conexão de rede</string>
+    <string name="exo_download_paused_for_wifi">Downloads aguardando uma rede Wi-Fi</string>
+    <string name="exo_download_removing">Removendo downloads</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Avançado"</string>
+    <string msgid="5974471714631304645" name="expanded">"Aberto"</string>
+    <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copiar link"</string>
+    <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Abrir no navegador"</string>
+    <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Compartilhar link"</string>
+    <string msgid="6827826412747255547" name="in_progress">"Em andamento"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Parcialmente selecionada"</string>
+    <string msgid="2939063992730535343" name="mr_button_content_description">"Transmitir"</string>
+    <string msgid="6073720094880410356" name="mr_cast_button_connected">"Transmitir. Conectado"</string>
+    <string msgid="6629927151350192407" name="mr_cast_button_connecting">"Transmitir. Conectando"</string>
+    <string msgid="8071109333469380363" name="mr_cast_button_disconnected">"Transmitir. Desconectado"</string>
+    <string msgid="2175930138959078155" name="mr_cast_dialog_title_view_placeholder">"Nenhuma informação disponível"</string>
+    <string msgid="6114250663023140921" name="mr_chooser_searching">"Localizando dispositivos"</string>
+    <string msgid="1419936397646839840" name="mr_chooser_title">"Transmitir para"</string>
+    <string msgid="3330502667672708728" name="mr_controller_album_art">"Arte do álbum"</string>
+    <string msgid="9171231064758955152" name="mr_controller_casting_screen">"Transmitindo tela"</string>
+    <string msgid="5684434439232634509" name="mr_controller_close_description">"Fechar"</string>
+    <string msgid="2585048604188129749" name="mr_controller_collapse_group">"Recolher"</string>
+    <string msgid="7812275474138309497" name="mr_controller_disconnect">"Desconectar"</string>
+    <string msgid="4521419834052044261" name="mr_controller_expand_group">"Abrir"</string>
+    <string msgid="855271725131981086" name="mr_controller_no_info_available">"Nenhuma informação disponível"</string>
+    <string msgid="5495452265246139458" name="mr_controller_no_media_selected">"Nenhuma mídia selecionada"</string>
+    <string msgid="747801650871398383" name="mr_controller_pause">"Pausar"</string>
+    <string msgid="1253345086594430054" name="mr_controller_play">"Reproduzir"</string>
+    <string msgid="5497722768305745508" name="mr_controller_stop">"Parar"</string>
+    <string msgid="804210341192624074" name="mr_controller_stop_casting">"Parar transmissão"</string>
+    <string msgid="2955862765169128170" name="mr_controller_volume_slider">"Controle deslizante de volume"</string>
+    <string msgid="4115858704575247342" name="mr_dialog_default_group_name">"Grupo"</string>
+    <string msgid="4307018456678388936" name="mr_dialog_groupable_header">"Adicionar um dispositivo"</string>
+    <string msgid="6068257520605505468" name="mr_dialog_transferable_header">"Reproduzir em um grupo"</string>
+    <string msgid="7449553026175453403" name="mr_system_route_name">"Sistema"</string>
+    <string msgid="4088331695424166162" name="mr_user_route_category_name">"Dispositivos"</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Menu de navegação"</string>
+    <string msgid="6610465462668679431" name="not_selected">"Não selecionado"</string>
+    <string msgid="6573031135582639649" name="not_set">"Não definido"</string>
+    <string msgid="875452955155264703" name="off">"Desativado"</string>
+    <string msgid="8655164131929253426" name="on">"Ativado"</string>
+    <string msgid="6685851473431805375" name="preference_copied">"\"<ns2:g id="SUMMARY">%1$s</ns2:g>\" copiado para a área de transferência."</string>
+    <string msgid="5941395253238309765" name="range_end">"Fim do intervalo"</string>
+    <string msgid="7097486360902471446" name="range_start">"Início do intervalo"</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Pesquisar"</string>
+    <string msgid="6043586758067023" name="selected">"Selecionado"</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="stripe_hcaptcha_loading_text">Verificando se você é humano</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns2:g id="CURRENT_ITEMS">%1$s</ns2:g>, <ns2:g id="ADDED_ITEMS">%2$s</ns2:g>"</string>
+    <string msgid="2561197295334830845" name="switch_role">"Chave"</string>
+    <string msgid="1672349317127674378" name="tab">"Guia"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns2:g id="PERCENTAGE">%1$d</ns2:g>%%"</string>
+    <string msgid="3765533235322692011" name="tooltip_description">"dica"</string>
+    <string msgid="3124740595719787496" name="tooltip_label">"mostrar dica"</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"DESATIVADO"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ATIVADO"</string>
+</resources>

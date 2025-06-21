@@ -13,17 +13,17 @@ class LocalLanguageResponse {
     if (json['keyword_data'] != null) {
       keywordData = <ContentData>[];
       json['keyword_data'].forEach((v) {
-        keywordData!.add(new ContentData.fromJson(v));
+        keywordData!.add(ContentData.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['screenID'] = this.screenID;
-    data['ScreenName'] = this.screenName;
-    if (this.keywordData != null) {
-      data['keyword_data'] = this.keywordData!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['screenID'] = screenID;
+    data['ScreenName'] = screenName;
+    if (keywordData != null) {
+      data['keyword_data'] = keywordData!.map((v) => v.toJson()).toList();
     }
     return data;
   }

@@ -22,7 +22,7 @@ import '../utils/app_constants.dart';
 class SignUpStep1Component extends StatefulWidget {
   final bool? isNewTask;
 
-  SignUpStep1Component({this.isNewTask = false});
+  const SignUpStep1Component({super.key, this.isNewTask = false});
 
   @override
   _SignUpStep1ComponentState createState() => _SignUpStep1ComponentState();
@@ -50,7 +50,7 @@ class _SignUpStep1ComponentState extends State<SignUpStep1Component> {
   void initState() {
     super.initState();
     print("------------51>>>${getStringAsync(COUNTRY_CODE)}");
-    print("------------52>>>${countryCode}");
+    print("------------52>>>$countryCode");
   }
 
   @override
@@ -75,7 +75,7 @@ class _SignUpStep1ComponentState extends State<SignUpStep1Component> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
+      physics: const BouncingScrollPhysics(),
       child: Form(
         key: mFormKey,
         child: Column(
@@ -118,6 +118,8 @@ class _SignUpStep1ComponentState extends State<SignUpStep1Component> {
               nextFocus: mEmailFocus,
               suffix: mSuffixTextFieldIconWidget(ic_call),
               validator: (value){
+                return null;
+              
                 /*if (value == null || value.isEmpty) {
                   return 'Please enter your phone number';
                 }*/
@@ -142,7 +144,7 @@ class _SignUpStep1ComponentState extends State<SignUpStep1Component> {
                           showFlagDialog: true,
                           showOnlyCountryWhenClosed: false,
                           alignLeft: false,
-                          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                           textStyle:primaryTextStyle(),
                           onInit: (c) {
                             setValue(COUNTRY_CODE,c!.code);
@@ -216,7 +218,7 @@ class _SignUpStep1ComponentState extends State<SignUpStep1Component> {
               color: primaryColor,
               onTap: () {
                 print("--------217>>>${mMobileNumberCont.text}");
-                print("--------218>>>${dialCode}");
+                print("--------218>>>$dialCode");
                 if (mFormKey.currentState!.validate()) {
                   hideKeyboard(context);
                   userStore.setFirstName(mFNameCont.text);
@@ -243,7 +245,7 @@ class _SignUpStep1ComponentState extends State<SignUpStep1Component> {
                       style: primaryTextStyle(color: primaryColor),
                     ).paddingLeft(4),
                     onTap: () {
-                      SignInScreen().launch(context);
+                      const SignInScreen().launch(context);
                     })
               ],
             ),

@@ -8,19 +8,19 @@ class NotificationResponse {
     if (json['notification_data'] != null) {
       notificationData = <NotificationData>[];
       json['notification_data'].forEach((v) {
-        notificationData!.add(new NotificationData.fromJson(v));
+        notificationData!.add(NotificationData.fromJson(v));
       });
     }
     allUnreadCount = json['all_unread_count'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.notificationData != null) {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (notificationData != null) {
       data['notification_data'] =
-          this.notificationData!.map((v) => v.toJson()).toList();
+          notificationData!.map((v) => v.toJson()).toList();
     }
-    data['all_unread_count'] = this.allUnreadCount;
+    data['all_unread_count'] = allUnreadCount;
     return data;
   }
 }
@@ -40,19 +40,19 @@ class NotificationData {
     id = json['id'];
     readAt = json['read_at'];
     createdAt = json['created_at'];
-    data = json['data'] != null ? new NotificationModel.fromJson(json['data']) : null;
+    data = json['data'] != null ? NotificationModel.fromJson(json['data']) : null;
     image = json['image'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['read_at'] = this.readAt;
-    data['created_at'] = this.createdAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['read_at'] = readAt;
+    data['created_at'] = createdAt;
     if (this.data != null) {
       data['data'] = this.data!.toJson();
     }
-    data['image'] = this.image;
+    data['image'] = image;
     return data;
   }
 }
@@ -83,13 +83,13 @@ class NotificationModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['push_notification_id'] = this.pushNotificationId;
-    data['type'] = this.type;
-    data['subject'] = this.subject;
-    data['message'] = this.message;
-    data['image'] = this.image;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['push_notification_id'] = pushNotificationId;
+    data['type'] = type;
+    data['subject'] = subject;
+    data['message'] = message;
+    data['image'] = image;
     return data;
   }
 }

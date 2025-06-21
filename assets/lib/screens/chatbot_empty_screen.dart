@@ -10,7 +10,7 @@ class ChatBotEmptyScreen extends StatefulWidget {
   final Function(String value) onTap;
   final bool isScroll;
 
-  ChatBotEmptyScreen({Key? key, required this.onTap, this.isScroll = false}) : super(key: key);
+  const ChatBotEmptyScreen({super.key, required this.onTap, this.isScroll = false});
 
   @override
   State<ChatBotEmptyScreen> createState() => _ChatBotEmptyScreenState();
@@ -59,7 +59,7 @@ class _ChatBotEmptyScreenState extends State<ChatBotEmptyScreen> {
                   widget.onTap.call(questionList[index]);
                 },
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                   decoration: appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(12)) : boxDecorationRoundedWithShadow(12, spreadRadius: 0, blurRadius: 6, shadowColor: Colors.grey.shade200),
                   child: Row(
                     children: [

@@ -38,7 +38,7 @@ class ChattingImageScreen extends StatefulWidget {
 
   final bool isDirect;
 
-  ChattingImageScreen({this.isDirect = false});
+  const ChattingImageScreen({super.key, this.isDirect = false});
 
   @override
   _ChattingImageScreenState createState() => _ChattingImageScreenState();
@@ -84,10 +84,10 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
           baseOption: HttpSetup(receiveTimeout: const Duration(seconds: 20), connectTimeout: const Duration(seconds: 20)),
           enableLog: true);
 
-      print("-----------------82>>>>${isFirstTime}");
+      print("-----------------82>>>>$isFirstTime");
       if (isFirstTime == false || isFirstTime == null) {
         firstQuestion =
-            "my gender is ${userStore.gender.validate()}, my age is ${userStore.age.validate()}, my weight is${userStore.weight.validate()}${userStore.weightUnit.validate()}, my height is ${userStore.height.validate()}${userStore.heightUnit.validate()}, ${selectMainGoal}, ${selectExperienced},${selectEquipments},${selectWeekWorkout} please schedule my workout?";
+            "my gender is ${userStore.gender.validate()}, my age is ${userStore.age.validate()}, my weight is${userStore.weight.validate()}${userStore.weightUnit.validate()}, my height is ${userStore.height.validate()}${userStore.heightUnit.validate()}, $selectMainGoal, $selectExperienced,$selectEquipments,$selectWeekWorkout please schedule my workout?";
         sendAutoFirstMsg(firstQuestion);
       }
 
@@ -146,7 +146,7 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
 
   void statusListener(String status) {
     setState(() {
-      lastStatus = "$status";
+      lastStatus = status;
     });
   }
 
@@ -163,7 +163,7 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
     questionAnswers.insert(0, QuestionImageAnswerModel(question: '', imageUri: imageSelected, answer: StringBuffer(), isLoading: true, smartCompose: selectedText));
     setState(() {});
 
-    final request = await ChatCompleteText(
+    final request = ChatCompleteText(
       messages: [
         {'role': 'system', 'content': 'Answer only workout-related questions.'},
         {'role': 'system', 'content': 'Answer only diet-related questions.'},
@@ -185,9 +185,9 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
 
     await _streamResponse(request);
     await setFirstTimeOpen(isFirstTime = true);
-    print("------------------>>>>${isFirstTime}");
+    print("------------------>>>>$isFirstTime");
     isFirstTime = await getFirstTimeOpen();
-    print("------------------>>>>----${isFirstTime}");
+    print("------------------>>>>----$isFirstTime");
 
     isLoading=false;
     questionAnswers[0].isLoading = false;
@@ -226,7 +226,7 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
         {'role': 'system', 'content': 'Answer only periods-related questions.'},
         {'role': 'system', 'content': 'Answer only body-related questions.'},
         {'role': 'system', 'content': 'Answer only skin-related questions.'},
-        {"role": "user", "content": "${question}"}
+        {"role": "user", "content": question}
       ],
       maxToken: 250,
       model: Gpt4ChatModel(),
@@ -310,11 +310,11 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
             height: context.height(),
             width: context.width(),
             margin: EdgeInsets.only(bottom: 66 + (isShowOption ? 50 : 0)),
-            padding: EdgeInsets.only(left: 16, right: 16),
+            padding: const EdgeInsets.only(left: 16, right: 16),
             child: ListView.separated(
-              separatorBuilder: (_, i) => Divider(color: Colors.transparent),
+              separatorBuilder: (_, i) => const Divider(color: Colors.transparent),
               reverse: true,
-              padding: EdgeInsets.only(bottom: 8, top: 16),
+              padding: const EdgeInsets.only(bottom: 8, top: 16),
               controller: scrollController,
               itemCount: questionAnswers.length,
               itemBuilder: (_, index) {
@@ -330,13 +330,13 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
                 crossAxisAlignment:  CrossAxisAlignment.center,
                 children: [
                   Lottie.asset('assets/loading.json', width: 70, height: 70),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     'Please wait...',
                     style: primaryTextStyle(size: 14),
                   )
                 ],
-              )):SizedBox.shrink(),
+              )):const SizedBox.shrink(),
 
        if (questionAnswers.validate().isEmpty)
             ChatBotEmptyScreen(
@@ -377,7 +377,7 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
                             child: IconButton(
                               highlightColor: Colors.transparent,
                               splashColor: Colors.transparent,
-                              icon: Icon(Icons.send, size: 16, color: Colors.white),
+                              icon: const Icon(Icons.send, size: 16, color: Colors.white),
                               onPressed: () {
                                 if (msgController.text.isNotEmpty) {
                                   sendMessage();
@@ -387,7 +387,7 @@ class _ChattingImageScreenState extends State<ChattingImageScreen> {
                           ),
                         ],
                       ).paddingSymmetric(horizontal: 16)
-                    : SizedBox.shrink(),
+                    : const SizedBox.shrink(),
                 16.height,
               ],
             ),

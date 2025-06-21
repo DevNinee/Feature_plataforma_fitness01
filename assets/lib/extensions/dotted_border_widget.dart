@@ -12,7 +12,7 @@ class DottedBorderWidget extends StatefulWidget {
   final Widget child;
   final EdgeInsets? padding;
 
-  DottedBorderWidget({
+  const DottedBorderWidget({
     this.color = Colors.black,
     this.dotsWidth = 5.0,
     this.gap = 3.0,
@@ -20,8 +20,8 @@ class DottedBorderWidget extends StatefulWidget {
     this.strokeWidth = 1.0,
     required this.child,
     this.padding,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   _DottedBorderWidgetState createState() => _DottedBorderWidgetState();
@@ -39,7 +39,7 @@ class _DottedBorderWidgetState extends State<DottedBorderWidget> {
         radius: widget.radius,
       ),
       child: Container(
-        padding: widget.padding ?? EdgeInsets.all(2),
+        padding: widget.padding ?? const EdgeInsets.all(2),
         child: widget.child,
       ),
     );

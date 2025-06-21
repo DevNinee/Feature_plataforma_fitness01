@@ -19,7 +19,7 @@ class WebViewScreen extends StatefulWidget {
   Function(String)? onClick;
 
 
-  WebViewScreen({this.mInitialUrl, this.isAdsLoad = false,this.onClick});
+  WebViewScreen({super.key, this.mInitialUrl, this.isAdsLoad = false,this.onClick});
 
   @override
   WebViewScreenState createState() => WebViewScreenState();
@@ -77,20 +77,20 @@ class WebViewScreenState extends State<WebViewScreen> {
             shouldOverrideUrlLoading: (controller, navigationAction) async {
               var uri = navigationAction.request.url;
               var url = navigationAction.request.url.toString();
-              print("URL----->>" + url.toString());
+              print("URL----->>$url");
 
               if (url.contains(successUrl)) {
                 widget.onClick?.call('Success');
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text("Payment Successful!")),
+                  const SnackBar(content: Text("Payment Successful!")),
                 );
                 return NavigationActionPolicy.CANCEL;
               }
               if (url.contains("status=cancelled")) {
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text("Payment Cancelled!")),
+                  const SnackBar(content: Text("Payment Cancelled!")),
                 );
                 return NavigationActionPolicy.CANCEL;
               }
@@ -153,13 +153,13 @@ class WebViewScreenState extends State<WebViewScreen> {
               });
             },
             onLoadError: (controller, url, code, message) {
-              log("onLoadError" + message);
+              log("onLoadError$message");
               setState(() {
                 isLoading = false;
               });
             },
           ),
-          Container(height: context.height(), color: Colors.white, child: Loader().center().visible(isLoading == true))
+          Container(height: context.height(), color: Colors.white, child: const Loader().center().visible(isLoading == true))
         ],
       );
     });
@@ -176,7 +176,7 @@ class WebViewScreenState extends State<WebViewScreen> {
               onPressed: () async {
                 Navigator.pop(context);
               },
-              icon: Icon(Feather.chevron_left, color: primaryColor))),
+              icon: const Icon(Feather.chevron_left, color: primaryColor))),
       body: mBody(),
     );
   }

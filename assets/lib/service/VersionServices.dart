@@ -12,7 +12,7 @@ class VersionService {
     num currentBuildNumberAndroid = num.tryParse(packageInfo.buildNumber.toString()) ?? 0;
     if (Platform.isAndroid) {
       num liveBuildNumber = num.tryParse(value.androidVersionCode.toString()) ?? 0;
-      print("----------15>>${liveBuildNumber}");
+      print("----------15>>$liveBuildNumber");
       if (currentBuildNumberAndroid != 0 && currentBuildNumberAndroid < liveBuildNumber) {
         //   update is available
         if (value.androidForceUpdate.toString() == "1") {

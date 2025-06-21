@@ -11,7 +11,7 @@ import '../utils/app_common.dart';
 class FeaturedBlogComponent extends StatefulWidget {
   final BlogModel? mBlogModel;
 
-  FeaturedBlogComponent({this.mBlogModel});
+  const FeaturedBlogComponent({super.key, this.mBlogModel});
 
   @override
   _FeaturedBlogComponentState createState() => _FeaturedBlogComponentState();

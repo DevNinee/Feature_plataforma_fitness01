@@ -23,6 +23,8 @@ import '../utils/app_common.dart';
 import '../utils/app_constants.dart';
 
 class SignUpStep4Component extends StatefulWidget {
+  const SignUpStep4Component({super.key});
+
   @override
   _SignUpStep4ComponentState createState() => _SignUpStep4ComponentState();
 }
@@ -87,7 +89,7 @@ class _SignUpStep4ComponentState extends State<SignUpStep4Component> with Ticker
               : appStore.isDarkMode
                   ? context.cardColor
                   : GreyLightColor),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Text(value!, style: secondaryTextStyle(color: mHeight == index ? Colors.white : textSecondaryColorGlobal)),
     ).onTap(() {
       hideKeyboard(context);
@@ -138,7 +140,7 @@ class _SignUpStep4ComponentState extends State<SignUpStep4Component> with Ticker
               : appStore.isDarkMode
                   ? context.cardColor
                   : GreyLightColor),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       child: Text(value!, style: secondaryTextStyle(color: mWeight == index ? Colors.white : textSecondaryColorGlobal)),
     ).onTap(() {
       mWeight = index;
@@ -211,9 +213,9 @@ class _SignUpStep4ComponentState extends State<SignUpStep4Component> with Ticker
       userStore.setLogin(true);
       userStore.setToken(value.data!.apiToken.validate());
       getUSerDetail(context, value.data!.id).then((value) {
-        DashboardScreen().launch(context, isNewTask: true);
+        const DashboardScreen().launch(context, isNewTask: true);
       }).catchError((e) {
-        print("error=>" + e.toString());
+        print("error=>$e");
       });
     }).catchError((e) {
       appStore.setLoading(false);
@@ -266,7 +268,7 @@ class _SignUpStep4ComponentState extends State<SignUpStep4Component> with Ticker
                   onTap: () {
                     CustomeHeightPicker(
                       heightSelected: (val) {
-                        mHeightCont.text = "${val} ${userStore.heightUnit.validate()}";
+                        mHeightCont.text = "$val ${userStore.heightUnit.validate()}";
                       },
                     ).launch(context);
                   },
@@ -307,7 +309,7 @@ class _SignUpStep4ComponentState extends State<SignUpStep4Component> with Ticker
             ).paddingSymmetric(horizontal: 16),
           ),
         ),
-        Loader().visible(appStore.isLoading)
+        const Loader().visible(appStore.isLoading)
       ],
     );
   }

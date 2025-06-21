@@ -4,7 +4,6 @@ import 'dart:math';
 
 import 'package:bambara_flutter/bambara_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 //import 'package:flutter_paystack/flutter_paystack.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
@@ -44,7 +43,7 @@ class PaymentScheduledScreen extends StatefulWidget {
   final String? price;
   final String? sceduledId;
 
-  PaymentScheduledScreen({this.mSubscriptionModel, this.price, this.sceduledId});
+  const PaymentScheduledScreen({super.key, this.mSubscriptionModel, this.price, this.sceduledId});
 
   @override
   PaymentScheduledScreenState createState() => PaymentScheduledScreenState();
@@ -96,7 +95,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
       Stripe.publishableKey = stripPaymentPublishKey.validate();
       Stripe.merchantIdentifier = mStripeIdentifier;
       await Stripe.instance.applySettings().catchError((e) {
-        log("${e.toString()}");
+        log(e.toString());
       });
     }
     if (paymentList.any((element) => element.type == PAYMENT_TYPE_PAYSTACK)) {
@@ -117,7 +116,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
       appStore.setLoading(false);
       paymentList.addAll(value.data!);
       if (paymentList.isNotEmpty) {
-        paymentList.forEach((element) {
+        for (var element in paymentList) {
           if (element.type == PAYMENT_TYPE_STRIPE) {
             stripPaymentKey = element.isTest == 1 ? element.testValue!.secretKey : element.liveValue!.secretKey;
             stripPaymentPublishKey = element.isTest == 1 ? element.testValue!.publishableKey : element.liveValue!.publishableKey;
@@ -153,12 +152,12 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
           } else if (element.type == PAYMENT_TYPE_ORANGE_MONEY) {
             orangeMoneyPublicKey = element.isTest == 1 ? element.testValue!.publicKey : element.liveValue!.publicKey;
           }
-        });
+        }
       }
       setState(() {});
     }).catchError((error) {
       appStore.setLoading(false);
-      log('${error.toString()}');
+      log(error.toString());
     });
   }
 
@@ -169,7 +168,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
       successChild: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.verified, size: 50, color: Colors.green),
+          const Icon(Icons.verified, size: 50, color: Colors.green),
           16.height,
           Text(languages.lblSuccess, style: boldTextStyle(color: Colors.green, size: 24)),
         ],
@@ -234,12 +233,12 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
 
   void _handlePaymentError(PaymentFailureResponse response) {
     _razorpay.clear();
-    toast("ERROR: " + response.code.toString() + " - " + response.message!);
+    toast("ERROR: ${response.code} - ${response.message!}");
   }
 
   void _handleExternalWallet(ExternalWalletResponse response) {
     _razorpay.clear();
-    toast("EXTERNAL_WALLET: " + response.walletName!);
+    toast("EXTERNAL_WALLET: ${response.walletName!}");
   }
 
   /// StripPayment
@@ -251,7 +250,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
 
     var request = http.Request('POST', Uri.parse(stripeURL));
 
-    request.bodyFields = {'amount': '${(widget.price!.toDouble() * 100).toInt()}', 'currency': "${userStore.currencyCode.toUpperCase()}", 'payment_method_types[]': 'card'};
+    request.bodyFields = {'amount': '${(widget.price!.toDouble() * 100).toInt()}', 'currency': userStore.currencyCode.toUpperCase(), 'payment_method_types[]': 'card'};
 
     log(request.bodyFields);
     request.headers.addAll(headers);
@@ -268,9 +267,9 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
           SetupPaymentSheetParameters setupPaymentSheetParameters = SetupPaymentSheetParameters(
             paymentIntentClientSecret: res.clientSecret.validate(),
             style: ThemeMode.light,
-            appearance: PaymentSheetAppearance(colors: PaymentSheetAppearanceColors(primary: primaryColor)),
-            applePay: PaymentSheetApplePay(merchantCountryCode: "${userStore.currencySymbol.toUpperCase()}"),
-            googlePay: PaymentSheetGooglePay(merchantCountryCode: "${userStore.currencySymbol.toUpperCase()}", testEnv: true),
+            appearance: const PaymentSheetAppearance(colors: PaymentSheetAppearanceColors(primary: primaryColor)),
+            applePay: PaymentSheetApplePay(merchantCountryCode: userStore.currencySymbol.toUpperCase()),
+            googlePay: PaymentSheetGooglePay(merchantCountryCode: userStore.currencySymbol.toUpperCase(), testEnv: true),
             merchantDisplayName: APP_NAME,
             customerId: userStore.userId.toString(),
           );
@@ -455,7 +454,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
       if (response.statusCode == 201) {
         final data = jsonDecode(response.body);
         String orderId = data['id'];
-        var link = await "https://www.sandbox.paypal.com/checkoutnow?token=${orderId}";
+        var link = "https://www.sandbox.paypal.com/checkoutnow?token=$orderId";
         appStore.setLoading(false);
         WebViewScreen(
             onClick: (msg) {
@@ -509,7 +508,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
         setState(() {
           var paymentLink = data['data']['link'];
           appStore.setLoading(false);
-          print("----------414>>>${paymentLink}");
+          print("----------414>>>$paymentLink");
           WebViewScreen(onClick: (msg) {
             if(msg=="Success"){
               paymentConfirm();
@@ -573,7 +572,7 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
   void orangeMoneyPayment() async {
     appStore.setLoading(true);
 
-    print("---------------------<<<----${orangeMoneyPublicKey}");
+    print("---------------------<<<----$orangeMoneyPublicKey");
     await BambaraView(
       data: BambaraData(
         amount: widget.price?.toInt() ?? 0,
@@ -686,11 +685,11 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
               ? AnimatedListView(
                   shrinkWrap: true,
                   itemCount: paymentList.length,
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   itemBuilder: (context, index) {
                     return Container(
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                      margin: EdgeInsets.only(bottom: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                      margin: const EdgeInsets.only(bottom: 16),
                       decoration:
                           boxDecorationWithRoundedCorners(border: Border.all(width: 0.5, color: selectedPaymentType == paymentList[index].type ? primaryColor.withOpacity(0.80) : GreyLightColor)),
                       child: Row(
@@ -705,11 +704,11 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
                           ).expand(),
                           selectedPaymentType == paymentList[index].type
                               ? Container(
-                                  padding: EdgeInsets.all(0),
+                                  padding: const EdgeInsets.all(0),
                                   decoration: boxDecorationWithRoundedCorners(backgroundColor: primaryColor, borderRadius: radius(8)),
-                                  child: Icon(Icons.check, color: Colors.white),
+                                  child: const Icon(Icons.check, color: Colors.white),
                                 )
-                              : SizedBox(),
+                              : const SizedBox(),
                         ],
                       ),
                     ).onTap(() {
@@ -717,16 +716,16 @@ class PaymentScheduledScreenState extends State<PaymentScheduledScreen> {
                       setState(() {});
                     });
                   })
-              : NoDataScreen().visible(!appStore.isLoading),
+              : const NoDataScreen().visible(!appStore.isLoading),
           Observer(
             builder: (context) {
-              return Loader().center().visible(appStore.isLoading);
+              return const Loader().center().visible(appStore.isLoading);
             },
           )
         ],
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Visibility(
           visible: paymentList.isNotEmpty,
           child: AppButton(

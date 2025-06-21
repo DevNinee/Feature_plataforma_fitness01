@@ -74,14 +74,14 @@ class _VideoScreenState extends State<VideoScreen> {
           AnimatedListView(
             shrinkWrap: true,
             controller: scrollController,
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
             itemCount: 5,
             itemBuilder: (context, index) {
-              return VideoComponent();
+              return const VideoComponent();
             },
           ),
-          mVideoList.isEmpty ? NoDataScreen().visible(!appStore.isLoading) : SizedBox(),
-          Loader().center().visible(appStore.isLoading)
+          mVideoList.isEmpty ? const NoDataScreen().visible(!appStore.isLoading) : const SizedBox(),
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
     );

@@ -13,21 +13,21 @@ class AppConfigurationResponse {
     disableQuickView = json['disable_quickview'];
     disableStory = json['disable_story'];
     dashboardType = json['dashboard_type'];
-    socialLink = json['social_link'] != null ? new SocialLink.fromJson(json['social_link']) : null;
-    admob = json['ads_configuration'] != null ? new Admob.fromJson(json['ads_configuration']) : null;
+    socialLink = json['social_link'] != null ? SocialLink.fromJson(json['social_link']) : null;
+    admob = json['ads_configuration'] != null ? Admob.fromJson(json['ads_configuration']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['enable_custom_dashboard'] = this.enableCustomDashboard;
-    data['disable_quickview'] = this.disableQuickView;
-    data['disable_story'] = this.disableStory;
-    data['dashboard_type'] = this.dashboardType;
-    if (this.socialLink != null) {
-      data['social_link'] = this.socialLink!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['enable_custom_dashboard'] = enableCustomDashboard;
+    data['disable_quickview'] = disableQuickView;
+    data['disable_story'] = disableStory;
+    data['dashboard_type'] = dashboardType;
+    if (socialLink != null) {
+      data['social_link'] = socialLink!.toJson();
     }
-    if (this.admob != null) {
-      data['ads_configuration'] = this.admob!.toJson();
+    if (admob != null) {
+      data['ads_configuration'] = admob!.toJson();
     }
     return data;
   }
@@ -59,16 +59,16 @@ class SocialLink {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['whatsapp'] = this.whatsapp;
-    data['facebook'] = this.facebook;
-    data['twitter'] = this.twitter;
-    data['instagram'] = this.instagram;
-    data['contact'] = this.contact;
-    data['website_url'] = this.websiteUrl;
-    data['privacy_policy'] = this.privacyPolicy;
-    data['copyright_text'] = this.copyrightText;
-    data['term_condition'] = this.termCondition;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['whatsapp'] = whatsapp;
+    data['facebook'] = facebook;
+    data['twitter'] = twitter;
+    data['instagram'] = instagram;
+    data['contact'] = contact;
+    data['website_url'] = websiteUrl;
+    data['privacy_policy'] = privacyPolicy;
+    data['copyright_text'] = copyrightText;
+    data['term_condition'] = termCondition;
     return data;
   }
 }
@@ -91,12 +91,12 @@ class Admob {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['banner_id'] = this.bannerId;
-    data['banner_id_ios'] = this.bannerIdIos;
-    data['interstitial_id'] = this.interstitialId;
-    data['interstitial_id_ios'] = this.interstitialIdIos;
-    data['ads_type'] = this.adsType;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['banner_id'] = bannerId;
+    data['banner_id_ios'] = bannerIdIos;
+    data['interstitial_id'] = interstitialId;
+    data['interstitial_id_ios'] = interstitialIdIos;
+    data['ads_type'] = adsType;
     return data;
   }
 }

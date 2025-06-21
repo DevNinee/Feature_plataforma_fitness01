@@ -17,7 +17,7 @@ import 'base_service.dart';
 class ChatMessageService extends BaseService {
   FirebaseFirestore fireStore = FirebaseFirestore.instance;
   late CollectionReference userRef;
-  FirebaseStorage _storage = FirebaseStorage.instance;
+  final FirebaseStorage _storage = FirebaseStorage.instance;
 
   ChatMessageService() {
     ref = fireStore.collection(MESSAGES_COLLECTION);
@@ -174,14 +174,14 @@ class ChatMessageService extends BaseService {
 
   Future<void> clearAllMessages(
       {String? senderId, required String receiverId}) async {
-    final WriteBatch _batch = fireStore.batch();
+    final WriteBatch batch = fireStore.batch();
 
     ref!.doc(senderId).collection(receiverId).get().then((value) {
-      value.docs.forEach((document) {
-        _batch.delete(document.reference);
-      });
+      for (var document in value.docs) {
+        batch.delete(document.reference);
+      }
 
-      return _batch.commit();
+      return batch.commit();
     }).catchError((error, stackTrace) {});
   }
 
@@ -217,11 +217,11 @@ class ChatMessageService extends BaseService {
         .where(KEY_IS_MESSAGE_READ, isEqualTo: false)
         .get()
         .then((value) {
-      value.docs.forEach((element) {
+      for (var element in value.docs) {
         element.reference.update({
           KEY_IS_MESSAGE_READ: true,
         });
-      });
+      }
     });
 
     ref!
@@ -230,11 +230,11 @@ class ChatMessageService extends BaseService {
         .where(KEY_IS_MESSAGE_READ, isEqualTo: false)
         .get()
         .then((value) {
-      value.docs.forEach((element) {
+      for (var element in value.docs) {
         element.reference.update({
           KEY_IS_MESSAGE_READ: true,
         });
-      });
+      }
     });
   }
 
@@ -260,12 +260,12 @@ class ChatMessageService extends BaseService {
     Query query1 =
         userRef.doc(currentUserId.toString()).collection(CONTACT_COLLECTION);
     query1.get().then((value) {
-      value.docs.forEach((element) {
+      for (var element in value.docs) {
         ContactModel contactData =
             ContactModel.fromJson(element.data() as Map<String, dynamic>);
         contactList.add(contactData);
-      });
-      contactList.forEach((e2) {
+      }
+      for (var e2 in contactList) {
         Query query = ref!
             .doc(e2.uid.toString())
             .collection(currentUserId)
@@ -282,7 +282,7 @@ class ChatMessageService extends BaseService {
         }).catchError((e) {
           log(e.toString());
         });
-      });
+      }
     }).catchError((e) {
       log(e);
     });
@@ -291,7 +291,7 @@ class ChatMessageService extends BaseService {
   }
 
   Future<UserModel> getUserPlayerId({String? uid}) {
-    print("data->>>" + uid.toString());
+    print("data->>>$uid");
     return userRef.where(KEY_UID, isEqualTo: uid).limit(1).get().then((value) {
       if (value.docs.length == 1) {
         return UserModel.fromJson(

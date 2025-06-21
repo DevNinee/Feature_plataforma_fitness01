@@ -31,6 +31,8 @@ import '../utils/app_config.dart';
 import '../utils/app_constants.dart';
 
 class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
+
   @override
   _SignInScreenState createState() => _SignInScreenState();
 }
@@ -92,9 +94,9 @@ class _SignInScreenState extends State<SignInScreen> {
 
 
           getUSerDetail(context, value.data!.id).then((value) {
-            DashboardScreen().launch(context, isNewTask: true);
+            const DashboardScreen().launch(context, isNewTask: true);
           }).catchError((e) {
-            print("error=>" + e.toString());
+            print("error=>$e");
           });
         } else {
           toast(languages.lblContactAdmin);
@@ -121,13 +123,13 @@ class _SignInScreenState extends State<SignInScreen> {
       if (Platform.isAndroid) {
         AndroidDeviceInfo androidInfo = await deviceInfo.androidInfo;
         String? locale = androidInfo.device; // More reliable locale
-        if (locale != null && locale.contains('_')) {
+        if (locale.contains('_')) {
           return locale.split('_').last;
         }
       } else if (Platform.isIOS) {
         IosDeviceInfo iosInfo = await deviceInfo.iosInfo;
         String? locale = iosInfo.localizedModel; // e.g., "en_US"
-        if (locale != null && locale.contains('_')) {
+        if (locale.contains('_')) {
           return locale.split('_').last;
         }
       }
@@ -152,9 +154,9 @@ class _SignInScreenState extends State<SignInScreen> {
       await getUSerDetail(context, userStore.userId).then((value) {
         appStore.setLoading(false);
         setValue(IS_REMEMBER, false);
-        DashboardScreen().launch(context, isNewTask: true);
+        const DashboardScreen().launch(context, isNewTask: true);
       }).catchError((e) {
-        print("error=>" + e.toString());
+        print("error=>$e");
       });
     }).catchError((e) {
       appStore.setLoading(false);
@@ -211,7 +213,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       width: mq.width*0.1,
                       height: 2,
                       decoration: boxDecorationWithRoundedCorners(backgroundColor: primaryColor),
-                      margin: EdgeInsets.only(top: 4),
+                      margin: const EdgeInsets.only(top: 4),
                     ).paddingSymmetric(horizontal: mq.width*0.040),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -224,7 +226,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             Text(languages.lblWelcomeBackDesc, style: secondaryTextStyle()),
                           ],
                         ),
-                        Image.asset(ic_login_new, height: mq.height*0.12, width: mq.width*0.26, fit: BoxFit.fill, opacity: AlwaysStoppedAnimation(.5)),
+                        Image.asset(ic_login_new, height: mq.height*0.12, width: mq.width*0.26, fit: BoxFit.fill, opacity: const AlwaysStoppedAnimation(.5)),
                         //Image.asset(ic_login_new, height: 100, width: 100, fit: BoxFit.fill, opacity: AlwaysStoppedAnimation(.5)),
                       ],
                     ).paddingOnly(left: mq.width*0.040),
@@ -272,7 +274,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                     shape: RoundedRectangleBorder(borderRadius: radius(4)),
                                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                     focusColor: primaryColor,
-                                    side: BorderSide(color: primaryColor),
+                                    side: const BorderSide(color: primaryColor),
                                     activeColor: primaryColor,
                                     value: getBoolAsync(IS_REMEMBER),
                                     onChanged: (bool? value) async {
@@ -286,7 +288,7 @@ class _SignInScreenState extends State<SignInScreen> {
                               ],
                             ).expand(),
                             Text(languages.lblForgotPassword, style: secondaryTextStyle(color: primaryColor)).onTap(() {
-                              ForgotPwdScreen().launch(context);
+                              const ForgotPwdScreen().launch(context);
                             }, hoverColor: Colors.transparent, splashColor: Colors.transparent, highlightColor: Colors.transparent),
                           ],
                         ),
@@ -303,7 +305,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             mSocialWidget(ic_mobile, () {
-                              OTPScreen().launch(context);
+                              const OTPScreen().launch(context);
                             }).visible(ENABLE_OTP),
                             12.width,
                             mSocialWidget(ic_apple, () {
@@ -328,7 +330,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             GestureDetector(
                                 child: Text(languages.lblRegisterNow, style: primaryTextStyle(color: primaryColor)).paddingLeft(4),
                                 onTap: () {
-                                  SignUpScreen().launch(context);
+                                  const SignUpScreen().launch(context);
                                 })
                           ],
                         ),
@@ -340,7 +342,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             Observer(builder: (context) {
-              return Loader().center().visible(appStore.isLoading);
+              return const Loader().center().visible(appStore.isLoading);
             })
           ],
         ),

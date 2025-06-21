@@ -21,7 +21,7 @@ class TipsScreen extends StatefulWidget {
   final String? mExerciseVideo;
   final String? mExerciseInstruction;
 
-  TipsScreen({this.mTips, this.mExerciseVideo, this.mExerciseImage, this.mExerciseInstruction});
+  const TipsScreen({super.key, this.mTips, this.mExerciseVideo, this.mExerciseImage, this.mExerciseInstruction});
 
   @override
   TipsScreenState createState() => TipsScreenState();
@@ -54,9 +54,9 @@ class TipsScreenState extends State<TipsScreen> {
       mode = "portrait";
     }
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size(double.infinity, 56), child: Visibility(visible: mode == 'portrait' ? true : false, child: appBarWidget(languages.lblTipsInst, context: context))),
+      appBar: PreferredSize(preferredSize: const Size(double.infinity, 56), child: Visibility(visible: mode == 'portrait' ? true : false, child: appBarWidget(languages.lblTipsInst, context: context))),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -69,13 +69,13 @@ class TipsScreenState extends State<TipsScreen> {
               children: [
                 Container(
                   // padding: EdgeInsets.all(16),
-                  margin: EdgeInsets.all(16),
+                  margin: const EdgeInsets.all(16),
                   decoration: boxDecorationWithRoundedCorners(backgroundColor: appStore.isDarkMode ? context.cardColor : primaryOpacity),
                   child: Column(
                     children: [
                       16.height,
                       Row(children: [
-                        Icon(Icons.info_outline, color: primaryColor, size: 25),
+                        const Icon(Icons.info_outline, color: primaryColor, size: 25),
                         10.width,
                         Text(languages.lblTips, style: primaryTextStyle(size: 18, color: appStore.isDarkMode ? white : textPrimaryColor)).expand(),
                         Icon(select ? Icons.keyboard_arrow_down_sharp : Icons.keyboard_arrow_up, color: primaryColor, size: 30),

@@ -10,14 +10,14 @@ enum ChartType { CHART1, CHART2, CHART3 }
 class HorizontalBarChart extends StatelessWidget {
   final List<GraphModel>? seriesList;
 
-  HorizontalBarChart(this.seriesList);
+  HorizontalBarChart(this.seriesList, {super.key});
 
   final List<GraphModel> data = [];
 
   @override
   Widget build(BuildContext context) {
     return SfCartesianChart(
-      legend: Legend(isVisible: true),
+      legend: const Legend(isVisible: true),
       series: getDefaultData3(),
       backgroundColor: context.cardColor,
       zoomPanBehavior: ZoomPanBehavior(
@@ -25,7 +25,7 @@ class HorizontalBarChart extends StatelessWidget {
         maximumZoomLevel: 0.85,
       ),
       selectionType: SelectionType.series,
-      primaryXAxis: CategoryAxis(interval: 1, isInversed: true, axisLine: AxisLine(color: primaryColor)),
+      primaryXAxis: const CategoryAxis(interval: 1, isInversed: true, axisLine: AxisLine(color: primaryColor)),
       enableAxisAnimation: true,
       tooltipBehavior: TooltipBehavior(enable: true),
     );
@@ -46,18 +46,18 @@ class HorizontalBarChart extends StatelessWidget {
           borderWidth: 2,
           gradient: LinearGradient(
             colors: <Color>[appStore.isDarkMode == true ? scaffoldBackgroundColor : Colors.white, primaryColor],
-            stops: <double>[0.03, 0.9],
+            stops: const <double>[0.03, 0.9],
             end: Alignment.topCenter,
             begin: Alignment.bottomCenter,
           ),
           borderColor: primaryColor,
           borderDrawMode: BorderDrawMode.excludeBottom,
           animationDuration: 1000,
-          dataLabelSettings: DataLabelSettings(isVisible: true, labelPosition: ChartDataLabelPosition.outside),
-          markerSettings: MarkerSettings(isVisible: true, height: 4, width: 4, shape: DataMarkerType.circle, borderWidth: 2, borderColor: primaryColor),
+          dataLabelSettings: const DataLabelSettings(isVisible: true, labelPosition: ChartDataLabelPosition.outside),
+          markerSettings: const MarkerSettings(isVisible: true, height: 4, width: 4, shape: DataMarkerType.circle, borderWidth: 2, borderColor: primaryColor),
           xValueMapper: (GraphModel data, _) => data.date.toString(),
           yValueMapper: (GraphModel data, _) => double.parse(data.value.toString()),
-          emptyPointSettings: EmptyPointSettings(mode: EmptyPointMode.average))
+          emptyPointSettings: const EmptyPointSettings(mode: EmptyPointMode.average))
     ];
   }
 }

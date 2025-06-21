@@ -13,7 +13,7 @@ import '../model/chat_message_model.dart';
 class LastMessageContainer extends StatelessWidget {
   final stream;
 
-  LastMessageContainer({required this.stream});
+  const LastMessageContainer({super.key, required this.stream});
 
   Widget typeWidget(ChatMessageModel message) {
     String? type = message.messageType;
@@ -30,7 +30,7 @@ class LastMessageContainer extends StatelessWidget {
       case IMAGE:
         return Row(
           children: [
-            Icon(Icons.photo_sharp, size: 16, color: textSecondaryColor),
+            const Icon(Icons.photo_sharp, size: 16, color: textSecondaryColor),
             4.width,
             Text('image', style: secondaryTextStyle(color: textSecondaryColor)),
           ],
@@ -71,11 +71,11 @@ class LastMessageContainer extends StatelessWidget {
                   children: [
                     message.isMe!
                         ? !message.isMessageRead!
-                            ? Icon(Icons.done,
+                            ? const Icon(Icons.done,
                                 size: 16, color: textSecondaryColor)
-                            : Icon(Icons.done_all,
+                            : const Icon(Icons.done_all,
                                 size: 16, color: primaryColor)
-                        : SizedBox(),
+                        : const SizedBox(),
                     4.width,
                     typeWidget(message),
                   ],

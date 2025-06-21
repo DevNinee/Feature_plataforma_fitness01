@@ -6,15 +6,15 @@ import 'package:mighty_fitness/utils/app_colors.dart';
 import 'package:tuple/tuple.dart';
 
 BoxDecoration bottomSheetDecoration = BoxDecoration(
-  color: appStore.isDarkMode ?Colors.black :Color(0xffD9D9D9),
-  borderRadius: BorderRadius.only(
+  color: appStore.isDarkMode ?Colors.black :const Color(0xffD9D9D9),
+  borderRadius: const BorderRadius.only(
     topLeft: Radius.circular(30),
     topRight: Radius.circular(30),
   ),
 );
 
 class Header extends StatefulWidget {
-  const Header({
+  const Header({super.key, 
     required this.weightType,
     required this.inKg,
   });
@@ -36,16 +36,16 @@ class _HeaderState extends State<Header> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           IconButton(
-            color: appStore.isDarkMode ?Color(0xffD9D9D9) :Colors.black,
+            color: appStore.isDarkMode ?const Color(0xffD9D9D9) :Colors.black,
             onPressed: ()  {
               navigator.pop();
             } ,
             icon: const Icon(Icons.close),
           ),
            Text(languages.lblWeight,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,color: appStore.isDarkMode ?Color(0xffD9D9D9) :Colors.black)),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600,color: appStore.isDarkMode ?const Color(0xffD9D9D9) :Colors.black)),
           IconButton(
-            color: appStore.isDarkMode ?Color(0xffD9D9D9) :Colors.black,
+            color: appStore.isDarkMode ?const Color(0xffD9D9D9) :Colors.black,
             onPressed: () => navigator.pop<Tuple2<WeightType, double>>(
               Tuple2(widget.weightType, widget.inKg),
             ),
@@ -78,10 +78,10 @@ class Switcher extends StatefulWidget {
   final WeightType weightType;
   final ValueChanged<WeightType> onChanged;
   const Switcher({
-    Key? key,
+    super.key,
     required this.weightType,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   State<Switcher> createState() => _SwitcherState();
@@ -107,7 +107,7 @@ class _SwitcherState extends State<Switcher> {
             duration: const Duration(milliseconds: 300),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffEC7E4A),
+                color: const Color(0xffEC7E4A),
                 borderRadius: BorderRadius.circular(8),
                 boxShadow: [
                   BoxShadow(
@@ -218,7 +218,7 @@ class DivisionSliderState extends State<DivisionSlider>   {
               const SizedBox(height: 10),
               Text(
                 '${languages.lblWeight}: ${value.toStringAsFixed(1)} ${widget.type.name}',
-                style:  TextStyle(
+                style:  const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: primaryColor,
@@ -287,7 +287,7 @@ class TrianglePainter extends CustomPainter {
   }
 }
 
-var c = Color(0xffEC7E4A);
+var c = const Color(0xffEC7E4A);
 
 class Numbers extends StatefulWidget {
   final PageController? controller;
@@ -300,8 +300,8 @@ class Numbers extends StatefulWidget {
     required this.itemsExtension,
     required this.start,
     required this.end,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<Numbers> createState() => _NumbersState();
@@ -335,8 +335,8 @@ class Item extends StatefulWidget {
 
   const Item({
     required this.index,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<Item> createState() => _ItemState();
@@ -368,7 +368,7 @@ class _ItemState extends State<Item> {
 }
 
 class Dividers extends StatefulWidget {
-  const Dividers({Key? key}) : super(key: key);
+  const Dividers({super.key});
 
   @override
   State<Dividers> createState() => _DividersState();
@@ -410,8 +410,8 @@ class CustomPageScrollPhysics extends ScrollPhysics {
   const CustomPageScrollPhysics({
     required this.start,
     required this.end,
-    ScrollPhysics? parent,
-  }) : super(parent: parent);
+    super.parent,
+  });
 
   @override
   CustomPageScrollPhysics applyTo(ScrollPhysics? ancestor) {

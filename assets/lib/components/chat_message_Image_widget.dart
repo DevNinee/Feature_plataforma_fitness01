@@ -17,7 +17,7 @@ class ChatMessageImageWidget extends StatefulWidget {
   final bool isLoading;
   final String firstQuestion;
 
-  ChatMessageImageWidget({
+  const ChatMessageImageWidget({super.key, 
     required this.answer,
     required this.data,
     required this.isLoading,
@@ -56,11 +56,11 @@ class _ChatMessageImageWidgetState extends State<ChatMessageImageWidget> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           if (widget.data.question == widget.firstQuestion || widget.data.question.isEmptyOrNull) ...[
-            SizedBox.shrink()
+            const SizedBox.shrink()
           ] else ...[
             Container(
-              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
-              margin: EdgeInsets.only(top: 3.0, bottom: 3.0, left: 120),
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+              margin: const EdgeInsets.only(top: 3.0, bottom: 3.0, left: 120),
               decoration: boxDecorationDefault(
                 color: appStore.isDarkMode ? context.cardColor : context.dividerColor.withOpacity(0.4),
                 boxShadow: defaultBoxShadow(blurRadius: 0, shadowColor: Colors.transparent),
@@ -93,7 +93,7 @@ class _ChatMessageImageWidgetState extends State<ChatMessageImageWidget> {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                     margin: EdgeInsets.only(top: 2, bottom: 4.0, left: 0, right: (500 * 0.14).toDouble()),
                     decoration: boxDecorationDefault(
                       color: primaryColor,
@@ -103,7 +103,7 @@ class _ChatMessageImageWidgetState extends State<ChatMessageImageWidget> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SelectableText('${widget.answer}', style: primaryTextStyle(size: 14, color: Colors.white)),
+                        SelectableText(widget.answer, style: primaryTextStyle(size: 14, color: Colors.white)),
                         8.height,
                         Text(
                           "${widget.answer.calculateReadTime().toStringAsFixed(1).toDouble().ceil()} min read",
@@ -118,7 +118,7 @@ class _ChatMessageImageWidgetState extends State<ChatMessageImageWidget> {
                   child: Column(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: boxDecorationWithRoundedCorners(),
                         child: Icon(Icons.copy, size: 16, color: appStore.isDarkMode ? Colors.white : primaryColor),
                       ).onTap(() {

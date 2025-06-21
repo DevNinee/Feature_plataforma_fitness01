@@ -12,7 +12,7 @@ import '../utils/app_common.dart';
 class LevelComponent extends StatefulWidget {
   final LevelModel? mLevelModel;
 
-  LevelComponent({this.mLevelModel});
+  const LevelComponent({super.key, this.mLevelModel});
 
   @override
   _LevelComponentState createState() => _LevelComponentState();

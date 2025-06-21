@@ -12,7 +12,7 @@ class PdfViewWidget extends StatefulWidget {
   static String tag = '/pdfViewWidget';
   final String? pdfUrl;
 
-  PdfViewWidget({this.pdfUrl});
+  const PdfViewWidget({super.key, this.pdfUrl});
 
   @override
   PdfViewWidgetState createState() => PdfViewWidgetState();
@@ -50,14 +50,14 @@ class PdfViewWidgetState extends State<PdfViewWidget> {
     );
     return Scaffold(
       body: Container(
-        margin: EdgeInsets.only(top: 26),
+        margin: const EdgeInsets.only(top: 26),
         width: context.width(),
         height: context.height(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             IconButton(
-                onPressed: () => finish(context), icon: Icon(Icons.arrow_back)),
+                onPressed: () => finish(context), icon: const Icon(Icons.arrow_back)),
             SizedBox(
               height: context.height(),
               width: context.width(),

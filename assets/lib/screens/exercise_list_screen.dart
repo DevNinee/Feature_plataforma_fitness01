@@ -25,7 +25,7 @@ class ExerciseListScreen extends StatefulWidget {
 
   final int? id;
 
-  ExerciseListScreen({this.mTitle, this.isBodyPart = false, this.isLevel = false, this.isEquipment = false, this.id});
+  const ExerciseListScreen({super.key, this.mTitle, this.isBodyPart = false, this.isLevel = false, this.isEquipment = false, this.id});
 
   @override
   _ExerciseListScreenState createState() => _ExerciseListScreenState();
@@ -91,9 +91,10 @@ class _ExerciseListScreenState extends State<ExerciseListScreen> {
     return Scaffold(
       appBar: appBarWidget(isSearch ? "" : widget.mTitle.validate().capitalizeFirstLetter(), context: context, actions: [
         AnimatedContainer(
-          margin: EdgeInsets.only(left: 8, top: 4),
-          duration: Duration(milliseconds: 100),
+          margin: const EdgeInsets.only(left: 8, top: 4),
+          duration: const Duration(milliseconds: 100),
           curve: Curves.decelerate,
+          width: isSearch ? context.width() - 80 : 50,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -124,7 +125,7 @@ class _ExerciseListScreenState extends State<ExerciseListScreen> {
                   ),
                 ).paddingBottom(10).expand(),
               IconButton(
-                icon: isSearch ? Icon(Icons.close) : Image.asset(ic_search, height: 20, width: 20, color: primaryColor),
+                icon: isSearch ? const Icon(Icons.close) : Image.asset(ic_search, height: 20, width: 20, color: primaryColor),
                 onPressed: () async {
                   isSearch = !isSearch;
                   mSearchValue = "";
@@ -138,7 +139,6 @@ class _ExerciseListScreenState extends State<ExerciseListScreen> {
               )
             ],
           ),
-          width: isSearch ? context.width() - 80 : 50,
         ),
       ]),
       body: Stack(
@@ -147,14 +147,14 @@ class _ExerciseListScreenState extends State<ExerciseListScreen> {
               ? AnimatedListView(
                   controller: scrollController,
                   itemCount: mExerciseList.length,
-                  padding: EdgeInsets.symmetric(horizontal: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
                     return ExerciseComponent(mExerciseModel: mExerciseList[index]);
                   },
                 )
               : NoDataScreen(mTitle: languages.lblExerciseNoFound).visible(!appStore.isLoading),
-          Loader().center().visible(appStore.isLoading)
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
     );

@@ -19,7 +19,7 @@ class HtmlWidget extends StatefulWidget {
   final String? postContent;
   final Color? color;
 
-  HtmlWidget({this.postContent, this.color});
+  const HtmlWidget({super.key, this.postContent, this.color});
 
   @override
   State<HtmlWidget> createState() => _HtmlWidgetState();
@@ -44,10 +44,10 @@ class _HtmlWidgetState extends State<HtmlWidget> {
     print("-------------------------->>>${extractSrc(widget.postContent ?? '')}");
     return Column(
       children: [
-        extractSrc(widget.postContent ?? '').isEmptyOrNull ? SizedBox.shrink()
+        extractSrc(widget.postContent ?? '').isEmptyOrNull ? const SizedBox.shrink()
         : extractSrc(widget.postContent ?? '')!.contains("https://www.youtu") || extractSrc(widget.postContent ?? '')!.contains("https://youtu")
             ? AspectRatio(aspectRatio: 12 / 7, child: HtmlYoutubePlayer(url: extractSrc(widget.postContent ?? '')))
-            : SizedBox.shrink(),
+            : const SizedBox.shrink(),
         Html(
           data: removeIframe(widget.postContent ?? ''),
           onLinkTap: (s, _, __, ___) async {
@@ -63,8 +63,8 @@ class _HtmlWidgetState extends State<HtmlWidget> {
           style: {
             "table": Style(backgroundColor: widget.color ?? transparentColor),
             "tr": Style(border: Border(bottom: BorderSide(color: Colors.black45.withOpacity(0.5)))),
-            "th": Style(padding: EdgeInsets.all(6), backgroundColor: Colors.black45.withOpacity(0.5)),
-            "td": Style(padding: EdgeInsets.all(6), alignment: Alignment.center),
+            "th": Style(padding: const EdgeInsets.all(6), backgroundColor: Colors.black45.withOpacity(0.5)),
+            "td": Style(padding: const EdgeInsets.all(6), alignment: Alignment.center),
             'embed':
                 Style(color: widget.color ?? transparentColor, fontStyle: FontStyle.italic, fontWeight: FontWeight.bold, fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
             'strong': Style(color: widget.color ?? textPrimaryColorGlobal, fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
@@ -92,7 +92,7 @@ class _HtmlWidgetState extends State<HtmlWidget> {
             'big': Style(color: widget.color ?? textPrimaryColorGlobal, fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
             'blockquote': Style(color: widget.color ?? textPrimaryColorGlobal, fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
             'audio': Style(color: widget.color ?? textPrimaryColorGlobal, fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
-            'img': Style(width: context.width(), padding: EdgeInsets.only(bottom: 8), fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
+            'img': Style(width: context.width(), padding: const EdgeInsets.only(bottom: 8), fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble())),
             'li': Style(
               color: widget.color ?? textPrimaryColorGlobal,
               fontSize: FontSize(getIntAsync(FONT_SIZE_PREF, defaultValue: 16).toDouble()),
@@ -118,7 +118,7 @@ class _HtmlWidgetState extends State<HtmlWidget> {
               } else if (renderContext.tree.element!.innerHtml.contains('vimeo')) {
                 return VimeoEmbedWidget(renderContext.tree.element!.innerHtml.splitBetween('<div class="wp-block-embed__wrapper">', "</div>").replaceAll('<br>', '').splitAfter('com/'));
               } else if (renderContext.tree.element!.innerHtml.contains('audio')) {
-                return Container(
+                return SizedBox(
                     width: context.width(),
                     child: Html(
                       data: renderContext.tree.element!.innerHtml,

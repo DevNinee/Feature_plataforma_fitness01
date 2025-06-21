@@ -13,7 +13,7 @@ class ViewAllBlogScreen extends StatefulWidget {
   static String tag = '/ViewAllBlogScreen';
   final bool? isFeatured;
 
-  ViewAllBlogScreen({this.isFeatured = false});
+  const ViewAllBlogScreen({super.key, this.isFeatured = false});
 
   @override
   ViewAllBlogScreenState createState() => ViewAllBlogScreenState();
@@ -69,7 +69,7 @@ class ViewAllBlogScreenState extends State<ViewAllBlogScreen> {
         page++;
         getBlogData();
       }
-    });;
+    });
   }
 
   @override
@@ -91,14 +91,14 @@ class ViewAllBlogScreenState extends State<ViewAllBlogScreen> {
           AnimatedListView(
             shrinkWrap: true,
             controller: scrollController,
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 2),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
             itemCount: mBlogList.length,
             itemBuilder: (context, index) {
               return BlogComponent(mBlogModel: mBlogList[index]);
             },
           ),
-          mBlogList.isEmpty ? NoDataScreen(mTitle: languages.lblBlogNoFound).visible(!appStore.isLoading) : SizedBox(),
-          Loader().center().visible(appStore.isLoading)
+          mBlogList.isEmpty ? NoDataScreen(mTitle: languages.lblBlogNoFound).visible(!appStore.isLoading) : const SizedBox(),
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
     );

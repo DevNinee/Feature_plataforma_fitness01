@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:crisp_chat/crisp_chat.dart';
@@ -39,9 +38,11 @@ import 'profile_screen.dart';
 import 'progress_screen.dart';
 
 bool? isFirstTime = false;
-AppVersion? app_update_check = null;
+AppVersion? app_update_check;
 
 class DashboardScreen extends StatefulWidget {
+  const DashboardScreen({super.key});
+
   @override
   _DashboardScreenState createState() => _DashboardScreenState();
 }
@@ -56,12 +57,12 @@ class _DashboardScreenState extends State<DashboardScreen> with SingleTickerProv
   bool _isExpanded = false;
 
   final tab = [
-    HomeScreen(),
-    DietScreen(),
-    ProductScreen(),
-    ProgressScreen(),
-    ScheduleScreen(),
-    ProfileScreen(),
+    const HomeScreen(),
+    const DietScreen(),
+    const ProductScreen(),
+    const ProgressScreen(),
+    const ScheduleScreen(),
+    const ProfileScreen(),
   ];
 
   List<BottomBarItemModel> bottomItemList = [
@@ -211,8 +212,8 @@ class _DashboardScreenState extends State<DashboardScreen> with SingleTickerProv
         print("-----------211>>>${getStringAsync(CRISP_CHAT_WEB_SITE_ID)}");
         print("-----------212>>>${getBoolAsync(CRISP_CHAT_ENABLED)}");
 
-        if (getStringAsync(CRISP_CHAT_WEB_SITE_ID) != null && getStringAsync(CRISP_CHAT_WEB_SITE_ID).isNotEmpty) {
-          User user = User(email: userStore.email, nickName: "${userStore.displayName}", avatar: userStore.profileImage ?? "");
+        if (getStringAsync(CRISP_CHAT_WEB_SITE_ID).isNotEmpty) {
+          User user = User(email: userStore.email, nickName: userStore.displayName, avatar: userStore.profileImage ?? "");
           configData = CrispConfig(
             user: user,
             tokenId: userStore.userId.toString(),
@@ -299,7 +300,7 @@ class _DashboardScreenState extends State<DashboardScreen> with SingleTickerProv
                                 ? () async {
                                     Navigator.push(
                                       context,
-                                      MaterialPageRoute(builder: (context) => GameHomeScreen()),
+                                      MaterialPageRoute(builder: (context) => const GameHomeScreen()),
                                     );
                                     _toggleExpand();
                                   }
@@ -325,7 +326,7 @@ class _DashboardScreenState extends State<DashboardScreen> with SingleTickerProv
                                 ? () async {
                                     configureCrispChat();
                                     String? sessionId = await FlutterCrispChat.getSessionIdentifier();
-                                    LiveChatScreen().launch(context);
+                                    const LiveChatScreen().launch(context);
                                     await FlutterCrispChat.openCrispChat(config: configData);
                                     _toggleExpand();
                                   }
@@ -335,7 +336,7 @@ class _DashboardScreenState extends State<DashboardScreen> with SingleTickerProv
                         ),
                       );
                     },
-                  ):SizedBox.shrink(),
+                  ):const SizedBox.shrink(),
                   AnimatedBuilder(
                     animation: _animation,
                     builder: (context, child) {
@@ -350,10 +351,10 @@ class _DashboardScreenState extends State<DashboardScreen> with SingleTickerProv
                             onClick: _isExpanded
                                 ? () async {
                                     bool? isFirstTime = await getFirstTimeOpen();
-                                    if (isFirstTime == false || isFirstTime == null) {
-                                      MainGoalScreen().launch(context);
+                                    if (isFirstTime == false) {
+                                      const MainGoalScreen().launch(context);
                                     } else {
-                                      ChattingImageScreen().launch(context);
+                                      const ChattingImageScreen().launch(context);
                                     }
                                     _toggleExpand();
                                   }
@@ -438,12 +439,8 @@ configureCrispChat() async {
   /// Checking session ID After 5 sec
   await Future.delayed(const Duration(seconds: 5), () async {
     String? sessionId = await FlutterCrispChat.getSessionIdentifier();
-    if (sessionId != null) {
-      if (kDebugMode) {
-        print("Session ID::: $sessionId");
-      }
-    } else {
-      if (kDebugMode) {}
+    if (kDebugMode) {
+      print("Session ID::: $sessionId");
     }
-  });
+    });
 }

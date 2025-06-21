@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import '../main.dart';
 import '../extensions/extension_util/widget_extensions.dart';
-import '../extensions/system_utils.dart';
 import '../../extensions/text_styles.dart';
 
 class CountDownProgressIndicator extends StatefulWidget {
@@ -32,7 +31,7 @@ class CountDownProgressIndicator extends StatefulWidget {
 
   // ignore: public_member_api_docs
   const CountDownProgressIndicator({
-    Key? key,
+    super.key,
     required this.duration,
     this.initialPosition = 0,
     required this.backgroundColor,
@@ -46,8 +45,7 @@ class CountDownProgressIndicator extends StatefulWidget {
     this.text,
     this.autostart = true,
   })  : assert(duration > 0),
-        assert(initialPosition < duration),
-        super(key: key);
+        assert(initialPosition < duration);
 
   @override
   _CountDownProgressIndicatorState createState() => _CountDownProgressIndicatorState();

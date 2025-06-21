@@ -49,25 +49,25 @@ class _ReminderScreenState extends State<ReminderScreen> {
         appBar: appBarWidget(languages.lblDailyReminders, context: context, actions: [
           IconButton(
             onPressed: () async {
-              bool? res = await SetReminderScreen().launch(context);
+              bool? res = await const SetReminderScreen().launch(context);
               if (res == true) {
                 setState(() {});
               }
             },
-            icon: Icon(Icons.add, color: primaryColor),
+            icon: const Icon(Icons.add, color: primaryColor),
           ),
         ]),
         body: notificationStore.mRemindList.isNotEmpty
             ? AnimatedListView(
                 shrinkWrap: true,
-                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                 itemCount: notificationStore.mRemindList.length,
                 itemBuilder: (context, index) {
                   DateTime? duration = DateTime.parse(notificationStore.mRemindList[index].duration.validate());
                   String formattedTime = DateFormat.jm().format(duration);
                   return Container(
-                    margin: EdgeInsets.only(bottom: 16),
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    margin: const EdgeInsets.only(bottom: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                     decoration: appStore.isDarkMode
                         ? boxDecorationWithRoundedCorners(borderRadius: radius(12))
                         : boxDecorationRoundedWithShadow(12, spreadRadius: 0, blurRadius: 6, shadowColor: Colors.grey.shade200),
@@ -78,7 +78,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(notificationStore.mRemindList[index].title.validate(), style: boldTextStyle(size: 18)),
-                            Container(child: Icon(MaterialCommunityIcons.delete_outline)).paddingAll(4).onTap(() {
+                            Container(child: const Icon(MaterialCommunityIcons.delete_outline)).paddingAll(4).onTap(() {
                               AwesomeNotifications().cancel(notificationStore.mRemindList[index].id.validate());
                               notificationStore.removeToReminder(notificationStore.mRemindList[index]);
                               setState(() {});

@@ -6,20 +6,20 @@ class GameResponse {
 
   GameResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <GameResponseData>[];
       json['data'].forEach((v) {
-        data!.add(new GameResponseData.fromJson(v));
+        data!.add(GameResponseData.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -45,11 +45,11 @@ class Pagination {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['total_items'] = this.totalItems;
-    data['per_page'] = this.perPage;
-    data['currentPage'] = this.currentPage;
-    data['totalPages'] = this.totalPages;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['total_items'] = totalItems;
+    data['per_page'] = perPage;
+    data['currentPage'] = currentPage;
+    data['totalPages'] = totalPages;
     return data;
   }
 }
@@ -73,12 +73,12 @@ class GameResponseData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['user_id'] = this.userId;
-    data['user_name'] = this.userName;
-    data['score'] = this.score;
-    data['country_code'] = this.countryCode;
-    data['flag_url'] = this.flagUrl;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['user_id'] = userId;
+    data['user_name'] = userName;
+    data['score'] = score;
+    data['country_code'] = countryCode;
+    data['flag_url'] = flagUrl;
     return data;
   }
 }

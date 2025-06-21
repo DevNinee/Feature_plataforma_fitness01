@@ -4,7 +4,7 @@ import 'package:mighty_fitness/pages/game/game.dart';
 class Routes {
   static Route createRoute(context) {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => Game(),
+      pageBuilder: (context, animation, secondaryAnimation) => const Game(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(1.0, 0.0);
         const end = Offset.zero;

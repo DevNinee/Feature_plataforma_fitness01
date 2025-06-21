@@ -23,7 +23,7 @@ class _VideoComponentState extends State<VideoComponent> {
       children: [
         cachedImage("widget.mWorkoutModel!.workoutImage.validate()", height: height, fit: BoxFit.cover, width: width).cornerRadiusWithClipRRect(16),
         mBlackEffect(width, height, radiusValue: 16),
-        Positioned(left: 16, right: 16, top: 0, bottom: 16, child: Icon(Icons.video_collection, color: Colors.white)),
+        const Positioned(left: 16, right: 16, top: 0, bottom: 16, child: Icon(Icons.video_collection, color: Colors.white)),
         Positioned(
           left: 16,
           right: 16,
@@ -39,7 +39,7 @@ class _VideoComponentState extends State<VideoComponent> {
         )
       ],
     ).paddingBottom(16).onTap(() {
-      VideoDetailScreen().launch(context);
+      const VideoDetailScreen().launch(context);
     });
   }
 }

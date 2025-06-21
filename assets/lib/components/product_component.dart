@@ -17,7 +17,7 @@ class ProductComponent extends StatefulWidget {
   final ProductModel? mProductModel;
   final Function? onCall;
 
-  ProductComponent({this.mProductModel, this.onCall});
+  const ProductComponent({super.key, this.mProductModel, this.onCall});
 
   @override
   ProductComponentState createState() => ProductComponentState();

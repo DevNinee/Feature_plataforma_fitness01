@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../../extensions/app_button.dart';
 import '../../extensions/extension_util/context_extensions.dart';
-import '../../extensions/extension_util/int_extensions.dart';
 import '../../extensions/extension_util/widget_extensions.dart';
 import '../../screens/sign_in_screen.dart';
 import '../../utils/app_images.dart';
@@ -16,6 +15,8 @@ import '../utils/app_config.dart';
 import '../utils/app_constants.dart';
 
 class WalkThroughScreen extends StatefulWidget {
+  const WalkThroughScreen({super.key});
+
   @override
   _WalkThroughScreenState createState() => _WalkThroughScreenState();
 }
@@ -85,10 +86,10 @@ class _WalkThroughScreenState extends State<WalkThroughScreen> {
               top: context.statusBarHeight,
               right: mq.width*0.010,
               child: TextButton(
-                  style: ButtonStyle(overlayColor: MaterialStateProperty.all(Colors.transparent)),
+                  style: ButtonStyle(overlayColor: WidgetStateProperty.all(Colors.transparent)),
                   onPressed: () {
                     setValue(IS_FIRST_TIME, true);
-                    SignInScreen().launch(context);
+                    const SignInScreen().launch(context);
                   },
                   child: Text(languages.lblSkip, style: boldTextStyle(color: primaryColor))),
             ).visible(mCurrentIndex != 2),
@@ -112,9 +113,9 @@ class _WalkThroughScreenState extends State<WalkThroughScreen> {
                     onTap: () {
                       if (mCurrentIndex.toInt() >= 2) {
                         setValue(IS_FIRST_TIME, true);
-                        SignInScreen().launch(context);
+                        const SignInScreen().launch(context);
                       } else {
-                        mPageController.nextPage(duration: Duration(seconds: 1), curve: Curves.linearToEaseOut);
+                        mPageController.nextPage(duration: const Duration(seconds: 1), curve: Curves.linearToEaseOut);
                       }
                     },
                   ),

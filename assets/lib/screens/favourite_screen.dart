@@ -14,7 +14,7 @@ class FavouriteScreen extends StatefulWidget {
 
   final int index;
 
-  FavouriteScreen({required this.index});
+  const FavouriteScreen({super.key, required this.index});
 
   @override
   FavouriteScreenState createState() => FavouriteScreenState();
@@ -59,12 +59,12 @@ class FavouriteScreenState extends State<FavouriteScreen> {
       appBar: appBarWidget(languages.lblFavoriteWorkoutAndNutristions,
           context: context,
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(45),
+            preferredSize: const Size.fromHeight(45),
             child: Container(
               decoration: BoxDecoration(border: Border(bottom: BorderSide(color: context.dividerColor))),
               child: Row(children: [
                 Container(
-                  padding: EdgeInsets.only(bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 8),
                   decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1.5, color: select! ? primaryColor : Colors.transparent))),
                   child: Text(
                     languages.lblWorkouts,
@@ -78,7 +78,7 @@ class FavouriteScreenState extends State<FavouriteScreen> {
                   },
                 ).expand(),
                 Container(
-                  padding: EdgeInsets.only(bottom: 8),
+                  padding: const EdgeInsets.only(bottom: 8),
                   decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 1.5, color: select! ? Colors.transparent : primaryColor))),
                   child: Text(languages.lblDiet, style: boldTextStyle(color: select! ? textSecondaryColorGlobal : primaryColor)).center(),
                 ).onTap(
@@ -91,7 +91,7 @@ class FavouriteScreenState extends State<FavouriteScreen> {
               ]).paddingSymmetric(horizontal: 16),
             ),
           )),
-      body: select! ? ViewWorkoutsScreen(isFav: true) : ViewAllDiet(isFav: true),
+      body: select! ? const ViewWorkoutsScreen(isFav: true) : const ViewAllDiet(isFav: true),
     );
   }
 }

@@ -8,20 +8,20 @@ class CategoryDietResponse {
 
   CategoryDietResponse.fromJson(Map<String, dynamic> json) {
     pagination = json['pagination'] != null
-        ? new Pagination.fromJson(json['pagination'])
+        ? Pagination.fromJson(json['pagination'])
         : null;
     if (json['data'] != null) {
       data = <CategoryDietModel>[];
       json['data'].forEach((v) {
-        data!.add(new CategoryDietModel.fromJson(v));
+        data!.add(CategoryDietModel.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -60,13 +60,13 @@ class CategoryDietModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['status'] = this.status;
-    data['categorydiet_image'] = this.categorydietImage;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['title'] = title;
+    data['status'] = status;
+    data['categorydiet_image'] = categorydietImage;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     // data['select'] = this.select;
     return data;
   }

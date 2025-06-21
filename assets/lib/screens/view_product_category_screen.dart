@@ -78,7 +78,7 @@ class _ViewProductCategoryScreenState extends State<ViewProductCategoryScreen> {
         children: [
           SingleChildScrollView(
             controller: scrollController,
-            padding: EdgeInsets.only(bottom: 16, top: 8),
+            padding: const EdgeInsets.only(bottom: 16, top: 8),
             child: AnimatedWrap(
               runSpacing: 16,
               spacing: 16,
@@ -87,7 +87,7 @@ class _ViewProductCategoryScreenState extends State<ViewProductCategoryScreen> {
               }),
             ).paddingSymmetric(horizontal: 16),
           ),
-          Loader().center().visible(appStore.isLoading)
+          const Loader().center().visible(appStore.isLoading)
         ],
       ),
     );

@@ -16,7 +16,7 @@ import 'package:table_calendar/table_calendar.dart';
 import 'payment_scheduled_screen.dart';
 
 class ScheduleScreen extends StatefulWidget {
-  ScheduleScreen({Key? key}) : super(key: key);
+  const ScheduleScreen({super.key});
 
   @override
   State<ScheduleScreen> createState() => ScheduleScreenState();
@@ -64,11 +64,11 @@ class ScheduleScreenState extends State<ScheduleScreen> with AutomaticKeepAliveC
   }
 
   Future<void> CallScheduleApi() async {
-    String commaSeparatedValues = await _selectedDays.map((date) => DateFormat('yyyy-MM-dd').format(date)).join(',');
+    String commaSeparatedValues = _selectedDays.map((date) => DateFormat('yyyy-MM-dd').format(date)).join(',');
     appStore.setLoading(true);
     var dataSet = commaSeparatedValues.isNotEmpty
         ? commaSeparatedValues
-        : _selectedDays.length == 0
+        : _selectedDays.isEmpty
             ? ''
             : DateFormat('yyyy-MM-dd').format(DateTime.now()).toString();
     //  commaSeparatedValues.isNotEmpty?commaSeparatedValues:DateFormat('yyyy-MM-dd').format(DateTime.now()).toString();
@@ -163,7 +163,7 @@ class ScheduleScreenState extends State<ScheduleScreen> with AutomaticKeepAliveC
             ],
           ),
           Observer(builder: (context) {
-            return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: Loader().center()).visible(appStore.isLoading);
+            return Container(color: Colors.transparent, width: double.infinity, height: double.infinity, child: const Loader().center()).visible(appStore.isLoading);
           })
         ],
       ),

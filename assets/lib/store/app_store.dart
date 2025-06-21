@@ -5,7 +5,6 @@ import 'package:mighty_fitness/languageConfiguration/LanguageDataConstant.dart';
 import 'package:mighty_fitness/languageConfiguration/LanguageDefaultJson.dart';
 import '../extensions/system_utils.dart';
 import '../main.dart';
-import '../models/language_data_model.dart';
 import '../extensions/colors.dart';
 import '../extensions/constants.dart';
 import '../utils/app_colors.dart';
@@ -106,7 +105,7 @@ abstract class AppStoreBase with Store {
     try{
       if (context != null) languages = BaseLanguage.of(context)!;
     }catch(e){}
-    languages = (await AppLocalizations().load(Locale(selectedLanguageCode)));
+    languages = (await const AppLocalizations().load(Locale(selectedLanguageCode)));
   }
 
   @action

@@ -22,6 +22,8 @@ import '../utils/app_constants.dart';
 import '../utils/app_images.dart';
 
 class OTPScreen extends StatefulWidget {
+  const OTPScreen({super.key});
+
   @override
   _OTPScreenState createState() => _OTPScreenState();
 }
@@ -98,7 +100,7 @@ class _OTPScreenState extends State<OTPScreen> {
                                 showFlagDialog: true,
                                 showOnlyCountryWhenClosed: false,
                                 alignLeft: false,
-                                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                 textStyle: primaryTextStyle(),
                                 onInit: (c) {
                                   countryCode = c!.dialCode;
@@ -146,7 +148,7 @@ class _OTPScreenState extends State<OTPScreen> {
             ),
           ),
           Observer(builder: (context) {
-            return Loader().visible(appStore.isLoading);
+            return const Loader().visible(appStore.isLoading);
           })
         ],
       ),

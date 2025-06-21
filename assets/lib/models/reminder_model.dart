@@ -24,13 +24,13 @@ class ReminderModel {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['duration'] = this.duration;
-    data['title'] = this.title;
-    data['subTitle'] = this.subTitle;
-    data['week'] = this.week;
-    data['status'] = this.status;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['duration'] = duration;
+    data['title'] = title;
+    data['subTitle'] = subTitle;
+    data['week'] = week;
+    data['status'] = status;
 
     return data;
   }

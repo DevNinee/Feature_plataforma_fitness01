@@ -14,6 +14,8 @@ String? selectEquipments = '';
 String? selectWeekWorkout = '';
 
 class MainGoalScreen extends StatefulWidget {
+  const MainGoalScreen({super.key});
+
   @override
   _MainGoalScreenState createState() => _MainGoalScreenState();
 }
@@ -29,7 +31,7 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: BackgroundColorImageColor,
-        title: Text(
+        title: const Text(
           'Mighty Ai',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 18),
         ),
@@ -47,7 +49,7 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                               : selectedScreen = 3;
             });
           },
-          child: Icon(
+          child: const Icon(
             Octicons.chevron_left,
             color: primaryColor,
             size: 28,
@@ -59,9 +61,9 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
           color: appStore.isDarkMode ? scaffoldColorDark : Colors.white,
         ),
         child: SingleChildScrollView(
-          physics: AlwaysScrollableScrollPhysics(),
+          physics: const AlwaysScrollableScrollPhysics(),
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 16.0),
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,15 +75,15 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                   fit: BoxFit.contain,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
                   child: Text(
                     selectedScreen == 0
                         ? languages.lblMainGoal
                         : selectedScreen == 1
                             ? languages.lblHowExperienced
                             : selectedScreen == 2
-                                ? '${languages.lblHoweEquipment}'
-                                : '${languages.lblHoweOftenWorkout}',
+                                ? languages.lblHoweEquipment
+                                : languages.lblHoweOftenWorkout,
                     style: TextStyle(
                       color: appStore.isDarkMode ? Colors.white : Colors.black,
                       fontSize: 18,
@@ -92,7 +94,7 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                 if (selectedScreen == 0) ...[
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: 3,
                     itemBuilder: (context, index) {
                       return GestureDetector(
@@ -116,7 +118,7 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                 ] else if (selectedScreen == 1) ...[
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: 4,
                     itemBuilder: (context, index) {
                       return GestureDetector(
@@ -140,7 +142,7 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                 ] else if (selectedScreen == 2) ...[
                   ListView.builder(
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: 5,
                     itemBuilder: (context, index) {
                       return GestureDetector(
@@ -162,7 +164,7 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                     },
                   ),
                 ] else ...[
-                  SeekBar(),
+                  const SeekBar(),
                 ],
                 16.height,
                 ElevatedButton(
@@ -176,20 +178,20 @@ class _MainGoalScreenState extends State<MainGoalScreen> {
                     } else {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => ChattingImageScreen()),
+                        MaterialPageRoute(builder: (context) => const ChattingImageScreen()),
                       );
                     }
                     setState(() {});
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: primaryColor,
-                    padding: EdgeInsets.symmetric(horizontal: 85, vertical: 15),
-                    textStyle: TextStyle(
+                    padding: const EdgeInsets.symmetric(horizontal: 85, vertical: 15),
+                    textStyle: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  child: Text(selectedScreen == 3 ? '${languages.lblFinish}' : '${languages.lblContinue}'),
+                  child: Text(selectedScreen == 3 ? languages.lblFinish : languages.lblContinue),
                 ),
                 20.height,
               ],
@@ -209,7 +211,7 @@ class GoalCard extends StatelessWidget {
   final double width;
   final double height;
 
-  GoalCard({
+  const GoalCard({super.key, 
     required this.title,
     required this.description,
     required this.icon,
@@ -225,7 +227,7 @@ class GoalCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
       ),
       color: isSelected ? primaryColor : primaryOpacity,
-      margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Padding(
         padding: const EdgeInsets.all(14.0),
         child: Column(
@@ -240,7 +242,7 @@ class GoalCard extends StatelessWidget {
                   color: isSelected ? Colors.white : primaryColor,
                   fit: BoxFit.fitWidth,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Text(
                   title,
                   style: TextStyle(
@@ -251,7 +253,7 @@ class GoalCard extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               description,
               style: TextStyle(
@@ -267,7 +269,7 @@ class GoalCard extends StatelessWidget {
 }
 
 class SeekBar extends StatefulWidget {
-  const SeekBar({Key? key}) : super(key: key);
+  const SeekBar({super.key});
 
   @override
   _SeekBarState createState() => _SeekBarState();
@@ -279,11 +281,11 @@ class _SeekBarState extends State<SeekBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Column(
         children: [
           HabitTracker(currentSliderValue: _currentSliderValue),
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Slider(
             value: _currentSliderValue,
             min: 1,
@@ -317,7 +319,7 @@ class _SeekBarState extends State<SeekBar> {
 class HabitTracker extends StatefulWidget {
   double currentSliderValue;
 
-  HabitTracker({this.currentSliderValue = 0.7});
+  HabitTracker({super.key, this.currentSliderValue = 0.7});
 
   @override
   State<HabitTracker> createState() => _HabitTrackerState();
@@ -327,8 +329,8 @@ class _HabitTrackerState extends State<HabitTracker> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
-      margin: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.all(16.0),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         color: primaryOpacity,
         borderRadius: BorderRadius.circular(10.0),
@@ -338,30 +340,30 @@ class _HabitTrackerState extends State<HabitTracker> {
         children: [
           Row(
             children: [
-              Icon(Icons.trending_up, color: scaffoldColorDark),
-              SizedBox(width: 8.0),
-              Text(languages.lblEasyHabit, style: TextStyle(color: scaffoldColorDark)),
+              const Icon(Icons.trending_up, color: scaffoldColorDark),
+              const SizedBox(width: 8.0),
+              Text(languages.lblEasyHabit, style: const TextStyle(color: scaffoldColorDark)),
             ],
           ),
-          SizedBox(height: 8.0),
+          const SizedBox(height: 8.0),
           LinearProgressIndicator(
             value: 0.9 / widget.currentSliderValue,
             backgroundColor: primaryColor.withOpacity(0.1),
-            valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+            valueColor: const AlwaysStoppedAnimation<Color>(primaryColor),
           ),
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           Row(
             children: [
-              Icon(Icons.speed, color: scaffoldColorDark),
-              SizedBox(width: 8.0),
-              Text(languages.lblProgression, style: TextStyle(color: scaffoldColorDark)),
+              const Icon(Icons.speed, color: scaffoldColorDark),
+              const SizedBox(width: 8.0),
+              Text(languages.lblProgression, style: const TextStyle(color: scaffoldColorDark)),
             ],
           ),
-          SizedBox(height: 8.0),
+          const SizedBox(height: 8.0),
           LinearProgressIndicator(
             value: widget.currentSliderValue / 10,
             backgroundColor: primaryColor.withOpacity(0.1),
-            valueColor: AlwaysStoppedAnimation<Color>(primaryColor),
+            valueColor: const AlwaysStoppedAnimation<Color>(primaryColor),
           ),
         ],
       ),

@@ -8,7 +8,7 @@ import 'package:mighty_fitness/utils/app_colors.dart';
 import 'package:mighty_fitness/widget/height_picker.dart';
 
 class CustomeHeightPicker extends StatefulWidget {
-  CustomeHeightPicker({super.key, required this.heightSelected});
+  const CustomeHeightPicker({super.key, required this.heightSelected});
 
   final ValueChanged<String> heightSelected;
 
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<CustomeHeightPicker> {
           onTap: ()  {
             finish(context);
           },
-          child: Icon(
+          child: const Icon(
             Octicons.chevron_left,
             color: primaryColor,
             size: 28,
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<CustomeHeightPicker> {
                 widget.heightSelected("${_tabIndexUpdateProgrammatically.value == 0 ? height : (height / 30.48).toStringAsFixed(1)}");
                 finish(context);
               },
-              child: Icon(
+              child: const Icon(
                 Icons.check,
                 color: primaryColor,
                 size: 28,
@@ -64,14 +64,14 @@ class _MyHomePageState extends State<CustomeHeightPicker> {
       ),
       body: Column(
         children: [
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ValueListenableBuilder(
             valueListenable: _tabIndexUpdateProgrammatically,
             builder: (context, currentIndex, _) {
               return FlutterToggleTab(
                 width: 50,
                 borderRadius: 10,
-                selectedBackgroundColors: [primaryColor],
+                selectedBackgroundColors: const [primaryColor],
                 selectedIndex: currentIndex,
                 selectedTextStyle: const TextStyle(
                   color: Colors.white,
@@ -92,7 +92,7 @@ class _MyHomePageState extends State<CustomeHeightPicker> {
               );
             },
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Expanded(
             child: HeightSlider(
                sliderCircleColor: primaryColor,

@@ -15,6 +15,8 @@ import 'count_down_progress_indicator.dart';
 class BMIComponent extends StatefulWidget {
   static String tag = '/BMIComponent';
 
+  const BMIComponent({super.key});
+
   @override
   BMIComponentState createState() => BMIComponentState();
 }
@@ -53,7 +55,7 @@ class BMIComponentState extends State<BMIComponent> with TickerProviderStateMixi
 
   //Convert lbs to kg
   void convertLbsToKg() {
-    print("user weight->" + userStore.weight.toString());
+    print("user weight->${userStore.weight}");
     double a = double.parse(userStore.weight.toString()) * 2.2046;
     mKg = userStore.weightUnit == LBS ? a : double.parse(userStore.weight.validate());
   }
@@ -71,8 +73,8 @@ class BMIComponentState extends State<BMIComponent> with TickerProviderStateMixi
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 8),
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       decoration:
           appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(16), backgroundColor: context.cardColor) : boxDecorationRoundedWithShadow(16, backgroundColor: context.cardColor),
       child: Column(
@@ -83,7 +85,7 @@ class BMIComponentState extends State<BMIComponent> with TickerProviderStateMixi
             children: [
               Container(
                 decoration: boxDecorationWithRoundedCorners(borderRadius: radius(8), backgroundColor: appStore.isDarkMode ? Colors.black : Colors.white),
-                padding: EdgeInsets.all(6),
+                padding: const EdgeInsets.all(6),
                 child: Image.asset(ic_calories, width: 22, height: 22, color: primaryColor),
               ),
               Text(languages.lblBmi, style: boldTextStyle(color: appStore.isDarkMode ? primaryColor : black), overflow: TextOverflow.ellipsis, maxLines: 2),

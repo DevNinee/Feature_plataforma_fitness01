@@ -61,23 +61,23 @@ class DiagonalPathClipperTwo extends CustomClipper<Path> {
 
 Widget outlineIconButton(BuildContext context, {required String text, String? icon, Function()? onTap, Color? textColor}) {
   return OutlinedButton(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        if (icon != null) ImageIcon(AssetImage(icon), color: appStore.isDarkMode ? Colors.white : primaryColor, size: 24),
-        if (icon != null) SizedBox(width: 8),
-        Text(text, style: primaryTextStyle(color: textColor ?? null, size: 14)),
-      ],
-    ),
     onPressed: onTap ?? () {},
     style: OutlinedButton.styleFrom(
       side: BorderSide(color: textColor ?? (appStore.isDarkMode ? Colors.white38 : primaryColor), style: BorderStyle.solid),
-      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       backgroundColor: Colors.transparent,
       elevation: 0,
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        if (icon != null) ImageIcon(AssetImage(icon), color: appStore.isDarkMode ? Colors.white : primaryColor, size: 24),
+        if (icon != null) const SizedBox(width: 8),
+        Text(text, style: primaryTextStyle(color: textColor, size: 14)),
+      ],
     ),
   );
 }
@@ -213,10 +213,10 @@ Widget mBlackEffect(double? width, double? height, {double? radiusValue = 16}) {
 
 Widget mOption(String img, String title, Function? onCall) {
   return SettingItemWidget(
-    padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+    padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
     title: title,
     leading: Image.asset(img, width: 20, height: 20, color: textPrimaryColorGlobal),
-    trailing: appStore.selectedLanguageCode == 'ar' ? Icon(Icons.chevron_left, color: grayColor) : Icon(Icons.chevron_right, color: grayColor),
+    trailing: appStore.selectedLanguageCode == 'ar' ? const Icon(Icons.chevron_left, color: grayColor) : const Icon(Icons.chevron_right, color: grayColor),
     onTap: () async {
       onCall!.call();
     },
@@ -267,10 +267,10 @@ Future<void> getUSerDetail(BuildContext context, int? id) async {
     userStore.setHeightUnit(value.data!.userProfile!.heightUnit.validate());
     userStore.setSubscribe(value.subscriptionDetail!.isSubscribe.validate());
     userStore.setSubscriptionDetail(value.subscriptionDetail!);
-    print("user data->" + value.toJson().toString());
+    print("user data->${value.toJson()}");
     appStore.setLoading(false);
   }).catchError((e) {
-    print("error-" + e.toString());
+    print("error-$e");
     appStore.setLoading(false);
   });
 }
@@ -319,7 +319,7 @@ List<ProgressSettingModel> progressSettingList() {
 
 Widget mPro() {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
     decoration: boxDecorationWithRoundedCorners(backgroundColor: primaryColor, borderRadius: radius(6)),
     child: Text(languages.lblPro, style: primaryTextStyle(color: Colors.white, size: 12)),
   );
@@ -345,7 +345,7 @@ UserModel sender = UserModel(
 
 
 dividerCommon(context) {
-  return Divider(
+  return const Divider(
     color: viewLineColor,
     height: 8,
     thickness: 1,
@@ -354,7 +354,7 @@ dividerCommon(context) {
 
 noteCommon() {
   return Container(
-    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
     decoration: boxDecorationWithRoundedCorners(
       backgroundColor: Colors.grey.shade200,
       borderRadius: radius(defaultRadius),
@@ -392,7 +392,7 @@ void unblockDialog(BuildContext context, {required UserModel receiver}) async {
       height: 50,
       decoration: boxDecorationDefault(
           color: primaryLightColor, borderRadius: BorderRadius.circular(40)),
-      child: Icon(Icons.block, size: 28, color: primaryColor),
+      child: const Icon(Icons.block, size: 28, color: primaryColor),
     ),
     title: 'Unblock ${receiver.firstName} to send a message',
     dialogAnimation: DialogAnimation.SCALE,

@@ -19,6 +19,8 @@ import '../utils/app_images.dart';
 class ProgressSettingScreen extends StatefulWidget {
   static String tag = '/ProgressSetting';
 
+  const ProgressSettingScreen({super.key});
+
   @override
   ProgressSettingScreenState createState() => ProgressSettingScreenState();
 }
@@ -46,14 +48,14 @@ class ProgressSettingScreenState extends State<ProgressSettingScreen> {
       body: Observer(builder: (context) {
         return AnimatedListView(
           itemCount: userStore.mProgressList.length,
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           shrinkWrap: true,
           itemBuilder: (context, index) {
             userStore.mProgressList.sort((a, b) => a.id!.compareTo(b.id!));
             ProgressSettingModel data = userStore.mProgressList[index];
             return Container(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-              margin: EdgeInsets.only(bottom: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+              margin: const EdgeInsets.only(bottom: 16),
               decoration: boxDecorationWithRoundedCorners(
                   backgroundColor: data.isEnable == true
                       ? primaryColor
@@ -67,7 +69,7 @@ class ProgressSettingScreenState extends State<ProgressSettingScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${data.name.validate()}',
+                        data.name.validate(),
                         style: boldTextStyle(
                             color: data.isEnable == true
                                 ? Colors.white

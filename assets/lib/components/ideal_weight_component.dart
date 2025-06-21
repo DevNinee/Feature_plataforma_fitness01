@@ -17,6 +17,8 @@ import 'count_down_progress_indicator.dart';
 class IdealWeightComponent extends StatefulWidget {
   static String tag = '/BMIComponent';
 
+  const IdealWeightComponent({super.key});
+
   @override
   IdealWeightComponentState createState() => IdealWeightComponentState();
 }
@@ -83,8 +85,8 @@ class IdealWeightComponentState extends State<IdealWeightComponent> with TickerP
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 8),
-      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       decoration:
           appStore.isDarkMode ? boxDecorationWithRoundedCorners(borderRadius: radius(16), backgroundColor: context.cardColor) : boxDecorationRoundedWithShadow(16, backgroundColor: context.cardColor),
       child: Observer(builder: (context) {
@@ -96,7 +98,7 @@ class IdealWeightComponentState extends State<IdealWeightComponent> with TickerP
               children: [
                 Container(
                   decoration: boxDecorationWithRoundedCorners(borderRadius: radius(8), backgroundColor: appStore.isDarkMode ? Colors.black : Colors.white),
-                  padding: EdgeInsets.all(6),
+                  padding: const EdgeInsets.all(6),
                   child: Image.asset(ic_ideal_weight, width: 20, height: 20, color: primaryColor),
                 ),
                 Text(languages.lblIdealWeight, style: boldTextStyle(color: appStore.isDarkMode ? primaryColor : black), overflow: TextOverflow.ellipsis, maxLines: 2),

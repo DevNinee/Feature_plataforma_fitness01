@@ -7,19 +7,19 @@ class SubscriptionPlanResponse {
   SubscriptionPlanResponse({this.pagination, this.data});
 
   SubscriptionPlanResponse.fromJson(Map<String, dynamic> json) {
-    pagination = json['pagination'] != null ? new Pagination.fromJson(json['pagination']) : null;
+    pagination = json['pagination'] != null ? Pagination.fromJson(json['pagination']) : null;
     if (json['data'] != null) {
       data = <SubscriptionPlan>[];
       json['data'].forEach((v) {
-        data!.add(new SubscriptionPlan.fromJson(v));
+        data!.add(SubscriptionPlan.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.pagination != null) {
-      data['pagination'] = this.pagination!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (pagination != null) {
+      data['pagination'] = pagination!.toJson();
     }
     if (this.data != null) {
       data['data'] = this.data!.map((v) => v.toJson()).toList();
@@ -74,11 +74,11 @@ class SubscriptionPlan {
     paymentType = json['payment_type'];
     txnId = json['txn_id'];
     transactionDetail = json['transaction_detail'] != null
-        ? new TransactionDetail.fromJson(json['transaction_detail'])
+        ? TransactionDetail.fromJson(json['transaction_detail'])
         : null;
     paymentStatus = json['payment_status'];
     status = json['status'];
-    packageData = json['package_data'] != null ? new PackageData.fromJson(json['package_data']) : null;
+    packageData = json['package_data'] != null ? PackageData.fromJson(json['package_data']) : null;
     subscriptionStartDate = json['subscription_start_date'];
     subscriptionEndDate = json['subscription_end_date'];
     createdAt = json['created_at'];
@@ -86,27 +86,27 @@ class SubscriptionPlan {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['user_id'] = this.userId;
-    data['user_name'] = this.userName;
-    data['package_id'] = this.packageId;
-    data['package_name'] = this.packageName;
-    data['total_amount'] = this.totalAmount;
-    data['payment_type'] = this.paymentType;
-    data['txn_id'] = this.txnId;
-    if (this.transactionDetail != null) {
-      data['transaction_detail'] = this.transactionDetail!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['user_id'] = userId;
+    data['user_name'] = userName;
+    data['package_id'] = packageId;
+    data['package_name'] = packageName;
+    data['total_amount'] = totalAmount;
+    data['payment_type'] = paymentType;
+    data['txn_id'] = txnId;
+    if (transactionDetail != null) {
+      data['transaction_detail'] = transactionDetail!.toJson();
     }
-    data['payment_status'] = this.paymentStatus;
-    data['status'] = this.status;
-    if (this.packageData != null) {
-      data['package_data'] = this.packageData!.toJson();
+    data['payment_status'] = paymentStatus;
+    data['status'] = status;
+    if (packageData != null) {
+      data['package_data'] = packageData!.toJson();
     }
-    data['subscription_start_date'] = this.subscriptionStartDate;
-    data['subscription_end_date'] = this.subscriptionEndDate;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
+    data['subscription_start_date'] = subscriptionStartDate;
+    data['subscription_end_date'] = subscriptionEndDate;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
     return data;
   }
 }
@@ -137,16 +137,16 @@ class PackageData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['price'] = this.price;
-    data['status'] = this.status;
-    data['duration'] = this.duration;
-    data['created_at'] = this.createdAt;
-    data['updated_at'] = this.updatedAt;
-    data['description'] = this.description;
-    data['duration_unit'] = this.durationUnit;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['price'] = price;
+    data['status'] = status;
+    data['duration'] = duration;
+    data['created_at'] = createdAt;
+    data['updated_at'] = updatedAt;
+    data['description'] = description;
+    data['duration_unit'] = durationUnit;
     return data;
   }
 }
@@ -163,9 +163,9 @@ class TransactionDetail {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = this.name;
-    data['added_by'] = this.addedBy;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['name'] = name;
+    data['added_by'] = addedBy;
     return data;
   }
 }

@@ -27,6 +27,8 @@ import 'view_product_category_screen.dart';
 class ProductScreen extends StatefulWidget {
   static String tag = '/ProductScreen';
 
+  const ProductScreen({super.key});
+
   @override
   ProductScreenState createState() => ProductScreenState();
 }
@@ -66,7 +68,7 @@ class ProductScreenState extends State<ProductScreen> {
       }
     });
     mSearch.addListener(() {
-      _showClearButton = mSearch.text.length > 0;
+      _showClearButton = mSearch.text.isNotEmpty;
     });
   }
 
@@ -116,7 +118,7 @@ class ProductScreenState extends State<ProductScreen> {
           onPressed: () {
             onCall!.call();
           },
-          icon: Icon(Feather.chevron_right, color: primaryColor),
+          icon: const Icon(Feather.chevron_right, color: primaryColor),
         ),
       ],
     ).paddingSymmetric(vertical: 8);
@@ -157,7 +159,7 @@ class ProductScreenState extends State<ProductScreen> {
         hideKeyboard(context);
         getProductDataAPI();
       },
-      icon: Icon(Icons.clear),
+      icon: const Icon(Icons.clear),
     );
   }
 
@@ -168,7 +170,7 @@ class ProductScreenState extends State<ProductScreen> {
       body: Stack(
         children: [
           SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -193,13 +195,13 @@ class ProductScreenState extends State<ProductScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               mHeading(languages.lblProductCategory, onCall: () {
-                                ViewProductCategoryScreen().launch(context);
+                                const ViewProductCategoryScreen().launch(context);
                               }),
                               HorizontalList(
-                                physics: BouncingScrollPhysics(),
+                                physics: const BouncingScrollPhysics(),
                                 itemCount: mProductCategoryList!.length,
                                 spacing: 16,
-                                padding: EdgeInsets.only(left: 16, right: 16, bottom: 4),
+                                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 4),
                                 itemBuilder: (context, index) {
                                   return ProductCategoryComponent(
                                     mProductCategoryModel: mProductCategoryList![index],
@@ -216,7 +218,7 @@ class ProductScreenState extends State<ProductScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               mHeading(languages.lblProductList, onCall: () {
-                                ViewAllProductScreen().launch(context);
+                                const ViewAllProductScreen().launch(context);
                               }),
                               mStoreProductList()
                             ],
@@ -232,7 +234,7 @@ class ProductScreenState extends State<ProductScreen> {
               ],
             ),
           ),
-          Loader().visible(appStore.isLoading),
+          const Loader().visible(appStore.isLoading),
         ],
       ),
     );

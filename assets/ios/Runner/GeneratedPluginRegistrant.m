@@ -96,6 +96,12 @@
 @import flutter_inappwebview_ios;
 #endif
 
+#if __has_include(<flutter_native_splash/FlutterNativeSplashPlugin.h>)
+#import <flutter_native_splash/FlutterNativeSplashPlugin.h>
+#else
+@import flutter_native_splash;
+#endif
+
 #if __has_include(<flutter_paytabs_bridge/FlutterPaymentSDKBridgePlugin.h>)
 #import <flutter_paytabs_bridge/FlutterPaymentSDKBridgePlugin.h>
 #else
@@ -240,6 +246,7 @@
   [FLTFirebaseStoragePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseStoragePlugin"]];
   [GoogleCastPlugin registerWithRegistrar:[registry registrarForPlugin:@"GoogleCastPlugin"]];
   [InAppWebViewFlutterPlugin registerWithRegistrar:[registry registrarForPlugin:@"InAppWebViewFlutterPlugin"]];
+  [FlutterNativeSplashPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterNativeSplashPlugin"]];
   [FlutterPaymentSDKBridgePlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterPaymentSDKBridgePlugin"]];
   [FlutterTtsPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterTtsPlugin"]];
   [FluttertoastPlugin registerWithRegistrar:[registry registrarForPlugin:@"FluttertoastPlugin"]];

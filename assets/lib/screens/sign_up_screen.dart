@@ -19,7 +19,7 @@ import '../components/sign_up_step4_component.dart';
 class SignUpScreen extends StatefulWidget {
   final String? phoneNumber;
 
-  SignUpScreen({this.phoneNumber});
+  const SignUpScreen({super.key, this.phoneNumber});
 
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
@@ -62,7 +62,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       child: Observer(builder: (context) {
         return Scaffold(
           appBar: appBarWidget("",
-              backWidget: Icon(
+              backWidget: const Icon(
                 Octicons.chevron_left,
                 color: primaryColor,
                 size: 28,
@@ -99,7 +99,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               if (appStore.signUpIndex == 0) SignUpStep1Component(isNewTask: isNewTask).expand(),
               if (appStore.signUpIndex == 1) SignUpStep2Component(isNewTask: isNewTask).expand(),
               if (appStore.signUpIndex == 2) SignUpStep3Component(isNewTask: isNewTask).expand(),
-              if (appStore.signUpIndex == 3) SignUpStep4Component().expand(),
+              if (appStore.signUpIndex == 3) const SignUpStep4Component().expand(),
             ],
           ),
         );

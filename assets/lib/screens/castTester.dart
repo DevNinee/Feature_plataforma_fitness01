@@ -4,6 +4,8 @@ import 'package:flutter_chrome_cast/widgets/mini_controller.dart';
 import 'package:mighty_fitness/utils/CastManager.dart';
 
 class Casttester extends StatefulWidget {
+  const Casttester({super.key});
+
   @override
   _CasttesterState createState() => _CasttesterState();
 }
@@ -59,7 +61,7 @@ class _CasttesterState extends State<Casttester> {
                 stream: GoogleCastSessionManager.instance.currentSessionStream,
                 builder: (context, snapshot) {
                   final isConnected = GoogleCastSessionManager.instance.connectionState == GoogleCastConnectState.ConnectionStateConnected;
-                  print("--------51>>>>${isConnected}");
+                  print("--------51>>>>$isConnected");
                   return Visibility(
                     visible: isConnected,
                     child: FloatingActionButton(
@@ -81,7 +83,7 @@ class _CasttesterState extends State<Casttester> {
                 final bool isConnected = GoogleCastSessionManager.instance.connectionState == GoogleCastConnectState.ConnectionStateConnected;
                 return IconButton(
                     onPressed: () {
-                      print("-----------86>>>>${isConnected}");
+                      print("-----------86>>>>$isConnected");
                       if (isConnected == false) {
                         castManager.initPlatformState();
                       } else {
